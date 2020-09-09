@@ -1,0 +1,32 @@
+{
+  "name": "space-buckets-site",
+  "version": "0.0.1",
+  "description": "Space Buckets - DIY indoor gardeners",
+  "author": "ekrof",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "export": "nuxt export",
+    "serve": "nuxt serve",
+    "generate": "node scripts/generateDb && nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-module": "latest",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "@nuxtjs/google-fonts": "^1.0.0",
+    "@nuxtjs/pwa": "^3.0.0-beta.20",
+    "eslint": "^7.7.0",
+    "gray-matter": "^4.0.2",
+    "image-size": "^0.8.3",
+    "node-sass": "^4.14.1",
+    "nuxt-edge": "latest",
+    "sass-loader": "^9.0.2",
+    "sort-array": "^4.1.1"
+  },
+  "dependencies": {
+    "@nuxtjs/sitemap": "^2.4.0"
+  }
+}
