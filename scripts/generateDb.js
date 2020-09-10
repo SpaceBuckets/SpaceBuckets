@@ -22,14 +22,14 @@ function createDb(src) {
   posts.forEach(post => {
     const srcImages = glob.sync('*.jpg', { cwd: `static/${src}/${post.s}` }).filter(e => e !== 'cover.jpg');    
     var postImages = [];
-
+/* 
     srcImages.forEach(singleImage => {
       var dimensions = sizeOf(`static/${src}/${post.s}/${singleImage}`);
       var redimensions = (dimensions.height / dimensions.width * 100).toFixed(1);
       redimensions = redimensions.replace(".0","")
 
       postImages.push({ 'h': singleImage, 's': redimensions})
-    });
+    }); */
     post.i = postImages 
   }); 
 
