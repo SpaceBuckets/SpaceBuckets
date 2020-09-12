@@ -5,7 +5,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+   head() {
+    return {
+      title: `Space Buckets - Drome`,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

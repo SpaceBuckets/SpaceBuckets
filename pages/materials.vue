@@ -373,6 +373,11 @@ export default {
   mounted() {
     this.selectFilter("ufo");
   },
+  head() {
+    return {
+      title: `Space Buckets - Materials`,
+    };
+  },  
   methods: {
     toggleWishlist(item) {
       if (this.wishlist.includes(item)) {

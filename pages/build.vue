@@ -1011,7 +1011,7 @@ export default {
   components: {},
   head() {
     return {
-      title: "Bucket Builder",
+      title: `Space Buckets - Builder`,
     };
   },    
   computed: {
