@@ -1,6 +1,6 @@
 <template>
   <div class="builder">
-    <iframe src="http://bucketdrome.com/" style="width:100%; height:100vh;border:0;"></iframe>
+    <iframe src="https://boletinextraoficial.com/design/" style="width:100%; height:100vh;border:0;"></iframe>
   </div>
 </template>
 
