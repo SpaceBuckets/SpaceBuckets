@@ -2,8 +2,8 @@
   <div class="docs-wrapper">
      <div class="search-sidebar">
       <div class="sidebar-content docs-links">
-        <h2>DOCS</h2>
-        <p>Select categories to filter the buckets. Amazon links help support this website ♥</p>
+        <nuxt-link to="/docs"><h2>DOCS</h2></nuxt-link>
+        <p>Browse these articles and how-to guides to learn the best bucket building tips.</p>
         <div>
           <nuxt-link v-for="doc in docs" :key="doc.s" :to="{name: 'docs-slug', params: { slug: `${doc.s}`, doc } }">
             {{ doc.t }}
