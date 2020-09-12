@@ -94,7 +94,7 @@ export default {
   },
   head() {
     return {
-      title: `Space Buckets - Template`,
+      title: `Space Buckets - SIMPLE TEMPLATE`,
     };
   },
 }; 

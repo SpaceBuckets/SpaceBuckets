@@ -46,7 +46,7 @@ export default {
   },
   head() {
     return {
-      title: `Space Buckets - Manifesto`,
+      title: `Space Buckets - MANIFESTO`,
     };
   },
 };

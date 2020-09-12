@@ -194,7 +194,7 @@ export default {
   },
   head() {
     return {
-      title: `Space Buckets - Gallery`,
+      title: `Space Buckets - GALLERY`,
     };
   },
 };

@@ -8,7 +8,7 @@
 export default {
    head() {
     return {
-      title: `Space Buckets - Drome`,
+      title: `Space Buckets - DROME`,
     };
   },
 };

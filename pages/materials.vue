@@ -375,7 +375,7 @@ export default {
   },
   head() {
     return {
-      title: `Space Buckets - Materials`,
+      title: `Space Buckets - MATERIALS`,
     };
   },  
   methods: {
