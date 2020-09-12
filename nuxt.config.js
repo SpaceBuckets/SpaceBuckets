@@ -64,6 +64,7 @@ export default {
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
   }, 
+  components: true,
   loading: { color: "#fdd835" },
   vueMeta: { refreshOnceOnNavigation: true },
   features: { transitions: false },

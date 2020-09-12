@@ -3,8 +3,8 @@
      <div class="search-sidebar">
       <div class="sidebar-content docs-links">
         <nuxt-link to="/docs"><h2>DOCS</h2></nuxt-link>
-        <p>Browse these articles and how-to guides to learn the best bucket building tips.</p>
-        <div>
+<!--         <p>Browse these articles and how-to guides to learn the best bucket building tips.</p>
+ -->        <div>
           <nuxt-link v-for="doc in docs" :key="doc.s" :to="{name: 'docs-slug', params: { slug: `${doc.s}`, doc } }">
             {{ doc.t }}
           </nuxt-link>
@@ -36,7 +36,7 @@ import { getDocs, singleDoc } from "~/store/flatDB";
   },    
   head() {
     return {
-      title: this.doc.title,
+      title: `Space Buckets - ${this.doc.t}`,
     };
   },
 }; 

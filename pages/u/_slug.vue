@@ -92,7 +92,7 @@ export default {
   },
   head() {
     return {
-      title: this.$route.params.title,
+      title: `Space Buckets - ${this.post.t}`,
     };
   },
 }; 
