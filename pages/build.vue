@@ -979,7 +979,7 @@ function getItems(itemsArr) {
 
 const asins = {
   container: {
-    bucket: "B071WCRN9W",
+    bucket: "B008DRMUS2",
     brute: "B005KDAK8O",
     tote: "B06ZZNLLP5"
   },
@@ -998,7 +998,7 @@ const asins = {
     powersupply: "B015G8E1Q4"
   },
   ropeextra: {
-    ledstrip: "B01D2CUPHK"
+    ledstrip: "B00UI1DVUW"
   }
 };
 
