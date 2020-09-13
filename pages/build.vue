@@ -725,7 +725,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'ufo'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2018/05/Untitled-1-3.jpg" alt />
+            <img src="/builds/the-mad-scientist/cover.jpg" alt />
             <h2>THE MAD SCIENTIST</h2>
           </nuxt-link>
 
@@ -735,7 +735,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2014/08/front.jpg" alt />
+            <img src="/builds/ekrof/cover.jpg" alt />
             <h2>EKROF SPACE BUCKET</h2>
           </nuxt-link>
           <nuxt-link
@@ -743,7 +743,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2016/03/cover-1.jpg" alt />
+            <img src="/builds/SantiagoSentMe/cover.jpg" alt />
             <h2>SANTIAGO'S BUILD</h2>
           </nuxt-link>
           <nuxt-link
@@ -752,7 +752,7 @@
             v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'cfl'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2014/06/o2cs9eG-e1411071667965.jpg"
+              src="/builds/levitatingchicken/cover.jpg"
               alt
             />
             <h2>LEVITATING BUCKET</h2>
@@ -763,7 +763,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'ufo'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2018/03/cover.jpg" alt />
+            <img src="/builds/Kazel93/cover.jpg" alt />
             <h2>THE BULLET</h2>
           </nuxt-link>
           <nuxt-link
@@ -771,7 +771,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'ufo'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2017/04/covertoo.jpg" alt />
+            <img src="/builds/ranger737/cover.jpg" alt />
             <h2>RANGER BUILD</h2>
           </nuxt-link>
 
@@ -781,7 +781,7 @@
             v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'led'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2017/02/covers-300x3871-1.jpg"
+              src="/builds/no-solder-led/cover.jpg"
               alt
             />
             <h2>NO SOLDER LED</h2>
@@ -791,7 +791,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'led'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2018/06/41-1.jpg" alt />
+            <img src="/builds/ekrof-vero/cover.jpg" alt />
             <h2>EKROF VERO LED</h2>
           </nuxt-link>
           <nuxt-link
@@ -799,7 +799,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'led'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/03/mark1.jpg" alt />
+            <img src="/builds/Mr_Markheim/cover.jpg" alt />
             <h2>MARKHEIM BUCKET</h2>
           </nuxt-link>
 
@@ -809,7 +809,7 @@
             v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'ufo'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2017/12/cover-buckettoss.jpg"
+              src="/builds/buckettoss/cover.jpg"
               alt
             />
             <h2>TOSS BRUTE</h2>
@@ -820,7 +820,7 @@
             v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'ufo'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2017/05/cover-gosu-sheep.jpg"
+              src="/builds/Gosu-Sheep/cover.jpg"
               alt
             />
             <h2>GOSU BRUTE</h2>
@@ -830,7 +830,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'ufo'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2017/04/coverto.jpg" alt />
+            <img src="/builds/SpaceBidet/cover.jpg" alt />
             <h2>BIDET BRUTE</h2>
           </nuxt-link>
 
@@ -839,7 +839,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/02/asd.jpg" alt />
+            <img src="/builds/Southernspaceweed/cover.jpg" alt />
             <h2>SOUTHERN BRUTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -847,7 +847,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/01/shaddo.jpg" alt />
+            <img src="/builds/shaddo/cover.jpg" alt />
             <h2>SHADDO'S BRUTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -855,7 +855,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/02/iss1.jpg" alt />
+            <img src="/builds/G_DuBs_brute/cover.jpg" alt />
             <h2>DUBS BRUTE BUILD</h2>
           </nuxt-link>
           <nuxt-link
@@ -863,7 +863,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'led'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/10/cover.jpg" alt />
+            <img src="/builds/bruteLED/cover.jpg" alt />
             <h2>SIMPLE LED BRUTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -872,7 +872,7 @@
             v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'led'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2018/02/cover-doublejallday.jpg"
+              src="/builds/doublejallday_bin/cover.jpg"
               alt
             />
             <h2>GARBO LED BUILD</h2>
@@ -882,7 +882,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'led'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/11/cove3r.jpg" alt />
+            <img src="/builds/HaplessAstronaut/cover.jpg" alt />
             <h2>HYDRO LED BRUTE</h2>
           </nuxt-link>
 
@@ -891,7 +891,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/01/toma.jpg" alt />
+            <img src="/builds/getitguh/cover.jpg" alt />
             <h2>GETGUH'S TOTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -899,7 +899,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2016/03/cover.jpg" alt />
+            <img src="/builds/SpaceBucket_Sue/cover.jpg" alt />
             <h2>SUE SPACE TOTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -907,7 +907,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'cfl'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2015/01/arr.jpg" alt />
+            <img src="/builds/Arrrr32/cover.jpg" alt />
             <h2>PIRATE TOTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -915,7 +915,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'ufo'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2018/04/Untitled-1.jpg" alt />
+            <img src="/builds/dangerzone710/cover.jpg" alt />
             <h2>DANGERZONE TOTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -923,7 +923,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'ufo'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2016/05/coverto-2.jpg" alt />
+            <img src="/builds/spacetotebuilder/cover.jpg" alt />
             <h2>SPACE TOTE v3</h2>
           </nuxt-link>
           <nuxt-link
@@ -932,7 +932,7 @@
             v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'ufo'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2017/04/cover-funforpun.jpg"
+              src="/builds/funforpun/cover.jpg"
               alt
             />
             <h2>PUN'S EURO BOX</h2>
@@ -942,7 +942,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'led'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2017/08/Untitled-1-1.jpg" alt />
+            <img src="/builds/vahpors-tote/cover.jpg" alt />
             <h2>VAHPOR'S TOTE</h2>
           </nuxt-link>
           <nuxt-link
@@ -951,7 +951,7 @@
             v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'led'"
           >
             <img
-              src="https://www.spacebuckets.com/wp-content/uploads/2017/05/cover-spacebucketfu.jpg"
+              src="/builds/SpaceBucketFu/cover.jpg"
               alt
             />
             <h2>STRAWBERRY TOTE</h2>
@@ -961,7 +961,7 @@
             class="similar-bucket-single"
             v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'led'"
           >
-            <img src="https://www.spacebuckets.com/wp-content/uploads/2016/04/cover.jpg" alt />
+            <img src="/builds/cottonparachute/cover.jpg" alt />
             <h2>COTTON'S TOTE</h2>
           </nuxt-link>
         </section>
