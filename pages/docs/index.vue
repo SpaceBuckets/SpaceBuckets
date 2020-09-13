@@ -39,7 +39,7 @@ export default {
   },
   head() {
     return {
-      title: "Docs",
+      title: "Space Buckets - Docs",
     };
   },
 };
