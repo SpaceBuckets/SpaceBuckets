@@ -1,16 +1,11 @@
 <template>
-  <div class="thaswipe" v-on:scroll.passive="handleScroll" :key="componentKey" :style="[ progressScroll > 0 ? {overflowY:'hidden'} : '']">
+  <div class="thaswipe" ref="scroller" v-on:scroll.self="handleScroll" :key="componentKey" @touchend.self="touchEnded">
     <header :class="{'drome': $route.path.includes('/drome') }">
       <div class="nav-logo">
         <nuxt-link :to="{name: 'index'}" exact>SPACE BUCKETS</nuxt-link>
       </div>
       <a class="nav-toggle active" href="#mobile-spacer">
-        <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792">
-          <path
-            d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"
-            fill="#eee"
-          />
-        </svg>
+        <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" fill="#eee"/></svg>
       </a>
       <div class="nav-sep">
         <nuxt-link to="/materials">MATERIALS</nuxt-link>
@@ -22,9 +17,9 @@
       </div>
       <div id="stat"></div>
     </header>
-    <div class="scroll-container" :style="[ progressScroll > 0 ? {pointerEvents:'none'} : '']">
-      <nuxt class="swipable" />
-      <div class="rand-container swipable" v-if="swipeItem" style="backface-visibility:hidden">
+    <div class="scroll-container" >
+      <nuxt class="swipable" :style="[ progressScroll > 0 ? {pointerEvents:'none'} : '']"/>
+      <div class="rand-container swipable" v-if="swipeItem" style="backface-visibility:hidden" :style="[ progressScroll > 0 ? {pointerEvents:'none'} : '']">
         <div class="rand-skeleton" >
           <client-only>
             <div class="post-masonry">
@@ -35,37 +30,17 @@
               <div class="post-support">
                 <div class="post-source" v-if="swipeItem.a">
                   <div class="avatar-container">
-                    <svg viewBox="0 0 1792 1792">
-                      <path
-                        d="M1792 846q0 58-29.5 105.5t-79.5 72.5q12 46 12 96 0 155-106.5 287t-290.5 208.5-400 76.5-399.5-76.5-290-208.5-106.5-287q0-47 11-94-51-25-82-73.5t-31-106.5q0-82 58-140.5t141-58.5q85 0 145 63 218-152 515-162l116-521q3-13 15-21t26-5l369 81q18-37 54-59.5t79-22.5q62 0 106 43.5t44 105.5-44 106-106 44-105.5-43.5-43.5-105.5l-334-74-104 472q300 9 519 160 58-61 143-61 83 0 141 58.5t58 140.5zm-1374 199q0 62 43.5 106t105.5 44 106-44 44-106-44-105.5-106-43.5q-61 0-105 44t-44 105zm810 355q11-11 11-26t-11-26q-10-10-25-10t-26 10q-41 42-121 62t-160 20-160-20-121-62q-11-10-26-10t-25 10q-11 10-11 25.5t11 26.5q43 43 118.5 68t122.5 29.5 91 4.5 91-4.5 122.5-29.5 118.5-68zm-3-205q62 0 105.5-44t43.5-106q0-61-44-105t-105-44q-62 0-106 43.5t-44 105.5 44 106 106 44z"
-                        fill="#fff"
-                      />
-                    </svg>
+                    <svg viewBox="0 0 1792 1792"><path d="M1792 846q0 58-29.5 105.5t-79.5 72.5q12 46 12 96 0 155-106.5 287t-290.5 208.5-400 76.5-399.5-76.5-290-208.5-106.5-287q0-47 11-94-51-25-82-73.5t-31-106.5q0-82 58-140.5t141-58.5q85 0 145 63 218-152 515-162l116-521q3-13 15-21t26-5l369 81q18-37 54-59.5t79-22.5q62 0 106 43.5t44 105.5-44 106-106 44-105.5-43.5-43.5-105.5l-334-74-104 472q300 9 519 160 58-61 143-61 83 0 141 58.5t58 140.5zm-1374 199q0 62 43.5 106t105.5 44 106-44 44-106-44-105.5-106-43.5q-61 0-105 44t-44 105zm810 355q11-11 11-26t-11-26q-10-10-25-10t-26 10q-41 42-121 62t-160 20-160-20-121-62q-11-10-26-10t-25 10q-11 10-11 25.5t11 26.5q43 43 118.5 68t122.5 29.5 91 4.5 91-4.5 122.5-29.5 118.5-68zm-3-205q62 0 105.5-44t43.5-106q0-61-44-105t-105-44q-62 0-106 43.5t-44 105.5 44 106 106 44z" fill="#fff" /></svg>
                   </div>
-                  <div>
-                    <strong>Gardener:</strong>
-                    <a
-                      :href="`https://www.reddit.com/user/${swipeItem.author}`"
-                    >{{ swipeItem.author }}</a>
-                  </div>
-                  <div>
-                    <a :href="`https://www.reddit.com/user/${swipeItem.author}`">View on Reddit</a>
-                  </div>
+                  <div><strong>Gardener:</strong><a :href="`https://www.reddit.com/user/${swipeItem.author}`">{{ swipeItem.author }}</a></div>
+                  <div><a :href="`https://www.reddit.com/user/${swipeItem.author}`">View on Reddit</a></div>
                 </div>
                 <div class="placeholder-items">
-                  <div
-                    v-for="(placeholder, ee) in swipeItem.itemCount"
-                    :key="`placeholder-${ee}`"
-                    class="listad-inline placeholder"
-                  >
+                  <div v-for="(placeholder, ee) in swipeItem.itemCount" :key="`placeholder-${ee}`" class="listad-inline placeholder">
                     <a class="ad-ad ad-ad-inline" target="_blank" href="#">
-                      <div class="listad-img-container">
-                        <div class="img-placeholder"></div>
-                      </div>
+                      <div class="listad-img-container"><div class="img-placeholder"></div></div>
                       <p class="item-title"></p>
-                      <p class="item-price">
-                        <span class="sale-price"></span>
-                      </p>
+                      <p class="item-price"><span class="sale-price"></span></p>
                       <p class="item-brand"></p>
                     </a>
                   </div>
@@ -104,13 +79,20 @@ export default {
       swipeItem: [],
       componentKey: 0,
       progressScroll: 0,
+      lastPosition: 0,
     };
   },
   methods: {
+    touchEnded() {
+
+      if (this.progressScroll < 50) {
+     //this.$refs.scroller.scrollLeft = 0
+     console.log(this.$refs.scroller.scrollLeft)
+
+  }
+      },
     async handleScroll() {
       this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
-      console.log(this.progressScroll + "%");
-
       if (this.progressScroll > 99) {
         this.$router.push({ path: `/u/${this.swipeItem.s}` });
         this.componentKey += 1;
@@ -120,6 +102,8 @@ export default {
           this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
         }
       } 
+      this.$refs.scroller.style.overflowY = "hidden"
+
     },
   },
   async created() {
@@ -494,6 +478,8 @@ p {
   -webkit-overflow-scrolling: touch;
   overflow-x: scroll;
   scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+
   scroll-snap-stop: always;
   scroll-snap-type: x mandatory;
   display: grid;
@@ -508,6 +494,8 @@ p {
     flex: 1;
     scroll-snap-align: center;
     scroll-snap-stop: always;
+      overscroll-behavior-x: contain;
+
     min-width: 100vw;
     max-width: 100vw;
     overflow: auto;
