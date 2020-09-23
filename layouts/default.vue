@@ -137,6 +137,9 @@ header {
     a {
       font-weight: 700;
       font-size: 21px;
+      &:hover {
+        color: #fdd835 !important;
+      }
       &.nuxt-link-active {
         color: #fafafa;
       }
@@ -257,8 +260,9 @@ input:focus {
   }
 }
 .onlydesktop {
-  @media screen and (max-width: 1111px) {
-    display: none !important;
+  display: none !important;
+  @media screen and (min-width: 981px) {
+    display: block !important;
   }
 }
 .onlymobile {
@@ -626,4 +630,10 @@ width: 100px;
 }
 
 }
+
+.card:hover h2 {
+  color: #fdd835 !important;
+  i { color: #eee !important; }
+
+ }
 </style>
