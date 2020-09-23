@@ -1,5 +1,9 @@
 <template>
-  <div>
+ 
+
+  <div style="padding-top:50px" class="thaswipe" ref="scroller" v-on:scroll.self="handleScroll" :key="componentKey" @touchend.self="touchEnded">
+
+ <div class="swipable">
     <div class="post-masonry">
       <div class="post-content">
      <h2>{{ post.t }}</h2>
@@ -37,12 +41,12 @@
               </a>
             </div>            
           </div>     
-        </div>      
-      <div class="img-container" v-for="(img,i) in post.i" :key="`section-${i}`">
-       <img :src="`/builds/${post.s}/${img.h}`" alt="" />
-       <div :style="{'padding-top': img.s +'%'}"></div>
+     
       </div> 
-
+        <div class="img-container" v-for="(img,ie) in post.i" :key="`section-${ie}`">
+                <img :src="`/builds/${post.s}/${img.h}`" alt />
+                <div :style="{'padding-top': img.s +'%'}"></div>
+              </div>
     </div>
 
     <div class="cards-container" v-if="relatedItems">
@@ -58,48 +62,118 @@
     <nuxt-link class="load-more" :to="{name: 'gallery'}">View More</nuxt-link>
 
   </div>
+      <div class="rand-container onlymobile swipable" v-if="swipeItem" style="backface-visibility:hidden" :style="[ progressScroll > 0 ? {pointerEvents:'none'} : '']">
+        <div class="rand-skeleton" >
+          <client-only>
+            <div class="post-masonry">
+              <div class="post-content">
+                <h2>{{ swipeItem.t }}</h2>
+                <div v-html="swipeItem.c"></div>
+              </div>
+              <div class="post-support">
+                <div class="post-source" v-if="swipeItem.a">
+                  <div class="avatar-container">
+                    <svg viewBox="0 0 1792 1792"><path d="M1792 846q0 58-29.5 105.5t-79.5 72.5q12 46 12 96 0 155-106.5 287t-290.5 208.5-400 76.5-399.5-76.5-290-208.5-106.5-287q0-47 11-94-51-25-82-73.5t-31-106.5q0-82 58-140.5t141-58.5q85 0 145 63 218-152 515-162l116-521q3-13 15-21t26-5l369 81q18-37 54-59.5t79-22.5q62 0 106 43.5t44 105.5-44 106-106 44-105.5-43.5-43.5-105.5l-334-74-104 472q300 9 519 160 58-61 143-61 83 0 141 58.5t58 140.5zm-1374 199q0 62 43.5 106t105.5 44 106-44 44-106-44-105.5-106-43.5q-61 0-105 44t-44 105zm810 355q11-11 11-26t-11-26q-10-10-25-10t-26 10q-41 42-121 62t-160 20-160-20-121-62q-11-10-26-10t-25 10q-11 10-11 25.5t11 26.5q43 43 118.5 68t122.5 29.5 91 4.5 91-4.5 122.5-29.5 118.5-68zm-3-205q62 0 105.5-44t43.5-106q0-61-44-105t-105-44q-62 0-106 43.5t-44 105.5 44 106 106 44z" fill="#fff" /></svg>
+                  </div>
+                  <div><strong>Gardener:</strong><a :href="`https://www.reddit.com/user/${swipeItem.author}`">{{ swipeItem.author }}</a></div>
+                  <div><a :href="`https://www.reddit.com/user/${swipeItem.author}`">View on Reddit</a></div>
+                </div>
+                <div class="placeholder-items">
+                  <div v-for="(placeholder, ee) in swipeItem.itemCount" :key="`placeholder-${ee}`" class="listad-inline placeholder">
+                    <a class="ad-ad ad-ad-inline" target="_blank" href="#">
+                      <div class="listad-img-container"><div class="img-placeholder"></div></div>
+                      <p class="item-title"></p>
+                      <p class="item-price"><span class="sale-price"></span></p>
+                      <p class="item-brand"></p>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="img-container" v-for="(img,i) in swipeItem.i" :key="`section-${i}`">
+                <img :src="`/builds/${swipeItem.s}/${img.h}`" alt />
+                <div :style="{'padding-top': img.s +'%'}"></div>
+              </div>
+            </div>
+          </client-only>
+        </div>
+      </div>
+    </div>
+
+
 </template>
 
 <script>
-import { singlePost, randomize } from "~/store/flatDB";
+import { singlePost, singleRandom, randomize } from "~/store/flatDB";
 
 export default {
-
   async asyncData({ params }) {
-    const loading = true
-    const post = await singlePost(params.slug) 
-    if (post.z !== "" || post.z !== undefined && post.z.length > 0) { post.itemCount = post.z.split(",").length }
-    return { post, loading }
-  },  
+    const loading = true;
+    const post = await singlePost(params.slug);
+    if (post.z !== "" || (post.z !== undefined && post.z.length > 0)) {
+      post.itemCount = post.z.split(",").length;
+    }
+    return { post, loading };
+  },
   data() {
     return {
       amazonItems: [],
       relatedItems: [],
+      swipeItem: [],
+      componentKey: 0,
+      progressScroll: 0,
+      lastPosition: 0,      
     };
   },
   async created() {
     if (process.client) {
-      this.relatedItems = await randomize(8) 
+      this.swipeItem = await singleRandom();
+      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
+        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
+      }      
+      this.relatedItems = await randomize(8);
       if (this.post.z !== "") {
-        const zItems = fetch(`https://bucket-builder.herokuapp.com/bucket-builder/${this.post.z}`)
-        .then(response => response.json())
-        .then(data => this.amazonItems = data.ItemsResult.Items)
+        const zItems = fetch(
+          `https://bucket-builder.herokuapp.com/bucket-builder/${this.post.z}`
+        )
+          .then((response) => response.json())
+          .then((data) => (this.amazonItems = data.ItemsResult.Items));
       }
     }
   },
+  methods: {
+    touchEnded() {
+
+      if (this.progressScroll < 50) {
+     //this.$refs.scroller.scrollLeft = 0
+     console.log(this.$refs.scroller.scrollLeft)
+
+  }
+      },
+    async handleScroll() {
+      this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
+      if (this.progressScroll > 50) {
+        this.$router.push({ path: `/u/${this.swipeItem.s}` });
+        //this.componentKey += 1;
+    
+      } 
+
+    },
+  },  
   mounted() {
-    this.loading = false
+    this.loading = false;
+  if (process.client && window) {
+    window.history.scrollRestoration = 'auto';
+  }    
   },
   head() {
     return {
       title: `Space Buckets - ${this.post.t}`,
     };
   },
-}; 
+};
 </script>
 
 <style scoped lang="scss">
-
 .load-more {
   color: #eee;
   border: 1px solid #333;
@@ -108,26 +182,30 @@ export default {
   cursor: pointer;
   width: 300px;
   margin: 10px auto;
-      color: #fafafa;
-    font-family: "Montserrat", sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    display: block;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
   &:hover {
     color: #fdd835;
   }
 }
 .related {
   margin-top: 20px;
-  h3 { color: #fff; margin: 20px 0; text-transform: uppercase; }
+  h3 {
+    color: #fff;
+    margin: 20px 0;
+    text-transform: uppercase;
+  }
 }
 .post-content {
-  padding:10px 15px 20px;
+  padding: 10px 15px 20px;
   background: #fff;
   min-height: 150px;
-  border-right: 1px solid #1A1A1B;
+  border-right: 1px solid #1a1a1b;
   overflow: auto;
   max-height: 3000px;
   h2 {
@@ -139,7 +217,7 @@ export default {
     overflow: auto;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;    
+    align-items: baseline;
     span {
       float: right;
       font-size: 16px;
@@ -162,7 +240,7 @@ export default {
   column-gap: 0;
   font-size: 0;
   background: #000;
-  border-top: 1px solid #1A1A1B; 
+  border-top: 1px solid #1a1a1b;
   @media (max-width: 1220px) {
     column-count: 2;
     column-gap: 0;
@@ -170,13 +248,13 @@ export default {
   @media (max-width: 660px) {
     column-count: 1;
     column-gap: 0;
-  }  
+  }
   .img-container {
     background: #151515;
     position: relative;
     overflow: auto;
     max-height: 3000px;
-    border: 1px solid #1A1A1B;
+    border: 1px solid #1a1a1b;
     user-select: none;
     img {
       position: absolute;
@@ -187,112 +265,116 @@ export default {
 }
 
 .post-support {
-  &:after { content: ""; display: table; clear: both; }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   background: #fff;
-  border-right: 1px solid #1A1A1B;
-  border-bottom: 1px solid #1A1A1B;
+  border-right: 1px solid #1a1a1b;
+  border-bottom: 1px solid #1a1a1b;
   overflow: auto;
   max-height: 3000px;
   position: relative;
-  .real-items { 
+  .real-items {
     position: absolute;
-    bottom:0;
+    bottom: 0;
     left: 0;
     right: 0;
   }
-  h3 { 
-    font-size: 16px; 
+  h3 {
+    font-size: 16px;
     border-bottom: 1px solid #eee;
     text-transform: uppercase;
     padding: 10px 20px;
   }
-  
-.listad-inline {
-  background: #fff;
-  width: 100%;
-  z-index: 999;
-  float: left;
-  border-top: 1px solid #eee;
-  &:after {
-    display: table;
-    content: "";
-    clear: both;
-  }
-  .listad-img-container {
-    width: 60px;
-    margin-top: 3px;
+
+  .listad-inline {
+    background: #fff;
+    width: 100%;
+    z-index: 999;
     float: left;
-    max-height: 50px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 5px;    
-    img {
-      padding: 5px;
-    }
-  }
-  p {
-    margin: 0;
-  }
-  a {
-    text-decoration: none;
-    display: block;
-    position: relative;
-    padding-left: 70px;
-    height: 60px;
-    background: white;
-    padding-right: 130px;
+    border-top: 1px solid #eee;
     &:after {
       display: table;
       content: "";
       clear: both;
     }
-  }
-  .item-title {
-    float: left;
-    margin: 10px 0 0 5px;
-    max-height: 40px;
-    overflow: hidden;
-    line-height: 20px !important;
-    padding: 0 !important;
-    color: #1d6ebf !important;
-    font-size: 15px !important;
+    .listad-img-container {
+      width: 60px;
+      margin-top: 3px;
+      float: left;
+      max-height: 50px;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 5px;
+      img {
+        padding: 5px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      position: relative;
+      padding-left: 70px;
+      height: 60px;
+      background: white;
+      padding-right: 130px;
+      &:after {
+        display: table;
+        content: "";
+        clear: both;
+      }
+    }
+    .item-title {
+      float: left;
+      margin: 10px 0 0 5px;
+      max-height: 40px;
+      overflow: hidden;
+      line-height: 20px !important;
+      padding: 0 !important;
+      color: #1d6ebf !important;
+      font-size: 15px !important;
 
-    &::first-line {
+      &::first-line {
+        font-weight: bold;
+      }
+    }
+    .item-price {
+      position: absolute;
+      top: 10px;
+      width: auto !important;
+      right: 30px;
+      font-size: 14px !important;
+      margin: 0 !important;
+      color: #a33426 !important;
       font-weight: bold;
     }
+    .item-brand {
+      font-size: 14px !important;
+      position: absolute;
+      right: 30px;
+      width: 95px !important;
+      bottom: 11px;
+      font-weight: normal !important;
+      text-align: right;
+      color: #34353675 !important;
+      overflow: hidden;
+      height: 18px;
+    }
+    .item-tag {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
   }
-  .item-price {
-    position: absolute;
-    top: 10px;
-    width: auto !important;
-    right: 30px;
-    font-size: 14px !important;
-    margin: 0 !important;
-    color: #a33426 !important;
-    font-weight: bold;
-  }
-  .item-brand {
-    font-size: 14px !important;
-    position: absolute;
-    right: 30px;
-    width: 95px !important;
-    bottom: 11px;
-    font-weight: normal !important;
-    text-align: right;
-    color: #34353675 !important;
-    overflow: hidden;
-    height: 18px;
-  }
-  .item-tag {
-    position: absolute;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-  }
-}
 }
 .cards-container {
   overflow: auto;
@@ -300,7 +382,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1280px;
-  margin: 50px auto 0;    
+  margin: 50px auto 0;
   .card {
     width: 300px;
     height: 387px;
@@ -308,7 +390,7 @@ export default {
     float: left;
     position: relative;
     color: #fff;
-    background: #1A1A1B;
+    background: #1a1a1b;
     h2 {
       position: absolute;
       top: 0;
@@ -339,7 +421,7 @@ export default {
   }
   50% {
     opacity: 0.4;
-  }  
+  }
   100% {
     opacity: 1;
   }
@@ -350,16 +432,15 @@ export default {
     overflow: visible;
   }
   .img-placeholder {
-      height: 45px;
-      width: 45px;
-      background: #34353610;
-      display: block;
-      border-radius: 50%;
-      position: relative;
-      top: 5px;
-      left: 5px;
-      animation: progress 2s linear infinite;
-
+    height: 45px;
+    width: 45px;
+    background: #34353610;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    animation: progress 2s linear infinite;
   }
   .item-title {
     &:before,
@@ -406,6 +487,15 @@ export default {
   }
 }
 
-
-
+/* .rand-skeleton {
+    position: fixed;
+    top: 50px;
+    right: -100vw;
+    width: 100vw;
+        right: -100vw;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+} */
 </style>

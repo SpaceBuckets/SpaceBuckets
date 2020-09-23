@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding-top:50px">
     <div class="post-masonry">
       <div class="post-content">
      <h2>{{ post.t }}</h2>

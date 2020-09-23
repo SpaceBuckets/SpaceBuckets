@@ -1,47 +1,35 @@
 <template>
   <div>
     <header :class="{'drome': $route.path.includes('/drome') }">
-      <div class="nav-logo">
+      <div class="nav-logo" >
         <nuxt-link :to="{name: 'index'}" exact>SPACE BUCKETS</nuxt-link>
       </div>
-      <a class="nav-toggle active" href="#mobile-spacer">
-        <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" fill="#eee"></path></svg>
-      </a>
-<!--       <a class="nav-toggle" href="#" @click="toggleActive = !toggleActive" :class="{'active': toggleActive}"><svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" fill="#eee"></path></svg>
-      </a>   -->    
-      <div class="nav-sep">
-        <nuxt-link to="/materials">MATERIALS</nuxt-link>
-        <nuxt-link to="/build">BUILD</nuxt-link>
+      <button class="nav-toggle active" @click="openNav = !openNav">
+        <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792"><path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" fill="#eee"/></svg>
+      </button>
+      <div class="nav-sep" :class="{ open: openNav }">
+        <nuxt-link @click="openNav = false" to="/materials">MATERIALS</nuxt-link>
+        <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
-        <nuxt-link class="onlydesktop" to="/designer">DESIGN</nuxt-link>
+        <nuxt-link to="/designer">DESIGN</nuxt-link>
         <nuxt-link to="/drome">DROME</nuxt-link>
-      </div> 
-      <div class="random-link">
-          <button style="opacity: 0">
-            <span>RANDOM</span><svg height="16" width="16" viewBox="0 0 1792 1792"><path d="M666 481q-60 92-137 273-22-45-37-72.5t-40.5-63.5-51-56.5-63-35-81.5-14.5h-224q-14 0-23-9t-9-23v-192q0-14 9-23t23-9h224q250 0 410 225zm1126 799q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192q-32 0-85 .5t-81 1-73-1-71-5-64-10.5-63-18.5-58-28.5-59-40-55-53.5-56-69.5q59-93 136-273 22 45 37 72.5t40.5 63.5 51 56.5 63 35 81.5 14.5h256v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23zm0-896q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192h-256q-48 0-87 15t-69 45-51 61.5-45 77.5q-32 62-78 171-29 66-49.5 111t-54 105-64 100-74 83-90 68.5-106.5 42-128 16.5h-224q-14 0-23-9t-9-23v-192q0-14 9-23t23-9h224q48 0 87-15t69-45 51-61.5 45-77.5q32-62 78-171 29-66 49.5-111t54-105 64-100 74-83 90-68.5 106.5-42 128-16.5h256v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23z" fill="#eee"/></svg>
-          </button>           
-        <client-only>
-          <button @click="randomLink()">
-            <span>RANDOM</span><svg height="16" width="16" viewBox="0 0 1792 1792"><path d="M666 481q-60 92-137 273-22-45-37-72.5t-40.5-63.5-51-56.5-63-35-81.5-14.5h-224q-14 0-23-9t-9-23v-192q0-14 9-23t23-9h224q250 0 410 225zm1126 799q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192q-32 0-85 .5t-81 1-73-1-71-5-64-10.5-63-18.5-58-28.5-59-40-55-53.5-56-69.5q59-93 136-273 22 45 37 72.5t40.5 63.5 51 56.5 63 35 81.5 14.5h256v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23zm0-896q0 14-9 23l-320 320q-9 9-23 9-13 0-22.5-9.5t-9.5-22.5v-192h-256q-48 0-87 15t-69 45-51 61.5-45 77.5q-32 62-78 171-29 66-49.5 111t-54 105-64 100-74 83-90 68.5-106.5 42-128 16.5h-224q-14 0-23-9t-9-23v-192q0-14 9-23t23-9h224q48 0 87-15t69-45 51-61.5 45-77.5q32-62 78-171 29-66 49.5-111t54-105 64-100 74-83 90-68.5 106.5-42 128-16.5h256v-192q0-14 9-23t23-9q12 0 24 10l319 319q9 9 9 23z" fill="#eee"/></svg>
-          </button>
-        </client-only>     
-      </div>       
+      </div>
+      
+      <div id="stat"></div>
     </header>
-    <section>
-      <nuxt />
-    </section>
-    <div id="mobile-spacer" style="height:50px">a</div>
-      <div id="mobile-menu" class="onlymobile nav-sep">
-        <div>
-          <nuxt-link to="/materials">MATERIALS</nuxt-link>
-          <nuxt-link to="/docs">DOCS</nuxt-link>
-          <nuxt-link to="/build">BUILD</nuxt-link>
-          <nuxt-link to="/gallery">GALLERY</nuxt-link>
-          <nuxt-link to="/drome">DROME</nuxt-link>
-        </div>
-      </div> 
-      <div id="stat"></div>    
+      <nuxt/>
+
+
+<!--      <div id="mobile-menu" class="onlymobile nav-sep">
+      <div>
+        <nuxt-link to="/materials">MATERIALS</nuxt-link>
+        <nuxt-link to="/docs">DOCS</nuxt-link>
+        <nuxt-link to="/build">BUILD</nuxt-link>
+        <nuxt-link to="/gallery">GALLERY</nuxt-link>
+        <nuxt-link to="/drome">DROME</nuxt-link>
+      </div>
+    </div>  -->
   </div>
 </template>
 
@@ -51,18 +39,17 @@ import { singleRandom } from "~/store/flatDB";
 export default {
   scrollToTop: true,
   data() {
-    return {
-      randomPost: [],
-      toggleActive: false,
+    return {  
+      openNav: false
+    };
+  },  
+  watch:{
+    $route (to, from){
+          this.openNav = false
     }
-  },
-  methods: {
-    async randomLink() {
-      this.randomPost = await singleRandom()
-      this.$router.push({ path: `/u/${this.randomPost.s}` })
-    }
-  },
-  updated() {
+}  
+ 
+  /*   updated() {
     var src = document.getElementById("stat");
     src.innerHTML = "" 
     this.$nextTick(() => {
@@ -70,16 +57,15 @@ export default {
       img.src = "https://c.statcounter.com/8400951/0/f591167d/1/?t=" + new Date().getTime();
       src.appendChild(img);
 		});
-  }
+  } */
 };
 </script>  
 <style lang="scss" scoped>
-
 header {
   background: #151515;
   color: #eee;
   z-index: 99;
-  grid-area: sidebar;
+  //grid-area: header;
   display: flex;
   position: fixed;
   backface-visibility: hidden;
@@ -91,7 +77,9 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 999;
-  & + section { grid-area: content; }
+/*   & + section {
+    grid-area: content;
+  } */
   &.drome {
     border-bottom: 2px solid #004d47;
   }
@@ -99,8 +87,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-
-  }    
+  }
   div,
   a {
     color: #fafafa;
@@ -113,7 +100,7 @@ header {
     &:hover {
       color: #fdd835;
     }
-  } 
+  }
   .nav-toggle {
     display: none;
     position: absolute;
@@ -121,57 +108,78 @@ header {
     right: 0px;
     padding: 15px 10px;
     cursor: pointer;
-    @media (max-width: 980px) { 
-          align-items: center;
-          justify-content: center;
-          &.active   {    display: flex;} 
-
-      }     
+    background: transparent;
+    border: 0;
+    &:focus { outline: 0 }
+    @media (max-width: 980px) {
+      align-items: center;
+      justify-content: center;
+      &.active {
+        display: flex;
+      }
+    }
   }
   .nav-logo {
     padding: 0 15px;
     min-height: 50px;
     display: flex;
     align-items: center;
+    
     a {
       font-weight: 700;
       font-size: 21px;
       &.nuxt-link-active {
         color: #fafafa;
-      }      
+      }
     }
   }
 }
 
-  .nav-sep {
-    padding: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    a {
-      display: block;
-      flex: 1;
-      padding: 0 20px;
-    }    
-    div,
-    a {
-      color: #fafafa;
-      font-family: "Montserrat", sans-serif;
-      font-size: 17px;
-      font-weight: 600;
-      display: block;
-      text-decoration: none;
-      &.nuxt-link-active,
-      &:hover {
-        color: #fdd835;
-      }
-    }    
-    @media (max-width: 980px) {
-      display: none;
-      a {
-        padding: 10px 0;
-      }
-    }    
+.nav-sep {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    display: block;
+    flex: 1;
+    padding: 0 20px;
   }
+  div,
+  a {
+    color: #fafafa;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    text-decoration: none;
+    &.nuxt-link-active,
+    &:hover {
+      color: #fdd835;
+    }
+  }
+  @media (max-width: 980px) {
+    display: none;
+    &.open { 
+      display: flex;
+&:after  {
+  content: "";
+        display: block !important;
+        position: fixed;
+        background:rgba(0,0,0,0.65);
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        z-index: -1;
+         }
+    }
+    a {
+      padding: 10px 0;
+          flex: 1;
+    min-width: 33%;
+    }
+  }
+}
 
 input::-webkit-input-placeholder {
   color: #eee;
@@ -191,13 +199,50 @@ input:focus {
 </style>
 
 <style lang="scss">
+.listad-inline.placeholder {
+  .listad-img-container {
+    overflow: visible;
+  }
+  .img-placeholder {
+    height: 45px;
+    width: 45px;
+    background: #34353610;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    animation: progress 2s linear infinite;
+  }
+  .item-title {
+    &:before,
+    &:after {
+      content: "";
+      min-height: 15px;
+      background: #34353610;
+      display: block;
+      position: absolute;
+      right: 120px;
+      left: 75px;
+      top: 10px;
+      animation: progress 2s linear infinite;
+    }
+    &:before {
+      top: initial;
+      bottom: 10px;
+      right: 150px;
+    }
+  }
+}
 
 #mobile-menu {
   grid-area: footer;
   min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
-  a { font-size: 18px !important; }
+  a {
+    font-size: 18px !important;
+  }
   > div {
     flex: 1;
   }
@@ -241,8 +286,11 @@ input:focus {
     max-width: 100%;
     padding-bottom: 0;
     padding: 15px 15px 0;
-  }  
-  p { color: #eee; line-height: 1.2em; }
+  }
+  p {
+    color: #eee;
+    line-height: 1.2em;
+  }
   h2 {
     font-size: 20px;
     color: #eee;
@@ -263,17 +311,25 @@ html {
 body {
   background-color: #000;
   margin: 0;
-  margin-top: 50px;
+}/* 
+::-webkit-scrollbar
+{
+  background-color: #000;
 }
-
-/*   .sb-grid {
+::-webkit-scrollbar-thumb
+{
+    background-color: #555;
+}
+  .sb-grid {
     display: grid;
     grid-template-rows: 50px 1fr auto;
     grid-template-areas: "sidebar" "content" "footer";
     min-height: 100vh; 
   } */
 
-a { color: #136baf; }
+a {
+  color: #136baf;
+}
 
 h1,
 h2,
@@ -291,12 +347,14 @@ h3 {
 *:before,
 *:after {
   box-sizing: border-box;
-  -webkit-tap-highlight-color: rgba(255,255,255,0) !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
 }
 
 .__nuxt-error-page {
   background: #000 !important;
-  svg { fill: #333 !important; }
+  svg {
+    fill: #333 !important;
+  }
 }
 
 h1 {
@@ -324,11 +382,24 @@ p {
     font-size: 17px;
     font-weight: 600;
     cursor: pointer;
-    + button { position: absolute; top: 0; padding: 15px 0; }
-    &:hover { color: #fdd835; }
-    &:focus { outline: 0; }
-    span { display: inline-block; padding-right: 8px; }
-    &:hover svg path { fill: #fdd835; }
+    + button {
+      position: absolute;
+      top: 0;
+      padding: 15px 0;
+    }
+    &:hover {
+      color: #fdd835;
+    }
+    &:focus {
+      outline: 0;
+    }
+    span {
+      display: inline-block;
+      padding-right: 8px;
+    }
+    &:hover svg path {
+      fill: #fdd835;
+    }
   }
   @media (max-width: 980px) {
     position: fixed;
@@ -342,15 +413,200 @@ p {
     align-items: center;
     display: flex !important;
     box-shadow: 0px 0px 2px #151515;
-    button span { display: none; }
-    button svg { width: 50px; height: auto; padding: 14px; }
-    button + button { padding: 0; }
+    button span {
+      display: none;
+    }
+    button svg {
+      width: 50px;
+      height: auto;
+      padding: 14px;
+    }
+    button + button {
+      padding: 0;
+    }
   }
 }
 
 #stat {
   img {
     width: auto;
+  }
+}
+  @media (max-width: 980px) {
+
+.thaswipe {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+  //scroll-behavior: smooth;
+  overscroll-behavior-x: contain;
+
+  scroll-snap-stop: always;
+  scroll-snap-type: x mandatory;
+  height: 100vh;
+    display: flex;
+  min-height: 100vh;
+  padding-top: 50px;
+  .swipable {
+    flex: 1;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow: auto;
+  }
+}
+}
+
+.scroll-container {
+  display: flex;
+  min-height: 100vh;
+
+  .swipable {
+    flex: 1;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+    
+    min-width: 100vw;
+    max-width: 100vw;
+    overflow: auto;
+  }
+}
+
+.post-source {
+  font-size: 14px;
+  padding: 10px 20px 10px;
+  border-top: 1px solid #eee;
+  line-height: 20px;
+  height: 60px;
+  position: relative;
+  padding-left: 75px;
+  .avatar-container {
+    padding: 8px;
+    max-height: 60px;
+    width: 60px;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    svg {
+      background: #eee;
+      border-radius: 50%;
+      padding: 7.5px;
+      width: 100%;
+    }
+  }
+}
+
+.post-support {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  background: #fff;
+  border-right: 1px solid #1a1a1b;
+  border-bottom: 1px solid #1a1a1b;
+  overflow: auto;
+  max-height: 3000px;
+  position: relative;
+  .real-items {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  h3 {
+    font-size: 16px;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    padding: 10px 20px;
+  }
+
+  .listad-inline {
+    background: #fff;
+    width: 100%;
+    z-index: 999;
+    float: left;
+    border-top: 1px solid #eee;
+    &:after {
+      display: table;
+      content: "";
+      clear: both;
+    }
+    .listad-img-container {
+      width: 60px;
+      margin-top: 3px;
+      float: left;
+      max-height: 50px;
+      overflow: visible;
+      position: absolute;
+      top: 0;
+      left: 5px;
+      img {
+        padding: 5px;
+      }
+    }
+    p {
+      margin: 0;
+    }
+    a {
+      text-decoration: none;
+      display: block;
+      position: relative;
+      padding-left: 70px;
+      height: 60px;
+      background: white;
+      padding-right: 130px;
+      &:after {
+        display: table;
+        content: "";
+        clear: both;
+      }
+    }
+    .item-title {
+      float: left;
+      margin: 10px 0 0 5px;
+      max-height: 40px;
+      overflow: hidden;
+      line-height: 20px !important;
+      padding: 0 !important;
+      color: #1d6ebf !important;
+      font-size: 15px !important;
+
+      &::first-line {
+        font-weight: bold;
+      }
+    }
+    .item-price {
+      position: absolute;
+      top: 10px;
+      width: auto !important;
+      right: 30px;
+      font-size: 14px !important;
+      margin: 0 !important;
+      color: #a33426 !important;
+      font-weight: bold;
+    }
+    .item-brand {
+      font-size: 14px !important;
+      position: absolute;
+      right: 30px;
+      width: 95px !important;
+      bottom: 11px;
+      font-weight: normal !important;
+      text-align: right;
+      color: #34353675 !important;
+      overflow: hidden;
+      height: 18px;
+    }
+    .item-tag {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+    }
   }
 }
 

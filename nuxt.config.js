@@ -6,6 +6,9 @@ export default {
 /*   router: {
     base: '/nuxt/'
   },   */
+  server: {
+    host: '0', // default: localhost,
+  },  
   generate: {
     //subFolders: false,
     concurrency: 1,

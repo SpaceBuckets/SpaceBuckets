@@ -124,7 +124,7 @@ import { getDocs, singleDoc } from "~/store/flatDB";
   h3 { color: #fff; margin: 20px 0; text-transform: uppercase; }
 }
 .post-content {
-  padding:10px 20px 1px;
+  padding:10px 15px 20px;
   background: #fff;
   min-height: 150px;
   border-right: 1px solid #1A1A1B;

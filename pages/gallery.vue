@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery-container">
+  <div class="gallery-container" style="padding-top:50px">
     <div class="search-sidebar">
       <div class="sidebar-content">
         <h2>GALLERY</h2>
