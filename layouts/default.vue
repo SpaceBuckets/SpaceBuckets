@@ -16,7 +16,7 @@
         <nuxt-link to="/drome">DROME</nuxt-link>
       </div>
       
-      <div style="position:absolute" id="stat"></div>
+      <div id="stat"></div>
     </header>
       <nuxt/>
 
@@ -619,4 +619,11 @@ p {
   }
 }
 
+#stat {
+width: 100px;
+  @media (max-width: 980px) {
+    position: absolute;
+}
+
+}
 </style>
