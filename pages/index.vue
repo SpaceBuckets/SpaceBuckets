@@ -139,7 +139,7 @@ export default {
   text-align: center;
   font-size: 0;
   overflow: hidden;
-  margin-top: 10px;
+  margin-top: 60px;
   width: 100%;
   height: 75px;
   position: relative;

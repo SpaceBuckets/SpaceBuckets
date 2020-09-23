@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="padding-top:50px">
     <div class="post-content">
       <h2>SPACE BUCKETS MANIFESTO</h2>
       <div>

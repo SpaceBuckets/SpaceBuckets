@@ -1,5 +1,5 @@
 <template>
-  <div class="builder">
+  <div style="padding-top:50px">
     <iframe src="https://boletinextraoficial.com/design/" style="width:100%; height:100vh;border:0;"></iframe>
   </div>
 </template>

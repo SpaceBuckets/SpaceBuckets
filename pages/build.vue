@@ -1097,8 +1097,9 @@ export default {
 <style lang="scss" scoped>
 #app {
   padding-left: 250px;
+  padding-top: 50px;
   @media (max-width: 980px) {
-    padding: 0;
+    padding-left: 0;
   }  
 }
 html {

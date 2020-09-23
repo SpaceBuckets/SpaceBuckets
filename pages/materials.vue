@@ -556,8 +556,10 @@ section.shopping-list {
   align-items: flex-start;
   //max-width: 1100px;
   padding-left: 250px;
+    padding-top: 50px;
+
   @media (max-width: 980px) {
-    padding: 0;
+    padding-left: 0;
   }
 }
 
