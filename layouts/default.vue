@@ -16,7 +16,7 @@
         <nuxt-link to="/drome">DROME</nuxt-link>
       </div>
       
-      <div id="stat"></div>
+      <div style="position:absolute" id="stat"></div>
     </header>
       <nuxt/>
 
@@ -47,9 +47,18 @@ export default {
     $route (to, from){
           this.openNav = false
     }
-}  
- 
-  /*   updated() {
+}, 
+      mounted() {
+
+    this.$nextTick(() => {
+    var src = document.getElementById("stat");
+    src.innerHTML = ""       
+      var img = document.createElement("img");
+      img.src = "https://c.statcounter.com/8400951/0/f591167d/1/?t=" + new Date().getTime();
+      src.appendChild(img);
+		});
+  }, 
+     updated() {
     var src = document.getElementById("stat");
     src.innerHTML = "" 
     this.$nextTick(() => {
@@ -57,7 +66,7 @@ export default {
       img.src = "https://c.statcounter.com/8400951/0/f591167d/1/?t=" + new Date().getTime();
       src.appendChild(img);
 		});
-  } */
+  } 
 };
 </script>  
 <style lang="scss" scoped>
