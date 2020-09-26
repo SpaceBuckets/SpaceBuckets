@@ -3,6 +3,9 @@
 
 </template>
 
-<style>
+<script>
+export default {
+  name: 'explode',
+};
+</script>
 
-</style>

@@ -143,36 +143,6 @@ display: flex;
     .skeleton { display: block;   }
     .card { display: none; }
   }
-  .card {
-    width: 300px;
-    height:387px;
-    margin: 10px;
-    float: left;
-    position: relative;
-    color: #fff;
-    background: rgba(255,255,255,0.1);
-    > h2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      color: #fafafa;
-      font-family: 'montserrat', Arial, Helvetica, sans-serif;
-      text-decoration: none;
-      font-size: 16px;
-      letter-spacing: -1px;
-      line-height: 32px;
-      padding-left: 15px;
-      background-color: rgba(0, 0, 0, 0.6);
-      text-transform: uppercase;
-    }
-    > p {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-  }
 }
 
 </style>

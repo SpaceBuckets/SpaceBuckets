@@ -1,6 +1,6 @@
 <template>
   <div class="builder">
-    <iframe src="https://bucketdrome.netlify.app/" style="width:100%; height:100vh;border:0;"></iframe>
+    <iframe src="https://bucketdrome.netlify.app/" style="padding-top:50px;width:100%; height:100vh;border:0;"></iframe>
   </div>
 </template>
 

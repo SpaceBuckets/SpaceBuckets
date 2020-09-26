@@ -16,7 +16,8 @@
           <div class="select-filter-container">
             <div class="filter-single-top">Per Page</div>
             <select name id @change="handlePerPage()">
-              <option value="10" selected>10</option>
+              <option value="10">10</option>
+              <option value="25" selected>25</option>
               <option value="50">50</option>
               <option value="100">100</option>
             </select>
@@ -78,18 +79,7 @@
 
     <div class="cards-wrapper">
       <div class="cards-container">
-        <nuxt-link
-          class="card"
-          v-for="post in posts"
-          :key="post.s"
-          :to="{name: 'u-slug', params: { slug: `${post.s}`} }"
-        >
-          <h2>
-            {{ post.t }}
-            <i>{{ post.v }}</i>
-          </h2>
-          <img :src="`../builds/${post.s}/cover.jpg`" alt />
-        </nuxt-link>
+        <card v-for="post in posts" :key="post.s" :id="post" />
       </div>
 
       <div class="top-wrapper">
@@ -107,7 +97,7 @@
 import { filterBuilds, getBuilds, randomize } from "~/store/flatDB";
 export default {
   async asyncData() {
-    const posts = await filterBuilds(10, 1, "asc");
+    const posts = await filterBuilds(24, 1, "asc");
     const allPosts = await getBuilds();
     return { posts, allPosts };
   },
@@ -125,7 +115,7 @@ export default {
     };
   },
   created() {
-    this.num = 10;
+    this.num = 24;
     this.page = 1;
     this.sort = "asc";
     var numberPosts = this.allPosts.length;
@@ -317,36 +307,6 @@ export default {
     }
     .card {
       display: none;
-    }
-  }
-  .card {
-    width: 300px;
-    height: 387px;
-    margin: 10px;
-    float: left;
-    position: relative;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.1);
-    > h2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      color: #fafafa;
-      font-family: "montserrat", Arial, Helvetica, sans-serif;
-      text-decoration: none;
-      font-size: 16px;
-      letter-spacing: -1px;
-      line-height: 32px;
-      padding-left: 15px;
-      background-color: rgba(0, 0, 0, 0.6);
-      text-transform: uppercase;
-    }
-    > p {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
     }
   }
 }

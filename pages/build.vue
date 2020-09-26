@@ -1166,8 +1166,6 @@ section {
   font-size: 14px;
   line-height: 20px;
   border-right: 1px solid #eee;
-
-  //background: #fff;
   user-select: none;
   color: #222;
   cursor: pointer;
@@ -1188,12 +1186,8 @@ section {
   @media screen and (max-width: 630px) {
         border-bottom: 1px solid #eee;
 
-    img { height: 60px !important; } 
+    img { height: 60px !important;width: auto; } 
     .product-title { height: 20px; -webkit-line-clamp: 1; padding-right: 20px; }
-/*    svg,
-   .item-title + div { display: none; }
-   &.active .item-title + div,
-   &.active svg { display: block; } */
    &.active { min-height: 94px; }
   }
   &:hover {
@@ -1268,11 +1262,6 @@ section {
       border-radius: 50%;
       margin: 0 auto;
     }
-    i {
-      //display: block;
-      //color: #888;
-      //font-size: 14px;
-    }
   }
 }
 
@@ -1298,10 +1287,8 @@ section {
   color: #a33426;
   font-weight: bold;
   i {
-    //font-size: 12px;
     font-style: normal;
     position: relative;
-    //top: -5px
   }
   &:before {
     content: "$";
@@ -1401,11 +1388,7 @@ section {
 }
 
 .amazon-btn {
-  //background: #000;
   overflow: auto;
-  form input {
-
-  }
   input[type="submit"],
   button {
     border: 0;

@@ -120,105 +120,10 @@ import { getDocs, singleDoc } from "~/store/flatDB";
   }
 }
 
-.related {
-  h3 { color: #fff; margin: 20px 0; text-transform: uppercase; }
-}
-.post-content {
-  padding:10px 15px 20px;
-  background: #fff;
-  min-height: 150px;
-  border-right: 1px solid #1A1A1B;
-  h2 {
-    font-family: "montserrat", Arial, Helvetica, sans-serif;
-    font-size: 22px;
-    color: #343536;
-    font-weight: 600;
-    padding: 10px 0 15px;
-    overflow: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;    
-    text-transform: uppercase;
-    span {
-      float: right;
-      font-size: 16px;
-      font-family: arial, helvetica, sans-serif;
-      font-weight: normal;
-    }
-  }
-  p,
-  div {
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-    color: #343536;
-    line-height: 1.6em;
-  }
-}
-
-.post-masonry {
-  column-count: 3;
-  column-gap: 0;
-  font-size: 0;
-  background: #000;
-  border-top: 1px solid #1A1A1B; 
-  @media (max-width: 1220px) {
-    column-count: 2;
-    column-gap: 0;
-  }
-  @media (max-width: 660px) {
-    column-count: 1;
-    column-gap: 0;
-  }    
-  .img-container {
-    background: #1A1A1B;
-    position: relative;
-    overflow: auto;
-    max-height: 3000px;
-    border: 1px solid #1A1A1B;
-    user-select: none;
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
-}
-
 .cards-container {
   overflow: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;  
-  .card {
-    width: 300px;
-    height: 387px;
-    margin: 10px;
-    float: left;
-    position: relative;
-    color: #fff;
-    background: #1A1A1B;
-    h2 {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      color: #fafafa;
-      font-family: "montserrat", Arial, Helvetica, sans-serif;
-      text-decoration: none;
-      font-size: 16px;
-      letter-spacing: -1px;
-      line-height: 32px;
-      padding-left: 15px;
-      background-color: rgba(0, 0, 0, 0.6);
-      text-transform: uppercase;
-    }
-    p {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
-  }
 }
 </style>

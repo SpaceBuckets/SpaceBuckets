@@ -1,14 +1,10 @@
 import { getBuilds } from "./store/flatDB";
 
-
 export default {
   target: "static",
-/*   router: {
-    base: '/nuxt/'
-  },   */
-  server: {
+   server: {
     host: '0', // default: localhost,
-  },  
+  },   
   generate: {
     //subFolders: false,
     concurrency: 1,
@@ -23,7 +19,7 @@ export default {
       })
     }    
   },
- build: {
+/*   build: {
     extractCSS: true,
     optimization: {
       splitChunks: {
@@ -37,15 +33,11 @@ export default {
         }
       }
     }
-  },  
+  },    */
   head: {
     htmlAttrs: {
       lang: "en",
     },
-     script: [
-/*       { src: "/statcounter.js", type: "text/javascript", async: true },
-      { src: "https://www.statcounter.com/counter/counter.js", type: "text/javascript", async: true } */
-    ],  
     titleTemplate: (chunk) => {
       if (chunk) { return `${chunk}`; }
       return "Space Buckets - DIY indoor gardeners";
@@ -73,7 +65,6 @@ export default {
   features: { transitions: false },
   buildModules: [
     "@nuxtjs/eslint-module",
-   // '@nuxtjs/pwa',
     ['@nuxtjs/google-fonts', {   
       display: 'auto',
       families: {
@@ -82,22 +73,18 @@ export default {
     }],
     ['@nuxtjs/google-analytics', {
       id: 'UA-35759103-1',
-    /*  debug: {
-        enabled: true,
-        sendHitTask: true
-      }, */
       autoTracking: {
         pageviewTemplate: route => {
           return {
-              page: route.path,
-              title: window.document.title,
-              location: window.location.href,
+            page: route.path,
+            title: window.document.title,
+            location: window.location.href,
           };
         }
       }      
     }],
-    '@nuxtjs/sitemap'
-  ],
+    "@nuxtjs/sitemap",
+  ],   
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://www.spacebuckets.com',
@@ -112,5 +99,5 @@ export default {
         })
       })
     } 
-  },  
+  }, 
 };

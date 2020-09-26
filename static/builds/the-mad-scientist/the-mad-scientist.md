@@ -12,11 +12,8 @@ All items were ordered from Amazon (which helps support this website!).
 <strong>Lights</strong>: With this combination of LED lights you can grow any plant.
 <a href='https://www.amazon.com/Growstar-Spectrum-Switch-Flowering-Growing/dp/B07312WKX2/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=8353b7b558842330a603202711ce676d'>UFO Led Grow Light, Growstar 150W Full Spectrum Plant Light</a> and also <a href='B01339G2F6'>LED Strip lights, 300LEDs</a>
 <br><br>
-<strong>Power supply</strong>: a <a href='https://www.amazon.com/Yellow-Jacket-2762-1-Outlet-Adapter/dp/B000MM3Z6C/ref=as_li_ss_tl?s=electronics&ie=UTF8&qid=1538573523&sr=1-5&keywords=gfci&linkCode=ll1&tag=spacbuck-20&linkId=31acaff2200ed3e733eadde84d9879be'>GFCI</a> is also recommended for safety.
-<a href='https://www.amazon.com/Belkin-BSE600-06BLK-WM-6-Outlet-Protector-6-Foot/dp/B0090YEVSE/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=3705d953e50acea5db93f8db5ded1c41'>Belkin 6-Outlet Power Strip</a>
-<br><br>
-<strong>Timer & Hygrometer</strong><a href='https://www.amazon.com/Dewenwils-Waterproof-Mechanical-Programmable-Electrical/dp/B0716LG6J6/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=1ebcaca8963b0565552c8a9b738ea56a'>Dewenwils Outdoor Mechanical Light Timer, 15Amp, UL Listed</a><a href='https://www.amazon.com/ThermoPro-TP65-Thermometer-Temperature-Touchscreen/dp/B075QBRR6S/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=1f2de9b4d3af296965547d1c771b6afd'>ThermoPro TP60 Digital Hygrometer</a>"
+<strong>Power</strong>: a <a href='https://www.amazon.com/Yellow-Jacket-2762-1-Outlet-Adapter/dp/B000MM3Z6C/ref=as_li_ss_tl?s=electronics&ie=UTF8&qid=1538573523&sr=1-5&keywords=gfci&linkCode=ll1&tag=spacbuck-20&linkId=31acaff2200ed3e733eadde84d9879be'>GFCI</a> is also recommended for safety.
+<a href='https://www.amazon.com/Belkin-BSE600-06BLK-WM-6-Outlet-Protector-6-Foot/dp/B0090YEVSE/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=3705d953e50acea5db93f8db5ded1c41'>Belkin 6-Outlet Power Strip</a>"
 v: "35626"
 g: "5630,5gal,linefan,ufo180"
-
 z: "B07312WKX2,B01339G2F6,B0090YEVSE,B075QBRR6S,B0716LG6J6"
