@@ -181,13 +181,13 @@ export default {
     }
   }
   &.skeleton {
-    display: flex;
+/*     display: flex;
     flex-direction: column;
     .post-support,
     .post-content {
       min-height: initial;
       overflow: initial;
-    }
+    } */
   }
 }
 

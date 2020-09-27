@@ -56,8 +56,8 @@ export default {
       });
     },
   },
-/*   mounted() { this.hitStat() },
-  updated() { this.hitStat() }, */
+  mounted() { this.hitStat() },
+  updated() { this.hitStat() },
 };
 </script>  
 <style lang="scss" scoped>
