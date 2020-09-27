@@ -3,7 +3,7 @@ const sizeOf = require('image-size');
 const glob = require('glob')
 const fs = require('fs');
 
-function createDb(src) {
+async function createDb(src) {
   //Get post names
   var folders = glob.sync('*', { cwd: `static/${src}/` })
   var posts = [];
@@ -22,7 +22,7 @@ function createDb(src) {
   posts.forEach(post => {
     const srcImages = glob.sync('*.jpg', { cwd: `static/${src}/${post.s}` }).filter(e => e !== 'cover.jpg');    
     var postImages = [];
-
+ 
     srcImages.forEach(singleImage => {
       var dimensions = sizeOf(`static/${src}/${post.s}/${singleImage}`);
       var redimensions = (dimensions.height / dimensions.width * 100).toFixed(1);

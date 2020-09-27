@@ -163,7 +163,7 @@ export default {
     column-gap: 0;
   }
   @media (max-width: 660px) {
-    column-count: 1;
+    column-count: auto;
     column-gap: 0;
   }
   .img-container {
