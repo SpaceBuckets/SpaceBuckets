@@ -12,13 +12,13 @@ There is some minor light leakage where I've drilled holes for the ties, but the
 Eventually I want to trim the white fan connector on the lid so it's not hanging over the edge and also cover the yellow tape with something a bit less bright but these are purely cosmetic.
 
 Here are links to some of the equipment I used:
-The Bin: https://www.amazon.co.uk/gp/product/B00997YOEI/ref=oh_aui_detailpage_o00_s00?ie=UTF8&amp;psc=1
-PC Fan: https://www.amazon.co.uk/gp/product/B002KTVFTE/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1
-Inline Fan: https://www.amazon.co.uk/gp/product/B01N6Y2HSF/ref=oh_aui_detailpage_o01_s00?ie=UTF8&amp;psc=1
-USB Adapter for PC Fan: https://www.amazon.co.uk/gp/product/B076YXSR42/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;psc=1
-LED Strip: https://www.amazon.co.uk/gp/product/B00ORBD8ZM/ref=oh_aui_detailpage_o06_s00?ie=UTF8&amp;psc=1
-UFO LED: https://www.amazon.co.uk/gp/product/B07DC9WZ8W/ref=oh_aui_detailpage_o04_s01?ie=UTF8&amp;psc=1
-Wall Plate Connector for Inline Fan: https://www.amazon.co.uk/gp/product/B06W584JZ4/ref=oh_aui_detailpage_o07_s00?ie=UTF8&amp;psc=1"
+ <a href='https://www.amazon.co.uk/gp/product/B00997YOEI'>The Bin</a> 
+ <a href='https://www.amazon.co.uk/gp/product/B002KTVFTE'>PC Fan</a> 
+ <a href='https://www.amazon.co.uk/gp/product/B01N6Y2HSF'>Inline Fan</a> 
+ <a href='https://www.amazon.co.uk/gp/product/B076YXSR42'>USB Adapter for PC Fan</a> 
+ <a href='https://www.amazon.co.uk/gp/product/B00ORBD8ZM'>LED Strip</a> 
+ <a href='https://www.amazon.co.uk/gp/product/B07DC9WZ8W'>UFO LED</a> 
+ <a href='https://www.amazon.co.uk/gp/product/B06W584JZ4'>Wall Plate Connector for Inline Fan</a>"
 v: "3826"
 g: ""
 

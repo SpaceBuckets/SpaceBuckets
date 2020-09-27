@@ -56,15 +56,14 @@ export default {
       });
     },
   },
-  mounted() { this.hitStat() },
-  updated() { this.hitStat() },
+/*   mounted() { this.hitStat() },
+  updated() { this.hitStat() }, */
 };
 </script>  
 <style lang="scss" scoped>
 header {
   background: #151515;
   color: #eee;
-  z-index: 99;
   display: flex;
   position: fixed;
   backface-visibility: hidden;
@@ -144,19 +143,7 @@ header {
     flex: 1;
     padding: 0 20px;
   }
-  div,
-  a {
-    color: #fafafa;
-    font-family: "Montserrat", sans-serif;
-    font-size: 17px;
-    font-weight: 600;
-    display: block;
-    text-decoration: none;
-    &.nuxt-link-active,
-    &:hover {
-      color: #fdd835;
-    }
-  }
+
   @media (max-width: 980px) {
     display: none;
     &.open {
@@ -238,6 +225,7 @@ html {
 body {
   background-color: #000;
   margin: 0;
+  padding-top: 50px;
 }
 
 a {
@@ -282,29 +270,6 @@ img {
 p {
   margin: 0 0 15px;
   line-height: 1.6em;
-}
-
-@media (max-width: 980px) {
-  .thaswipe {
-    -webkit-overflow-scrolling: touch;
-    overflow-x: scroll;
-    //scroll-behavior: smooth;
-    overscroll-behavior-x: contain;
-    scroll-snap-stop: always;
-    scroll-snap-type: x mandatory;
-    height: 100vh;
-    display: flex;
-    min-height: 100vh;
-    padding-top: 50px;
-    .swipable {
-      flex: 1;
-      scroll-snap-align: center;
-      scroll-snap-stop: always;
-      min-width: 100vw;
-      max-width: 100vw;
-      overflow: auto;
-    }
-  }
 }
 
 #stat {

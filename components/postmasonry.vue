@@ -19,7 +19,7 @@
               <svg width="32" height="32" viewBox="0 0 100 100">
                 <path
                   d="M61.4 49.1L40 27.7c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l20.7 20.7-20.7 20.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l21.4-21.4c.2-.2.3-.4.3-.7s-.1-.5-.3-.7z"
-                  fill="#888"
+                  fill="#ccc"
                 />
               </svg>
             </p>        
@@ -75,7 +75,7 @@
               <svg width="32" height="32" viewBox="0 0 100 100">
                 <path
                   d="M61.4 49.1L40 27.7c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l20.7 20.7-20.7 20.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l21.4-21.4c.2-.2.3-.4.3-.7s-.1-.5-.3-.7z"
-                  fill="#888"
+                  fill="#ccc"
                 />
               </svg>
             </p>
@@ -83,18 +83,11 @@
         </div>
       </div>
     </div>
-    <template v-if="variation != 'skeleton'">
-      <div class="img-container" v-for="(img,ie) in post.i" :key="`section-${ie}`">
-        <img :src="`/builds/${post.s}/${img.h}`" alt />
-        <div :style="{'padding-top': img.s +'%'}"></div>
-      </div>      
-    </template>    
-    <template v-if="variation === 'skeleton'">
-      <div class="img-container" v-for="(img,ie) in post.i" :key="`section-${ie}`">
-        <img :src="`/builds/${post.s}/${img.h}`" alt />
-        <div :style="{'padding-top': img.s +'%'}"></div>
-      </div>      
-    </template>  
+    <div class="img-container" v-for="(img,ie) in post.i" :key="`section-${ie}`">
+      <img :src="`/builds/${post.s}/${img.h}`" alt />
+      <div :style="{'padding-top': img.s +'%'}"></div>
+    </div>      
+    
   </div>
 </template>
 
@@ -116,7 +109,6 @@ export default {
         const zItems = fetch(`https://bucket-builder.herokuapp.com/bucket-builder/${this.post.z}`)
           .then((response) => response.json())
           .then((data) => (this.amazonItems = data.ItemsResult.Items));
-          console.log(await zItems)
       }
     }
   },
@@ -189,8 +181,12 @@ export default {
     }
   }
   &.skeleton {
-    .img-container {
-      overflow:initial;
+    display: flex;
+    flex-direction: column;
+    .post-support,
+    .post-content {
+      min-height: initial;
+      overflow: initial;
     }
   }
 }
@@ -220,7 +216,6 @@ export default {
     text-transform: uppercase;
     padding: 10px 20px;
   }
-
   .listad-inline {
     background: #fff;
     width: 100%;
@@ -267,10 +262,10 @@ export default {
       margin: 10px 0 0 5px;
       max-height: 40px;
       overflow: hidden;
-      line-height: 20px !important;
-      padding: 0 !important;
-      color: #1d6ebf !important;
-      font-size: 15px !important;
+      line-height: 20px;
+      padding: 0;
+      color: #1d6ebf;
+      font-size: 15px;
 
       &::first-line {
         font-weight: bold;
@@ -279,22 +274,22 @@ export default {
     .item-price {
       position: absolute;
       top: 10px;
-      width: auto !important;
+      width: auto;
       right: 30px;
-      font-size: 14px !important;
-      margin: 0 !important;
-      color: #a33426 !important;
+      font-size: 14px;
+      margin: 0;
+      color: #a33426;
       font-weight: bold;
     }
     .item-brand {
-      font-size: 14px !important;
+      font-size: 14px;
       position: absolute;
       right: 30px;
-      width: 95px !important;
+      width: 95px;
       bottom: 11px;
-      font-weight: normal !important;
+      font-weight: normal;
       text-align: right;
-      color: #34353675 !important;
+      color: #34353675;
       overflow: hidden;
       height: 18px;
     }
@@ -362,18 +357,18 @@ export default {
     &:before,
     &:after {
       content: "";
-      min-height: 15px;
+      min-height: 12px;
       background: #34353610;
       display: block;
       position: absolute;
       right: 120px;
       left: 75px;
-      top: 10px;
+      top: 14px;
       animation: progress 2s linear infinite;
     }
     &:before {
       top: initial;
-      bottom: 10px;
+      bottom: 14px;
       right: 150px;
     }
   }

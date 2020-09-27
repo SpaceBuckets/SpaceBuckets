@@ -551,13 +551,8 @@ section.shopping-list {
 }
 
 #app {
-  //display: flex;
-  //margin: 10px;
   align-items: flex-start;
-  //max-width: 1100px;
   padding-left: 250px;
-    padding-top: 50px;
-
   @media (max-width: 980px) {
     padding-left: 0;
   }
@@ -636,8 +631,6 @@ section.shopping-list {
     border-bottom: 1px solid rgba(52, 53, 54, 0.31373);
     cursor: pointer;
     padding-bottom: 12px;
-    &:hover input + div {
-    }
     &:last-child {
       border: none;
     }

@@ -1,5 +1,5 @@
 <template>
-  <div style="padding-top:50px">
+  <div>
     <div class="post-content">
       <h2>SPACE BUCKETS MANIFESTO</h2>
       <div>
@@ -13,17 +13,8 @@
       </div>
     </div>
 
-    <div class="cards-container" v-if="relatedItems">
-      <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
-        <client-only>
-          <nuxt-link class="card" :to="{name: 'u-slug', params: { slug: `${post.s}`, post } }">
-            <h2>{{ post.t }}</h2>
-            <img :src="`/builds/${post.s}/cover.jpg`" alt />
-          </nuxt-link>
-        </client-only>
-      </div>
-    </div>
-    <nuxt-link class="load-more" :to="{name: 'gallery'}">View More</nuxt-link>
+    <cardrelated />
+
   </div>
 </template>
 
@@ -53,33 +44,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.load-more {
-  color: #eee;
-  border: 1px solid #333;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  width: 300px;
-  margin: 10px auto;
-  color: #fafafa;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  &:hover {
-    color: #fdd835;
-  }
-}
-.related {
-  margin-top: 20px;
-  h3 {
-    color: #fff;
-    margin: 20px 0;
-    text-transform: uppercase;
-  }
-}
+
 .post-content {
   padding: 10px 15px 20px;
   background: #fff;
@@ -112,13 +77,6 @@ export default {
     color: #343536;
     line-height: 1.6em;
   }
-}
-
-.cards-container {
-  overflow: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 
 </style>

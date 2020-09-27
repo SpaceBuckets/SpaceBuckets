@@ -1,6 +1,7 @@
 <template>
-  <div style="padding-top:50px" class="thaswipe" v-on:scroll.self="handleScroll" @touchstart="touchStart()" @touchend="touchEnd()">
-    <div class="swipable">
+
+  <swiper :next="swipeItem">
+    <template v-slot:main>
       <div class="intro-home">
         <nuxt-link to="/materials">
           <h2>Begin your journey</h2>
@@ -22,7 +23,6 @@
           <div><icon-mail/>info@spacebuckets.com</div>
         </a>
       </div>
-
       <div class="post-wrapper">  
         
         <card :id="mad" />
@@ -49,14 +49,11 @@
         <card :id="tito" />
 
       </div>
-    </div>
-  
-    <div class="onlymobile swipable" v-if="swipeItem" style="backface-visibility:hidden" :style="[ progressScroll > 0 ? {pointerEvents:'none'} : '']">
-      <client-only>
-        <postmasonry :post="swipeItem" />
-      </client-only>
-    </div>
-  </div>
+    </template>
+    <template v-slot:next>
+      <postmasonry :post="swipeItem" variation="skeleton" />
+    </template>
+  </swiper>
 </template>
 
 <script>
@@ -75,29 +72,12 @@ export default {
     const tito = await singlePost("titobin");
     const garbo = await singlePost("doublejallday_bin");
 
-    
     return { garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
   },
   data() {
     return {
       swipeItem: [],
-      progressScroll: 0,
-      moving: false
     };
-  },
-  methods: {
-    touchStart() {
-      this.moving = true
-    },
-    touchEnd() {
-      this.moving = false
-    },    
-    async handleScroll() {
-      this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
-      if (this.progressScroll > 50 && !this.moving) {
-        this.$router.push({ path: `/u/${this.swipeItem.s}` });
-      }
-    },
   },
   async created() {
     if (process.client) {
@@ -117,30 +97,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.post-wrapper:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+
 .post-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1600px;
   margin: 0 auto;
-}
-
-.new-ver {
-  margin-top: 50px;
-  background: #151515;
-  padding: 10px 10px 10px 15px;
-  color: #ddd;
-  border-bottom: 1px solid #222;
-  line-height: 19px;
-  a { 
-    color: #ddd;
-    font-size: 15px;
-  }
 }
 
 .intro-home {
@@ -151,38 +114,38 @@ export default {
   width: 100%;
   height: 75px;
   position: relative;
-}
-
-.intro-home > a {
-  text-decoration: none;
-  width: 300px;
-  margin: 0 10px 10px;
-  display: inline-block;
-  text-align: left;
-  position: relative;
-  height: 74px;
-  padding: 15px 0;
-  &:hover h2 {
-    color: #fdd835;
+  > a {
+    text-decoration: none;
+    width: 300px;
+    margin: 0 10px 10px;
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    height: 74px;
+    padding: 15px 0;
+    &:hover h2 {
+      color: #fdd835;
+    }
+    h2 {
+      margin: 0 0 2px;
+      padding-left: 78px;
+      color: #eee;
+      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+    }  
+    h2 + div {
+      color: #eee;
+      font-size: 15px;
+      padding-left: 78px;
+      font-family: Arial, Helvetica, sans-serif;
+    }  
+    svg {
+      position: absolute;
+      top: 18px;
+      left: 24px;
+    }  
   }
-  h2 {
-    margin: 0 0 2px;
-    padding-left: 78px;
-    color: #eee;
-    font-size: 16px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 400;
-  }  
-  h2 + div {
-    color: #eee;
-    font-size: 15px;
-    padding-left: 78px;
-    font-family: Arial, Helvetica, sans-serif;
-  }  
-  svg {
-    position: absolute;
-    top: 18px;
-    left: 24px;
-  }  
 }
+ 
 </style>
