@@ -41,15 +41,6 @@ export default {
   watch: {
     $route(to, from) {
       this.openNav = false;
-      var src = document.getElementById("stat");
-      src.innerHTML = "";
-      this.$nextTick(() => {
-        var img = document.createElement("img");
-        img.src =
-          "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
-          new Date().getTime();
-        src.appendChild(img);
-      });
     },
   },
   mounted() {
@@ -63,6 +54,17 @@ export default {
       src.appendChild(img);
     });
   },
+  updated() {
+    this.$nextTick(() => {
+      var src = document.getElementById("stat");
+      src.innerHTML = "";
+      var img = document.createElement("img");
+      img.src =
+        "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
+        new Date().getTime();
+      src.appendChild(img);
+    });
+  },  
 };
 </script>  
 <style lang="scss" scoped>
