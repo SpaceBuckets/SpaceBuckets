@@ -43,28 +43,21 @@ export default {
       this.openNav = false;
     },
   },
-  mounted() {
-    this.$nextTick(() => {
-      var src = document.getElementById("stat");
-      src.innerHTML = "";
-      var img = document.createElement("img");
-      img.src =
-        "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
-        new Date().getTime();
-      src.appendChild(img);
-    });
+  methods: {
+    hitStat() {
+      this.$nextTick(() => {
+        var src = document.getElementById("stat");
+        src.innerHTML = "";
+        var img = document.createElement("img");
+        img.src =
+          "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
+          new Date().getTime();
+        src.appendChild(img);
+      });
+    },
   },
-  updated() {
-    this.$nextTick(() => {
-      var src = document.getElementById("stat");
-      src.innerHTML = "";
-      var img = document.createElement("img");
-      img.src =
-        "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
-        new Date().getTime();
-      src.appendChild(img);
-    });
-  },  
+  mounted() { this.hitStat() },
+  updated() { this.hitStat() },
 };
 </script>  
 <style lang="scss" scoped>

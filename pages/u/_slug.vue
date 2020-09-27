@@ -1,9 +1,15 @@
 <template>
-  <div style="padding-top:50px" class="thaswipe" v-on:scroll.self="handleScroll" @touchstart="touchStart()" @touchend="touchEnd()">
+  <div
+    style="padding-top:50px"
+    class="thaswipe"
+    v-on:scroll.self="handleScroll"
+    @touchstart="touchStart()"
+    @touchend="touchEnd()"
+  >
     <div class="swipable">
-        <postmasonry :post="post" />
+      <postmasonry :post="post" />
       <div class="cards-container" v-if="relatedItems">
-        <div class="card-skeleton" v-for="post in relatedItems" :key="post.s" >
+        <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
           <client-only>
             <card :id="post" />
           </client-only>
@@ -11,15 +17,17 @@
       </div>
       <nuxt-link class="load-more" :to="{name: 'gallery'}">View More</nuxt-link>
     </div>
-    
-    <div class="rand-container onlymobile swipable" v-if="swipeItem" style="backface-visibility:hidden" :style="[ progressScroll > 0 ? {pointerEvents:'none'} : '']">
-      <client-only>
+
+    <client-only>
+      <div
+        class="onlymobile swipable"
+        v-if="swipeItem"
+        style="backface-visibility:hidden;min-height:100vh;pointer-events:none"
+      >
         <postmasonry :post="swipeItem" variation="skeleton" />
-      </client-only>
-    </div>
+      </div>
+    </client-only>
   </div>
-
-
 </template>
 
 <script>
@@ -45,20 +53,23 @@ export default {
   async created() {
     if (process.client) {
       this.swipeItem = await singleRandom();
-      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
+      if (
+        this.swipeItem.z !== "" ||
+        (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)
+      ) {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
       }
-      this.swipeItem.i = this.swipeItem.i.slice(0,1)
+      this.swipeItem.i = this.swipeItem.i.slice(0, 1);
       this.relatedItems = await randomize(8);
     }
   },
   methods: {
     touchStart() {
-      this.moving = true
+      this.moving = true;
     },
     touchEnd() {
-      this.moving = false
-    },    
+      this.moving = false;
+    },
     async handleScroll() {
       this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
       if (this.progressScroll > 50 && !this.moving) {
@@ -103,6 +114,4 @@ export default {
   max-width: 1280px;
   margin: 50px auto 0;
 }
-
-
 </style>

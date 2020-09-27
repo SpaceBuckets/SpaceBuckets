@@ -24,10 +24,9 @@ import { singlePost, randomize } from "~/store/flatDB";
 export default {
 
   async asyncData({ params }) {
-    const loading = true
     const post = await singlePost("simple-template") 
     if (post.z !== "" || post.z !== undefined && post.z.length > 0) { post.itemCount = post.z.split(",").length }
-    return { post, loading }
+    return { post }
   },  
   data() {
     return {
@@ -46,9 +45,6 @@ export default {
       }
 
     }
-  },
-  mounted() {
-    this.loading = false
   },
   head() {
     return {
