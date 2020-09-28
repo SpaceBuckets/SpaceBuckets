@@ -4,7 +4,7 @@
       <postmasonry :post="post" />
       <cardrelated />
     </template>
-    <template v-slot:next>
+    <template v-slot:next v-if="swipeItem">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
   </swiper>
