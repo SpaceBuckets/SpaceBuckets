@@ -4,7 +4,7 @@
       {{ id.t }}
       <i>{{ id.v }}</i>
     </h2>
-    <img :src="`../builds/${id.s}/cover.jpg`" alt />
+    <img :src="`/builds/${id.s}/cover.jpg`" alt />
   </nuxt-link>
 </template>
 
