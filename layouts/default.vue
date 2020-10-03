@@ -21,8 +21,12 @@
         <nuxt-link to="/drome">DROME</nuxt-link>
         <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       </div>
-
-      <div id="stat"></div>
+      <div class="random-next">
+        <button>
+          RANDOM <icon-random/>
+          <div style="width: 10px" id="stat"></div>
+        </button>
+      </div>
     </header>
     <nuxt />
   </div>
@@ -169,6 +173,27 @@ header {
     }
   }
 }
+.random-next {
+  display: flex;
+  height: 50px;
+  button {
+    background: transparent;
+    border: 0;
+    color: #fafafa;
+    font-family: "Montserrat", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;    
+    &:focus { outline: 0; }
+    svg {
+      width: 17px;
+      height: auto;
+      margin-left: 4px;
+    }
+  }
+}
+
 </style>
 
 <style lang="scss">

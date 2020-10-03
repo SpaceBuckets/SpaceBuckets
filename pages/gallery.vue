@@ -1,11 +1,12 @@
 <template>
-  <div class="gallery-container">
+  <swiper :next="swipeItem" type="posts">
+    <template v-slot:main>
+<div class="gallery-container">
     <div class="search-sidebar">
       <div class="sidebar-content">
         <h2>GALLERY</h2>
         <p>Select categories to filter the buckets. Amazon links help support this website ♥</p>
       </div>
-
       <div class="filters-container">
         <div class="sort-filters">
           <div :class="{'active': sort === 'asc'}" @click="handleSort('asc')">Latest</div>
@@ -91,18 +92,26 @@
       </div>
     </div>
   </div>
+    </template>
+    <template v-slot:next v-if="!loadingSwipe">
+      <postmasonry :post="swipeItem" variation="skeleton" />
+    </template>
+  </swiper>
+  
 </template>
 
 <script>
-import { filterBuilds, getBuilds, randomize } from "~/store/flatDB";
+import { filterBuilds, singleRandom, getBuilds, randomize } from "~/store/flatDB";
 export default {
   async asyncData() {
-    const posts = await filterBuilds(24, 1, "asc");
+    const posts = await filterBuilds(24, 1, "popular");
     const allPosts = await getBuilds();
     return { posts, allPosts };
   },
   data() {
     return {
+      swipeItem: [],
+      loadingSwipe: true,      
       relatedInfo: [],
       filterQuery: {
         container: "",
@@ -114,7 +123,7 @@ export default {
       },
     };
   },
-  created() {
+  async created() {
     this.num = 24;
     this.page = 1;
     this.sort = "asc";
@@ -123,6 +132,14 @@ export default {
     infoArr.total = numberPosts;
     infoArr.pages = (numberPosts / this.num).toFixed();
     this.relatedInfo = infoArr;
+    if (process.client) {
+      this.swipeItem = await singleRandom();
+      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
+        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
+      }
+      this.swipeItem.i = this.swipeItem.i.slice(0, 1);
+      this.loadingSwipe = false
+    }    
   },
   methods: {
     async fetchNew(type) {

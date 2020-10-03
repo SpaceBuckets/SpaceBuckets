@@ -15,7 +15,7 @@
         <label for="second">
           <div>Advanced Stuff</div>
           <div>
-            <nuxt-link to="/docs/led-bulbs">Side-Lighting</nuxt-link>            
+            <nuxt-link to="/docs/side-lighting">Side-Lighting</nuxt-link>            
             <nuxt-link to="/docs/heat-control">Heat Control</nuxt-link>
             <nuxt-link to="/docs/smell-control">Smell Control</nuxt-link>
             <nuxt-link to="/docs/led-basics">LED Basics</nuxt-link>
