@@ -24,5 +24,5 @@ Some bucketeers install the UFO inside the container, which is not recommended a
 Proper heat extraction is essential for Space Buckets, and more for the light-top part of the setup. <strong>Just one PC fan blasting directly onto the bulbs can be enough to keep the heat under control.</strong> An extra fan exhaust on top of the lid is recommended in most situations, as it creates better airflow circulation between the lights. CFL bulbs have a higher temperature footprint, and because of that they usually require extra fans. Keep in mind that the temperature inside the bucket will never be inferior to the temperature of the ambient it is in."
 v: ""
 g: ""
-
 z: ""
+o: "2"

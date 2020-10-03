@@ -13,10 +13,10 @@
         </svg>
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
-        <nuxt-link @click="openNav = false" to="/materials">MATERIALS</nuxt-link>
+        <nuxt-link to="/materials"><span class="onlydesktop">MATERIALS</span><span class="onlymobile">PARTS</span></nuxt-link>
         <nuxt-link to="/build">BUILDER</nuxt-link>
-        <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
+        <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/designer">DESIGN</nuxt-link>
         <nuxt-link to="/drome">DROME</nuxt-link>
         <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
@@ -148,6 +148,8 @@ header {
     display: none;
     &.open {
       display: flex;
+      padding-top: 5px;
+      padding-bottom: 5px;
       .nav-backdrop {
         content: "";
         display: block !important;
@@ -193,6 +195,7 @@ header {
   backface-visibility: hidden;
   left: 0;
   top: 50px;
+  a { text-decoration: none; }
   @media (max-width: 980px) {
     position: relative;
     height: auto;
@@ -208,7 +211,7 @@ header {
   h2 {
     font-size: 20px;
     color: #eee;
-    padding-bottom: 15px;
+    padding-bottom: 0px;
   }
 }
 

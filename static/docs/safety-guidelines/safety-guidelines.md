@@ -28,5 +28,5 @@ Even it everything feels snug, it may actually be 1 or 2 out of 3 that are snug.
 If you use LED intracanopy lighting, <strong>use a lower voltage to drive them.</strong> I'll be showing multiple ways on how to do this in my lighting guide for people of different skill levels. I'll also be showing a safe exception to this rule."
 v: ""
 g: ""
-
 z: ""
+o: "5"

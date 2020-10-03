@@ -17,5 +17,5 @@ Bucketeers can choose to build their own filters, which is usually <strong>not v
 One supplemental option for activated carbon filters is <strong>ONA gel, a material that masks the smell in the room that is present.</strong> This won't remove the odor from the ambient, but it will change its appearance. For this reason, a combination of ONA gel and inline fan + filter is the safest bet for smell concerned bucketeers. The apple crumble version of ONA gel is usually the most effective and recommended."
 v: ""
 g: ""
-
 z: ""
+o: "8"

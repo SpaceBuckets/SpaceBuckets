@@ -625,23 +625,24 @@
       <section class="shopping-list">
         <span>SELECTED SHOPPING LIST <i>Product links help support this website <i>♥</i> </i>
  </span>
-        <a
-          v-for="(item, i) in items"
-          :key="`section-${i}`"
-          :href="`${item.url}`"
-          target="_blank"
-          class="item-title-container item-title-container-shopping"
-        >
-          <div class="product-image">
-            <img :src="`${item.img}`" />
-          </div>
-          <div class="product-title">{{item.title}}</div>
-          <div class="product-brand-container">
-            <i class="product-brand">by {{item.brand}}</i>
 
-            <div class="product-price">{{item.price}}</div>
-          </div>
-        </a>
+          <a
+            v-for="(item, i) in items"
+            :key="`section-${i}`"
+            :href="`${item.url}`"
+            target="_blank"
+            class="item-title-container item-title-container-shopping"
+          >
+            <div class="product-image">
+              <img :src="`${item.img}`" />
+            </div>
+            <div class="product-title">{{item.title}}</div>
+            <div class="product-brand-container">
+              <i class="product-brand">by {{item.brand}}</i>
+
+              <div class="product-price">{{item.price}}</div>
+            </div>
+          </a>          
         <div class="total-price">
           <div class="amazon-btn">
             <form method="GET" target="_blank" action="https://www.amazon.com/gp/aws/cart/add.html">

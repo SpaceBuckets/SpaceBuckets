@@ -1,6 +1,7 @@
 <template>
 
-  <swiper :next="swipeItem">
+  <swiper :next="swipeItem" type="posts">
+
     <template v-slot:main>
       <div class="intro-home">
         <nuxt-link to="/materials">

@@ -18,5 +18,5 @@ Brutes or Bins, given their supersized nature, <strong>need extra lighting power
 A Space Bucket can also be made with <strong>plastic boxes, generally known as totes</strong>. These rectangular containers are even bigger than supersized Brutes, and usually come in 32gal or 44gal versions. They have a bigger footprint than buckets, buy <strong>they allow for more powerful designs.</strong> Tote gardens stack two containers on top of each other, with one inverted functioning as the light-top. This means that the SB tote design features a fixed height. Given their massive size, SB totes need powerful lighting from all sides, with a 300w UFO LED panel being the most recommended option."
 v: ""
 g: ""
-
 z: ""
+o: "1"

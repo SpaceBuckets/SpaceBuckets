@@ -219,7 +219,7 @@ export default {
   .listad-inline {
     background: #fff;
     width: 100%;
-    z-index: 999;
+    z-index: 99;
     float: left;
     border-top: 1px solid #eee;
     &:after {

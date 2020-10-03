@@ -4,12 +4,12 @@
      <div style="padding: 10px 15px 20px;background: #fff;">
        <br>
 
-      <p style="background:#fafafa;">
+      <p>
         Welcome! You have reached the home of the Space Buckets movement. We're an
         <a href="https://www.reddit.com/r/SpaceBuckets">open community of indoor gardeners</a> who like to build DIY grow chambers. Space Buckets are easy to make, and only require common items for construction.
         <strong>Total cost is about $100</strong>, depending on what materials you can recycle. Your support is appreciated! Amazon suggestions help maintain this site.
       </p>
-      <p style="background:#fafafa;">
+      <p>
         <strong>This website is built to be explored</strong>.
         <a href="https://spacebuckets.com/gallery/">In our Gallery</a> you'll find over 300 examples of great setups: the style of the containers is variable, but their gardening function is the same. Ready to start your build?
         <strong>
