@@ -21,7 +21,7 @@
   </div>
 
     <client-only>
-      <div class="onlymobile swipable">
+      <div class="onlymobile swipable" v-if="next">
         <slot name="next"></slot>
       </div>
     </client-only>

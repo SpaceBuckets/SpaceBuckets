@@ -367,7 +367,7 @@ export default {
     color: #fff;
     border: 0;
     border-radius: 3px;
-    padding: 5px 10px;
+    padding: 5px 0 5px 10px;
     height: 35px;
 -moz-appearance: none;
 -webkit-appearance: none;    
@@ -394,6 +394,7 @@ export default {
     line-height: 35px;
     font-size: 10px;
     color: #333;
+    pointer-events: none;
 }
 
 </style>

@@ -4,7 +4,7 @@
       <postmasonry :post="post" />
       <cardrelated />
     </template>
-    <template v-slot:next>
+    <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
   </swiper>
@@ -24,6 +24,7 @@ export default {
   data() {
     return {
       swipeItem: [],
+      loadingSwipe: true,
     };
   },
   async created() {
@@ -33,7 +34,7 @@ export default {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
       }
       this.swipeItem.i = this.swipeItem.i.slice(0, 1);
-      this.relatedItems = await randomize(8);
+      this.loadingSwipe = false
     }
   },
   head() {
