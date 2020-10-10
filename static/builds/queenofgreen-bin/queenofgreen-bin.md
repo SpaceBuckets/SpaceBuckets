@@ -3,7 +3,7 @@ t: "QueenOfGreen Bin Build"
 s: "queenofgreen-bin"
 a: ""
 d: "2018-12-24"
-c: "This is a 110litre bin build using a '300watt' UFO LED mounted to the inside of the lid for the main light, and a 5050 LED strip for side lighting.
+c: "This is a 110litre bin build using a '300watt' UFO LED mounted to the inside of the lid for the main light, and a <a href='https://amzn.to/30OqRW0'>5050SMD LED</a> strip for side lighting.
 The inside of the bin is lined with Mylar using strong double sided sticky tape. 
 There's a 120mm pc fan for intake, and a 4inch (diameter) inline fan, later on I will connect a carbon filter to the inline fan for smell control.
 Everything is connected to a power supply mounted to the side of the bin to keep the growing area as tidy and clutter free as possible.

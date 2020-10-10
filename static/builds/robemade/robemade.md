@@ -9,7 +9,7 @@ c: "This is my first bucket, first post, fifth grow (but first in the bucket gar
 
 For the bucket ventilation I'm using a combination of different kind of fans. The main intake is a 6 inch 110v fan that was really easy to install, just plug and play. <strong>This is a powerful fan that creates great circulation inside the container. </strong>For the top exhaust I'm using a mini fan that should be enough to extract the heat for the light bulbs. I think I might add elbows to the fans to prevent light leaks, I am more concerned with light getting in during flowering than light getting out, so I will cross that bridge when I get to it. 
 
-<h3>LIGHTING STUFF</h3><strong>For the lighting configuration I'm using 4x23wCFL + 1x26wCFL on the lid</strong>, with adjustable height and a 5 meter, 300 LED strip (5050) outdoor use, pure white color. As the plant grows, the cords can be tied to raise the level of the light source. This is essential if you are using CFL bulbs, as they are most effective when placed really close to the leaves."
+<h3>LIGHTING STUFF</h3><strong>For the lighting configuration I'm using 4x23wCFL + 1x26wCFL on the lid</strong>, with adjustable height and a 5 meter, 300 LED strip (5050) outdoor use, pure white color. As the plant grows, the cords can be tied to raise the level of the light source. This is essential if you are using <a href='https://amzn.to/3jMfTYw'>CFL bulbs</a>, as they are most effective when placed really close to the leaves."
 v: "10647"
 g: "5050,bin,cfl"
 

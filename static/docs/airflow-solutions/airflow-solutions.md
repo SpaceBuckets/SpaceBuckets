@@ -1,7 +1,7 @@
 ---
 t: "Airflow Solutions"
 s: "airflow-solutions"
-c: "Proper air circulation is essential for Space Buckets (and every other kind of indoor garden). <strong>Your bucket needs good ventilation to extract the heat</strong> from the CFL bulbs (or LED lights), and also to give the plant breaths of fresh air and plenty of CO2. In this section we review good ventilation solutions that you can use for cooling your always trusty bucket garden.
+c: "Proper air circulation is essential for Space Buckets (and every other kind of indoor garden). <strong>Your bucket needs good ventilation to extract the heat</strong> from the <a href='https://amzn.to/3jMfTYw'>CFL bulbs</a> (or LED lights), and also to give the plant breaths of fresh air and plenty of CO2. In this section we review good ventilation solutions that you can use for cooling your always trusty bucket garden.
 
 <h3>110/220v fans</h3>
 These fans are a step up from standard PC fans, as they run at line voltage (110v or 220v, depending on where you live). <strong>This cooling solution is sturdy and reliable</strong>, protected with a metal frame. Most of these fans also come wired with a plug for easy installation in the garden. A typical 110v fan works at about 50CFM, with a noise level of 40dBA. <strong>These units have 40% more airflow than PC fans</strong>, which makes them a good choice for cooling small spaces (and also for DIY carbon filters such as this one).

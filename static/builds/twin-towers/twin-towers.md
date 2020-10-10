@@ -8,7 +8,7 @@ c: "The original goal was building two 5-bucket tall towers. Due to some changes
 THE GROW-FLOW TOWER (2 UNITS)
 
 Grow Unit (90% complete)
-The bottom and middle buckets fit airtight into each other, but come apart for access to the humidifier and fans in the bottom bucket. An extended 2-gallon bucket hangs from where the middle and top buckets meet, holding a 1 gallon soil pot. The top bucket is lined with a cool-white SMD5630 LED strip. Hanging 5' into the top bucket is a ventilated, shielded light unit. It holds 4 uncapped LED bulbs at 6,500k, 9.5w each for a total of 38w. 
+The bottom and middle buckets fit airtight into each other, but come apart for access to the humidifier and fans in the bottom bucket. An extended 2-gallon bucket hangs from where the middle and top buckets meet, holding a 1 gallon soil pot. The top bucket is lined with a cool-white <a href='https://amzn.to/30TZOZn'>5630SMD LED strip</a>. Hanging 5' into the top bucket is a ventilated, shielded light unit. It holds 4 uncapped <a href='https://amzn.to/3lyKIRa'>LED bulbs</a> at 6,500k, 9.5w each for a total of 38w. 
 
 Flow Unit (complete)
 The bottom of the bottom bucket is connected with ducting to the veg module it sits on top of. The duct is connected to a 12v 120mm fan, actively pulling air through the veg module, its lighting rig, and into the HVAC module. On its side, the HVAC module accepts a passive duct from the drying module. Air from both sources fills its main chamber, forcing It through a 12' carbon filter which hangs from the underside of a sealed exhaust unit. Inside that unit is a 18w, 110cfm fan pulling air through the filter to exhaust the entire system.

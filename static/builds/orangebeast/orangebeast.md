@@ -4,7 +4,7 @@ s: "orangebeast"
 a: ""
 d: "2018-03-07"
 c: "5 Gallon Home Depot Buckets
-270 Watt Roleadro UFO LED
+270 Watt Roleadro <a href='https://amzn.to/36NO5zr'>UFO LED light</a>
 Aluminum Tape
 HighTech3D PC Fan to Bucket Adapter x2
 HighTech3D Carbon Filter Cartridge 

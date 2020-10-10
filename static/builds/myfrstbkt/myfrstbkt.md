@@ -3,7 +3,7 @@ t: "HYDRO DWC BUCKET"
 s: "myfrstbkt"
 a: "myfrstbkt"
 d: "2015-03-29"
-c: "This is my DWC build! <strong>I'm using standard 5gal buckets with LED bulbs and LED sidelights</strong>, and a 140mm Noctua fan screwed directly to bucket. For simplicity's sake I'm using General Hydroponics Flora Duo 2 part. It's a complete nutrient so I don't have to worry about Cal Mag or anything. Also using both Piranha and Voodoo Juice for root health. It's all working great (and I'm having fun).
+c: "This is my DWC build! <strong>I'm using standard 5gal buckets with <a href='https://amzn.to/3lyKIRa'>LED bulbs</a> and LED sidelights</strong>, and a 140mm Noctua fan screwed directly to bucket. For simplicity's sake I'm using General Hydroponics Flora Duo 2 part. It's a complete nutrient so I don't have to worry about Cal Mag or anything. Also using both Piranha and Voodoo Juice for root health. It's all working great (and I'm having fun).
 
 <h3>CONSTRUCTION DETAILS</h3>
 I cut a hole in the lid to hold the 5' netpot, drill holes for air lines, fill tube and water level indicator. Additionally you can see the medium cover that I cut from another lid. <strong>This is to keep light off the grow medium and discourage surface algae</strong> during initial starting phase when medium is wet from nutrient solution needing to be pumped up to the immature roots. 

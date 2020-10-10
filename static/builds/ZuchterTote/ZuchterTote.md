@@ -3,7 +3,7 @@ t: "ZUCHTER'S TOTE"
 s: "ZuchterTote"
 a: "ZuchterTote"
 d: "2015-03-25"
-c: "Check out my new Space Bucket! This time I'm using a Rubbermaid bin for a Tote build. I'm using 6 CFL bulbs for the moment. Hope you like the extra space on my garden!"
+c: "Check out my new Space Bucket! This time I'm using a Rubbermaid bin for a Tote build. I'm using 6 <a href='https://amzn.to/3jMfTYw'>CFL bulbs</a> for the moment. Hope you like the extra space on my garden!"
 v: "5678"
 g: "cfl,pcfan,tote"
 
