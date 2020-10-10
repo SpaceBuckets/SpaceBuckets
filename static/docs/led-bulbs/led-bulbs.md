@@ -5,8 +5,5 @@ c: "<strong>LED bulbs can be used for Space Buckets, and they are a good replace
 
 <h3>Types of LED bulbs and Safety </h3>
 Important note on safety: When removing the cover or diffuser on an LED lamp, <strong>you may be exposing yourself to very unsafe DC voltage.</strong> Count the LED's. If there are more than 20 LED's then you should probably think about using a different brand of LED. This is because the SMD LED's commonly used in LED e27 lightbulbs use about 3v. Wired in series, the string could require upwards of 60vDC. Although this voltage may be safe, you are quickly approaching the range of voltage that can pass current through the human body. This is regardless of AC or DC."
-v: ""
-g: ""
-
-z: ""
 o: "10"
+d: "LED bulbs can be used to grow all kinds of plants indoors. Space Buckets are a great fit for these lighting option."

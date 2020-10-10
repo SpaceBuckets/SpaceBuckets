@@ -15,7 +15,5 @@ Builds with UFO LEDs don't usually have heat issues, <strong>specially if the li
 
 <h3>Nighttime Bucketing</h3>
 A good strategy when dealing with high ambient temperatures is to <strong>schedule the bucket to run on the night</strong>, which is naturally colder. Electrical rates are usually cheaper during this time, so this is a win-win bucket situation."
-v: ""
-g: ""
-z: ""
 o: "7"
+d: "Learn how to control high temperatures in your DIY indoor garden. Proper lighting and airflow are essential for solving these issues."

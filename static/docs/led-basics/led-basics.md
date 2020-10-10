@@ -29,8 +29,5 @@ For horticultural lighting, we're interested in high power LEDs. They draw a lot
 
 <h3>RECOMMENDED READING</h3>
 This is an extremely short introduction to electronics, so if you're interested in the topic you would do well to read something more comprehensive. The best book for beginning electonics is Practical Electronics for Inventors by Paul Scherz. It's cheap, covers a lot of material, and doesn't assume any prior knowledege."
-v: ""
-g: ""
-
-z: ""
 o: "9"
+d: "Learn the basics of LED lighting and its many uses in DIY indoor gardening setups."

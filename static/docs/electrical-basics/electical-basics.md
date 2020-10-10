@@ -14,4 +14,5 @@ Electricity can be dangerous, especially to power coming from the wall. Make sur
 <h3>Electrical Circuits</h3>
 An electrical circuit is a closed conductive path for electrons to flow. <strong>If you connect a wire to both sides of a battery, you've made a circuit.</strong> Current flows from the positive side of the battery, through the wire, back into the battery's negative side. (This is called a short circuit. Don't do this). The most basic electrical circuit is a resistor attached to a voltage source, like a battery. The current through the resistor equals the voltage divided by the resistance, which we know because of Ohm's law. If there are multiple components in a circuit, we can figure out the current and voltage for each part using Kirchoff's laws."
 o: "4"
+d: "Learn the fundamental and basic electrical knowledge you need to build a Space Bucket or any DIY indoor garden."
 ---

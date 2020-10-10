@@ -13,8 +13,5 @@ Diatomaceous Earth is another great and natural tool to fight off pests, and it 
 
 <h3>Top Soil Layer</h3>
 One of the easiest and most effective pest control techniques is to <strong>put a layer of material on top of the soil of the plang: Diatomaceous Earth, perlite or aquarium gravel all work well for this application.</strong> Once the top part of the soil is covered, the pests ability to reproduce will be greatly reduced, interrupting their remaining life-cycle. Perlite is usually the best choice for this application, as Diatomaceous Earth can get muddy after a few waterings."
-v: ""
-g: ""
-
-z: ""
 o: "11"
+d: "Pests are one of the biggest challenges that a gardener has to face, and this is also true in DIY setups like Space Buckets."

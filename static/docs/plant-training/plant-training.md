@@ -16,8 +16,5 @@ Topping is the main HST technique in a bucketeers arsenal. <strong>This method r
 
 <h3>Supercropping</h3>
 Supercropping is another useful tool for controlling the plants growth and training its canopy: in its simplest form, <strong>it means pinching the stem to force the plant to heal its internal structure. Once healed, this results in stronger and faster growth.</strong> The most important part of supercropping is to avoild breaking open the stem, and just crushing it. A whole branch of the plant can die if the Supercropping is excessive. Supercropping tends to be considered a controversial technique, given its high stress methods. As with topping, not all plants react positively to this kind of training. Supercropping is recommended for gardeners that already have some experience in plant growing."
-v: ""
-g: ""
-
-z: ""
 o: "13"
+d: "DIY indoor gardens can be used to grow many kinds of plants, but they need to be trained with LST, topping, tucking or supercropping."

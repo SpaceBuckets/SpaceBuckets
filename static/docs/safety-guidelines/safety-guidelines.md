@@ -26,7 +26,5 @@ Even it everything feels snug, it may actually be 1 or 2 out of 3 that are snug.
 
 <h3>No line voltage at canopy</h3>
 If you use LED intracanopy lighting, <strong>use a lower voltage to drive them.</strong> I'll be showing multiple ways on how to do this in my lighting guide for people of different skill levels. I'll also be showing a safe exception to this rule."
-v: ""
-g: ""
-z: ""
 o: "5"
+d: "Follow these safety guidelines to make your that your DIY indoor garden is following the best electrical practices."

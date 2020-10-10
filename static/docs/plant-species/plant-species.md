@@ -17,8 +17,5 @@ Space Buckets can also be used to grow all kinds of herbs: these plants have gre
 
 <h3>Other Plants</h3>
 Over the years, bucketeers have experimented with many plant species, like strawberry, potatoes, wasabi and even an avocado sapling. Expanding the bucket plant portfolio is a good cause!"
-v: ""
-g: ""
-
-z: ""
 o: "12"
+d: "DIY indoor gardens can be used to grow all species of plants, specially those that are naturally short or react well to training."

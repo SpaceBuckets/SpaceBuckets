@@ -10,7 +10,5 @@ There are many types of SMD LEDs: <strong>for Space Buckets, 5050, 5630 and 7020
 
 <h3>Single chips</h3>
 Single LED chips can also be used for Space Bucket sidelighting: <strong>an array of 1w or 3w LEDs can provide an interesting alternative to SMD strips</strong>. This solution is usually harder to install, but more effective in the long run. With these kind of LEDs, it is always a good idea to keep the heatsinks on the outside of the growing container."
-v: ""
-g: ""
-z: ""
 o: "6"
+d: "A very important kind of lighting for DIY gardening are LED strips, which are installed on the walls as a supplemental source of lumens."

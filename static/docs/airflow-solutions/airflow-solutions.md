@@ -15,4 +15,5 @@ Duct fans are a great (and often overlooked) alternative for cooling Space Bucke
 <h3>USB fans</h3>
 Most cheap USB fans are built with brushed rather than brushless motors and are not likely to last more than a few months (see this comparison thread). However there are some higher end USB fans (for example the Stylepie Fun Fun Fan) that are brushless and will last a long time. A sewn carbon filter can be put on this fan but its ability to push enough air through is debatable."
 o: "3"
+d: "Proper airflow is essential for Space Buckets and indoor gardening. You need good ventilation to extract the heat away from your plants."
 ---
