@@ -3,7 +3,7 @@ t: "TITO'S BUCKET"
 s: "tito"
 a: "Tito_Ortitty"
 d: "2014-11-08"
-c: "Using a 180w UFO with a 5gal container. 3 fans have been reversed to exhaust out the top. The gaps between the fans and the housing were siliconed air tight. The idea here was to have a completely air tight bucket. when these fans try to pull air out of the space, it will have negative air pressure and will draw from any leaks or openings. In my case it's the 3/4' elbow. The hygrometer lead goes around back and enters through a small hole. 
+c: "Using a <a href='https://amzn.to/36NO5zr'>180w UFO LED light</a> with a 5gal container. 3 fans have been reversed to exhaust out the top. The gaps between the fans and the housing were siliconed air tight. The idea here was to have a completely air tight bucket. when these fans try to pull air out of the space, it will have negative air pressure and will draw from any leaks or openings. In my case it's the 3/4' elbow. The hygrometer lead goes around back and enters through a small hole. 
 There are also holes on the bottom for drainage into another partial pail below. Bucket is lined with strips of aluminum foil, and aluminum tape. LEDs are much brighter than they appear in the pictures.
 
 <h3>UPDATED CONFIGURATION</h3>

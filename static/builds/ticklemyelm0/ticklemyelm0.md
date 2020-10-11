@@ -3,7 +3,7 @@ t: "ELMO'S BUCKET"
 s: "ticklemyelm0"
 a: "ticklemyelm0"
 d: "2016-02-17"
-c: "This is my UFO Space Bucket! First of all, I really appreciate the crazy wealth of information this community has, as well as the s<strong>uper helpful and awesome people that are a part of it</strong>. I watched you guys for a year before I finally got the go-ahead to finally do this. And a special thanks to <a href='/u/ekrof'>/u/Ekrof</a> for helping out and making this whole subreddit even exist.
+c: "This is my <a href='https://amzn.to/36NO5zr'>UFO LED</a> Space Bucket! First of all, I really appreciate the crazy wealth of information this community has, as well as the s<strong>uper helpful and awesome people that are a part of it</strong>. I watched you guys for a year before I finally got the go-ahead to finally do this. And a special thanks to <a href='/u/ekrof'>/u/Ekrof</a> for helping out and making this whole subreddit even exist.
 
 <h3>GENERAL ADVICE</h3>
 Visit the <a href='https://www.reddit.com/r/SpaceBuckets/comments/461u0m/finally_roughly_finished_presenting_elmos_bucket/'>subreddit thread</a> for a full part list. Total cost was about ~0. Honestly, you can keep costs way lower than mine, I was just going for gold, and had the money to spare. I figure I'll be able to recoup the losses in around 6 to 8 months anyway.
