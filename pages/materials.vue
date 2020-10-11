@@ -312,6 +312,14 @@ function createItem(asin, type) {
 }
 
 function itemFromAmazon(json) {
+    if(!json.Offers) { 
+      json.Offers = {}
+      json.Offers.Listings = {}
+      json.Offers.Listings[0] = {}
+      json.Offers.Listings[0].Price = {}
+      json.Offers.Listings[0].Price.Amount = "-"
+    } 
+
   return {
     asin: json.ASIN,
     price: json.Offers.Listings[0].Price.Amount,
