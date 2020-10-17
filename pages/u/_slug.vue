@@ -33,7 +33,7 @@ export default {
       if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
       }
-      this.swipeItem.i = this.swipeItem.i.slice(0, 1);
+      //this.swipeItem.i = this.swipeItem.i.slice(0, 1);
       this.loadingSwipe = false
     }
   },
