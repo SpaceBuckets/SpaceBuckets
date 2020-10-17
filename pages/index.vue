@@ -17,7 +17,7 @@
         </nuxt-link>
         <a href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets">
           <h2>Join our subreddit</h2>
-          <div><icon-reddit/>98.000+ bucketeers await.</div>
+          <div><icon-reddit/>100.000+ bucketeers await.</div>
         </a>
         <a href="mailto:info@spacebuckets.com" title="Contact us">
           <h2>Contact us!</h2>

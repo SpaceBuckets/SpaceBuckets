@@ -5,23 +5,14 @@
     v-on:scroll.self="handleScroll"
     @touchstart="touchStart()"
     @touchend="touchEnd()"
-    @touchmove="touchMove()"
   >
-<!--     <div class="swipable sideswipe">
-      <nuxt-link to="/materials">MATERIALS</nuxt-link>
-      <nuxt-link to="/build">BUILDER</nuxt-link>
-      <nuxt-link to="/gallery">GALLERY</nuxt-link>
-      <nuxt-link to="/docs">DOCS</nuxt-link>
-      <nuxt-link to="/designer">DESIGN</nuxt-link>
-      <nuxt-link to="/drome">DROME</nuxt-link>
-    </div>   -->
 
   <div class="swipable" ref="mainswipe">
     <slot name="main"></slot>
   </div>
 
     <client-only>
-      <div class="onlymobile swipable" v-if="next">
+      <div class="swipable" v-if="next">
         <slot name="next"></slot>
       </div>
     </client-only>
@@ -38,12 +29,6 @@ export default {
       moving: false,
     };
   },  
-  created() {
-    this.$nextTick(() => {
-
-      });
-    //this.$router.push({hash: '#mainswipe'});
-  },
   methods: {
     touchStart() {
       this.moving = true;
@@ -52,8 +37,6 @@ export default {
     touchEnd() {
       this.moving = false;
       //this.$refs.swiper.style.willChange = "initial"
-    },
-    touchMove() {
     },
     async handleScroll() {
 
@@ -72,7 +55,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (max-width: 980px) {
+/* @media (max-width: 980px) { */
   #swiper {
     -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
@@ -119,5 +102,5 @@ export default {
       }
     }
   }
-}
+/* } */
 </style>

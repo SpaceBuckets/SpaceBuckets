@@ -21,7 +21,10 @@
         <nuxt-link to="/drome">DROME</nuxt-link>
         <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       </div>
-      <div id="stat"></div>
+      <button class="randomer" @click="swipeRandom()">
+        RANDOM <icon-random/>
+        <span id="stat"></span>
+      </button>
     </header>
     <nuxt />
   </div>
@@ -43,6 +46,9 @@ export default {
     },
   },
   methods: {
+    swipeRandom() {
+      document.getElementById("swiper").scrollBy(100,0)
+    },
     hitStat() {
       this.$nextTick(() => {
         var src = document.getElementById("stat");
@@ -84,6 +90,7 @@ header {
   align-items: center;
   justify-content: space-between;
   z-index: 999;
+  user-select: none;
   &.drome {
     border-bottom: 2px solid #004d47;
   }
@@ -114,9 +121,6 @@ header {
     cursor: pointer;
     background: transparent;
     border: 0;
-    &:focus {
-      outline: 0;
-    }
     @media (max-width: 980px) {
       align-items: center;
       justify-content: center;
@@ -140,6 +144,28 @@ header {
         color: #fafafa;
       }
     }
+  }
+}
+
+.randomer {
+  border: 0;
+  background: transparent;
+  color: #fafafa;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 600;  
+  padding: 0;
+  padding-right: 15px;
+  cursor: pointer;
+  &:hover {
+    color: #fdd835 !important;
+    svg { fill: #fdd835 !important; }
+  }  
+  svg {
+    width: 16px;
+    height: auto;
+    position: relative;
+    top: 2px;
   }
 }
 
@@ -181,6 +207,9 @@ header {
 </style>
 
 <style lang="scss">
+
+button:focus { outline: 0; }
+
 .onlydesktop {
   display: none !important;
   @media screen and (min-width: 981px) {
@@ -285,12 +314,11 @@ p {
 }
 
 #stat {
-  width: 100px;
+  width: 0;
+  position: absolute;
+  opacity: 0;
   img {
     width: auto;
-  }
-  @media (max-width: 980px) {
-    position: absolute;
   }
 }
 </style>
