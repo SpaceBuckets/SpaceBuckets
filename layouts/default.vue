@@ -21,7 +21,7 @@
         <nuxt-link to="/drome">DROME</nuxt-link>
         <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       </div>
-      <button class="randomer" @click="swipeRandom()">
+      <button class="randomer onlydesktop" @click="swipeRandom()">
         RANDOM <icon-random/>
         <span id="stat"></span>
       </button>
