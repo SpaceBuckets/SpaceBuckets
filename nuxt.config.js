@@ -25,7 +25,7 @@ export default {
     },
     titleTemplate: (chunk) => {
       if (chunk) { return `${chunk}`; }
-      return "Space Buckets - DIY indoor gardeners";
+      return "DIY indoor gardening - Space Buckets";
     },
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
     meta: [
@@ -39,7 +39,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Space Buckets: DIY Indoor Gardening with stacked containers. Start your journey and join the community!'
+        content: 'DIY Indoor Gardening with stacked containers and LED or CFL lights. Grow plants indoors and join our community!'
       }      
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
