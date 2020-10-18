@@ -175,7 +175,7 @@
         <div class="shopping-header">
           <div class="shopping-desc">
             <span>
-              <a href="https://spacebuckets.com/bruteLED">Brute Bucket</a>
+              <a href="https://spacebuckets.com/u/bruteLED">Brute Bucket</a>
             </span>
           </div>
         </div>
@@ -217,7 +217,7 @@
         <div class="shopping-header">
           <div class="shopping-desc">
             <span>
-              <a href="https://spacebuckets.com/GNKtote">Space Tote</a>
+              <a href="https://spacebuckets.com/u/GNKtote">Space Tote</a>
             </span>
           </div>
         </div>
