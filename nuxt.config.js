@@ -48,6 +48,11 @@ export default {
   loading: { color: "#fdd835" },
   vueMeta: { refreshOnceOnNavigation: true },
   features: { transitions: false },
+  modules: ['@nuxtjs/axios'],
+  axios: {
+    proxyHeaders: false,
+    credentials: false
+  },  
   buildModules: [
     "@nuxtjs/eslint-module",
     ['@nuxtjs/google-fonts', {   

@@ -1,8 +1,13 @@
 <template>
   <div>
-    <header :class="{'drome': $route.path.includes('/drome') }">
+    <header
+      :class="{
+        drome: $route.path.includes('/drome'),
+        login: $route.path.includes('/profile'),
+      }"
+    >
       <div class="nav-logo">
-        <nuxt-link :to="{name: 'index'}" exact>SPACE BUCKETS</nuxt-link>
+        <nuxt-link :to="{ name: 'index' }" exact>SPACE BUCKETS</nuxt-link>
       </div>
       <button class="nav-toggle active" @click="openNav = !openNav">
         <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792">
@@ -13,18 +18,63 @@
         </svg>
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
-        <nuxt-link to="/materials"><span class="onlydesktop">MATERIALS</span><span class="onlymobile">PARTS</span></nuxt-link>
+        <nuxt-link to="/materials"
+          ><span class="onlydesktop">MATERIALS</span
+          ><span class="onlymobile">PARTS</span></nuxt-link
+        >
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
         <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/designer">DESIGN</nuxt-link>
         <nuxt-link to="/drome">DROME</nuxt-link>
+        <nuxt-link to="/profile" class="onlymobile" v-if="isLogged">PROFILE</nuxt-link>
+        <nuxt-link to="/profile" class="onlymobile" v-if="!isLogged">LOGIN</nuxt-link>
         <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       </div>
-      <button class="randomer onlydesktop" @click="swipeRandom()">
+      <div
+        class="nav-sep logger"
+        :class="{ logged: isLogged }"
+        style="padding: 0 15px"
+      >
+        <template v-if="isLogged">
+          <nuxt-link :to="{ name: 'profile', params: { loggedProfile: profile }}">
+<!--           <span>{{ profile.name }}</span>  
+ -->          <span>PROFILE</span>  
+          <svg
+            style="height: auto; width: 24px;display:none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill="#FFF"
+              d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
+            />
+          </svg>
+          </nuxt-link>
+        </template>
+        <template v-if="!isLogged">
+          <nuxt-link to="/profile">
+          <span style="display:inline-block">
+            LOGIN
+          </span>
+          <svg
+            style="height: auto; width: 24px;display:none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+          >
+            <path
+              fill="#FFF"
+              d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
+            />
+          </svg>
+          </nuxt-link>
+        </template>
+          <span id="stat"></span>
+
+      </div>
+      <!--       <button class="randomer onlydesktop" @click="swipeRandom()">
         RANDOM <icon-random/>
-        <span id="stat"></span>
-      </button>
+      </button> -->
     </header>
     <nuxt />
   </div>
@@ -38,6 +88,15 @@ export default {
   data() {
     return {
       openNav: false,
+      isLogged: false,
+      nametest: "test",
+      profile: {
+        name: "",
+        prefs: "",
+        drome: "",
+        post: "",
+        favs: "",
+      },
     };
   },
   watch: {
@@ -47,7 +106,17 @@ export default {
   },
   methods: {
     swipeRandom() {
-      document.getElementById("swiper").scrollBy(100,0)
+      document.getElementById("swiper").scrollBy(100, 0);
+    },
+    hitLog() {
+      if (process.client) {
+        var checkLog = localStorage.getItem("profile");
+        var parsedLog = JSON.parse(checkLog);
+        if (localStorage.getItem("profile")) {
+          this.isLogged = true;
+          this.profile = parsedLog;
+        }
+      }
     },
     hitStat() {
       this.$nextTick(() => {
@@ -61,18 +130,24 @@ export default {
       });
     },
   },
-  mounted() { this.hitStat() },
-  updated() { this.hitStat() },
+  mounted() {
+    this.hitStat();
+    this.hitLog();
+  },
+  updated() {
+    this.hitStat();
+
+  },
   head() {
     return {
       link: [
         {
-          rel: 'canonical',
-          href: 'https://spacebuckets.com' + this.$route.path
-        }
-      ]
-    }
-  }  
+          rel: "canonical",
+          href: "https://spacebuckets.com" + this.$route.path,
+        },
+      ],
+    };
+  },
 };
 </script>  
 <style lang="scss" scoped>
@@ -89,10 +164,13 @@ header {
   border-bottom: 1px solid #222;
   align-items: center;
   justify-content: space-between;
-  z-index: 999;
+  z-index: 9;
   user-select: none;
   &.drome {
     border-bottom: 2px solid #004d47;
+  }
+  &.login {
+    background: transparent;
   }
   @media (max-width: 980px) {
     flex-direction: column;
@@ -153,14 +231,16 @@ header {
   color: #fafafa;
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
-  font-weight: 600;  
+  font-weight: 600;
   padding: 0;
   padding-right: 15px;
   cursor: pointer;
   &:hover {
     color: #fdd835 !important;
-    svg { fill: #fdd835 !important; }
-  }  
+    svg {
+      fill: #fdd835 !important;
+    }
+  }
   svg {
     width: 16px;
     height: auto;
@@ -173,6 +253,32 @@ header {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
+  //svg path { transition: all 0.3s linear; }
+  &.logger {
+    position: relative;
+    cursor: pointer;
+    &:hover {
+      a {
+        color: #fdd835;
+      }
+      svg path {
+        fill: #fdd835;
+      }
+    }
+    a {
+      padding: 0;
+      position: relative;
+      color: #fff;
+      /* display: flex;
+      align-items: center;
+      top: 1px; */
+    }
+  }
+  &.logged {
+    svg path {
+      fill: #fdd835;
+    }
+  }
   a {
     display: block;
     flex: 1;
@@ -207,8 +313,9 @@ header {
 </style>
 
 <style lang="scss">
-
-button:focus { outline: 0; }
+button:focus {
+  outline: 0;
+}
 
 .onlydesktop {
   display: none !important;
@@ -233,7 +340,9 @@ button:focus { outline: 0; }
   backface-visibility: hidden;
   left: 0;
   top: 50px;
-  a { text-decoration: none; }
+  a {
+    text-decoration: none;
+  }
   @media (max-width: 980px) {
     position: relative;
     height: auto;
