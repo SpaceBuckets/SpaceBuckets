@@ -134,22 +134,17 @@ export default {
       welcomeHidden: false,
       currentMessage: [],
       progressValue: 0,
-      player: {
-        name: "",
-        prefs: "",
-        drome: "",
-        post: "",
-        favs: "",
-      },
       notLogged: false,
       isLogged: false,
       nametest: "test",
       profile: {
         name: "",
+        pin: "",
         prefs: "",
         drome: "",
         post: "",
         favs: "",
+        images: ""
       },
     };
   },
@@ -161,6 +156,7 @@ export default {
   },
   mounted() {
     this.hitLog();
+    console.log(this.profile)
   },
   methods: {
     logOuter() {
@@ -182,9 +178,10 @@ export default {
       }
     },
     registerUser() {
-      this.player.name = this.$refs.dataUser.value;
+      this.profile.name = this.$refs.dataUser.value;
+      this.profile.pin = this.$refs.dataPin.value;
 
-      var formattedData = JSON.stringify(this.player);
+      var formattedData = JSON.stringify(this.profile);
       var reformattedData = formattedData.replace(/"/g, "'");
 
       var usrArr = [];
@@ -214,25 +211,19 @@ export default {
             if (data.responseJSON[0]) {
               if (data.responseJSON[0].name === usrName) {
                 console.log("EXISTS ✓");
-                self.currentMessage.push(
-                  "The Space Drome has identified this gardener ✓"
-                );
                 self.progressValue = 0.8;
                 if (data.responseJSON[0].pin === usrPin) {
                   console.log("PASS ✓");
+                                    console.log(data.responseJSON[0].data)
+
                   var responseData = JSON.parse(data.responseJSON[0].data);
+                  console.log(responseData)
                   localStorage.setItem("profile", JSON.stringify(responseData));
                   self.progressValue = 1;
                   self.userLogged = true;
-                  self.currentMessage.push(
-                    "Welcome back " + usrName + "! More bucketing awaits."
-                  );
                   self.$router.go();
                 } else {
                   console.log("PASS 𐄂");
-                  self.currentMessage.push(
-                    "Unidentified credentials! The Space Drome records do not match 𐄂"
-                  );
                   self.progressValue = 0;
                   self.pinError = true;
                   self.isLoading = false;
@@ -241,9 +232,6 @@ export default {
             } else {
               self.creatingUser = true;
               console.log("EXISTS 𐄂");
-              self.currentMessage.push(
-                "New gardener detected! Initiating registering process..."
-              );
               self.progressValue = 0.6;
               $.ajax({
                 url: "https://boletinextraoficial.com/drome_in.php",
@@ -255,10 +243,7 @@ export default {
                 },
                 complete: function (data) {
                   console.log("CREATED ✓");
-                  self.currentMessage.push(
-                    "Gardener " + usrName + " has been registered succesfully."
-                  );
-                  var reformattedData = JSON.stringify(self.player);
+                  var reformattedData = JSON.stringify(self.profile);
                   var megaData =
                     "name=" +
                     self.$refs.dataUser.value +
@@ -279,15 +264,10 @@ export default {
                       console.log("UPDATED ✓");
                       localStorage.setItem(
                         "profile",
-                        JSON.stringify(self.player)
+                        JSON.stringify(self.profile)
                       );
                       self.progressValue = 1;
                       self.userLogged = true;
-                      self.currentMessage.push(
-                        "Welcome " +
-                          usrName +
-                          "! bucket journey starts today. Choose parts wisely and build your first garden!"
-                      );
                       self.$router.go();
                     },
                   });

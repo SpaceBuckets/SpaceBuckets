@@ -1,7 +1,5 @@
 <template>
   <div>
-    <div class="progress" v-if="submitting"></div>
-
     <div class="loading-container" v-if="!isLogged && !notLogged">
       <div class="spinner">
         <div class="rect1"></div>
@@ -24,11 +22,13 @@
                 name="title"
                 v-model="form.title"
                 placeholder="Enter Bucket Title..."
+                @input="updateTitle($event)"
               />
             </h2>
             <div
               contenteditable="true"
               :data-placeholder="dataPlaceholder"
+              ref="dataContent"
               @input="updateContent($event)"
             ></div>
           </div>
@@ -88,12 +88,12 @@
                   />
                 </svg>
               </div>
-              <div>
+              <div class="submit-container" :class="{ submitting,submiterror,submitsuccess }">
+                <span>{{submitText}}</span>
                 <input
                   id="submit-btn"
                   type="submit"
                   name="submit"
-                  :value="submitText"
                   :disabled="
                     imgItems && form.content && form.title ? false : true
                   "
@@ -124,6 +124,7 @@
 
 <script>
 import { singlePost, randomize } from "~/store/flatDB";
+import $ from "jquery";
 
 export default {
   data() {
@@ -150,6 +151,7 @@ export default {
       submitText: "Submit your bucket!",
       submitting: false,
       submiterror: false,
+      submitsuccess: false,
       notLogged: false,
       isLogged: false,
       profile: {
@@ -158,6 +160,7 @@ export default {
         drome: "",
         post: "",
         favs: "",
+        images: ""
       },
     };
   },
@@ -166,7 +169,6 @@ export default {
     if (this.$route.params.loggedProfile) {
       this.isLogged = true;
       this.profile = this.$route.params.loggedProfile;
-      console.log(this.profile);
     }
   },
   mounted() {
@@ -181,17 +183,36 @@ export default {
         if (localStorage.getItem("profile")) {
           this.isLogged = true;
           this.profile = parsedLog;
+          if(this.profile.post != "") {
+            this.form.title = this.profile.post.title
+            this.$nextTick(() => {
+              this.dataPlaceholder = "";
+              this.$refs.dataContent.innerHTML = this.profile.post.content
+            });
+
+            this.imageData = this.profile.post.images
+          }
+
         } else {
           this.notLogged = true;
         }
       }
     },
+    updateTitle(event) {
+      this.submitText = "Submit your bucket!";
+      this.submiterror = false
+      this.submitsuccess = false
+
+    },    
     updateContent(event) {
       this.dataPlaceholder = "";
       this.form.content = event.target.innerHTML;
       if (event.target.innerHTML === "") {
         this.dataPlaceholder = `Enter bucket content...\n(Markdown formatting is supported)`;
       }
+      this.submitText = "Submit your bucket!";
+      this.submiterror = false
+      this.submitsuccess = false
     },
     fileChange(event, pos) {
       var input = event.target;
@@ -203,8 +224,8 @@ export default {
         };
         reader.readAsDataURL(input.files[0]);
       }
-      this.submitText = "Submit your bucket!"
-
+      this.submitText = "Submit your bucket!";
+      this.submiterror = false
     },
     async submit(e) {
       e.preventDefault();
@@ -220,31 +241,65 @@ export default {
       var mdContent = `---
 t: "${this.form.title}"
 s: "${reslug}"
-a: ""
+a: "${this.profile.name}"
 d: "${redate}"
 c: "${this.form.content}"
 v: ""
 g: ""
 z: ""`;
 
-      this.submitText = "Submitting! Please wait..."
+      var postContent = {title:this.form.title,content:this.form.content,images:this.imageData}
+      this.profile.post = postContent
+      this.submitText = "Submitting! Please wait...";
+      var self = this;
+      var formattedData = JSON.stringify(this.profile);
+      var datar =
+        "name=" +
+        this.profile.name +
+        "&pin=" +
+        this.profile.pin +
+        "&obj=" +
+        encodeURIComponent(formattedData);
+      var self = this;
+
+      localStorage.setItem("profile",JSON.stringify(self.profile));
+       $.ajax({
+        url: "https://boletinextraoficial.com/drome_up.php",
+        data: datar,
+        type: "POST",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },        
+        dataType: "json",
+        complete: function(data) {
+          console.log("UPDATED ✓");
+
+        }
+      });
+   
       //await this.$axios.post('https://github-sb.herokuapp.com/post', {
       await this.$axios
         .post("http://localhost:4000/post", {
           title: this.form.title,
           slug: reslug,
+          author: this.profile.name,
           content: mdContent,
           images: this.imageData,
-        })
+        },{progress: false} )
         .then(function (response) {
-          console.log(response);
+          //console.log(response);
+          if (response.data === "OK") {
+            self.submitText = "Success! Your bucket has been submitted for review";
+            self.submitsuccess = true
+          } else {
+            self.submitText = "Error! Could not submit your bucket";
+            self.submiterror = true
+          }
+          self.submitting = false;
         })
-        .catch(function (error) {
-          this.submiterror = true;
-          console.log(submiterror);
-        });
-      this.submitting = false;
-      this.submitText = "Your bucket has been submitted for review"
+        .catch(function (error) {});
+
+        console.log("its over")
     },
   },
   head() {
@@ -519,22 +574,20 @@ textarea {
       display: none;
     }
     #submit-btn {
-      background: rgba(253, 216, 53, 0.9);
-      color: #222;
-      font-weight: bold;
+      color: transparent;
       width: 100%;
       height: 40px;
       display: block;
       cursor: pointer;
+      background: transparent;
+      z-index: 999;
+      position: relative;
       &[disabled="disabled"] {
         cursor: not-allowed;
         opacity: 0.5;
       }
       &:focus {
         outline: 0;
-      }
-      &:hover {
-        background: rgba(253, 216, 53, 1);
       }
     }
   }
@@ -683,37 +736,59 @@ textarea {
     width: 0;
   }
   100% {
-    width: 100vw;
+    width: 100%;
   }
-}
-
-.loading-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.progress {
-  display: flex;
-  height: 2px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding: 0;
-  z-index: 999;
-}
-
-.progress:before {
-  content: "";
-  width: calc(var(--value) * 1%);
-  background: #fdd835;
-  animation: megaload 10s linear;
 }
 
 .nuxt-progress {
   display: none !important;
+}
+
+.submit-container {
+  position: relative;
+  background: rgba(253, 216, 53, 0.9);
+  &:hover {
+    background: rgba(253, 216, 53, 1);
+  }
+  span {
+    z-index: 99999;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    pointer-events: none;
+  }
+  &.submitting:after {
+    content: "";
+    width: 0;
+    background: rgba(76,175,80, 0.3);
+    animation: megaload 6s linear forwards;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+  }
+  &.submitting:hover {
+    background: rgba(253, 216, 53, 0.9)
+  }
+  &.submitsuccess {
+    background: #50B83C;
+    cursor: not-allowed;
+    pointer-events: none;
+    span { color: #fff; }
+  }
+  &.submiterror {
+    background: #d84315;
+    cursor: not-allowed;
+    pointer-events: none;
+    span { color: #fff; }
+  }
 }
 </style>
