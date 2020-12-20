@@ -258,7 +258,7 @@ z: ""`;
       var self = this;
       await this.$axios
         .post(
-          "http://localhost:4000/post",
+          "https://github-sb.herokuapp.com/post",
           {
             title: this.form.title,
             slug: reslug,
