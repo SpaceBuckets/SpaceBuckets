@@ -2,13 +2,14 @@
 
 export default ({ app }, inject) => {
   inject('profile', { 
-    profile: {
       name: "",
+      pin: "",
       prefs: "",
       drome: "",
       post: "",
-      favs: "",
-    },
-  })
-
+      favs: [],
+   })
+   inject('profileStatus', { 
+    isLogged: false,
+    })
   }

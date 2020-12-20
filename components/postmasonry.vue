@@ -1,28 +1,68 @@
 <template>
   <div class="post-masonry" :class="variation">
     <div class="post-content">
-      <h2>{{ post.t }}</h2>
+      <h2>
+        <span>{{ post.t }}</span>
+        <button
+          v-if="$profileStatus.isLogged"
+          title="Save to Favorites"
+          aria-label="Save to Favorites"
+          @click="saveFavorite(post.t,post.s)"
+          class="sav-fav"
+          :class="{ savedActive }"
+        >
+          <svg
+            viewBox="0 0 18 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.19 1.155c-1.672-1.534-4.383-1.534-6.055 0L9 2.197 7.864 1.155c-1.672-1.534-4.382-1.534-6.054 0-1.881 1.727-1.881 4.52 0 6.246L9 14l7.19-6.599c1.88-1.726 1.88-4.52 0-6.246z"
+              fill="#fff"
+            />
+          </svg>
+          <svg
+            viewBox="0 0 18 14"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M16.19 1.156c-1.672-1.535-4.383-1.535-6.055 0L9 2.197 7.864 1.156c-1.672-1.535-4.382-1.535-6.054 0-1.881 1.726-1.881 4.519 0 6.245L9 14l7.19-6.599c1.88-1.726 1.88-4.52 0-6.245zm-1.066 5.219L9 12.09 2.875 6.375c-.617-.567-.856-1.307-.856-2.094 0-.787.138-1.433.756-1.999.545-.501 1.278-.777 2.063-.777.784 0 1.517.476 2.062.978L9 4.308l2.099-1.826c.546-.502 1.278-.978 2.063-.978.785 0 1.518.276 2.063.777.618.566.755 1.212.755 1.999 0 .787-.238 1.528-.856 2.095z"
+              fill="#ccc"
+            />
+          </svg>
+        </button>
+      </h2>
       <div v-html="post.c"></div>
     </div>
     <div class="post-support">
       <div class="post-source listad-inline" v-if="post.a">
         <div class="avatar-container">
-          <svg viewBox="0 0 1792 1792"><path d="M1792 846q0 58-29.5 105.5t-79.5 72.5q12 46 12 96 0 155-106.5 287t-290.5 208.5-400 76.5-399.5-76.5-290-208.5-106.5-287q0-47 11-94-51-25-82-73.5t-31-106.5q0-82 58-140.5t141-58.5q85 0 145 63 218-152 515-162l116-521q3-13 15-21t26-5l369 81q18-37 54-59.5t79-22.5q62 0 106 43.5t44 105.5-44 106-106 44-105.5-43.5-43.5-105.5l-334-74-104 472q300 9 519 160 58-61 143-61 83 0 141 58.5t58 140.5zm-1374 199q0 62 43.5 106t105.5 44 106-44 44-106-44-105.5-106-43.5q-61 0-105 44t-44 105zm810 355q11-11 11-26t-11-26q-10-10-25-10t-26 10q-41 42-121 62t-160 20-160-20-121-62q-11-10-26-10t-25 10q-11 10-11 25.5t11 26.5q43 43 118.5 68t122.5 29.5 91 4.5 91-4.5 122.5-29.5 118.5-68zm-3-205q62 0 105.5-44t43.5-106q0-61-44-105t-105-44q-62 0-106 43.5t-44 105.5 44 106 106 44z" fill="#fff"/></svg>
+          <svg viewBox="0 0 1792 1792">
+            <path
+              d="M1792 846q0 58-29.5 105.5t-79.5 72.5q12 46 12 96 0 155-106.5 287t-290.5 208.5-400 76.5-399.5-76.5-290-208.5-106.5-287q0-47 11-94-51-25-82-73.5t-31-106.5q0-82 58-140.5t141-58.5q85 0 145 63 218-152 515-162l116-521q3-13 15-21t26-5l369 81q18-37 54-59.5t79-22.5q62 0 106 43.5t44 105.5-44 106-106 44-105.5-43.5-43.5-105.5l-334-74-104 472q300 9 519 160 58-61 143-61 83 0 141 58.5t58 140.5zm-1374 199q0 62 43.5 106t105.5 44 106-44 44-106-44-105.5-106-43.5q-61 0-105 44t-44 105zm810 355q11-11 11-26t-11-26q-10-10-25-10t-26 10q-41 42-121 62t-160 20-160-20-121-62q-11-10-26-10t-25 10q-11 10-11 25.5t11 26.5q43 43 118.5 68t122.5 29.5 91 4.5 91-4.5 122.5-29.5 118.5-68zm-3-205q62 0 105.5-44t43.5-106q0-61-44-105t-105-44q-62 0-106 43.5t-44 105.5 44 106 106 44z"
+              fill="#fff"
+            />
+          </svg>
         </div>
         <div>
-          by <strong>/u/{{ post.a }}</strong>          
+          by <strong>/u/{{ post.a }}</strong>
         </div>
         <div>
-          <a style="padding:0;height:auto;" :href="`https://www.reddit.com/user/${post.a}`">View on Reddit</a>
+          <a
+            style="padding: 0; height: auto"
+            :href="`https://www.reddit.com/user/${post.a}`"
+            >View on Reddit</a
+          >
         </div>
-            <p class="item-tag">
-              <svg width="32" height="32" viewBox="0 0 100 100">
-                <path
-                  d="M61.4 49.1L40 27.7c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l20.7 20.7-20.7 20.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l21.4-21.4c.2-.2.3-.4.3-.7s-.1-.5-.3-.7z"
-                  fill="#ccc"
-                />
-              </svg>
-            </p>        
+        <p class="item-tag">
+          <svg width="32" height="32" viewBox="0 0 100 100">
+            <path
+              d="M61.4 49.1L40 27.7c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l20.7 20.7-20.7 20.7c-.4.4-.4 1 0 1.4.2.2.5.3.7.3s.5-.1.7-.3l21.4-21.4c.2-.2.3-.4.3-.7s-.1-.5-.3-.7z"
+              fill="#ccc"
+            />
+          </svg>
+        </p>
       </div>
       <div class="placeholder-items">
         <div
@@ -43,32 +83,38 @@
         </div>
       </div>
       <div class="real-items" v-if="variation != 'skeleton'">
-        <div v-for="(item, e) in amazonItems" :key="`item-${e}`" class="listad-inline">
-          <a class="ad-ad ad-ad-inline" target="_blank" :href="item.DetailPageURL">
+        <div
+          v-for="(item, e) in amazonItems"
+          :key="`item-${e}`"
+          class="listad-inline"
+        >
+          <a
+            class="ad-ad ad-ad-inline"
+            target="_blank"
+            :href="item.DetailPageURL"
+          >
             <div class="listad-img-container">
               <img :src="item.Images.Primary.Medium.URL" />
             </div>
             <p class="item-title">{{ item.ItemInfo.Title.DisplayValue }}</p>
             <p class="item-price" v-if="item.Offers">
-              <span class="sale-price">${{ item.Offers.Listings[0].Price.Amount }}</span>
+              <span class="sale-price"
+                >${{ item.Offers.Listings[0].Price.Amount }}</span
+              >
             </p>
             <p class="item-price" v-if="!item.Offers">
               <span class="sale-price"></span>
             </p>
             <template v-if="item.ItemInfo.ByLineInfo">
-              <p
-                class="item-brand"
-                v-if="item.ItemInfo.ByLineInfo.Brand"
-              >{{ item.ItemInfo.ByLineInfo.Brand.DisplayValue }}</p>
-              <p
-                class="item-brand"
-                v-if="!item.ItemInfo.ByLineInfo.Brand"
-              >{{ item.ItemInfo.ByLineInfo.Manufacturer.DisplayValue }}</p>              
+              <p class="item-brand" v-if="item.ItemInfo.ByLineInfo.Brand">
+                {{ item.ItemInfo.ByLineInfo.Brand.DisplayValue }}
+              </p>
+              <p class="item-brand" v-if="!item.ItemInfo.ByLineInfo.Brand">
+                {{ item.ItemInfo.ByLineInfo.Manufacturer.DisplayValue }}
+              </p>
             </template>
             <template v-if="!item.ItemInfo.ByLineInfo">
-              <p
-                class="item-brand"
-              ></p>     
+              <p class="item-brand"></p>
             </template>
 
             <p class="item-tag">
@@ -83,15 +129,20 @@
         </div>
       </div>
     </div>
-    <div class="img-container" v-for="(img,ie) in post.i" :key="`section-${ie}`">
+    <div
+      class="img-container"
+      v-for="(img, ie) in post.i"
+      :key="`section-${ie}`"
+    >
       <img :src="`/builds/${post.s}/${img.h}`" alt />
-      <div :style="{'padding-top': img.s +'%'}"></div>
-    </div>      
-    
+      <div :style="{ 'padding-top': img.s + '%' }"></div>
+    </div>
   </div>
 </template>
 
 <script>
+import $ from "jquery";
+
 export default {
   name: "postmasonry",
   props: ["post", "variation"],
@@ -101,16 +152,72 @@ export default {
       relatedItems: [],
       swipeItem: [],
       progressScroll: 0,
+      savedActive: false,
     };
   },
+  updated() {
+    if (process.client) {
+      var savedFavs = this.$profile.favs;
+      var i;
+      for (i = 0; i < savedFavs.length; i++) {
+        if (savedFavs[i] === this.post.s) {
+          this.savedActive = true;
+        }
+      }
+    }
+  },
   async created() {
+    if (process.client) {
+      var savedFavs = this.$profile.favs;
+      console.log(savedFavs)
+      var i;
+      for (i = 0; i < savedFavs.length; i++) {
+        if (savedFavs[i].s === this.post.s) {
+          this.savedActive = true;
+        }
+      }
+    }    
     if (process.client && this.$props.variation != "skeleton") {
-    if (this.post.z !== "" || (this.post.z !== undefined && this.post.z.length > 0)) {
-        const zItems = fetch(`https://bucket-builder.herokuapp.com/bucket-builder/${this.post.z}`)
+      if (
+        this.post.z !== "" ||
+        (this.post.z !== undefined && this.post.z.length > 0)
+      ) {
+        const zItems = fetch(
+          `https://bucket-builder.herokuapp.com/bucket-builder/${this.post.z}`
+        )
           .then((response) => response.json())
           .then((data) => (this.amazonItems = data.ItemsResult.Items));
       }
     }
+  },
+  methods: {
+    saveFavorite(postTitle,postSlug) {
+      var newFav = { t: postTitle, s: postSlug }
+      var currFavs = this.$profile.favs;
+      currFavs.push(newFav);
+
+      this.savedActive = true;
+      console.log(currFavs)
+      var saveData =
+        "name=" + this.$profile.name + "&obj=" + JSON.stringify(currFavs);
+      var self = this;
+
+       $.ajax({
+        url: "https://boletinextraoficial.com/sb_fav_up.php",
+        data: saveData,
+        type: "POST",
+        dataType: "json",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        complete: function (data) {
+          console.log("SAVED FAVORITE ✓");
+          self.$profile.favs = currFavs;
+          localStorage.setItem('favs',JSON.stringify(currFavs))
+
+        },
+      });
+    },
   },
 };
 </script>
@@ -132,14 +239,41 @@ export default {
     padding: 10px 0 15px;
     overflow: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: baseline;
     text-transform: uppercase;
+    > * {
+      flex: 1;
+    }
     span {
-      float: right;
-      font-size: 16px;
-      font-family: arial, helvetica, sans-serif;
-      font-weight: normal;
+      max-width: max-content;
+    }
+    .sav-fav {
+      background: none;
+      border: 0;
+      padding: 0;
+      cursor: pointer;
+      position: relative;
+      max-width: 50px;
+
+      svg {
+        position: absolute;
+        left: 0;
+        top: 4px;
+        width: 25px;
+        height: auto;
+        margin-left: 10px;
+      }
+      &.savedActive {
+        pointer-events: none;
+      }
+      &.savedActive,
+      &:hover {
+        svg {
+          fill: #a33426;
+        }
+        svg path {
+          fill: #a33426;
+        }
+      }
     }
   }
   p,
@@ -183,7 +317,7 @@ export default {
     }
   }
   &.skeleton {
-/*     display: flex;
+    /*     display: flex;
     flex-direction: column;
     .post-support,
     .post-content {
@@ -199,7 +333,7 @@ export default {
     display: table;
     clear: both;
   }
-  color:#343536;
+  color: #343536;
   background: #fff;
   border-right: 1px solid #1a1a1b;
   border-bottom: 1px solid #1a1a1b;
@@ -221,7 +355,6 @@ export default {
   .listad-inline {
     background: #fff;
     width: 100%;
-    z-index: 99;
     float: left;
     border-top: 1px solid #eee;
     &:after {

@@ -25,10 +25,8 @@
     "node-sass": "^4.14.1",
     "nuxt-edge": "latest",
     "sass-loader": "^9.0.2",
-    "sort-array": "^4.1.1"
-  },
-  "dependencies": {
+    "sort-array": "^4.1.1",
     "@nuxtjs/axios": "^5.12.2",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1"    
   }
 }

@@ -13,7 +13,6 @@
         <div class="doc-single-content">
           <h2>Begin your Journey</h2>
           <br />
-          <explode style="float:right;margin: 0 20px;" />
           <p>
             <strong>A Space Bucket is a DIY indoor garden</strong> that is made by stacking plastic containers alongside lighting (CFL or LED) and airflow (PC or other fans).
             <strong>It is an enclosed growth chamber that can be used to garden many kinds of plants.</strong> A Space Bucket is a versatile gardening tool that can be adapted to the users needs. Every variable of the bucket environment can be
@@ -151,6 +150,16 @@ export default {
       margin: 0;
       margin-bottom: 10px;
     }
+  }
+  @media (max-width: 980px) {
+    column-count: 1;
+  }  
+}
+
+.exploder {
+  width: 100px;
+  @media (max-width: 980px) {
+    display: none;
   }
 }
 </style>

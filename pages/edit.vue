@@ -1,6 +1,6 @@
 <template>
   <div>
-<!--     <div class="loading-container" v-if="!isLogged && !notLogged">
+    <!--     <div class="loading-container" v-if="!isLogged && !notLogged">
       <div class="spinner">
         <div class="rect1"></div>
         <div class="rect2"></div>
@@ -23,11 +23,11 @@
                 v-model="form.title"
                 placeholder="Enter Bucket Title..."
                 @input="updateTitle($event)"
+                style="pointer-events: none"
               />
             </h2>
             <div
               contenteditable="true"
-              :data-placeholder="dataPlaceholder"
               ref="dataContent"
               @input="updateContent($event)"
             ></div>
@@ -93,14 +93,7 @@
                 :class="{ submitting, submiterror, submitsuccess }"
               >
                 <span>{{ submitText }}</span>
-                <input
-                  id="submit-btn"
-                  type="submit"
-                  name="submit"
-                  :disabled="
-                    imgItems && form.content && form.title ? false : true
-                  "
-                />
+                <input id="submit-btn" type="submit" name="submit" />
               </div>
             </div>
           </div>
@@ -141,20 +134,20 @@ export default {
   data() {
     return {
       imageData: {
-        0: "",
-        1: "",
-        2: "",
-        3: "",
-        4: "",
+        0: this.$route.params.post.images[0],
+        1: this.$route.params.post.images[1],
+        2: this.$route.params.post.images[2],
+        3: this.$route.params.post.images[3],
+        4: this.$route.params.post.images[4],
       },
       imageCover: "",
       dataPlaceholder: `Enter bucket content...\n(Markdown formatting is supported)`,
       form: {
-        title: "",
+        title: this.$route.params.post.title,
         slug: "",
         author: "",
         date: "",
-        content: "",
+        content: this.$route.params.post.content,
         views: "",
         tags: "",
         amazon: "",
@@ -165,6 +158,9 @@ export default {
       submiterror: false,
       submitsuccess: false,
     };
+  },
+  updated() {
+    this.$refs.dataContent.innerHTML = this.form.content;
   },
   mounted() {
     this.submitting = false;
@@ -260,7 +256,7 @@ z: ""`;
 
       this.submitText = "Submitting! Please wait...";
       var self = this;
-       await this.$axios
+      await this.$axios
         .post(
           "http://localhost:4000/post",
           {
@@ -282,7 +278,7 @@ z: ""`;
             self.submiterror = true;
           }
         })
-        .catch(function (error) {}); 
+        .catch(function (error) {});
 
       var megapost = [];
       var postContent = {
@@ -291,74 +287,103 @@ z: ""`;
         images: this.imageData,
         cover: this.imageCover,
       };
-
-
-      if (this.$profile.post !== "") {
-        megapost.push(this.$profile.post);
-        megapost.push(postContent);
-        megapost = megapost.flat();
-
-        var ir;
-        for (ir = 0; ir < megapost.length; ir++) {
-          megapost[ir].cover = megapost[ir].cover.replace(/\+/g, "%2B");
-
-          Object.keys(megapost[ir].images).forEach(function (key) {
-            megapost[ir].images[key] = megapost[ir].images[key].replace(
-              /\+/g,
-              "%2B"
-            );
-          });
-        }
-        this.$profile.post = megapost;
-      } else {
-        this.$profile.post = [postContent];
+      if (this.$profile.post) {
+        megapost.push(...this.$profile.post);
       }
 
-      var self = this;
+      var i;
+      for (i = 0; i < megapost.length; i++) {
+        if (megapost[i].title === postContent.title) {
+          megapost[i] = postContent;
+        }
+      }
+      var ir;
+      for (ir = 0; ir < megapost.length; ir++) {
+        megapost[ir].cover = megapost[ir].cover.replace(/\+/g, "%2B");
 
-      var gameData =
-        "name=" +
-        this.$profile.name +
-        "&title=" +
-        this.form.title +
-        "&content=" +
-        this.form.content +        
-        "&cover=" +
-        this.imageCover +
-        "&image1=" +
-        this.imageData[0] +
-        "&image2=" +
-        this.imageData[1] +
-        "&image3=" +
-        this.imageData[2] +
-        "&image4=" +
-        this.imageData[3] +
-        "&image5=" +
-        this.imageData[4]                      
+        Object.keys(megapost[ir].images).forEach(function (key) {
+          megapost[ir].images[key] = megapost[ir].images[key].replace(
+            /\+/g,
+            "%2B"
+          );
+        });
+      }
+      this.$profile.post = megapost;
+      localStorage.setItem("post", JSON.stringify(this.$profile.post));
+      var self = this;
+      var formattedData = this.$profile;
+
+      var checkPosts = "name=" + this.$profile.name;
 
       $.ajax({
-        url: "https://boletinextraoficial.com/sb_in_post.php",
-        data: gameData,
+        url: "https://boletinextraoficial.com/sb_call_post.php",
+        data: checkPosts,
         type: "POST",
+        dataType: "json",
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
-        dataType: "json",
         complete: function (data) {
-          console.log("UPDATED ✓");
-          self.submitText =
-            "Success! Your bucket has been submitted for review";
-          self.submitsuccess = true;
-          self.submitting = false;
-          localStorage.setItem('post',JSON.stringify(self.$profile.post))
+          if (data.status === 200) {
+            console.log("POSTS ✓");
+            console.log(data);
+            var daleID;
+            var ia;
+            for (ia = 0; ia < data.responseJSON.length; ia++) {
+              if (
+                data.responseJSON[ia].title === self.$route.params.post.title
+              ) {
+                daleID = data.responseJSON[ia].ID;
+              }
+            }
+            var gameData =
+              "id=" +
+              daleID +
+              "&name=" +
+              self.$profile.name +
+              "&title=" +
+              self.form.title +
+              "&content=" +
+              self.form.content +
+              "&cover=" +
+              self.imageCover +
+              "&image1=" +
+              self.imageData[0] +
+              "&image2=" +
+              self.imageData[1] +
+              "&image3=" +
+              self.imageData[2] +
+              "&image4=" +
+              self.imageData[3] +
+              "&image5=" +
+              self.imageData[4];
+            $.ajax({
+              url: "https://boletinextraoficial.com/sb_up_post.php",
+              data: gameData,
+              type: "POST",
+              headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+              },
+              dataType: "json",
+              complete: function (data) {
+                console.log("UPDATED ✓");
+                self.submitText =
+                  "Success! Your bucket has been submitted for review";
+                self.submitsuccess = true;
+                self.submitting = false;
+              },
+            });
+          }
+        },
+        error: function (request, status, error) {
+          console.log("POSTS 𐄂");
         },
       });
-      
     },
   },
   head() {
     return {
-      title: `Space Buckets - SUBMIT!`,
+      title: `Space Buckets - EDIT!`,
     };
   },
 };
@@ -504,7 +529,7 @@ textarea {
   background: #fff;
   border-right: 1px solid #1a1a1b;
   border-bottom: 1px solid #1a1a1b;
-  //overflow: auto;
+  overflow: auto;
   max-height: 3000px;
   position: relative;
   .real-items {

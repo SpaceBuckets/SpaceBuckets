@@ -37,6 +37,7 @@ export default {
       this.loadingSwipe = false
     }
   },
+
   head() {
     return {
       title: `Space Buckets - ${this.post.t}`,

@@ -27,19 +27,21 @@
         <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/designer">DESIGN</nuxt-link>
         <nuxt-link to="/drome">DROME</nuxt-link>
-        <nuxt-link to="/profile" class="onlymobile" v-if="isLogged">PROFILE</nuxt-link>
-        <nuxt-link to="/profile" class="onlymobile" v-if="!isLogged">LOGIN</nuxt-link>
+        <nuxt-link to="/profile" class="onlymobile" v-if="$profileStatus.isLogged">PROFILE</nuxt-link>
+        <nuxt-link to="/profile" class="onlymobile" v-if="!$profileStatus.isLogged">LOGIN</nuxt-link>
         <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       </div>
+
       <div
         class="nav-sep logger"
-        :class="{ logged: isLogged }"
+        :class="{ logged: $profileStatus.isLogged }"
         style="padding: 0 15px"
       >
-        <template v-if="isLogged">
-          <nuxt-link :to="{ name: 'profile', params: { loggedProfile: profile }}">
-<!--           <span>{{ profile.name }}</span>  
- -->          <span>PROFILE</span>  
+            <client-only>
+
+        <template v-if="$profileStatus.isLogged">
+          <nuxt-link :to="{ name: 'profile' }">
+           <span>PROFILE</span>  
           <svg
             style="height: auto; width: 24px;display:none"
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +54,7 @@
           </svg>
           </nuxt-link>
         </template>
-        <template v-if="!isLogged">
+        <template v-if="!$profileStatus.isLogged">
           <nuxt-link to="/profile">
           <span style="display:inline-block">
             LOGIN
@@ -70,8 +72,10 @@
           </nuxt-link>
         </template>
           <span id="stat"></span>
+            </client-only>
 
       </div>
+
       <!--       <button class="randomer onlydesktop" @click="swipeRandom()">
         RANDOM <icon-random/>
       </button> -->
@@ -88,15 +92,6 @@ export default {
   data() {
     return {
       openNav: false,
-      isLogged: false,
-      nametest: "test",
-      profile: {
-        name: "",
-        prefs: "",
-        drome: "",
-        post: "",
-        favs: "",
-      },
     };
   },
   watch: {
@@ -105,18 +100,9 @@ export default {
     },
   },
   methods: {
+
     swipeRandom() {
       document.getElementById("swiper").scrollBy(100, 0);
-    },
-    hitLog() {
-      if (process.client) {
-        var checkLog = localStorage.getItem("profile");
-        var parsedLog = JSON.parse(checkLog);
-        if (localStorage.getItem("profile")) {
-          this.isLogged = true;
-          this.profile = parsedLog;
-        }
-      }
     },
     hitStat() {
       this.$nextTick(() => {
@@ -132,11 +118,24 @@ export default {
   },
   mounted() {
     this.hitStat();
-    this.hitLog();
-  },
+    if (process.client) {
+      this.$profile.name = JSON.parse(localStorage.getItem('name'))
+      if (this.$profile.name) {
+        this.$profile.post = JSON.parse(localStorage.getItem('post'))
+        this.$profile.favs = JSON.parse(localStorage.getItem('favs'))
+        console.log(this.$profile.favs)
+        this.$profileStatus.isLogged = true;
+      }
+    }    
+   },
   updated() {
     this.hitStat();
-
+    if (process.client) {
+      this.$profile.name = JSON.parse(localStorage.getItem('name'))
+      if (this.$profile.name) {
+        this.$profileStatus.isLogged = true;
+      }
+    }        
   },
   head() {
     return {
@@ -164,13 +163,13 @@ header {
   border-bottom: 1px solid #222;
   align-items: center;
   justify-content: space-between;
-  z-index: 9;
+  z-index: 999;
   user-select: none;
   &.drome {
     border-bottom: 2px solid #004d47;
   }
   &.login {
-    background: transparent;
+    //background: transparent;
   }
   @media (max-width: 980px) {
     flex-direction: column;
@@ -256,7 +255,9 @@ header {
   //svg path { transition: all 0.3s linear; }
   &.logger {
     position: relative;
+    min-width: 110px;
     cursor: pointer;
+    text-align: center;
     &:hover {
       a {
         color: #fdd835;

@@ -55,4 +55,11 @@ async function singleDoc(slug) {
   return single
 }
 
-export { getDocs, singleDoc, getBuilds, filterBuilds, singlePost, randomize, singleRandom };
+async function getAuthor(author) {
+  var docs = await getBuilds()
+  var single = []
+  docs.forEach(doc => { if (doc.a === author) { single.push(doc) } })
+  return single
+}
+
+export { getAuthor, getDocs, singleDoc, getBuilds, filterBuilds, singlePost, randomize, singleRandom };

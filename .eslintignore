@@ -4,3 +4,4 @@ layouts
 store
 middleware
 plugins
+static
