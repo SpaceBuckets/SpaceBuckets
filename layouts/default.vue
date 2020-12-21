@@ -123,7 +123,7 @@ export default {
       if (this.$profile.name) {
         this.$profile.post = JSON.parse(localStorage.getItem('post'))
         if(localStorage.getItem('favs')) { this.$profile.favs = JSON.parse(localStorage.getItem('favs'))}
-        this.$profileStatus.isLogged = true;
+        this.$profileStatus.isLogged = true; 
       }
     }    
    },
