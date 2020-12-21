@@ -106,13 +106,19 @@ export default {
     },
     hitStat() {
       this.$nextTick(() => {
+              if (process.client) {
+
         var src = document.getElementById("stat");
+        if(src) {
         src.innerHTML = "";
         var img = document.createElement("img");
         img.src =
           "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
           new Date().getTime();
         src.appendChild(img);
+        } 
+
+         }
       });
     },
   },

@@ -224,6 +224,8 @@ export default {
       this.submitsuccess = false;
     },
     updateContent(event) {
+      if (process.client) {
+
       this.dataPlaceholder = "";
       this.form.content = event.target.innerHTML;
       if (event.target.innerHTML === "") {
@@ -232,6 +234,7 @@ export default {
       this.submitText = "Submit your bucket!";
       this.submiterror = false;
       this.submitsuccess = false;
+      }
     },
     fileChange(event, pos) {
       var input = event.target;
