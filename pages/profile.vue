@@ -323,8 +323,9 @@ export default {
           },
           complete: function (data) {
             self.progressValue = 0.5;
+            console.log(data)
             if (data.responseJSON[0]) {
-              if (data.responseJSON[0].name === usrName) {
+              if (data.responseJSON[0].name.toLowerCase() === usrName.toLowerCase()) {
                 console.log("EXISTS ✓");
                 self.progressValue = 0.6;
                 var checkData =
