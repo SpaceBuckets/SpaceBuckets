@@ -86,11 +86,11 @@
               <img :src="`/index/designer.jpg`" />
             </nuxt-link>
             <!-- USER POSTS -->
-            <template v-if="$profile.post">
+            <template>
               <h2 class="title-separator">
                 Submitted ({{ $profile.post.length }}) »
               </h2>
-              <div class="bucket-builds">
+              <div class="bucket-builds" v-if="$profile.post">
                 <template v-for="(post, ee) in $profile.post.slice().reverse()">
                   <div class="recard" v-if="post.title" :key="`post-${ee}`">
                     <!-- POST STATUS -->
@@ -247,10 +247,11 @@ export default {
 
       this.$profile.favs = myFav.flat();
 
-      var delFavData = "name=" + this.$profile.name + "&obj=" + JSON.stringify(myFav.flat());
+      var delFavData =
+        "name=" + this.$profile.name + "&obj=" + JSON.stringify(myFav.flat());
       var self = this;
 
-       $.ajax({
+      $.ajax({
         url: "https://boletinextraoficial.com/sb_fav_up.php",
         data: delFavData,
         type: "POST",
@@ -347,10 +348,6 @@ export default {
                       console.log("PASS ✓");
                       var checkPosts = "name=" + self.$refs.dataUser.value;
                       self.progressValue = 0.8;
-                      localStorage.setItem(
-                        "name",
-                        JSON.stringify(self.$profile.name)
-                      );
                       $.ajax({
                         url: "https://boletinextraoficial.com/sb_call_post.php",
                         data: checkPosts,
@@ -388,7 +385,10 @@ export default {
                             self.$profile.pin = self.$refs.dataPin.value;
                             self.$profile.post = postArr;
                             self.progressValue = 0.9;
-
+                            localStorage.setItem(
+                              "name",
+                              JSON.stringify(self.$profile.name)
+                            );
                             localStorage.setItem(
                               "post",
                               JSON.stringify(self.$profile.post)
