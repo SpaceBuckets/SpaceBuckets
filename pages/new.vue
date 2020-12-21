@@ -270,7 +270,7 @@ z: ""`;
 this.resizeImage()
       this.submitText = "Submitting! Please wait...";
       var self = this;
-/*         await this.$axios
+        await this.$axios
         .post(
           "https://github-sb.herokuapp.com/post",
           {
@@ -291,7 +291,7 @@ this.resizeImage()
             self.submiterror = true;
           }
         })
-        .catch(function (error) {});   */
+        .catch(function (error) {});  
 
       var megapost = [];
       var postContent = {

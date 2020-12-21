@@ -140,7 +140,15 @@ export default {
         3: "",
         4: "",
       },
+      imageDataGit: {
+        0: "",
+        1: "",
+        2: "",
+        3: "",
+        4: "",
+      },      
       imageCover: "",
+      imageCoverGit: "",
       dataPlaceholder: `Enter bucket content...\n(Markdown formatting is supported)`,
       form: {
         title: "",
@@ -190,6 +198,7 @@ export default {
       var img = new Image();
       img.src = arr[0];
       this.imageCover = arr[0].replace(/\+/g, "%2B");
+      this.imageCoverGit = arr[0];
 
       var canvas = document.createElement("canvas");
       var MAX_WIDTH = 300;
@@ -235,6 +244,7 @@ export default {
         var reader = new FileReader();
         reader.onload = (e) => {
           this.imageData[pos] = e.target.result.replace(/\+/g, "%2B");
+          this.imageDataGit[pos] = e.target.result;
 
           this.imgItems = true;
         };
@@ -265,7 +275,7 @@ c: "${this.form.content}"
 v: ""
 g: ""
 z: ""`;
-
+this.resizeImage()
       this.submitText = "Submitting! Please wait...";
       var self = this;
       await this.$axios
@@ -276,8 +286,8 @@ z: ""`;
             slug: reslug,
             author: this.$profile.name,
             content: mdContent,
-            images: this.imageData,
-            cover: this.resizeImage(),
+            images: this.imageDataGit,
+            cover:this.imageCoverGit,
             uuid: uuid,
           },
           { progress: false }
