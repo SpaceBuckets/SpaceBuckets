@@ -100,6 +100,7 @@ export default {
     },
   },
   methods: {
+
     swipeRandom() {
       document.getElementById("swiper").scrollBy(100, 0);
     },
@@ -117,27 +118,23 @@ export default {
   },
   mounted() {
     this.hitStat();
-    if (process.client && localStorage.getItem("name")) {
-      this.$profile.name = JSON.parse(localStorage.getItem("name"));
+    if (process.client) {
+      this.$profile.name = JSON.parse(localStorage.getItem('name'))
       if (this.$profile.name) {
-        if (localStorage.getItem("post") !== []) {
-          this.$profile.post = JSON.parse(localStorage.getItem("post"));
-        }
-        if (localStorage.getItem("favs")) {
-          this.$profile.favs = JSON.parse(localStorage.getItem("favs"));
-        }
+        this.$profile.post = JSON.parse(localStorage.getItem('post'))
+        if(localStorage.getItem('favs')) { this.$profile.favs = JSON.parse(localStorage.getItem('favs'))}
         this.$profileStatus.isLogged = true;
       }
-    }
-  },
+    }    
+   },
   updated() {
     this.hitStat();
     if (process.client) {
-      this.$profile.name = JSON.parse(localStorage.getItem("name"));
+      this.$profile.name = JSON.parse(localStorage.getItem('name'))
       if (this.$profile.name) {
         this.$profileStatus.isLogged = true;
       }
-    }
+    }        
   },
   head() {
     return {

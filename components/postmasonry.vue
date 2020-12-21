@@ -169,7 +169,6 @@ export default {
   async created() {
     if (process.client) {
       var savedFavs = this.$profile.favs;
-      console.log(savedFavs)
       var i;
       for (i = 0; i < savedFavs.length; i++) {
         if (savedFavs[i].s === this.post.s) {
@@ -197,7 +196,6 @@ export default {
       currFavs.push(newFav);
 
       this.savedActive = true;
-      console.log(currFavs)
       var saveData =
         "name=" + this.$profile.name + "&obj=" + JSON.stringify(currFavs);
       var self = this;

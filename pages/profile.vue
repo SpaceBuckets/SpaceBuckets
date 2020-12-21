@@ -47,7 +47,7 @@
               and favorite posts.
             </p>
             <div class="yourbucket-actions">
-              <button class="onlydesktop" @click="logOuter()">
+              <button @click="logOuter()">
                 LOG OUT
                 <icon-logout />
               </button>
@@ -134,7 +134,7 @@
                 </template>
               </div>
             </template>
-            <template v-if="$profile.favs">
+            <template>
               <h2 class="title-separator">
                 Favorites ({{ $profile.favs.length }}) »
               </h2>
@@ -247,11 +247,10 @@ export default {
 
       this.$profile.favs = myFav.flat();
 
-      var delFavData =
-        "name=" + this.$profile.name + "&obj=" + JSON.stringify(myFav.flat());
+      var delFavData = "name=" + this.$profile.name + "&obj=" + JSON.stringify(myFav.flat());
       var self = this;
 
-      $.ajax({
+       $.ajax({
         url: "https://boletinextraoficial.com/sb_fav_up.php",
         data: delFavData,
         type: "POST",
@@ -348,6 +347,7 @@ export default {
                       console.log("PASS ✓");
                       var checkPosts = "name=" + self.$refs.dataUser.value;
                       self.progressValue = 0.8;
+
                       $.ajax({
                         url: "https://boletinextraoficial.com/sb_call_post.php",
                         data: checkPosts,
@@ -359,7 +359,6 @@ export default {
                         complete: function (data) {
                           if (data.status === 200) {
                             console.log("POSTS ✓");
-                            console.log(data);
 
                             var postArr = [];
                             var iae;
@@ -786,6 +785,8 @@ export default {
     }
     button {
       padding: 0;
+      margin-top: 15px;
+      font-size: 14px;
     }
   }
 }

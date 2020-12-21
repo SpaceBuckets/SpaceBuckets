@@ -134,20 +134,20 @@ export default {
   data() {
     return {
       imageData: {
-        0: this.$route.params.post.images[0],
-        1: this.$route.params.post.images[1],
-        2: this.$route.params.post.images[2],
-        3: this.$route.params.post.images[3],
-        4: this.$route.params.post.images[4],
+        0: "",
+        1: "",
+        2: "",
+        3: "",
+        4: "",
       },
       imageCover: "",
       dataPlaceholder: `Enter bucket content...\n(Markdown formatting is supported)`,
       form: {
-        title: this.$route.params.post.title,
+        title: "",
         slug: "",
         author: "",
         date: "",
-        content: this.$route.params.post.content,
+        content: "",
         views: "",
         tags: "",
         amazon: "",
@@ -160,10 +160,22 @@ export default {
     };
   },
   updated() {
-    this.$refs.dataContent.innerHTML = this.form.content;
+        this.$refs.dataContent.innerHTML = this.form.content;
+
   },
   mounted() {
     this.submitting = false;
+        if (process.client) {
+        this.imageData = {
+        0: this.$route.params.post.images[0],
+        1: this.$route.params.post.images[1],
+        2: this.$route.params.post.images[2],
+        3: this.$route.params.post.images[3],
+        4: this.$route.params.post.images[4]
+      }
+      this.form.title = this.$route.params.post.title
+      this.form.content = this.$route.params.post.content
+    }
   },
   methods: {
     removeImg(img) {
@@ -271,7 +283,6 @@ z: ""`;
           { progress: false }
         )
         .then(function (response) {
-          //console.log(response);
           if (response.data === "OK") {
           } else {
             self.submitText = "Error! Could not submit your bucket";
@@ -326,7 +337,6 @@ z: ""`;
         complete: function (data) {
           if (data.status === 200) {
             console.log("POSTS ✓");
-            console.log(data);
             var daleID;
             var ia;
             for (ia = 0; ia < data.responseJSON.length; ia++) {

@@ -275,7 +275,6 @@ z: ""`;
           { progress: false }
         )
         .then(function (response) {
-          //console.log(response);
           if (response.data === "OK") {
           } else {
             self.submitText = "Error! Could not submit your bucket";
