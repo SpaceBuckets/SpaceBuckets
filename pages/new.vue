@@ -186,11 +186,14 @@ export default {
       arr = arr.filter(function (e) {
         return e;
       });
-
+      var gitarr = Object.values(this.imageDataGit);
+      gitarr = gitarr.filter(function (e) {
+        return e;
+      });
       var img = new Image();
       img.src = arr[0];
       this.imageCover = arr[0].replace(/\+/g, "%2B");
-      this.imageCoverGit = arr[0];
+      this.imageCoverGit = gitarr[0];
 
       var canvas = document.createElement("canvas");
       var MAX_WIDTH = 300;
