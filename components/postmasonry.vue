@@ -1,5 +1,7 @@
 <template>
   <div class="post-masonry" :class="variation">
+    <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
+
     <div class="post-content">
       <h2>
         <span>{{ post.t }}</span>
@@ -152,6 +154,7 @@ export default {
       relatedItems: [],
       swipeItem: [],
       progressScroll: 0,
+      progressValue: 0,
       savedActive: false,
     };
   },
@@ -168,7 +171,7 @@ export default {
   },
   async created() {
     if (process.client) {
-      var savedFavs = this.$profile.favs;
+      var savedFavs = JSON.parse(localStorage.getItem("favs"));
       var i;
       for (i = 0; i < savedFavs.length; i++) {
         if (savedFavs[i].s === this.post.s) {
@@ -194,7 +197,7 @@ export default {
       var newFav = { t: postTitle, s: postSlug }
       var currFavs = this.$profile.favs;
       currFavs.push(newFav);
-
+      this.progressValue = 0.7
       this.savedActive = true;
       var saveData =
         "name=" + this.$profile.name + "&obj=" + JSON.stringify(currFavs);
@@ -210,9 +213,10 @@ export default {
         },
         complete: function (data) {
           console.log("SAVED FAVORITE ✓");
+          self.progressValue = 1
           self.$profile.favs = currFavs;
           localStorage.setItem('favs',JSON.stringify(currFavs))
-
+          setTimeout(() => { self.progressValue = 0; },2000);
         },
       });
     },
@@ -221,6 +225,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.progress {
+  display: flex;
+  height: 2px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.progress:before {
+  content: "";
+  width: calc(var(--value) * 1%);
+  background: #fdd835;
+  transition: width 0.5s linear;
+}
+
 .post-content {
   padding: 10px 15px 20px;
   background: #fff;

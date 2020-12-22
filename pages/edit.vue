@@ -1,5 +1,7 @@
 <template>
   <div>
+              <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
+
     <!--     <div class="loading-container" v-if="!isLogged && !notLogged">
       <div class="spinner">
         <div class="rect1"></div>
@@ -146,10 +148,11 @@ export default {
         2: "",
         3: "",
         4: "",
-      },      
+      },
       imageCover: "",
       imageCoverGit: "",
       dataPlaceholder: `Enter bucket content...\n(Markdown formatting is supported)`,
+      progressValue: 0,
       form: {
         title: "",
         slug: "",
@@ -168,21 +171,20 @@ export default {
     };
   },
   updated() {
-        this.$refs.dataContent.innerHTML = this.form.content;
-
+    this.$refs.dataContent.innerHTML = this.form.content;
   },
   mounted() {
     this.submitting = false;
-        if (process.client) {
-        this.imageData = {
+    if (process.client) {
+      this.imageData = {
         0: this.$route.params.post.images[0],
         1: this.$route.params.post.images[1],
         2: this.$route.params.post.images[2],
         3: this.$route.params.post.images[3],
-        4: this.$route.params.post.images[4]
-      }
-      this.form.title = this.$route.params.post.title
-      this.form.content = this.$route.params.post.content
+        4: this.$route.params.post.images[4],
+      };
+      this.form.title = this.$route.params.post.title;
+      this.form.content = this.$route.params.post.content;
     }
   },
   methods: {
@@ -263,6 +265,7 @@ export default {
     async makePostRequest() {
       this.submitting = true;
       var uuid = Math.random().toString(36).slice(-6);
+            self.progressValue = 0.2;
 
       var redate = new Date().toLocaleDateString();
       var reslug = this.form.title
@@ -278,7 +281,7 @@ c: "${this.form.content}"
 v: ""
 g: ""
 z: ""`;
-this.resizeImage()
+      this.resizeImage();
       this.submitText = "Submitting! Please wait...";
       var self = this;
       await this.$axios
@@ -290,16 +293,18 @@ this.resizeImage()
             author: this.$profile.name,
             content: mdContent,
             images: this.imageDataGit,
-            cover:this.imageCoverGit,
+            cover: this.imageCoverGit,
             uuid: uuid,
           },
           { progress: false }
         )
         .then(function (response) {
           if (response.data === "OK") {
+            self.progressValue = 0.4;
           } else {
             self.submitText = "Error! Could not submit your bucket";
             self.submiterror = true;
+            self.progressValue = 0;
           }
         })
         .catch(function (error) {});
@@ -350,6 +355,8 @@ this.resizeImage()
         complete: function (data) {
           if (data.status === 200) {
             console.log("POSTS ✓");
+            self.progressValue = 0.7;
+
             var daleID;
             var ia;
             for (ia = 0; ia < data.responseJSON.length; ia++) {
@@ -394,6 +401,10 @@ this.resizeImage()
                   "Success! Your bucket has been submitted for review";
                 self.submitsuccess = true;
                 self.submitting = false;
+                self.progressValue = 1;
+                setTimeout(() => {
+                  self.progressValue = 0;
+                }, 2000);
               },
             });
           }
@@ -412,6 +423,24 @@ this.resizeImage()
 };
 </script>
 <style lang="scss" scoped>
+.progress {
+  display: flex;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.progress:before {
+  content: "";
+  width: calc(var(--value) * 1%);
+  background: rgba(253, 216, 53, 0.4);
+  transition: width 0.5s linear;
+}
 .logged-notice {
   font-size: 17px;
   font-family: "montserrat", Arial, Helvetica, sans-serif;

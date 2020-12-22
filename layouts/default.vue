@@ -322,10 +322,15 @@ header {
 button:focus {
   outline: 0;
 }
-
+.onlydesktop-in {
+  display: none !important;
+  @media screen and (min-width: 980px) {
+    display: inline-block !important;
+  }
+}
 .onlydesktop {
   display: none !important;
-  @media screen and (min-width: 981px) {
+  @media screen and (min-width: 980px) {
     display: block !important;
   }
 }

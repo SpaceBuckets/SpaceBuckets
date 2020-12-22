@@ -1,5 +1,7 @@
 <template>
   <div>
+          <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
+
 <!--     <div class="loading-container" v-if="!isLogged && !notLogged">
       <div class="spinner">
         <div class="rect1"></div>
@@ -157,6 +159,7 @@ export default {
       imageCover: "",
       imageCoverGit: "",
       dataPlaceholder: `Enter bucket content...\n(Markdown formatting is supported)`,
+      progressValue: 0,
       form: {
         title: "",
         slug: "",
@@ -258,6 +261,7 @@ export default {
     async makePostRequest() {
       this.submitting = true;
       var uuid = Math.random().toString(36).slice(-6);
+      this.progressValue = 0.1;
 
       var redate = new Date().toLocaleDateString();
       var reslug = this.form.title
@@ -276,6 +280,8 @@ z: ""`;
 this.resizeImage()
       this.submitText = "Submitting! Please wait...";
       var self = this;
+            this.progressValue = 0.3;
+
         await this.$axios
         .post(
           "https://github-sb.herokuapp.com/post",
@@ -292,9 +298,13 @@ this.resizeImage()
         )
         .then(function (response) {
           if (response.data === "OK") {
+                  self.progressValue = 0.4;
+
           } else {
             self.submitText = "Error! Could not submit your bucket";
             self.submiterror = true;
+                  self.progressValue = 0;
+
           }
         })
         .catch(function (error) {});  
@@ -330,6 +340,7 @@ this.resizeImage()
       }
 
       var self = this;
+                  self.progressValue = 0.7;
 
       var gameData =
         "name=" +
@@ -366,6 +377,9 @@ this.resizeImage()
           self.submitsuccess = true;
           self.submitting = false;
           localStorage.setItem('post',JSON.stringify(self.$profile.post))
+                            self.progressValue = 1;
+          setTimeout(() => { self.progressValue = 0; },2000);
+
         },
       });
       
@@ -387,7 +401,24 @@ this.resizeImage()
   margin: 60px 0;
   text-transform: uppercase;
 }
+.progress {
+  display: flex;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
 
+.progress:before {
+  content: "";
+  width: calc(var(--value) * 1%);
+  background: rgba(253, 216, 53, 0.4);
+  transition: width 0.5s linear;
+}
 input,
 textarea {
   border: 0;
@@ -851,12 +882,15 @@ textarea {
     font-weight: bold;
     pointer-events: none;
   }
+  &.submitting {
+    pointer-events: none;
+  }
   &.submitting:after {
     content: "";
     width: 0;
     background: rgba(76, 175, 80, 0.3);
-    animation: megaload 8s linear infinite;
-    display: block;
+    //animation: megaload 8s linear infinite;
+    display: none;
     position: absolute;
     top: 0;
     left: 0;

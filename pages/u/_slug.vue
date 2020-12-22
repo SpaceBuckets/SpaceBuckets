@@ -1,6 +1,7 @@
 <template>
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
+
       <postmasonry :post="post" />
       <cardrelated />
     </template>

@@ -54,6 +54,7 @@
             </div>
           </div>
           <div class="recards-container">
+            <div>
             <nuxt-link
               class="bucketdrome design"
               :to="{
@@ -81,16 +82,17 @@
                 </div>
               </div>
             </nuxt-link>
-            <nuxt-link class="bucketdrome designer" :to="{ name: 'new' }">
+            <nuxt-link class="bucketdrome designer onlydesktop-in" :to="{ name: 'designer' }">
               <h2>3D DESIGNER</h2>
               <img :src="`/index/designer.jpg`" />
             </nuxt-link>
+            </div>
             <!-- USER POSTS -->
             <template>
               <h2 class="title-separator">
                 Submitted ({{ $profile.post.length }}) »
               </h2>
-              <div class="bucket-builds" v-if="$profile.post">
+              <div class="bucket-builds" v-if="$profile.post && loadKey">
                 <template v-for="(post, ee) in $profile.post.slice().reverse()">
                   <div class="recard" v-if="post.title" :key="`post-${ee}`">
                     <!-- POST STATUS -->
@@ -138,7 +140,7 @@
               <h2 class="title-separator">
                 Favorites ({{ $profile.favs.length }}) »
               </h2>
-              <div class="bucket-builds">
+              <div class="bucket-builds" v-if="favKey">
                 <template v-for="(post, ee) in $profile.favs">
                   <nuxt-link
                     class="recard"
@@ -191,6 +193,8 @@ export default {
       welcomeHidden: false,
       currentMessage: [],
       progressValue: 0,
+      favKey: true,
+      loadKey: true,
       nametest: "test",
       imageAvatar: "",
       currentPosts: [],
@@ -247,10 +251,11 @@ export default {
 
       this.$profile.favs = myFav.flat();
 
-      var delFavData = "name=" + this.$profile.name + "&obj=" + JSON.stringify(myFav.flat());
+      var delFavData =
+        "name=" + this.$profile.name + "&obj=" + JSON.stringify(myFav.flat());
       var self = this;
 
-       $.ajax({
+      $.ajax({
         url: "https://boletinextraoficial.com/sb_fav_up.php",
         data: delFavData,
         type: "POST",
@@ -261,7 +266,10 @@ export default {
         complete: function (data) {
           console.log("DELETED ✓");
           localStorage.setItem("favs", JSON.stringify(self.$profile.favs));
-          self.$router.go();
+          self.favKey = false;
+          self.$nextTick().then(() => {
+            self.favKey = true;
+          }); //self.$router.go();
         },
       });
     },
@@ -292,7 +300,11 @@ export default {
           self.$profile.post = myObj.flat();
 
           localStorage.setItem("post", JSON.stringify(self.$profile.post));
-          self.$router.go();
+             self.loadKey = false;
+          self.$nextTick().then(() => {
+            self.loadKey = true;
+          });
+          //self.$router.go();
         },
       });
     },
@@ -323,9 +335,12 @@ export default {
           },
           complete: function (data) {
             self.progressValue = 0.5;
-            console.log(data)
+            console.log(data);
             if (data.responseJSON[0]) {
-              if (data.responseJSON[0].name.toLowerCase() === usrName.toLowerCase()) {
+              if (
+                data.responseJSON[0].name.toLowerCase() ===
+                usrName.toLowerCase()
+              ) {
                 console.log("EXISTS ✓");
                 self.progressValue = 0.6;
                 var checkData =
@@ -516,7 +531,7 @@ export default {
 
 .login-inputs {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: flex;
   .login-wrap {
     height: 100%;
@@ -1310,9 +1325,8 @@ h2.title-separator {
 }
 
 .bucket-builds {
-    text-align: left;
+  text-align: left;
 }
-
 </style> 
 
 
