@@ -162,22 +162,30 @@ export default {
     if (process.client) {
       var savedFavs = this.$profile.favs;
       var i;
+      if (savedFavs) {
+
       for (i = 0; i < savedFavs.length; i++) {
         if (savedFavs[i] === this.post.s) {
           this.savedActive = true;
         }
       }
+            }
+
     }
   },
   async created() {
     if (process.client) {
       var savedFavs = JSON.parse(localStorage.getItem("favs"));
       var i;
+            if (savedFavs) {
+
       for (i = 0; i < savedFavs.length; i++) {
         if (savedFavs[i].s === this.post.s) {
           this.savedActive = true;
         }
       }
+            }
+
     }    
     if (process.client && this.$props.variation != "skeleton") {
       if (
