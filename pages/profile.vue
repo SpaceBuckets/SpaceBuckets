@@ -1308,6 +1308,11 @@ h2.title-separator {
   border-top: 1px solid #004d47;
   padding-top: 20px;
 }
+
+.bucket-builds {
+    text-align: left;
+}
+
 </style> 
 
 
