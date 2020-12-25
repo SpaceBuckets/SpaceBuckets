@@ -64,7 +64,7 @@ export default {
   async asyncData({ params }) {
     const mad = await singlePost("the-mad-scientist");
     const forever = await singlePost("budsforever");
-    const ekrof = await singlePost("next-gen");
+    const ekrof = await singlePost("potcasso");
     const simpleLED = await singlePost("bruteLED");
     const gnk = await singlePost("GNKtote");
     const sag = await singlePost("SuperAngryGuy");
