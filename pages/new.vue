@@ -1,8 +1,8 @@
 <template>
   <div>
-          <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
+    <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
 
-<!--     <div class="loading-container" v-if="!isLogged && !notLogged">
+    <!--     <div class="loading-container" v-if="!isLogged && !notLogged">
       <div class="spinner">
         <div class="rect1"></div>
         <div class="rect2"></div>
@@ -155,7 +155,7 @@ export default {
         2: "",
         3: "",
         4: "",
-      },      
+      },
       imageCover: "",
       imageCoverGit: "",
       dataPlaceholder: `Enter bucket content...\n(Markdown formatting is supported)`,
@@ -228,15 +228,14 @@ export default {
     },
     updateContent(event) {
       if (process.client) {
-
-      this.dataPlaceholder = "";
-      this.form.content = event.target.innerHTML;
-      if (event.target.innerHTML === "") {
-        this.dataPlaceholder = `Enter bucket content...\n(Markdown formatting is supported)`;
-      }
-      this.submitText = "Submit your bucket!";
-      this.submiterror = false;
-      this.submitsuccess = false;
+        this.dataPlaceholder = "";
+        this.form.content = event.target.innerHTML;
+        if (event.target.innerHTML === "") {
+          this.dataPlaceholder = `Enter bucket content...\n(Markdown formatting is supported)`;
+        }
+        this.submitText = "Submit your bucket!";
+        this.submiterror = false;
+        this.submitsuccess = false;
       }
     },
     fileChange(event, pos) {
@@ -244,10 +243,13 @@ export default {
       if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = (e) => {
-          this.imageData[pos] = e.target.result.replace(/\+/g, "%2B");
-          this.imageDataGit[pos] = e.target.result;
-
-          this.imgItems = true;
+          if (Math.round((e.target.result.length * 3) / 4 / 1024) < 1200) {
+            this.imageData[pos] = e.target.result.replace(/\+/g, "%2B");
+            this.imageDataGit[pos] = e.target.result;
+            this.imgItems = true;
+          } else {
+            alert("Image is too heavy! 1MB filesize limit");
+          }
         };
         reader.readAsDataURL(input.files[0]);
       }
@@ -277,12 +279,12 @@ c: "${this.form.content}"
 v: ""
 g: ""
 z: ""`;
-this.resizeImage()
+      this.resizeImage();
       this.submitText = "Submitting! Please wait...";
       var self = this;
-            this.progressValue = 0.3;
+      this.progressValue = 0.3;
 
-        await this.$axios
+      await this.$axios
         .post(
           "https://github-sb.herokuapp.com/post",
           {
@@ -298,16 +300,14 @@ this.resizeImage()
         )
         .then(function (response) {
           if (response.data === "OK") {
-                  self.progressValue = 0.4;
-
+            self.progressValue = 0.4;
           } else {
             self.submitText = "Error! Could not submit your bucket";
             self.submiterror = true;
-                  self.progressValue = 0;
-
+            self.progressValue = 0;
           }
         })
-        .catch(function (error) {});  
+        .catch(function (error) {});
 
       var megapost = [];
       var postContent = {
@@ -316,7 +316,6 @@ this.resizeImage()
         images: this.imageData,
         cover: this.imageCover,
       };
-
 
       if (this.$profile.post !== "") {
         megapost.push(this.$profile.post);
@@ -340,7 +339,7 @@ this.resizeImage()
       }
 
       var self = this;
-                  self.progressValue = 0.7;
+      self.progressValue = 0.7;
 
       var gameData =
         "name=" +
@@ -348,7 +347,7 @@ this.resizeImage()
         "&title=" +
         this.form.title +
         "&content=" +
-        this.form.content +        
+        this.form.content +
         "&cover=" +
         this.imageCover +
         "&image1=" +
@@ -360,7 +359,7 @@ this.resizeImage()
         "&image4=" +
         this.imageData[3] +
         "&image5=" +
-        this.imageData[4]                      
+        this.imageData[4];
 
       $.ajax({
         url: "https://boletinextraoficial.com/sb_in_post.php",
@@ -376,13 +375,13 @@ this.resizeImage()
             "Success! Your bucket has been submitted for review";
           self.submitsuccess = true;
           self.submitting = false;
-          localStorage.setItem('post',JSON.stringify(self.$profile.post))
-                            self.progressValue = 1;
-          setTimeout(() => { self.progressValue = 0; },2000);
-
+          localStorage.setItem("post", JSON.stringify(self.$profile.post));
+          self.progressValue = 1;
+          setTimeout(() => {
+            self.progressValue = 0;
+          }, 2000);
         },
       });
-      
     },
   },
   head() {
@@ -754,9 +753,9 @@ textarea {
     background: #111;
   }
   &:before {
-    content: "Select image";
+    content: "Select image\A(1MB max size)";
     position: absolute;
-    padding-top: 90px;
+    padding-top: 95px;
     top: 0;
     left: 0;
     width: 100%;
@@ -771,6 +770,9 @@ textarea {
     background-position: center 45%;
     background-size: 75px;
     background-repeat: no-repeat;
+    white-space: pre-wrap;
+    text-align: center;
+    line-height: 20px;
   }
   input {
     font-size: 0;
