@@ -65,7 +65,7 @@
               <explode />
               <p>Upload a new bucket to the gallery.</p>
             </nuxt-link>
-            <nuxt-link to="/drome" class="bucketdrome">
+            <nuxt-link :to="{ name: 'drome' }" class="bucketdrome">
               <h2>PLAY BUCKETDROME</h2>
 
               <div class="scene buildActiveGarage">
@@ -404,6 +404,10 @@ export default {
                               "name",
                               JSON.stringify(self.$profile.name)
                             );
+                            localStorage.setItem(
+                              "pin",
+                              JSON.stringify(self.$refs.dataPin.value)
+                            );                            
                             localStorage.setItem(
                               "post",
                               JSON.stringify(self.$profile.post)

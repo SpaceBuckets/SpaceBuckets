@@ -125,6 +125,7 @@ export default {
     this.hitStat();
     if (process.client) {
       this.$profile.name = JSON.parse(localStorage.getItem("name"));
+      this.$profile.pin = JSON.parse(localStorage.getItem("pin"));
       if (this.$profile.name) {
         this.$profile.post = JSON.parse(localStorage.getItem("post"));
         if (localStorage.getItem("favs")) {
@@ -138,6 +139,8 @@ export default {
     this.hitStat();
     if (process.client) {
       this.$profile.name = JSON.parse(localStorage.getItem("name"));
+      this.$profile.pin = JSON.parse(localStorage.getItem("pin"));
+
       if (this.$profile.name) {
         this.$profileStatus.isLogged = true;
       }
