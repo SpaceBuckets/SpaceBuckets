@@ -18,62 +18,64 @@
         </svg>
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
-        <nuxt-link to="/materials"
-          ><span class="onlydesktop">MATERIALS</span
-          ><span class="onlymobile">PARTS</span></nuxt-link
+        <nuxt-link
+          to="/profile"
+          class="onlymobile"
+          v-if="$profileStatus.isLogged"
+          >PROFILE</nuxt-link
         >
+        <nuxt-link
+          to="/profile"
+          class="onlymobile"
+          v-if="!$profileStatus.isLogged"
+          >LOGIN</nuxt-link
+        >
+        <nuxt-link to="/materials">MATERIALS</nuxt-link>
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
         <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/designer">DESIGN</nuxt-link>
         <nuxt-link to="/drome">DROME</nuxt-link>
-        <nuxt-link to="/profile" class="onlymobile" v-if="$profileStatus.isLogged">PROFILE</nuxt-link>
-        <nuxt-link to="/profile" class="onlymobile" v-if="!$profileStatus.isLogged">LOGIN</nuxt-link>
-        <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       </div>
-
+      <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
         class="nav-sep logger"
         :class="{ logged: $profileStatus.isLogged }"
         style="padding: 0 15px"
       >
-            <client-only>
-
-        <template v-if="$profileStatus.isLogged">
-          <nuxt-link :to="{ name: 'profile' }">
-           <span>PROFILE</span>  
-          <svg
-            style="height: auto; width: 24px;display:none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill="#FFF"
-              d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
-            />
-          </svg>
-          </nuxt-link>
-        </template>
-        <template v-if="!$profileStatus.isLogged">
-          <nuxt-link to="/profile">
-          <span style="display:inline-block">
-            LOGIN
-          </span>
-          <svg
-            style="height: auto; width: 24px;display:none"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 20 20"
-          >
-            <path
-              fill="#FFF"
-              d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
-            />
-          </svg>
-          </nuxt-link>
-        </template>
+        <client-only>
+          <template v-if="$profileStatus.isLogged">
+            <nuxt-link :to="{ name: 'profile' }">
+              <span>PROFILE</span>
+              <svg
+                style="height: auto; width: 24px; display: none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="#FFF"
+                  d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
+                />
+              </svg>
+            </nuxt-link>
+          </template>
+          <template v-if="!$profileStatus.isLogged">
+            <nuxt-link to="/profile">
+              <span style="display: inline-block"> LOGIN </span>
+              <svg
+                style="height: auto; width: 24px; display: none"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill="#FFF"
+                  d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
+                />
+              </svg>
+            </nuxt-link>
+          </template>
           <span id="stat"></span>
-            </client-only>
-
+        </client-only>
       </div>
 
       <!--       <button class="randomer onlydesktop" @click="swipeRandom()">
@@ -100,47 +102,46 @@ export default {
     },
   },
   methods: {
-
     swipeRandom() {
       document.getElementById("swiper").scrollBy(100, 0);
     },
     hitStat() {
       this.$nextTick(() => {
-              if (process.client) {
-
-        var src = document.getElementById("stat");
-        if(src) {
-        src.innerHTML = "";
-        var img = document.createElement("img");
-        img.src =
-          "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
-          new Date().getTime();
-        src.appendChild(img);
-        } 
-
-         }
+        if (process.client) {
+          var src = document.getElementById("stat");
+          if (src) {
+            src.innerHTML = "";
+            var img = document.createElement("img");
+            img.src =
+              "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
+              new Date().getTime();
+            src.appendChild(img);
+          }
+        }
       });
     },
   },
   mounted() {
     this.hitStat();
     if (process.client) {
-      this.$profile.name = JSON.parse(localStorage.getItem('name'))
+      this.$profile.name = JSON.parse(localStorage.getItem("name"));
       if (this.$profile.name) {
-        this.$profile.post = JSON.parse(localStorage.getItem('post'))
-        if(localStorage.getItem('favs')) { this.$profile.favs = JSON.parse(localStorage.getItem('favs'))}
-        this.$profileStatus.isLogged = true; 
+        this.$profile.post = JSON.parse(localStorage.getItem("post"));
+        if (localStorage.getItem("favs")) {
+          this.$profile.favs = JSON.parse(localStorage.getItem("favs"));
+        }
+        this.$profileStatus.isLogged = true;
       }
-    }    
-   },
+    }
+  },
   updated() {
     this.hitStat();
     if (process.client) {
-      this.$profile.name = JSON.parse(localStorage.getItem('name'))
+      this.$profile.name = JSON.parse(localStorage.getItem("name"));
       if (this.$profile.name) {
         this.$profileStatus.isLogged = true;
       }
-    }        
+    }
   },
   head() {
     return {
@@ -164,11 +165,11 @@ header {
   left: 0;
   top: 0;
   right: 0;
-  min-height: 50px;
+  max-height: 50px;
   border-bottom: 1px solid #222;
   align-items: center;
   justify-content: space-between;
-  z-index: 999;
+  z-index: 9999;
   user-select: none;
   &.drome {
     border-bottom: 2px solid #004d47;
@@ -294,10 +295,14 @@ header {
   @media (max-width: 980px) {
     display: none;
     &.open {
-      display: flex;
+      display: block;
       padding-top: 5px;
       padding-bottom: 5px;
-      .nav-backdrop {
+      min-height: calc(100vh - 50px);
+      background: #151515;
+      width: 220px;
+      z-index: 9999;
+      + .nav-backdrop:before {
         content: "";
         display: block !important;
         position: fixed;
@@ -305,7 +310,7 @@ header {
         left: 0;
         bottom: 0;
         right: 0;
-        top: 0;
+        top: 50px;
         z-index: -1;
       }
     }

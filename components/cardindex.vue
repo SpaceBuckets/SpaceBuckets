@@ -38,7 +38,7 @@ export default {
     text-transform: uppercase;
     padding: 3px 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 600;    
   }
   > p {

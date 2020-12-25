@@ -174,7 +174,7 @@ export default {
     }
   },
   async created() {
-    if (process.client) {
+    if (process.client && localStorage.getItem("favs")) {
       var savedFavs = JSON.parse(localStorage.getItem("favs"));
       var i;
             if (savedFavs) {
@@ -241,7 +241,7 @@ export default {
   left: 0;
   right: 0;
   padding: 0;
-  z-index: 9999;
+  z-index: 999999;
   pointer-events: none;
 }
 
