@@ -90,7 +90,7 @@
 import { singleRandom } from "~/store/flatDB";
 
 export default {
-  scrollToTop: true,
+  //scrollToTop: true,
   data() {
     return {
       openNav: false,
