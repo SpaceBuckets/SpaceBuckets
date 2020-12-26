@@ -62,4 +62,11 @@ async function getAuthor(author) {
   return single
 }
 
-export { getAuthor, getDocs, singleDoc, getBuilds, filterBuilds, singlePost, randomize, singleRandom };
+async function getSearch(query) {
+  var docs = await getBuilds()
+  var single = []
+  docs.forEach(doc => { if (doc.t.toLowerCase().includes(query)) { single.push(doc) } })
+  return single
+}
+
+export { getSearch, getAuthor, getDocs, singleDoc, getBuilds, filterBuilds, singlePost, randomize, singleRandom };
