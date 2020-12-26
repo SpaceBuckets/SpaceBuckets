@@ -39,7 +39,8 @@ export default {
       //this.$refs.swiper.style.willChange = "initial"
     },
     async handleScroll() {
-
+      var top = window.pageYOffset || document.documentElement.scrollTop
+      
       this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
       if (this.progressScroll > 50 && !this.moving) {
         if (this.$props.type === "posts") {

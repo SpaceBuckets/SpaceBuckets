@@ -15,6 +15,7 @@
 import { singlePost, singleRandom, randomize } from "~/store/flatDB";
 
 export default {
+  scrollToTop: false,
   async asyncData({ params }) {
     const post = await singlePost(params.slug);
     if (post.z !== "" || (post.z !== undefined && post.z.length > 0)) {
