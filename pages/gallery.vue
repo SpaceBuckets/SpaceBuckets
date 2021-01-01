@@ -134,7 +134,7 @@ export default {
   async created() {
     this.num = 24;
     this.page = 1;
-    this.sort = "asc";
+    this.sort = "popular";
     var numberPosts = this.allPosts.length;
     var infoArr = {};
     infoArr.total = numberPosts;
