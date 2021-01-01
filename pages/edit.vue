@@ -248,12 +248,12 @@ export default {
       if (input.files && input.files[0]) {
         var reader = new FileReader();
         reader.onload = (e) => {
-          if (Math.round((e.target.result.length * 3) / 4 / 1024) < 1200) {
+          if (Math.round((e.target.result.length * 3) / 4 / 1024) < 3000) {
             this.imageData[pos] = e.target.result.replace(/\+/g, "%2B");
             this.imageDataGit[pos] = e.target.result;
             this.imgItems = true;
           } else {
-            alert("Image is too heavy! 1MB filesize limit");
+            alert("Image is too heavy! 3MB filesize limit");
           }
         };
         reader.readAsDataURL(input.files[0]);
@@ -788,7 +788,7 @@ textarea {
     background: #111;
   }
   &:before {
-    content: "Select image\A(1MB max size)";
+    content: "Select image\A(3MB max size)";
     position: absolute;
     padding-top: 95px;
     top: 0;

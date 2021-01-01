@@ -73,7 +73,7 @@
             <option value="linefan">Inline fan</option>
           </select>
         </div>
-        <div class="select-filter-container">
+<!--         <div class="select-filter-container">
           <div class="filter-single-top">Other</div>
           <select name id @change="handleChange('other')">
             <option value class="active">All</option>
@@ -81,7 +81,7 @@
             <option value="110v">110v fan</option>
             <option value="linefan">Inline fan</option>
           </select>
-        </div>
+        </div> -->
       </div>
     </div>
 
@@ -120,6 +120,7 @@ export default {
       swipeItem: [],
       loadingSwipe: true,      
       relatedInfo: [],
+      allReposts: "",
       filterQuery: {
         container: "",
         lighting: "",
@@ -161,25 +162,26 @@ export default {
       if (type === "prev") {
         this.page = this.page - 1;
       }
-      this.filterPosts();
+      await this.filterPosts();
       window.scrollTo(0, 0);
     },
     async handleChange(type) {
       this.page = 1;
       this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
-      this.filterPosts();
-      this.relatedInfo.total = this.posts.length;
+      await this.filterPosts();
+      this.relatedInfo.total = this.allposts.length;
       this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
+      if (this.relatedInfo.pages == 0) { this.relatedInfo.pages = 1 }
     },
     async handleSort(name) {
       this.page = 1;
       this.sort = name;
-      this.filterPosts();
+      await this.filterPosts();
     },
     async handlePerPage() {
       this.page = 1;
       this.num = event.target.options[event.target.options.selectedIndex].value;
-      this.filterPosts();
+      await this.filterPosts();
       this.relatedInfo.pages = (this.allPosts.length / this.num).toFixed();
     },
     async filterPosts() {
@@ -190,6 +192,12 @@ export default {
         this.sort,
         this.filterQuery.selected
       );
+      this.allposts = await filterBuilds(
+        -1,
+        this.page,
+        this.sort,
+        this.filterQuery.selected
+      );      
     },
     syncQuery() {
       this.filterQuery.selected =
@@ -249,7 +257,7 @@ export default {
   width: 100%;
   max-width: 1280px;
   padding: 0 15px;
-  margin: 0 auto 5px;
+  margin: 20px auto 40px;
   justify-content: center;
   align-items: center;
   @media (max-width: 980px) {

@@ -3,7 +3,21 @@ t: "First bucket - Simple+"
 s: "first-bucket-simple"
 a: "Dontknooowme"
 d: "12/29/2020"
-c: "<div>First bucket ever. I've lurked here for years on my main account. I was gifted a clone for Xmas, so I built a bucket. I have the side lights and fans on a separate, removable ring. Other than that, I follows the "simple template" pretty close. Lemme know what you think. Here's what I used.&nbsp;</div><div><br></div><div>[150W UFO Light by GrowStar](https://www.amazon.com/Growstar-Spectrum-Switch-Flowering-Growing/dp/B07312WKX2/ref=mp_s_a_1_1_sspa?dchild=1&amp;keywords=ufo+grow+light&amp;qid=1609276392&amp;sprefix=ufo+grow+&amp;sr=8-1-spons&amp;psc=1&amp;spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEySTc5NUNWUDlPUjE3JmVuY3J5cHRlZElkPUEwOTg5OTE0U1ExRFBSV09aRU9GJmVuY3J5cHRlZEFkSWQ9QTA0MzAwNzEzNVVHUDZBMEFTOFlLJndpZGdldE5hbWU9c3BfcGhvbmVfc2VhcmNoX2F0ZiZhY3Rpb249Y2xpY2tSZWRpcmVjdCZkb05vdExvZ0NsaWNrPXRydWU=)</div><div><br></div><div>2 Phanteks PC case fans</div><div><br></div><div>[4x 5gal Lowes Buckets ](https://www.lowes.com/pl/Buckets-Buckets-bucket-accessories-Paint-supplies-Paint/4294625955?cm_mmc=src-_-c-_-prd-_-pnt-_-bing-_-paint-_-NB_PNT_133_Buckets_BMM-_-+5%20+gallon%20+bucket-_-0-_-0&amp;&amp;msclkid=b30dbee55a4c1dbf20f1e10ec631579e&amp;gclid=b30dbee55a4c1dbf20f1e10ec631579e&amp;gclsrc=3p.ds)</div><div><br></div><div>[~3 Rolls Gorilla Tape](https://www.amazon.com/Gorilla-Tape-Black-Duct-1-88/dp/B000CSS8UE/ref=mp_s_a_1_3?dchild=1&amp;keywords=Gorilla+Tape&amp;qid=1609276603&amp;sr=8-3)</div><div><br></div><div>[12v 4a power adapter with splitter and female jack cinnector](https://www.amazon.com/Eleidgs-Switching-Adapter-5-5x2-1mm-Splitter/dp/B01M72BHU6/ref=mp_s_a_1_5?dchild=1&amp;keywords=12v+4a+splitter+power+supply&amp;qid=1609276674&amp;refinements=p_85%3A2470955011&amp;rnid=2470954011&amp;rps=1&amp;sr=8-5)</div><div><br></div><div>[5050 SMD LED Strip lights - White](https://www.amazon.com/YUNBO-3000-3500K-Waterproof-Flexible-Cuttable/dp/B07QQSBKWN/ref=mp_s_a_1_3?dchild=1&amp;keywords=3000k+led+smd+5050&amp;qid=1609276732&amp;sr=8-3)</div><div><br></div><div>Surge protector</div><div><br></div>"
+c: "First bucket ever. I've lurked here for years on my main account. I was gifted a clone for Xmas, so I built a bucket. I have the side lights and fans on a separate, removable ring. Other than that, I follows the simple template pretty close. Lemme know what you think. Here's what I used: 
+<br><br>
+<a href='https://amzn.to/34YDCiI'>150W UFO Light by GrowStar</a>
+<br><br>
+2 Phanteks PC case fans
+<br><br>
+<a href='https://www.lowes.com/pl/Buckets-Buckets-bucket-accessories-Paint-supplies-Paint/4294625955'>4x 5gal Lowes Buckets</a> 
+<br><br>
+<a href='https://amzn.to/3n36QTN'>~3 Rolls Gorilla Tape</a>
+<br><br>
+<a href='https://amzn.to/3530Ggp'>12v 4a power adapter with splitter and female jack connector</a>
+<br><br>
+<a href='https://amzn.to/2X1cF9U'>5050 SMD LED Strip lights</a>
+<br><br>
+Surge protector"
 v: ""
 g: ""
-z: ""
+z: "B07312WKX2,B07QQSBKWN"

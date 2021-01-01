@@ -54,21 +54,6 @@ export default {
     credentials: false
   },  
   cssSourceMap: false,
-/*   firebase: {
-    config: {
-      apiKey: 'AIzaSyCaqlZAzU3tjz41UqgkEFpzJpXuhdmHsR8',
-      authDomain: 'space-buckets.firebaseapp.com',
-      databaseURL: 'https://space-buckets-default-rtdb.firebaseio.com/',
-      projectId: 'space-buckets',
-      storageBucket: 'space-buckets.appspot.com',
-      messagingSenderId: '134918806223',
-      appId: '1:134918806223:web:28fb305dd9c5f176c7b5ba',
-      measurementId: ''
-    },
-    services: {
-      auth: true // Just as example. Can be any other service.
-    }
-  },   */
   plugins: ['~/plugins/profile.js'],
   buildModules: [
     "@nuxtjs/eslint-module",
