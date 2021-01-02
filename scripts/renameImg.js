@@ -31,7 +31,6 @@ async function renameImg(src) {
       getColors(`static/${src}/${post}/${singleImage}`, optionsC).then(colors => {
         if (`static/${src}/${post}/${singleImage}` === `static/${src}/${post}/${colors[0].hex().substring(1)}.jpg`) {
         } else {
-          console.log(singleImage)
           fs.renameSync(`static/${src}/${post}/${singleImage}`, `static/${src}/${post}/${colors[0].hex().substring(1)}.jpg`);
         }
       })
