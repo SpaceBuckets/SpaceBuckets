@@ -137,7 +137,7 @@
       :key="`section-${ie}`"
     >
       <img :src="`/builds/${post.s}/${img.h}`" alt />
-      <div :style="{ 'padding-top': img.s + '%' }"></div>
+      <div :style="{ 'padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"></div>
     </div>
   </div>
 </template>
