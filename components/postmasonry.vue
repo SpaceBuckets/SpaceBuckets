@@ -137,6 +137,7 @@
       :key="`section-${ie}`"
     >
       <img v-if="variation != 'skeleton'" :src="`/builds/${post.s}/${img.h}`" alt />
+      <img v-if="variation === 'skeleton'" loading="lazy" :src="`/builds/${post.s}/${img.h}`" alt />
       <div :style="{ 'padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"></div>
     </div>
   </div>
