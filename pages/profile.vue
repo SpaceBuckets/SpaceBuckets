@@ -482,10 +482,10 @@ export default {
                     "post",
                     JSON.stringify(self.$profile.post)
                   );
-                            localStorage.setItem(
-                              "pin",
-                              JSON.stringify(self.$refs.dataPin.value)
-                            );                         
+                  localStorage.setItem(
+                    "pin",
+                    JSON.stringify(self.$refs.dataPin.value)
+                  );                         
                   localStorage.setItem(
                     "favs",
                     JSON.stringify(self.$profile.favs)
