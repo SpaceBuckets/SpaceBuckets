@@ -36,5 +36,8 @@ iframe {
   width: 100%;
   height: 100vh;
   border: 0;
+  position: fixed;
+  top: 50px;
+  left: 0;
 }
 </style>

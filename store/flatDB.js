@@ -10,7 +10,7 @@ async function filterBuilds(num,page,sort,tags) {
 
   //Sort
   if(sort === "asc" || "desc") { sortArray(posts, { by: 'd', order: sort }) }
-  if(sort === "popular") { 
+  if(sort === "pop") { 
     posts.forEach(post => {post.v = Number(post.v) });
     sortArray(posts, { by: 'v', order: 'desc' }) 
   }  
@@ -22,7 +22,9 @@ async function filterBuilds(num,page,sort,tags) {
   }
 
   //Paginate
-  posts = posts.slice(num * (page - 1), num * page);
+  if (page > 0) {
+    posts = posts.slice(num * (page - 1), num * page);
+  }
   
   return posts 
 }

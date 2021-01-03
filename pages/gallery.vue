@@ -37,14 +37,16 @@
             </div>
             <div class="sort-filters">
               <div
+                ref="sortAsc"
                 :class="{ active: sort === 'asc' }"
                 @click="handleSort('asc')"
               >
                 Latest
               </div>
               <div
-                :class="{ active: sort === 'popular' }"
-                @click="handleSort('popular')"
+                ref="sortPop"
+                :class="{ active: sort === 'pop' }"
+                @click="handleSort('pop')"
               >
                 Popular
               </div>
@@ -53,7 +55,7 @@
               <div class="results">{{ relatedInfo.total }} builds</div>
               <div class="select-filter-container">
                 <div class="filter-single-top">Per Page</div>
-                <select name id @change="handlePerPage()">
+                <select ref="selectPerPage" @change="handlePerPage()">
                   <option value="10">10</option>
                   <option value="25" selected>25</option>
                   <option value="50">50</option>
@@ -148,7 +150,7 @@ import {
 } from "~/store/flatDB";
 export default {
   async asyncData() {
-    const posts = await filterBuilds(24, 1, "popular");
+    const posts = await filterBuilds(24, 1, "pop");
     const allPosts = await getBuilds();
     return { posts, allPosts };
   },
@@ -170,21 +172,24 @@ export default {
     };
   },
   async created() {
-    this.num = 24;
+    this.num = 25;
     this.page = 1;
-    this.sort = "popular";
+    this.sort = "pop";
+
     var numberPosts = this.allPosts.length;
     var infoArr = {};
     infoArr.total = numberPosts;
     infoArr.pages = (numberPosts / this.num).toFixed();
     this.relatedInfo = infoArr;
-
+ 
+    
     if (Object.keys(this.$route.query).length == 0) {
       this.loadingGallery = false;
     } else {
       await this.getURL();
       this.loadingGallery = false;
-    }
+    }    
+
     if (process.client) {
       this.swipeItem = await singleRandom();
       if (
@@ -203,6 +208,9 @@ export default {
       if (this.$route.query.light) { this.filterQuery.lighting = this.$route.query.light; }
       if (this.$route.query.air) { this.filterQuery.airflow = this.$route.query.air; }
       if (this.$route.query.side) { this.filterQuery.side = this.$route.query.side; }
+      if (this.$route.query.p) { this.page = parseInt(this.$route.query.p); }
+      if (this.$route.query.n) { this.num = parseInt(this.$route.query.n); }
+      if (this.$route.query.s) { this.sort = this.$route.query.s; }
       if (this.$route.query.search) { await this.customSearch(this.$route.query.search); }
 
       this.$nextTick(() => {
@@ -211,11 +219,18 @@ export default {
         if (this.$route.query.air) { this.$refs.selectAirflow.value = this.$route.query.air; }
         if (this.$route.query.side) { this.$refs.selectSide.value = this.$route.query.side; }
         if (this.$route.query.search) { this.$refs.searchInput.value = this.$route.query.search; }
+        if (this.$route.query.n) { this.$refs.selectPerPage.value = this.$route.query.n; }
+        if (this.$route.query.s === "asc") { this.$refs.sortAsc.classList = "active"; }
+        if (this.$route.query.s === "pop") { this.$refs.sortPop.classList = "active"; }
       });
       if (!this.$route.query.search) {
         await this.filterPosts();
         this.relatedInfo.total = this.allposts.length;
         this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
+           console.log(this.allposts.length)   
+           console.log(this.num)   
+           console.log(this.relatedInfo.total / this.num)   
+
         if (this.relatedInfo.pages == 0) {
           this.relatedInfo.pages = 1;
         }
@@ -223,8 +238,8 @@ export default {
 
     },
     setURL() {
-      var newURL = "?" + 
-        (this.filterQuery.container ? "container=" + this.filterQuery.container : "") +
+      var newURL = "?p="+this.page+"&n="+this.num+"&s="+this.sort + 
+        (this.filterQuery.container ? "&container=" + this.filterQuery.container : "") +
         (this.filterQuery.lighting ? "&light=" + this.filterQuery.lighting : "") +
         (this.filterQuery.airflow ? "&air=" + this.filterQuery.airflow : "") +
         (this.filterQuery.side ? "&side=" + this.filterQuery.side : "");
@@ -265,8 +280,7 @@ export default {
     async handleChange(type) {
       this.$refs.searchInput.value = ""
       this.page = 1;
-      this.filterQuery[type] =
-        event.target.options[event.target.options.selectedIndex].value;
+      this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
       await this.filterPosts();
       this.relatedInfo.total = this.allposts.length;
       this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
@@ -280,12 +294,18 @@ export default {
       await this.filterPosts();
     },
     async handlePerPage() {
+      this.num = parseInt(event.target.options[event.target.options.selectedIndex].value);
       this.page = 1;
-      this.num = event.target.options[event.target.options.selectedIndex].value;
       await this.filterPosts();
-      this.relatedInfo.pages = (this.allPosts.length / this.num).toFixed();
+      //await this.getURL();
+      this.relatedInfo.total = this.allposts.length;
+      this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
+      if (this.relatedInfo.pages == 0) {
+        this.relatedInfo.pages = 1;
+      }
     },
     async filterPosts() {
+      this.setURL();
       this.syncQuery();
       this.posts = await filterBuilds(
         this.num,
@@ -295,11 +315,11 @@ export default {
       );
       this.allposts = await filterBuilds(
         -1,
-        this.page,
+        0,
         this.sort,
         this.filterQuery.selected
       );
-      this.setURL();
+
     },
     syncQuery() {
       this.filterQuery.selected =
