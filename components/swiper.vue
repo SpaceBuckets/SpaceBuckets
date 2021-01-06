@@ -64,9 +64,9 @@ export default {
     overscroll-behavior-x: contain;
     scroll-snap-stop: always;
     scroll-snap-type: x mandatory;
-    height: 100vh;
+    height: calc(100vh - 50px);
     display: flex;
-    min-height: 100vh;
+    min-height: calc(100vh - 50px);
     will-change: scroll-position;
     .swipable {
       flex: 1;

@@ -357,7 +357,7 @@ export default {
   text-align: center;
   cursor: pointer;
   width: 300px;
-  margin: 10px auto;
+  margin: 20px auto 30px;
   color: #fafafa;
   background: transparent;
   font-family: "Montserrat", sans-serif;
