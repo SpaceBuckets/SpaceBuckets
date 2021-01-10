@@ -75,6 +75,7 @@ export default {
       min-width: 100vw;
       max-width: 100vw;
       overflow: auto;
+      backface-visibility: hidden;
       + .swipable {
         content-visibility: auto;
       }
