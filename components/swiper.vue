@@ -69,6 +69,12 @@ export default {
     display: flex;
     min-height: calc(100vh - 50px);
     will-change: scroll-position;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    * {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
     .swipable {
       flex: 1;
       scroll-snap-align: center;
@@ -76,7 +82,6 @@ export default {
       min-width: 100vw;
       max-width: 100vw;
       overflow: auto;
-      backface-visibility: hidden;
       + .swipable {
         content-visibility: auto;
       }
