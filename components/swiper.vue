@@ -59,7 +59,7 @@ export default {
 <style lang="scss" scoped>
 /* @media (max-width: 980px) { */
   #swiper {
-    //-webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     overflow-x: scroll;
     //scroll-behavior: smooth;
     overscroll-behavior-x: contain;
