@@ -33,7 +33,7 @@
         <nuxt-link to="/materials">MATERIALS</nuxt-link>
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
-        <nuxt-link to="/gallery">GALLERY</nuxt-link>
+        <nuxt-link to="/gallery" no-prefetch>GALLERY</nuxt-link>
         <nuxt-link to="/designer">DESIGN</nuxt-link>
         <nuxt-link to="/drome">DROME</nuxt-link>
       </div>
