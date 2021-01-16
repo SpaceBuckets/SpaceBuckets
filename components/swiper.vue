@@ -39,12 +39,12 @@ export default {
       //this.$refs.swiper.style.willChange = "initial"
     },
     async handleScroll() {
-      var top = window.pageYOffset || document.documentElement.scrollTop
+      var top = this.$refs.mainswipe.scrollTop
       
       this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
       if (this.progressScroll > 50 && !this.moving) {
         if (this.$props.type === "posts") {
-          this.$router.push({ path: `/u/${this.$props.next.s}`, params: { savePosition: true } });
+          this.$router.push({ name: 'u-slug', params: { 'slug': this.$props.next.s, 'y': top } });
 
         }
         if (this.$props.type === "docs") {

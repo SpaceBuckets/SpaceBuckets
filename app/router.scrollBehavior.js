@@ -1,5 +1,5 @@
 export default function (to, from, savedPosition) {
-  console.log(from)
+  console.log(to.params)
   if (to.hash) {
     return {selector: to.hash}
   } else if (savedPosition) {
