@@ -23,6 +23,7 @@
 export default {
   name: 'swiper',
   props: ['next','type'],
+  scrollToTop: false,
   data() {
     return {
       progressScroll: 0,
