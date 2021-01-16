@@ -34,8 +34,8 @@
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
         <nuxt-link to="/gallery" no-prefetch>GALLERY</nuxt-link>
-        <nuxt-link to="/designer">DESIGN</nuxt-link>
-        <nuxt-link to="/drome">DROME</nuxt-link>
+        <nuxt-link to="/designer" no-prefetch>DESIGN</nuxt-link>
+        <nuxt-link to="/drome" no-prefetch>DROME</nuxt-link>
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
@@ -45,7 +45,7 @@
       >
         <client-only>
           <template v-if="$profileStatus.isLogged">
-            <nuxt-link :to="{ name: 'profile' }">
+            <nuxt-link :to="{ name: 'profile' }" no-prefetch>
               <span>PROFILE</span>
               <svg
                 style="height: auto; width: 24px; display: none"
@@ -60,7 +60,7 @@
             </nuxt-link>
           </template>
           <template v-if="!$profileStatus.isLogged">
-            <nuxt-link to="/profile">
+            <nuxt-link to="/profile" no-prefetch>
               <span style="display: inline-block"> LOGIN </span>
               <svg
                 style="height: auto; width: 24px; display: none"
