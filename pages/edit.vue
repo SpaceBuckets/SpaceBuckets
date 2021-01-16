@@ -129,7 +129,7 @@
 </template>
 
 <script>
-import { singlePost, randomize } from "~/store/flatDB";
+import { singlePost, randomize } from "~/static/flatDB";
 import $ from "jquery";
 
 export default {

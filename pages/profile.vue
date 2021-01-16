@@ -177,7 +177,7 @@
 </template>
 <script>
 import $ from "jquery";
-import { getAuthor } from "~/store/flatDB";
+import { getAuthor } from "~/static/flatDB";
 
 export default {
   head() {

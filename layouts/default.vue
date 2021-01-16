@@ -87,7 +87,7 @@
 </template>
 
 <script>
-import { singleRandom } from "~/store/flatDB";
+import { singleRandom } from "~/static/flatDB";
 
 export default {
   //scrollToTop: true,

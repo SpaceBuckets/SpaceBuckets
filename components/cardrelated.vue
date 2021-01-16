@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { randomize } from "~/store/flatDB";
+import { randomize } from "~/static/flatDB";
 
 export default {
   name: "cardrelated",

@@ -147,7 +147,7 @@ import {
   getBuilds,
   getSearch,
   randomize,
-} from "~/store/flatDB";
+} from "~/static/flatDB";
 export default {
   async asyncData() {
     const posts = await filterBuilds(24, 1, "pop");

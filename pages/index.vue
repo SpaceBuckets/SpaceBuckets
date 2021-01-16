@@ -62,7 +62,7 @@
 </template>
 
 <script>
-import { singlePost, singleRandom, getBuilds } from "~/store/flatDB";
+import { singlePost, singleRandom, getBuilds } from "~/static/flatDB";
 
 export default {
   async asyncData({ params }) {

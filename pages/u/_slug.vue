@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { singlePost, singleRandom, randomize } from "~/store/flatDB";
+import { singlePost, singleRandom, randomize } from "~/static/flatDB";
 
 export default {
   scrollToTop: false,

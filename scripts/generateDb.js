@@ -33,7 +33,7 @@ async function createDb(src) {
     post.i = postImages 
   }); 
 
-  fs.writeFileSync(`./store/${src}.json`, JSON.stringify(posts));
+  fs.writeFileSync(`./static/${src}.json`, JSON.stringify(posts));
   console.log(`♥ ${src}.json generated`)
 }
 

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { singlePost, randomize } from "~/store/flatDB";
+import { singlePost, randomize } from "~/static/flatDB";
 
 export default {
   async asyncData({ params }) {

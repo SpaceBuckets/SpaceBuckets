@@ -1,4 +1,4 @@
-import { getBuilds } from "./store/flatDB";
+import { getBuilds } from "./static/flatDB";
 
 export default {
   target: "static",

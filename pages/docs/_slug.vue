@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { getDocs, singleDoc } from "~/store/flatDB";
+import { getDocs, singleDoc } from "~/static/flatDB";
 
 export default {
   async asyncData({ params }) {
