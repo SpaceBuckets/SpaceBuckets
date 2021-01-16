@@ -121,6 +121,11 @@ export default {
       });
     },
   },
+  created() {
+      if (process.client && window) {
+    window.history.scrollRestoration = 'auto';
+  }    
+  },
   mounted() {
   if (process.client && window) {
     window.history.scrollRestoration = 'auto';
