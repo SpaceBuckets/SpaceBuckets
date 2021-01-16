@@ -122,6 +122,9 @@ export default {
     },
   },
   mounted() {
+  if (process.client && window) {
+    window.history.scrollRestoration = 'auto';
+  }    
     this.hitStat();
     if (process.client) {
       this.$profile.name = JSON.parse(localStorage.getItem("name"));
