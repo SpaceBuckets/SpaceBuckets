@@ -15,7 +15,7 @@
             <div class="onlymobile"><icon-random/><span>Swipe for a random build.</span></div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/gallery">
+        <nuxt-link to="/gallery" no-prefetch>
           <h2>Try a random build</h2>
           <div><icon-random/>Infinite bucket loop!</div>
         </nuxt-link>
