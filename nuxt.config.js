@@ -46,8 +46,8 @@ export default {
   }, 
   components: true,
   loading: { color: "#fdd835" },
-  //vueMeta: { refreshOnceOnNavigation: true },
-  //features: { transitions: false },
+  vueMeta: { refreshOnceOnNavigation: true },
+  features: { transitions: false },
   modules: ['@nuxtjs/axios'],
   axios: {
     proxyHeaders: false,
