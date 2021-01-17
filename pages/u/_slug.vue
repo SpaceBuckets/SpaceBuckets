@@ -6,7 +6,8 @@
       <cardrelated />
     </template>
     <template v-slot:next v-if="!loadingSwipe">
-      <postmasonry :post="swipeItem" variation="skeleton" />
+<!--     <nuxt-link v-if="!loadingSwipe" :to="{name: 'u-slug', params: { slug: `${swipeItem.s}`} }">HIDDENPOST</nuxt-link>
+ -->      <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
   </swiper>
 </template>
