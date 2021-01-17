@@ -86,7 +86,7 @@ export default {
     };
   },
   async created() {
-    if (process.client) {
+    if (process.client && !(navigator.connection.effectiveType || '').includes('2g')) {
       this.swipeItem = await singleRandom();
       if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;

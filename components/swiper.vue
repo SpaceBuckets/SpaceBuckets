@@ -12,7 +12,7 @@
   </div>
 
     <client-only>
-      <div class="swipable" v-if="next">
+      <div class="swipable" v-if="next" >
         <slot name="next"></slot>
       </div>
     </client-only>

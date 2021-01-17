@@ -1,13 +1,11 @@
 <template>
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
-
       <postmasonry :post="post" />
       <cardrelated />
     </template>
     <template v-slot:next v-if="!loadingSwipe">
-<!--     <nuxt-link v-if="!loadingSwipe" :to="{name: 'u-slug', params: { slug: `${swipeItem.s}`} }">HIDDENPOST</nuxt-link>
- -->      <postmasonry :post="swipeItem" variation="skeleton" />
+      <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
   </swiper>
 </template>
@@ -28,11 +26,13 @@ export default {
     return {
       swipeItem: [],
       loadingSwipe: true,
+      disablePointers: false
     };
   },
   async created() {
-    if (process.client) {
+    if (process.client && !(navigator.connection.effectiveType || '').includes('2g')) {
       this.swipeItem = await singleRandom();
+
       if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
       }
