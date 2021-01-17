@@ -30,7 +30,7 @@ export default {
     };
   },
   async created() {
-    if (process.client && !(navigator.connection.effectiveType || '').includes('2g')) {
+    if (process.client) {
       this.swipeItem = await singleRandom();
 
       if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
