@@ -122,15 +122,12 @@ export default {
     },
   },
   created() {
-      if (process.client && window) {
-    window.history.scrollRestoration = 'auto';
+    if (process.client && window) {
+        this.hitStat();
   }    
   },
   mounted() {
-  if (process.client && window) {
-    window.history.scrollRestoration = 'auto';
-  }    
-    this.hitStat();
+
     if (process.client) {
       this.$profile.name = JSON.parse(localStorage.getItem("name"));
       this.$profile.pin = JSON.parse(localStorage.getItem("pin"));
