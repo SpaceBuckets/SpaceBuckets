@@ -12,7 +12,7 @@
   </div>
 
     <client-only>
-      <div class="swipable" v-if="next && !slowconn" >
+      <div class="swipable" v-if="next" >
         <slot name="next"></slot>
       </div>
     </client-only>
@@ -33,9 +33,9 @@ export default {
     };
   },  
   fetch() {
-    if(!(navigator.connection && ((navigator.connection.effectiveType || '').includes('3g')))) {
+/*     if(!(navigator.connection && ((navigator.connection.effectiveType || '').includes('3g')))) {
       this.slowconn = false
-    }
+    } */
   },
   methods: {
     touchStart() {

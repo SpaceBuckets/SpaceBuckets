@@ -15,7 +15,6 @@ import { singlePost, singleRandom, randomize } from "~/static/flatDB";
 
 export default {
   scrollToTop: false,
-  fetchOnServer: false,
   async asyncData({ params }) {
     const post = await singlePost(params.slug);
     if (post.z !== "" || (post.z !== undefined && post.z.length > 0)) {
@@ -23,13 +22,7 @@ export default {
     }
     return { post };
   },
-  async fetch() {
-      const data = await singleRandom();
-      this.swipeItem = data
-      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
-        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
-      }
-  },  
+  
   data() {
     return {
       swipeItem: [],
@@ -37,9 +30,17 @@ export default {
       disablePointers: false
     };
   },
-  mounted() {
+  async created() {
+    if (process.client) {
+      this.swipeItem = await singleRandom();
 
-      
+      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
+        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
+      }
+      //this.swipeItem.i = this.swipeItem.i.slice(0, 1);
+
+      this.loadingSwipe = false
+    }
   },
 
   head() {
