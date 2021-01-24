@@ -43,11 +43,11 @@ export default {
       this.progressScroll = ((event.target.scrollLeft * 100) / event.target.offsetWidth).toFixed(2);
       if (this.progressScroll > 50 && !this.moving) {
         if (this.$props.type === "posts") {
-          this.$router.push({ name: 'u-slug', params: { 'slug': this.$props.next.s } });
+          this.$router.replace({ name: 'u-slug', params: { 'slug': this.$props.next.s } });
 
         }
         if (this.$props.type === "docs") {
-          this.$router.push({ path: `/docs/${this.$props.next.s}` });
+          this.$router.replace({ path: `/docs/${this.$props.next.s}` });
         }        
       }
     },
