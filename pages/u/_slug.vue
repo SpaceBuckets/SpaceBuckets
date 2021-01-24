@@ -24,9 +24,9 @@ export default {
     return { post };
   },
   async fetch() {
-    const data = await singleRandom();
-    this.swipeItem = data
-    if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
+      const data = await singleRandom();
+      this.swipeItem = data
+      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
       }
   },  
@@ -38,7 +38,8 @@ export default {
     };
   },
   mounted() {
-      this.loadingSwipe = false
+
+      
   },
 
   head() {

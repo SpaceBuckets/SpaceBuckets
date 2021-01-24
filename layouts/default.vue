@@ -127,7 +127,6 @@ export default {
   }    
   },
   mounted() {
-
     if (process.client) {
       this.$profile.name = JSON.parse(localStorage.getItem("name"));
       this.$profile.pin = JSON.parse(localStorage.getItem("pin"));

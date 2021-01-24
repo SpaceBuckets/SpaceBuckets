@@ -12,7 +12,7 @@
   </div>
 
     <client-only>
-      <div class="swipable" v-if="next" >
+      <div class="swipable" v-if="next && !slowconn" >
         <slot name="next"></slot>
       </div>
     </client-only>
@@ -24,12 +24,19 @@ export default {
   name: 'swiper',
   props: ['next','type'],
   scrollToTop: false,
+  fetchOnServer: false,
   data() {
     return {
       progressScroll: 0,
       moving: false,
+      slowconn: true,
     };
   },  
+  fetch() {
+    if(!(navigator.connection && ((navigator.connection.effectiveType || '').includes('3g')))) {
+      this.slowconn = false
+    }
+  },
   methods: {
     touchStart() {
       this.moving = true;
