@@ -4,7 +4,7 @@
       <postmasonry :post="post" />
       <cardrelated />
     </template>
-    <template v-slot:next>
+    <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
   </swiper>
@@ -25,29 +25,21 @@ export default {
   },
   async fetch() {
     const data = await singleRandom();
-    console.log(data)
     this.swipeItem = data
+    if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
+        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
+      }
   },  
   data() {
     return {
       swipeItem: [],
-      loadingSwipe: false,
+      loadingSwipe: true,
       disablePointers: false
     };
   },
-/*   async created() {
-    if (process.client) {
-      this.swipeItem = await singleRandom();
-
-      if (this.swipeItem.z !== "" || (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)) {
-        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
-      }
-      //this.swipeItem.i = this.swipeItem.i.slice(0, 1);
-      console.log(this)
-
+  mounted() {
       this.loadingSwipe = false
-    }
-  }, */
+  },
 
   head() {
     return {
