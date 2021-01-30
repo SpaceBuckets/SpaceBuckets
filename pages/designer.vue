@@ -1,6 +1,6 @@
 <template>
   <div>
-    <iframe src="https://boletinextraoficial.com/design/" style="width:100%; height:100vh;border:0;"></iframe>
+    <iframe src="https://bucket-designer.netlify.app/" style="width:100%; height:100vh;border:0;"></iframe>
   </div>
 </template>
 

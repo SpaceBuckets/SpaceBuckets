@@ -34,8 +34,8 @@
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
         <nuxt-link to="/gallery" no-prefetch>GALLERY</nuxt-link>
-<!--         <nuxt-link to="/designer" no-prefetch>DESIGN</nuxt-link>
- -->        <nuxt-link to="/drome" no-prefetch>DROME</nuxt-link>
+        <nuxt-link to="/designer" no-prefetch>DESIGN</nuxt-link>
+        <nuxt-link to="/drome" no-prefetch>DROME</nuxt-link>
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
