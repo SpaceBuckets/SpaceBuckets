@@ -360,7 +360,7 @@ const asins = {
   },
   light: {
     cfl: "B00M6SR1JM",
-    ufo: "B07315FTRS",
+    ufo: "B07312WKX2",
     led: "B01DBZHUXA",
     ledbulb: "B01BFCGBN6"
   },
