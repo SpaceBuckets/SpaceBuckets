@@ -373,7 +373,7 @@ const asins = {
     powersupply: "B015G8E1Q4"
   },
   ropeextra: {
-    ledstrip: "B00UI1DVUW"
+    ledstrip: "B01D2CUNQ8"
   }
 };
 

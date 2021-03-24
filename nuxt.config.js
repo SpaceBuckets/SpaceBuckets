@@ -55,6 +55,11 @@ export default {
   },  
   cssSourceMap: false,
   plugins: ['~/plugins/profile.js'],
+  build: {
+    transpile: [
+      'three',
+    ],
+  },  
   buildModules: [
     "@nuxtjs/eslint-module",
     ['@nuxtjs/google-fonts', {   
