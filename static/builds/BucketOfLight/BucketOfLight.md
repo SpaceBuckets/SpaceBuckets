@@ -1,6 +1,6 @@
 ---
 t: "STEALTH LED BUCKET"
-s: "BucketOfLight"
+s: "bucketoflight"
 a: "BucketOfLight"
 d: "2019-06-01"
 c: "This idea is based off of <a href='/u/superangryguy'>SuperAngryGuy's hardware store LED bucket</a>. Everything here was sourced in Canada, either locally at Home Depot/Rona or from Amazon.ca. <strong>I'm using standard 10w <a href='https://amzn.to/3lyKIRa'>LED bulbs</a> with plug-in sockets</strong>, along with 5 meters of 5050SMD LED lighting for the sides. I chose a 5gal container for this build, as I want a small footprint. Also betting on a 4' Duct Booster fan with a carbon filter. <a href='http://www.reddit.com/r/SpaceBuckets/comments/27lf9t/build_guide_for_a_stealth_saginspired_led_space/'>Check out more info on the subreddit!</a></strong><h3>Question: how much noise does the booster fan make?</h3><strong>It's very quiet to me</strong>, especially compared to the other fans of a similar size. If you are in the same room with it and it's out in the open, you can only hear the air moving and not any mechanical sounds. I sleep with it out in the open near my bed. 

@@ -1,6 +1,6 @@
 ---
 t: "BIK BUCKET"
-s: "B_I_K"
+s: "b_i_k"
 a: "B_I_K"
 d: "2019-09-29"
 c: "If you are reading this, you have probably unknowingly helped me through this amazing journey and pushed me to discover my love for The Grow.

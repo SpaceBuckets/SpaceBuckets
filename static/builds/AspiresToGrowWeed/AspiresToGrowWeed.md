@@ -1,6 +1,6 @@
 ---
 t: "ASPIRATION'S BUCKET"
-s: "AspiresToGrowWeed"
+s: "aspirestogrowweed"
 a: "AspiresToGrowWeed"
 h: "http://www.reddit.com/r/SpaceBuckets/comments/26f5vr/spacebucket_progress_so_far_looking_pretty_good/"
 d: "2014-06-30"

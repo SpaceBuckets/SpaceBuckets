@@ -1,6 +1,6 @@
 ---
 t: "SIMPLE LED BRUTE"
-s: "bruteLED"
+s: "bruteled"
 a: "halfmpty"
 d: "2016-11-06"
 c: "This bucket took a few hours to build, you could make one today!<b><a href='https://www.reddit.com/r/HandsOnComplexity/comments/1rcgih/led_and_led_grow_lights_part_5_working_with_100/'> I followed SAGs wiring guides</a></b> for this lighting project, they are an invaluable resource.

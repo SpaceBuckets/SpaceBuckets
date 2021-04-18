@@ -1,6 +1,6 @@
 ---
 t: "ALIASESQUIRE'S BUCKET"
-s: "AliasEsquire"
+s: "aliasesquire"
 a: "AliasEsquire"
 h: "http://www.reddit.com/r/SpaceBuckets/comments/2q7h70/space_bucket_unveiling_and_introduction_to_ms/"
 d: "2014-12-24"
