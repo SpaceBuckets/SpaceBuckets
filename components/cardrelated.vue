@@ -94,5 +94,6 @@ h2 {
   display: block;
   width: 100%;
   margin: 20px 10px 5px;
+  font-size: 22px;
 }
 </style>

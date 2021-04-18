@@ -84,7 +84,7 @@ export default {
   ],   
   sitemap: {
     path: '/sitemap.xml',
-    hostname: 'https://www.spacebuckets.com',
+    hostname: 'https://spacebuckets.com',
     exclude: [],
     routes() {
       return getBuilds().then(res => {
