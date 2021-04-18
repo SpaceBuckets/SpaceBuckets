@@ -17,6 +17,7 @@ export default {
   scrollToTop: false,
   async asyncData({ params }) {
     const post = await singlePost(params.slug);
+    console.log(post)
     if (post.z !== "" || (post.z !== undefined && post.z.length > 0)) {
       post.itemCount = post.z.split(",").length;
     }
