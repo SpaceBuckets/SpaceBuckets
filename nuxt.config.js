@@ -54,7 +54,6 @@ export default {
     credentials: false
   },  
   cssSourceMap: false,
-  //plugins: ['~/plugins/profile.js'],
   build: {
     transpile: [
       'three',
@@ -90,7 +89,7 @@ export default {
       return getBuilds().then(res => {
         return res.map(post => {
           return {
-            route: '/u/' + post.s,
+            route: '/u/' + post.s + '/',
             payload: post
           }
         })
