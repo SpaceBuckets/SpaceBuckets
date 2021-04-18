@@ -89,7 +89,7 @@ export default {
       return getBuilds().then(res => {
         return res.map(post => {
           return {
-            route: '/u/' + post.s,
+            route: '/u/' + post.s.toLowerCase(),
             payload: post
           }
         })

@@ -105,6 +105,7 @@ export default {
   head() {
     return {
       title: "Space Buckets - Docs",
+      meta: [{ hid: 'description', name: 'description', content: 'A Space Bucket is a DIY indoor garden</strong> that is made by stacking plastic containers alongside lighting (CFL or LED) and airflow (PC or other fans). It is an enclosed growth chamber that can be used to garden many kinds of plants.' }]      
     };
   },
 };
