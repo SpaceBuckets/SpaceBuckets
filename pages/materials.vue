@@ -18,7 +18,7 @@
 
     <div class="search-sidebar">
       <div class="sidebar-content">
-        <h2>MATERIALS</h2>
+        <h1>MATERIALS</h1>
         <p>Select categories to filter the products. Amazon links help support this website ♥</p>
       </div>
       <div class="search-filters">
@@ -767,7 +767,7 @@ section.shopping-list {
   font-size: 16px;
 }
 
-.searcher-content-container h2 {
+.searcher-content-container h1 {
   color: #fff;
   font-size: 18px;
   font-family: montserrat;

@@ -4,7 +4,7 @@
       <div class="gallery-container">
         <div class="search-sidebar">
           <div class="sidebar-content">
-            <h2>GALLERY</h2>
+            <h1>GALLERY</h1>
             <p>
               Select categories to filter the buckets. Amazon links help support
               this website ♥

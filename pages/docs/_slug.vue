@@ -5,7 +5,7 @@
         <div class="search-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
             <nuxt-link to="/docs">
-              <h2 style="padding-bottom: 15px;">DOCS</h2>
+              <h1 style="padding-bottom: 15px;">DOCS</h1>
             </nuxt-link>
             <docsnav />          
           </div>
@@ -21,7 +21,7 @@
     </template>
     <template v-slot:next>
         <div class="doc-single-content">
-          <h2>{{swipeItem.t}}</h2>
+          <h1>{{swipeItem.t}}</h1>
           <div v-html="swipeItem.c"></div>
         </div>
     </template>
@@ -68,6 +68,7 @@ export default {
   h3 {
     margin: 15px 0 5px;
   }
+  h1,
   h2 {
     margin-bottom: 10px;
   }

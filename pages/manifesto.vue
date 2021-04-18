@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="post-content">
-      <h2>SPACE BUCKETS MANIFESTO</h2>
+      <h1>SPACE BUCKETS MANIFESTO</h1>
       <div>
         Humans of the Earth! Hear the Space Buckets calling. It is time for a DIY indoor gardening revolution. We stand at the vanguard:
         <ul>
@@ -52,12 +52,15 @@ export default {
   border-right: 1px solid #1a1a1b;
   overflow: auto;
   max-height: 3000px;
+  h1,
   h2 {
     font-family: "montserrat", Arial, Helvetica, sans-serif;
     font-size: 22px;
     color: #343536;
     font-weight: 600;
     padding: 10px 0 15px;
+    margin-bottom: 0px;
+
     overflow: auto;
     display: flex;
     justify-content: space-between;

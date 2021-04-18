@@ -2,7 +2,7 @@
   <div id="app">
         <div class="search-sidebar">
       <div class="sidebar-content">
-        <h2>BUCKET BUILDER</h2>
+        <h1>BUCKET BUILDER</h1>
           <p>Select a combination of bucket parts to create your custom build. Shopping list, similar buckets and general tips will adapt to your preferences.</p>
       </div>
    

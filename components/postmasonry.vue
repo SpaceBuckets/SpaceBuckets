@@ -182,6 +182,7 @@ export default {
     color: #343536;
     font-weight: 600;
     padding: 10px 0 15px;
+    margin-bottom: 0;
     overflow: auto;
     display: flex;
     text-transform: uppercase;

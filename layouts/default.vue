@@ -333,10 +333,13 @@ button:focus {
     color: #eee;
     line-height: 1.2em;
   }
+  h1,
   h2 {
     font-size: 20px;
     color: #eee;
     padding-bottom: 0px;
+    margin-bottom: 10px;
+    text-align: left;
   }
 }
 

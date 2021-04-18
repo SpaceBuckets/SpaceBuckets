@@ -1,5 +1,7 @@
 <template>
   <div>
+        <h1 style="opacity: 0;position:absolute">SUBMIT YOUR BUCKET</h1>
+
     <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
     <div>
       <form @submit="submit" ref="formHTML" class="post-masonry">
