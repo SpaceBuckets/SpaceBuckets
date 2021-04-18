@@ -1,13 +1,18 @@
 <template>
   <div>
-    <h1 style="opacity: 0;position:absolute">BUCKET DROME</h1>
+    <h1 style="opacity: 0;position:absolute">BUCKET DESIGNER</h1>
     <iframe src="https://bucket-designer.netlify.app/" style="width:100%; height:100vh;border:0;"></iframe>
   </div>
 </template>
 
 <script>
-export default {};
-</script>
+export default {
+   head() {
+    return {
+      title: `Space Buckets - DESIGNER`,
+    };
+  },  
+}</script>
 
 <style lang="scss" scoped>
 

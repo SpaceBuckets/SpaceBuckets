@@ -99,6 +99,11 @@ export default {
   head() {
     return {
       title: "Space Buckets - DIY indoor gardeners",
+      meta: [{
+        hid: 'description',
+        name: 'description',
+        content: 'DIY Indoor Gardening with stacked containers and LED or CFL lights. Create your garden, grow plants indoors and join our community!'
+      }]           
     };
   },
 };

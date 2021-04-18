@@ -46,6 +46,7 @@ export default {
   head() {
     return {
       title: `Space Buckets - ${this.post.t}`,
+      meta: [{ hid: 'description', name: 'description', content: this.post.c.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "") }]      
     };
   },
 };

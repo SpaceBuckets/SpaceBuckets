@@ -42,9 +42,7 @@ export default {
   head() {
     return {
       title: `Space Buckets - ${this.doc.t}`,
-      meta: [
-        { hid: 'description', name: 'description', content: this.doc.d }
-      ]      
+      meta: [{ hid: 'description', name: 'description', content: this.doc.d }]      
     };
   },
 };

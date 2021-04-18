@@ -52,18 +52,12 @@
           <span id="stat"></span>
         </client-only>
       </div>
-
-      <!--       <button class="randomer onlydesktop" @click="swipeRandom()">
-        RANDOM <icon-random/>
-      </button> -->
     </header>
     <nuxt />
   </div>
 </template>
 
 <script>
-import { singleRandom } from "~/static/flatDB";
-
 export default {
   scrollToTop: false,
   data() {
@@ -135,9 +129,6 @@ header {
   &.drome {
     border-bottom: 2px solid #004d47;
   }
-  &.login {
-    //background: transparent;
-  }
   @media (max-width: 980px) {
     flex-direction: column;
     justify-content: space-between;
@@ -190,63 +181,11 @@ header {
     }
   }
 }
-
-.randomer {
-  border: 0;
-  background: transparent;
-  color: #fafafa;
-  font-family: "Montserrat", sans-serif;
-  font-size: 17px;
-  font-weight: 600;
-  padding: 0;
-  padding-right: 15px;
-  cursor: pointer;
-  &:hover {
-    color: #fdd835 !important;
-    svg {
-      fill: #fdd835 !important;
-    }
-  }
-  svg {
-    width: 16px;
-    height: auto;
-    position: relative;
-    top: 2px;
-  }
-}
-
 .nav-sep {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  //svg path { transition: all 0.3s linear; }
-  &.logger {
-    position: relative;
-    min-width: 110px;
-    cursor: pointer;
-    text-align: center;
-    &:hover {
-      a {
-        color: #fdd835;
-      }
-      svg path {
-        fill: #fdd835;
-      }
-    }
-    a {
-      padding: 0;
-      position: relative;
-      color: #fff;
-      /* display: flex;
-      align-items: center;
-      top: 1px; */
-    }
-  }
-  &.logged {
-    svg path {
-      fill: #fdd835;
-    }
-  }
+
   a {
     display: block;
     flex: 1;
