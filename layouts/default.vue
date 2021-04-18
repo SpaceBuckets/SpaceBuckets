@@ -3,7 +3,6 @@
     <header
       :class="{
         drome: $route.path.includes('/drome'),
-        login: $route.path.includes('/profile'),
       }"
     >
       <div class="nav-logo">
@@ -19,7 +18,7 @@
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
         <nuxt-link
-          to="/profile"
+          to="/new"
           class="onlymobile"
           >SUBMIT</nuxt-link
         >

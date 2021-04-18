@@ -12,7 +12,7 @@ export default {
         var iframeContainer = document.getElementById("iframe-container");
         iframeContainer.innerHTML = "";
         var iframe = document.createElement("iframe");
-        iframe.src = `https://bucketdrome.netlify.app/?name=${this.$profile.name}&pin=${this.$profile.pin}`
+        iframe.src = `https://bucketdrome.netlify.app/`
         iframeContainer.appendChild(iframe);
       });
     }
