@@ -98,11 +98,6 @@ export default {
   updated() {
     this.hitStat();
   },
-  head() {
-    return {
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },],
-    };
-  },
 };
 </script>  
 <style lang="scss" scoped>
