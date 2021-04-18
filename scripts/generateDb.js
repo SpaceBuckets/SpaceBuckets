@@ -15,6 +15,7 @@ async function createDb(src) {
     //Parse Markdown
     var contents = matter(fs.readFileSync(`static/${src}/${singleFolder}/${documentes}`, 'utf8').toString());
     post = contents.data
+    post.s = post.s.toLowerCase()
     posts.push(post);
   });
 

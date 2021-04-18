@@ -280,7 +280,7 @@
             <h2>DUBS BRUTE BUILD</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/bruteLED" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'led'">
+          <nuxt-link to="/u/bruteled" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'led'">
             <img src="/builds/bruteLED/cover.jpg" />
             <h2>SIMPLE LED BRUTE</h2>
           </nuxt-link>

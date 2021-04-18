@@ -69,11 +69,11 @@ export default {
     const mad = await singlePost("the-mad-scientist");
     const forever = await singlePost("budsforever");
     const ekrof = await singlePost("green-top-tower");
-    const simpleLED = await singlePost("bruteLED");
-    const gnk = await singlePost("GNKtote");
-    const sag = await singlePost("SuperAngryGuy");
-    const hydro = await singlePost("HaplessAstronaut");
-    const morri = await singlePost("Morrigan_Disapproves");
+    const simpleLED = await singlePost("bruteled");
+    const gnk = await singlePost("gnktote");
+    const sag = await singlePost("superangryguy");
+    const hydro = await singlePost("haplessastronaut");
+    const morri = await singlePost("morrigan_disapproves");
     const tito = await singlePost("titobin");
     const garbo = await singlePost("doublejallday_bin");
 
