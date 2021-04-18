@@ -103,7 +103,7 @@ export default {
       link: [
         {
           rel: "canonical",
-          href: "https://spacebuckets.com" + this.$route.path,
+          href: "https://spacebuckets.com" + this.$route.path + "/",
         },
       ],
     };
