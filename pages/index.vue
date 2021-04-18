@@ -99,6 +99,7 @@ export default {
   head() {
     return {
       title: "Space Buckets - DIY indoor gardeners",
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" },],
       meta: [{
         hid: 'description',
         name: 'description',
