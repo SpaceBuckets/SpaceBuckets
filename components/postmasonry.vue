@@ -3,9 +3,9 @@
     <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
 
     <div class="post-content">
-      <h2>
+      <h1>
         <span>{{ post.t }}</span>
-      </h2>
+      </h1>
       <div v-html="post.c"></div>
     </div>
     <div class="post-support">
@@ -175,6 +175,7 @@ export default {
   overflow: auto;
   max-height: 5000px;
   margin-bottom: -1px;
+  h1,
   h2 {
     font-family: "montserrat", Arial, Helvetica, sans-serif;
     font-size: 22px;
