@@ -102,12 +102,15 @@
         </div>
       </div>
     </div>
+    <div class="data-pepe">
+      {{post.i}}
+    </div>
     <div
       class="img-container"
       v-for="(img, ie) in post.i"
       :key="`section-${ie}`"
     >
-      <img :src="`/builds/${post.s}/${img.h}`" alt />
+      <img v-if="variation != 'skeleton'" :src="`/builds/${post.s}/${img.h}`" alt />
       <img v-if="variation === 'skeleton'" loading="lazy" :src="`/builds/${post.s}/${img.h}`" alt />
       <div :style="{ 'padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"></div>
     </div>
