@@ -381,7 +381,7 @@ export default {
     return {
       title: `Space Buckets - MATERIALS`,
       meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of recommended items for DIY indoor gardening.' }],
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },]
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
   },  
   methods: {

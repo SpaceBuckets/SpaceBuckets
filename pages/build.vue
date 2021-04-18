@@ -387,7 +387,7 @@ export default {
   head() {
     return {
       title: `Space Buckets - BUILDER`,
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },]
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
   },    
   computed: {

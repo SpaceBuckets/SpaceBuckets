@@ -26,7 +26,7 @@ export default {
    head() {
     return {
       title: `Space Buckets - DROME`,
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },],
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Try the DIY indoor gardening simulator, from digital seed to flower.' }],
     };
   },
