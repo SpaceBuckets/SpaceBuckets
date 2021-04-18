@@ -5,35 +5,6 @@
     <div class="post-content">
       <h2>
         <span>{{ post.t }}</span>
-        <button
-          v-if="$profileStatus.isLogged"
-          title="Save to Favorites"
-          aria-label="Save to Favorites"
-          @click="saveFavorite(post.t,post.s)"
-          class="sav-fav"
-          :class="{ savedActive }"
-        >
-          <svg
-            viewBox="0 0 18 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.19 1.155c-1.672-1.534-4.383-1.534-6.055 0L9 2.197 7.864 1.155c-1.672-1.534-4.382-1.534-6.054 0-1.881 1.727-1.881 4.52 0 6.246L9 14l7.19-6.599c1.88-1.726 1.88-4.52 0-6.246z"
-              fill="#fff"
-            />
-          </svg>
-          <svg
-            viewBox="0 0 18 14"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M16.19 1.156c-1.672-1.535-4.383-1.535-6.055 0L9 2.197 7.864 1.156c-1.672-1.535-4.382-1.535-6.054 0-1.881 1.726-1.881 4.519 0 6.245L9 14l7.19-6.599c1.88-1.726 1.88-4.52 0-6.245zm-1.066 5.219L9 12.09 2.875 6.375c-.617-.567-.856-1.307-.856-2.094 0-.787.138-1.433.756-1.999.545-.501 1.278-.777 2.063-.777.784 0 1.517.476 2.062.978L9 4.308l2.099-1.826c.546-.502 1.278-.978 2.063-.978.785 0 1.518.276 2.063.777.618.566.755 1.212.755 1.999 0 .787-.238 1.528-.856 2.095z"
-              fill="#ccc"
-            />
-          </svg>
-        </button>
       </h2>
       <div v-html="post.c"></div>
     </div>
@@ -159,35 +130,7 @@ export default {
       savedActive: false,
     };
   },
-  updated() {
-    if (process.client) {
-      var savedFavs = this.$profile.favs;
-      var i;
-      if (savedFavs) {
-
-      for (i = 0; i < savedFavs.length; i++) {
-        if (savedFavs[i] === this.post.s) {
-          this.savedActive = true;
-        }
-      }
-            }
-
-    }
-  },
-  async created() {
-    if (process.client && localStorage.getItem("favs")) {
-      var savedFavs = JSON.parse(localStorage.getItem("favs"));
-      var i;
-            if (savedFavs) {
-
-      for (i = 0; i < savedFavs.length; i++) {
-        if (savedFavs[i].s === this.post.s) {
-          this.savedActive = true;
-        }
-      }
-            }
-
-    }    
+  async created() {  
     if (process.client && this.$props.variation != "skeleton") {
       if (
         this.post.z !== "" ||
@@ -200,35 +143,6 @@ export default {
           .then((data) => (this.amazonItems = data.ItemsResult.Items));
       }
     }
-  },
-  methods: {
-    saveFavorite(postTitle,postSlug) {
-      var newFav = { t: postTitle, s: postSlug }
-      var currFavs = this.$profile.favs;
-      currFavs.push(newFav);
-      this.progressValue = 0.7
-      this.savedActive = true;
-      var saveData =
-        "name=" + this.$profile.name + "&obj=" + JSON.stringify(currFavs);
-      var self = this;
-
-       $.ajax({
-        url: "https://boletinextraoficial.com/sb_fav_up.php",
-        data: saveData,
-        type: "POST",
-        dataType: "json",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        complete: function (data) {
-          console.log("SAVED FAVORITE ✓");
-          self.progressValue = 1
-          self.$profile.favs = currFavs;
-          localStorage.setItem('favs',JSON.stringify(currFavs))
-          setTimeout(() => { self.progressValue = 0; },2000);
-        },
-      });
-    },
   },
 };
 </script>

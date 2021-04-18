@@ -1,30 +1,60 @@
 <template>
   <div>
     <div class="cards-container" v-if="relatedItems">
+      <h2>RELATED ITEMS</h2>
       <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
         <client-only>
           <card :id="post" />
         </client-only>
       </div>
+
+
+      <h2>RANDOM ITEMS</h2>
+
+      <div class="card-skeleton" v-for="post in randomItems" :key="post.s">
+        <client-only>
+          <card :id="post" />
+        </client-only>
+      </div>      
     </div>
-    <nuxt-link class="load-more" :to="{name: 'gallery'}">View More</nuxt-link>
+    <nuxt-link class="load-more" :to="{name: 'gallery'}">View All</nuxt-link>
   </div>
 </template>
 
 <script>
-import { randomize } from "~/static/flatDB";
+import { randomize, filterBuilds } from "~/static/flatDB";
 
 export default {
   name: "cardrelated",
+  props: ["cat"],
   data() {
     return {
       relatedItems: [],
+      randomItems: [],
     };
   },
   async created() {
     if (process.client) {
-      this.relatedItems = await randomize(8);
-    }
+      var currCat = this.cat.split(',')
+         this.randomItems = await randomize(4);
+
+   
+        if (currCat.includes('5gal')) {
+          this.relatedItems = await filterBuilds(4, 1, 'rand', '5gal');
+        }
+        if (currCat.includes('brute')) {
+          this.relatedItems = await filterBuilds(4, 1, 'rand', 'brute');
+        }
+        if (currCat.includes('tote')) {
+          this.relatedItems = await filterBuilds(4, 1, 'rand', 'tote');
+        }
+        if (currCat.includes('barrel')) {
+          this.relatedItems = await filterBuilds(4, 1, 'rand', 'barrel');
+        }                
+        if (currCat.includes('bin')) {
+          this.relatedItems = await filterBuilds(4, 1, 'rand', 'bin');
+        }        
+     }
   },
 };
 </script>
@@ -57,5 +87,12 @@ export default {
   justify-content: center;
   max-width: 1280px;
   margin: 50px auto 0;
+}
+
+h2 {
+  color: #fff;
+  display: block;
+  width: 100%;
+  margin: 20px 10px 5px;
 }
 </style>

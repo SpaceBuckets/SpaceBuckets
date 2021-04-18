@@ -4,7 +4,7 @@
 
     <template v-slot:main>
       <div class="intro-home">
-        <nuxt-link to="/profile" class="submit-link">
+        <nuxt-link to="/new" class="submit-link">
           <h2>Submit your build!</h2>
           <div><icon-flask/>Add a bucket to the gallery.</div>
         </nuxt-link>        

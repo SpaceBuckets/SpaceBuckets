@@ -1,20 +1,7 @@
 <template>
   <div>
     <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
-
-    <!--     <div class="loading-container" v-if="!isLogged && !notLogged">
-      <div class="spinner">
-        <div class="rect1"></div>
-        <div class="rect2"></div>
-        <div class="rect3"></div>
-        <div class="rect4"></div>
-        <div class="rect5"></div>
-      </div>
-    </div> -->
-    <div v-if="!$profileStatus.isLogged" class="logged-notice">
-      You must be logged in to publish your bucket.
-    </div>
-    <div v-if="$profileStatus.isLogged">
+    <div>
       <form @submit="submit" ref="formHTML" class="post-masonry">
         <client-only>
           <div class="post-content">
@@ -45,7 +32,7 @@
                 </svg>
               </div>
               <div>
-                by <strong>{{ $profile.name }}</strong>
+                <input placeholder="Enter username..." v-model="form.author" />
               </div>
               <div>
                 <a
@@ -264,7 +251,7 @@ export default {
       this.submitting = true;
       var uuid = Math.random().toString(36).slice(-6);
       this.progressValue = 0.1;
-
+      if (this.form.author === "") { this.form.author = "Anonymous" }
       var redate = new Date().toLocaleDateString();
       var reslug = this.form.title
         .toLowerCase()
@@ -273,7 +260,7 @@ export default {
       var mdContent = `---
 t: "${this.form.title}"
 s: "${reslug}"
-a: "${this.$profile.name}"
+a: "${this.form.author}"
 d: "${redate}"
 c: "${this.form.content}"
 v: ""
@@ -282,7 +269,7 @@ z: ""`;
       this.resizeImage();
       this.submitText = "Submitting! Please wait...";
       var self = this;
-      this.progressValue = 0.3;
+      this.progressValue = 0.6;
 
       await this.$axios
         .post(
@@ -290,7 +277,7 @@ z: ""`;
           {
             title: this.form.title,
             slug: reslug,
-            author: this.$profile.name,
+            author: this.form.author,
             content: mdContent,
             images: this.imageDataGit,
             cover: this.imageCoverGit,
@@ -300,7 +287,9 @@ z: ""`;
         )
         .then(function (response) {
           if (response.data === "OK") {
-            self.progressValue = 0.4;
+            self.progressValue = 1;
+            self.submitText = "Success! Your build has been submitted";
+            self.submitsuccess = true;
           } else {
             self.submitText = "Error! Could not submit your bucket";
             self.submiterror = true;
@@ -308,80 +297,11 @@ z: ""`;
           }
         })
         .catch(function (error) {});
+        setTimeout(function(){ 
+          self.progressValue = 0; 
+        
+          }, 3000);
 
-      var megapost = [];
-      var postContent = {
-        title: this.form.title,
-        content: this.form.content,
-        images: this.imageData,
-        cover: this.imageCover,
-      };
-
-      if (this.$profile.post !== "") {
-        megapost.push(this.$profile.post);
-        megapost.push(postContent);
-        megapost = megapost.flat();
-
-        var ir;
-        for (ir = 0; ir < megapost.length; ir++) {
-          megapost[ir].cover = megapost[ir].cover.replace(/\+/g, "%2B");
-
-          Object.keys(megapost[ir].images).forEach(function (key) {
-            megapost[ir].images[key] = megapost[ir].images[key].replace(
-              /\+/g,
-              "%2B"
-            );
-          });
-        }
-        this.$profile.post = megapost;
-      } else {
-        this.$profile.post = [postContent];
-      }
-
-      var self = this;
-      self.progressValue = 0.7;
-
-      var gameData =
-        "name=" +
-        this.$profile.name +
-        "&title=" +
-        this.form.title +
-        "&content=" +
-        this.form.content +
-        "&cover=" +
-        this.imageCover +
-        "&image1=" +
-        this.imageData[0] +
-        "&image2=" +
-        this.imageData[1] +
-        "&image3=" +
-        this.imageData[2] +
-        "&image4=" +
-        this.imageData[3] +
-        "&image5=" +
-        this.imageData[4];
-
-      $.ajax({
-        url: "https://boletinextraoficial.com/sb_in_post.php",
-        data: gameData,
-        type: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-        dataType: "json",
-        complete: function (data) {
-          console.log("UPDATED ✓");
-          self.submitText =
-            "Success! Your bucket has been submitted for review";
-          self.submitsuccess = true;
-          self.submitting = false;
-          localStorage.setItem("post", JSON.stringify(self.$profile.post));
-          self.progressValue = 1;
-          setTimeout(() => {
-            self.progressValue = 0;
-          }, 2000);
-        },
-      });
     },
   },
   head() {
@@ -416,12 +336,17 @@ z: ""`;
   content: "";
   width: calc(var(--value) * 1%);
   background: rgba(253, 216, 53, 0.4);
-  transition: width 0.5s linear;
+  transition: width 1s linear;
 }
 input,
 textarea {
   border: 0;
   resize: none;
+  padding: 0;
+  width: 100%;
+  &:focus {
+    outline: 0;
+  }
 }
 .post-content {
   padding: 10px 15px 20px;

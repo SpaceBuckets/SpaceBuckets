@@ -2,7 +2,7 @@
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
       <postmasonry :post="post" />
-      <cardrelated />
+      <cardrelated :cat="post.g"/>
     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />

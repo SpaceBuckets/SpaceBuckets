@@ -21,32 +21,24 @@
         <nuxt-link
           to="/profile"
           class="onlymobile"
-          v-if="$profileStatus.isLogged"
-          >PROFILE</nuxt-link
-        >
-        <nuxt-link
-          to="/profile"
-          class="onlymobile"
-          v-if="!$profileStatus.isLogged"
-          >LOGIN</nuxt-link
+          >SUBMIT</nuxt-link
         >
         <nuxt-link to="/materials">MATERIALS</nuxt-link>
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
-        <nuxt-link to="/gallery" no-prefetch>GALLERY</nuxt-link>
+        <nuxt-link to="/gallery">GALLERY</nuxt-link>
         <nuxt-link to="/designer" no-prefetch>DESIGN</nuxt-link>
         <nuxt-link to="/drome" no-prefetch>DROME</nuxt-link>
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
         class="nav-sep logger"
-        :class="{ logged: $profileStatus.isLogged }"
         style="padding: 0 15px"
       >
         <client-only>
-          <template v-if="$profileStatus.isLogged">
-            <nuxt-link :to="{ name: 'profile' }" no-prefetch>
-              <span>PROFILE</span>
+ 
+            <nuxt-link to="/new" no-prefetch>
+              <span style="display: inline-block"> SUBMIT </span>
               <svg
                 style="height: auto; width: 24px; display: none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,22 +50,6 @@
                 />
               </svg>
             </nuxt-link>
-          </template>
-          <template v-if="!$profileStatus.isLogged">
-            <nuxt-link to="/profile" no-prefetch>
-              <span style="display: inline-block"> LOGIN </span>
-              <svg
-                style="height: auto; width: 24px; display: none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill="#FFF"
-                  d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
-                />
-              </svg>
-            </nuxt-link>
-          </template>
           <span id="stat"></span>
         </client-only>
       </div>
@@ -123,32 +99,11 @@ export default {
   },
   created() {
     if (process.client && window) {
-        this.hitStat();
-  }    
-  },
-  mounted() {
-    if (process.client) {
-      this.$profile.name = JSON.parse(localStorage.getItem("name"));
-      this.$profile.pin = JSON.parse(localStorage.getItem("pin"));
-      if (this.$profile.name) {
-        this.$profile.post = JSON.parse(localStorage.getItem("post"));
-        if (localStorage.getItem("favs")) {
-          this.$profile.favs = JSON.parse(localStorage.getItem("favs"));
-        }
-        this.$profileStatus.isLogged = true;
-      }
-    }
+      this.hitStat();
+    }    
   },
   updated() {
     this.hitStat();
-    if (process.client) {
-      this.$profile.name = JSON.parse(localStorage.getItem("name"));
-      this.$profile.pin = JSON.parse(localStorage.getItem("pin"));
-
-      if (this.$profile.name) {
-        this.$profileStatus.isLogged = true;
-      }
-    }
   },
   head() {
     return {

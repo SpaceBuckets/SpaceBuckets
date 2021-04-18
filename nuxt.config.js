@@ -54,7 +54,7 @@ export default {
     credentials: false
   },  
   cssSourceMap: false,
-  plugins: ['~/plugins/profile.js'],
+  //plugins: ['~/plugins/profile.js'],
   build: {
     transpile: [
       'three',

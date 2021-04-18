@@ -14,6 +14,9 @@ async function filterBuilds(num,page,sort,tags) {
     posts.forEach(post => {post.v = Number(post.v) });
     sortArray(posts, { by: 'v', order: 'desc' }) 
   }  
+  if(sort === "rand") { 
+    posts = shuffle(posts);
+  }  
 
   //Filter
   if (tags) {
