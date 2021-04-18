@@ -38,6 +38,7 @@ export default {
   head() {
     return {
       title: `Space Buckets - MANIFESTO`,
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },],
       meta: [{ hid: 'description', name: 'description', content: 'Humans of the Earth! Hear the Space Buckets calling. It is time for a DIY indoor gardening revolution. We stand at the vanguard' }]      
     };
   },

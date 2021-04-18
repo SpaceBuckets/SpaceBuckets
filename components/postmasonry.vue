@@ -102,9 +102,7 @@
         </div>
       </div>
     </div>
-    <div class="data-pepe">
-      {{post.i}}
-    </div>
+
     <div
       class="img-container"
       v-for="(img, ie) in post.i"

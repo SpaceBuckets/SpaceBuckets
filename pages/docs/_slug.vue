@@ -42,7 +42,8 @@ export default {
   head() {
     return {
       title: `Space Buckets - ${this.doc.t}`,
-      meta: [{ hid: 'description', name: 'description', content: this.doc.d }]      
+      meta: [{ hid: 'description', name: 'description', content: this.doc.d }],
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },]
     };
   },
 };

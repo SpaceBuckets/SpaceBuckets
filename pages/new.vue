@@ -309,6 +309,8 @@ z: ""`;
   head() {
     return {
       title: `Space Buckets - SUBMIT!`,
+      meta: [{ hid: 'description', name: 'description', content: 'Submit your Space Bucket to the Gallery for the world to see!' }],
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },]
     };
   },
 };
