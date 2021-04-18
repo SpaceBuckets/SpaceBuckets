@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="cards-container" v-if="relatedItems">
-      <h2>RELATED ITEMS</h2>
+      <h2>RELATED BUILDS</h2>
       <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
         <client-only>
           <card :id="post" />
@@ -9,7 +9,7 @@
       </div>
 
 
-      <h2>RANDOM ITEMS</h2>
+      <h2>RANDOM BUILDS</h2>
 
       <div class="card-skeleton" v-for="post in randomItems" :key="post.s">
         <client-only>
