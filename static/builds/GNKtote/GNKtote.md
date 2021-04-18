@@ -1,6 +1,6 @@
 ---
 t: "GNK POWER TOTE"
-s: "GNKtote"
+s: "gnktote"
 a: "Ser_NSFW"
 d: "2020-05-23"
 c: "This is my new SB build! It is in the beginning stages still. <strong>I've named it GNK Power Tote for the Star Wars droid it so closely resembles.</strong>

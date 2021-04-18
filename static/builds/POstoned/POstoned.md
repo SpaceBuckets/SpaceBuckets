@@ -1,6 +1,6 @@
 ---
 t: "BUCKET TRON"
-s: "POstoned"
+s: "postoned"
 a: "POstoned"
 h: "https://www.reddit.com/r/SpaceBuckets/comments/4nhaz1/the_story_of_buckettron/"
 d: "2017-03-15"

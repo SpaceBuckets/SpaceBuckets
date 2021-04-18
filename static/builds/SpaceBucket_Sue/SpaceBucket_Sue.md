@@ -1,6 +1,6 @@
 ---
 t: "SUE SPACE TOTE"
-s: "SpaceBucket_Sue"
+s: "spacebucket_sue"
 a: "SB_Sue"
 d: "2016-03-01"
 c: "Check out my hybrid LED/CFL Space Tote! <strong>This build is still work in progress, but I think it looks really rad! </strong> I also made <a href='http://i.imgur.com/VWNleSu.gifv'>this GIF</a> showing it in motion.

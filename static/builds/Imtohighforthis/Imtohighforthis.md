@@ -1,6 +1,6 @@
 ---
 t: "IMTO'S BUCKET"
-s: "Imtohighforthis"
+s: "imtohighforthis"
 a: "Imtohighforthis"
 d: "2015-05-12"
 c: "I decided to go with the basic build of a couple 5 gallons, <a href='https://amzn.to/3jMfTYw'>CFL bulbs</a> and PC fans. <strong>First time bucket builder and grower.</strong> The temperature with the lights on is usually around 70-75°F (21-24°C). I have been topping the plant in hopes it will keep the height to a minimum. Any ideas or recommendations are greatly appreciated. <strong>Happy gardening everyone!</strong>"

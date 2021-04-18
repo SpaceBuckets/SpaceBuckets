@@ -1,6 +1,6 @@
 ---
 t: "FROSTY'S BUCKET"
-s: "FrostyNugs"
+s: "frostynugs"
 h: "http://www.reddit.com/r/trees/comments/2iqr93/my_5gallon_grow_room/"
 a: "FrostyNugs"
 d: "2014-10-09"

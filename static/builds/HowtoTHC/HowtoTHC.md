@@ -1,6 +1,6 @@
 ---
 t: "HowtoTHC BUILD"
-s: "HowtoTHC"
+s: "howtothc"
 a: ""
 d: "2016-04-30"
 c: "Built from two 20 Gallon garbage cans, this Spacebucket design focuses on separating light heat from the plant for optimal temperature control. This units maximum temperature after 12 hours of light lies between 70 and 82 degrees based on outdoor climate. It consists of two separate compartments with a fan to move air between the two.

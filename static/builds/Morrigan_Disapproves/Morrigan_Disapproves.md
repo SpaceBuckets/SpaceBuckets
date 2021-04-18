@@ -1,6 +1,6 @@
 ---
 t: "MORRIGAN'S BUILD"
-s: "Morrigan_Disapproves"
+s: "morrigan_disapproves"
 a: "Morrigan_Disapproves"
 d: "2015-07-19"
 c: "Hey everyone! It has taken only several months, but I'm super happy with the way it has turned out. It has been a blast to plan, work out some interesting solutions and build. I think for the most part, this bucket is complete... save for some tweaks. Lots of lessons were learned and lots of things I would do differently however, that is probably best left for Bucket #2 (and that begins with <a href='/u/3drenders'>more 3D models!</a>). The truth: many design decisions came down to 'would this look badass?'<ol><li>Yes -&gt; hell yeah!</li><li>No -&gt; how can one make this look more awesome?</li></ol>

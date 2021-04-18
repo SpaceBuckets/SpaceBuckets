@@ -1,6 +1,6 @@
 ---
 t: "YESIFLY'S BUCKET"
-s: "yesIflyhigh"
+s: "yesiflyhigh"
 a: "yesIflyhigh"
 h: "http://www.reddit.com/r/SpaceBuckets/comments/2r8ovn/im_ready_to_get_this_show_on_the_road_bucket/"
 d: "2015-01-06"

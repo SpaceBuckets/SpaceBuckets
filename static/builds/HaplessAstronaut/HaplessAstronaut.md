@@ -1,6 +1,6 @@
 ---
 t: "HYDRO LED BRUTE"
-s: "HaplessAstronaut"
+s: "haplessastronaut"
 a: "HaplessAstronaut"
 d: "2015-11-07"
 c: "It is done. It is overly complicated, and I'll probably kill the plant with it - <strong>but I had FUN making it!</strong> I'm using a 5 gallon black bucket for a reservoir, plus a 20 gallon bucket for the main container. A lot of this was stuff I already had, so I really didn't spend much. As you might have noticed, there is no RTC on the Arduino so right now the lights are running from the relay to a regular light timer. After I get a better light top built I'd like to add an RTC and some data logging capability to the Arduino. <strong>I'll eventually put it all on a real circuit board. Crawl before you walk, right?</strong><h3>THE LIGHTS</h3>

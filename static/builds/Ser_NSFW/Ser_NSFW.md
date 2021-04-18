@@ -1,6 +1,6 @@
 ---
 t: "SER'S BUILD"
-s: "Ser_NSFW"
+s: "ser_nsfw"
 a: "Ser_NSFW"
 d: "2015-08-13"
 c: "Pick out a bucket that will hold the plants, and wrap it entirely in black duct tape. If you can find white 5gal buckets and got a different color, line the inside of the bucket with tin foil so the inside light will be reflected and not absorbed by the bucket walls. White buckets reflect the light just fine without the lining, but you can line white buckets if you really want to. For the remaining buckets, cut the lids off, leaving about 2'-3' of plastic to it doesn't slip off somehow. I left 4'-5' because I was lazy and this is only crucial if the extra plastic will hit a fan or whatever else you have installed in the sides of the bucket. You can always cut more off, too.

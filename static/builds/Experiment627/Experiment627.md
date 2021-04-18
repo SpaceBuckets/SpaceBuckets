@@ -1,6 +1,6 @@
 ---
 t: "EXPERIMENT BUCKET"
-s: "Experiment627"
+s: "experiment627"
 a: "Experiment627"
 d: "2014-10-07"
 c: "Just found out Space Buckets a few weeks ago and <strong>I really loved the concept so I decided to build one</strong> taking ideas from different posts. I'm in the phase now of testing temperature and humidity, photoperiod cycles, and the irrigation system. <strong>Everything is working as expected!</strong>

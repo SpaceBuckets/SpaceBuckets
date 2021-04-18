@@ -1,6 +1,6 @@
 ---
 t: "CURIOUS BIN"
-s: "Thecuriouspaddy"
+s: "thecuriouspaddy"
 a: "Thecuriouspaddy"
 d: "2017-09-27"
 c: "Hey bucketeers! I finally finished my Space Bucket. Thrilled isn't the word. <strong>It was great fun and great sense of achievment when I finished building it</strong>. After seeking some great advice and tips on here I think anybody would be able to manage it!"

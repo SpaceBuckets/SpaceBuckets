@@ -1,6 +1,6 @@
 ---
 t: "SAGs LED BUCKET"
-s: "SuperAngryGuy"
+s: "superangryguy"
 a: "SuperAngryGuy"
 h: "http://www.reddit.com/r/SpaceBuckets/comments/1lmfqd/my_1st_results_56_watts_warm_white_leds_26_grams/"
 d: "2016-05-02"

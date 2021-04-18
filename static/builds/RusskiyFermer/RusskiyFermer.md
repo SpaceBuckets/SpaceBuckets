@@ -1,6 +1,6 @@
 ---
 t: "RUSSKIY SB ONE"
-s: "RusskiyFermer"
+s: "russkiyfermer"
 a: "RusskiyFermer"
 d: "2016-01-07"
 c: "This has been nothing short of the excitement I felt when building useless things out of spare parts when I was a child. Granted, this actually has a purpose, and is built out of specific parts,<strong> but the excitement captured, for me, was the best part</strong>. 

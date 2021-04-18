@@ -215,8 +215,8 @@
             <h2>EKROF SPACE BUCKET</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/SantiagoSentMe" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/builds/SantiagoSentMe/cover.jpg" />
+          <nuxt-link to="/u/santiagosentme" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'cfl'">
+            <img src="/builds/santiagosentme/cover.jpg" />
             <h2>SANTIAGO'S BUILD</h2>
           </nuxt-link>
 
@@ -225,8 +225,8 @@
             <h2>LEVITATING BUCKET</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/Kazel93" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/builds/Kazel93/cover.jpg" />
+          <nuxt-link to="/u/kazel93" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'ufo'">
+            <img src="/builds/kazel93/cover.jpg" />
             <h2>THE BULLET</h2>
           </nuxt-link>
 
@@ -245,8 +245,8 @@
             <h2>EKROF VERO LED</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/Mr_Markheim" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/builds/Mr_Markheim/cover.jpg" />
+          <nuxt-link to="/u/mr_markheim" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'led'">
+            <img src="/builds/mr_markheim/cover.jpg" />
             <h2>MARKHEIM BUCKET</h2>
           </nuxt-link>
 
@@ -255,18 +255,18 @@
             <h2>TOSS BRUTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/Gosu-Sheep" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/builds/Gosu-Sheep/cover.jpg"/>
+          <nuxt-link to="/u/gosu-sheep" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'ufo'">
+            <img src="/builds/gosu-sheep/cover.jpg"/>
             <h2>GOSU BRUTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/SpaceBidet" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/builds/SpaceBidet/cover.jpg" />
+          <nuxt-link to="/u/spacebidet" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'ufo'">
+            <img src="/builds/spacebidet/cover.jpg" />
             <h2>BIDET BRUTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/Southernspaceweed" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/builds/Southernspaceweed/cover.jpg" />
+          <nuxt-link to="/u/southernspaceweed" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'cfl'">
+            <img src="/builds/southernspaceweed/cover.jpg" />
             <h2>SOUTHERN BRUTE</h2>
           </nuxt-link>
 
@@ -275,13 +275,13 @@
             <h2>SHADDO'S BRUTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/G_DuBs_brute" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/builds/G_DuBs_brute/cover.jpg" />
+          <nuxt-link to="/u/g_dubs_brute" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'cfl'">
+            <img src="/builds/g_dubs_brute/cover.jpg" />
             <h2>DUBS BRUTE BUILD</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/bruteled" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/builds/bruteLED/cover.jpg" />
+            <img src="/builds/bruteled/cover.jpg" />
             <h2>SIMPLE LED BRUTE</h2>
           </nuxt-link>
 
@@ -290,8 +290,8 @@
             <h2>GARBO LED BUILD</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/HaplessAstronaut" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/builds/HaplessAstronaut/cover.jpg" />
+          <nuxt-link to="/u/haplessastronaut" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'led'">
+            <img src="/builds/haplessastronaut/cover.jpg" />
             <h2>HYDRO LED BRUTE</h2>
           </nuxt-link>
 
@@ -300,13 +300,13 @@
             <h2>GETGUH'S TOTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/SpaceBucket_Sue" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/builds/SpaceBucket_Sue/cover.jpg" />
+          <nuxt-link to="/u/spaceBucket_sue" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'cfl'">
+            <img src="/builds/spaceBucket_sue/cover.jpg" />
             <h2>SUE SPACE TOTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/Arrrr32" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/builds/Arrrr32/cover.jpg" />
+          <nuxt-link to="/u/arrrr32" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'cfl'">
+            <img src="/builds/arrrr32/cover.jpg" />
             <h2>PIRATE TOTE</h2>
           </nuxt-link>
 
@@ -330,8 +330,8 @@
             <h2>VAHPOR'S TOTE</h2>
           </nuxt-link>
 
-          <nuxt-link to="/u/SpaceBucketFu" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/builds/SpaceBucketFu/cover.jpg"/>
+          <nuxt-link to="/u/spacebucketfu" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'led'">
+            <img src="/builds/spacebucketfu/cover.jpg"/>
             <h2>STRAWBERRY TOTE</h2>
           </nuxt-link>
 

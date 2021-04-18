@@ -1,6 +1,6 @@
 ---
 t: "LADY OF THE BUCKETS"
-s: "Lets_build_abucket"
+s: "lets_build_abucket"
 a: "Lets_build_abucket"
 h: "https://www.reddit.com/r/SpaceBuckets/comments/3zft7k/my_bucket_build_album/"
 d: "2017-03-18"

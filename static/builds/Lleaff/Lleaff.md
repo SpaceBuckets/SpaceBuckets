@@ -1,6 +1,6 @@
 ---
 t: "LLEAFF'S BUCKET"
-s: "Lleaff"
+s: "lleaff"
 a: "Lleaff"
 h: "http://www.reddit.com/r/SpaceBuckets/comments/2xwdfh/the_stealth_bucket/"
 d: "2015-03-04"

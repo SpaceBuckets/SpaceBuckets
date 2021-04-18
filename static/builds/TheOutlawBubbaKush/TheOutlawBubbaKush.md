@@ -1,6 +1,6 @@
 ---
 t: "THE SPACE ACE"
-s: "TheOutlawBubbaKush"
+s: "theoutlawbubbakush"
 a: "TheOutlawBubbaKush"
 d: "2018-01-10"
 c: "<strong>Here is my submission for joining the Space Bucket ranks.</strong> I live in a very small apartment and the only space I have to grow is the space on top of my fridge. So after some planning I put together this build: it consists of two 32gal trashcans lined with a thick aluminum insulation and wrapped with 5 meters of <a href='https://amzn.to/30TZOZn'>5630SMD LED strips</a>. 

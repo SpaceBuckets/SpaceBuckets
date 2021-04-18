@@ -12,7 +12,7 @@ export default {
       return getBuilds().then(res => {
         return res.map(post => {
           return {
-            route: '/u/' + post.s.toLowerCase(),
+            route: '/u/' + post.s,
             payload: post
           }
         })
