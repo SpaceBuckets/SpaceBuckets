@@ -1,32 +1,19 @@
+
 <template>
-  <div>
-    <postmasonry :post="post" />
-    <cardrelated />
-  </div>
+  <div></div>
 </template>
 
 <script>
-import { singlePost, randomize } from "~/static/flatDB";
-
 export default {
-  async asyncData({ params }) {
-    const post = await singlePost("simple-template");
-    if (post.z !== "" || (post.z !== undefined && post.z.length > 0)) {
-      post.itemCount = post.z.split(",").length;
-    }
-    return { post };
-  },
-  data() {
-    return {
-      amazonItems: [],
-    };
-  },
   head() {
     return {
-      title: `Space Buckets - SIMPLE TEMPLATE`,
-      meta: [{ hid: 'description', name: 'description', content: this.post.c.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "") }],
+      title: `Space Buckets | SIMPLE TEMPLATE`,
+      meta: [{ hid: 'description', name: 'description', content: 'Learn how to build a DIY indoor garden with stacked buckets and LED lights. Join the bucketeers!' }],
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
-  },
-};
+  }, 
+  fetch ({ params, redirect }) {
+    redirect(301, '/u/simple-template')
+  }
+}
 </script>
