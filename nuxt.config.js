@@ -55,9 +55,7 @@ export default {
   },  
   cssSourceMap: false,
   build: {
-    transpile: [
-      'three',
-    ],
+    extractCSS: true
   },  
   buildModules: [
     "@nuxtjs/eslint-module",
