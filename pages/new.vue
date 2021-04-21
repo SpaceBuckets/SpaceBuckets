@@ -1,6 +1,6 @@
 <template>
   <div>
-        <h1 style="opacity: 0;position:absolute">SUBMIT YOUR BUCKET</h1>
+    <h2 style="opacity: 0;position:absolute">SUBMIT YOUR BUCKET</h2>
 
     <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
     <div>

@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link class="card" :class="variation" :to="`/${link}`">
+  <nuxt-link class="card" :class="variation" :to="`/${link}/`">
     <img :src="`/index/${link}.jpg`" :alt="title" />
     <h2>{{ title }}</h2>
   </nuxt-link>

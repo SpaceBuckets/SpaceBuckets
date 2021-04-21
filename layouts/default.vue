@@ -5,9 +5,9 @@
         drome: $route.path.includes('/drome'),
       }"
     >
-      <div class="nav-logo">
+      <h1 class="nav-logo">
         <nuxt-link :to="{ name: 'index' }" exact>SPACE BUCKETS</nuxt-link>
-      </div>
+      </h1>
       <button class="nav-toggle active" @click="openNav = !openNav">
         <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792">
           <path
@@ -18,7 +18,7 @@
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
         <nuxt-link
-          to="/new"
+          to="/new/"
           class="onlymobile"
           >SUBMIT</nuxt-link
         >
@@ -34,10 +34,9 @@
         class="nav-sep logger"
         style="padding: 0 15px"
       >
-        <client-only>
  
-            <nuxt-link to="/new" no-prefetch>
-              <span style="display: inline-block"> SUBMIT </span>
+            <nuxt-link to="/new/" no-prefetch>
+              <span style="display: inline-block">SUBMIT</span>
               <svg
                 style="height: auto; width: 24px; display: none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -50,7 +49,6 @@
               </svg>
             </nuxt-link>
           <span id="stat"></span>
-        </client-only>
       </div>
     </header>
     <nuxt />
@@ -159,6 +157,7 @@ header {
     min-height: 50px;
     display: flex;
     align-items: center;
+    margin: 0;
     a {
       font-weight: 700;
       font-size: 21px;

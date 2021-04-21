@@ -4,8 +4,8 @@
       <div class="gallery-container">
         <div class="search-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
-            <nuxt-link to="/docs">
-              <h2 style="padding-bottom: 15px;">DOCS</h2>
+            <nuxt-link to="/docs/">
+              <h2 style="margin:0">DOCS</h2>
             </nuxt-link>
             <docsnav />
           </div>

@@ -10,7 +10,7 @@
         <strong>Total cost is about $100</strong>, depending on what materials you recycle. Your support is appreciated! Amazon suggestions help maintain this site. <strong>This website is built to be explored</strong>.
         <a href="https://spacebuckets.com/gallery/">In our Gallery</a> you'll find over 300 examples of great setups: the style of the containers is variable, but their gardening function is the same. Ready to start your build?
         <strong>
-          <a href="https://spacebuckets.com/template">Take the next step</a>
+          <a href="https://spacebuckets.com/u/simple-template/">Take the next step</a>
         </strong> with the DIY guide. 
       </p>
     </div> 
@@ -18,7 +18,7 @@
 
     <div class="search-sidebar">
       <div class="sidebar-content">
-        <h1>MATERIALS</h1>
+        <h2>MATERIALS</h2>
         <p>Select categories to filter the products. Amazon links help support this website ♥</p>
       </div>
       <div class="search-filters">

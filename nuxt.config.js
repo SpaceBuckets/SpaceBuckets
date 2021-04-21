@@ -81,9 +81,13 @@ export default {
     }],
     "@nuxtjs/sitemap",
   ],   
+  router: {
+    trailingSlash: true,
+  },  
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://spacebuckets.com',
+    trailingSlash: true,
     exclude: [],
     routes() {
       return getBuilds().then(res => {

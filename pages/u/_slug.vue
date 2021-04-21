@@ -47,7 +47,7 @@ export default {
     return {
       title: `Space Buckets - ${this.post.t}`,
       meta: [{ hid: 'description', name: 'description', content: this.post.c.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "") }],
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },]
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
   },
 };

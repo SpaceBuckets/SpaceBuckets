@@ -4,7 +4,7 @@
       <div class="gallery-container">
         <div class="search-sidebar">
           <div class="sidebar-content">
-            <h1>GALLERY</h1>
+            <h2>GALLERY</h2>
             <p>
               Select categories to filter the buckets. Amazon links help support
               this website ♥
@@ -344,7 +344,7 @@ export default {
   head() {
     return {
       title: `Space Buckets - GALLERY`,
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },],
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of DIY indoor gardens from the community. More than 350 builds await!' }],
 
     };

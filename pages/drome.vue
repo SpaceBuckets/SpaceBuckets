@@ -1,6 +1,6 @@
 <template>
   <div class="builder" id="iframe-container">
-    <h1 style="opacity: 0;position:absolute">BUCKET DROME</h1>
+    <h2 style="opacity: 0;position:absolute">BUCKET DROME</h2>
   </div>
 </template>
 

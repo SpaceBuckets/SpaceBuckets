@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 style="opacity: 0;position:absolute">BUCKET DESIGNER</h1>
+    <h2 style="opacity: 0;position:absolute">BUCKET DESIGNER</h2>
     <iframe src="https://bucket-designer.netlify.app/" style="width:100%; height:100vh;border:0;"></iframe>
   </div>
 </template>

@@ -4,32 +4,32 @@
         <label for="first">
           <div>Getting Started</div>
           <div>
-            <nuxt-link to="/docs/main-container">Main Container</nuxt-link>
-            <nuxt-link to="/docs/light-top">Light Top</nuxt-link>
-            <nuxt-link to="/docs/airflow-solutions">Airflow Solutions</nuxt-link>
-            <nuxt-link to="/docs/electrical-basics">Electrical Basics</nuxt-link>
-            <nuxt-link to="/docs/safety-guidelines">Safety Guidelines</nuxt-link>
+            <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
+            <nuxt-link to="/docs/light-top/">Light Top</nuxt-link>
+            <nuxt-link to="/docs/airflow-solutions/">Airflow Solutions</nuxt-link>
+            <nuxt-link to="/docs/electrical-basics/">Electrical Basics</nuxt-link>
+            <nuxt-link to="/docs/safety-guidelines/">Safety Guidelines</nuxt-link>
           </div>
         </label>
 
         <label for="second">
           <div>Advanced Stuff</div>
           <div>
-            <nuxt-link to="/docs/side-lighting">Side-Lighting</nuxt-link>            
-            <nuxt-link to="/docs/heat-control">Heat Control</nuxt-link>
-            <nuxt-link to="/docs/smell-control">Smell Control</nuxt-link>
-            <nuxt-link to="/docs/led-basics">LED Basics</nuxt-link>
-            <nuxt-link to="/docs/led-bulbs">LED Bulbs</nuxt-link>
+            <nuxt-link to="/docs/side-lighting/">Side-Lighting</nuxt-link>            
+            <nuxt-link to="/docs/heat-control/">Heat Control</nuxt-link>
+            <nuxt-link to="/docs/smell-control/">Smell Control</nuxt-link>
+            <nuxt-link to="/docs/led-basics/">LED Basics</nuxt-link>
+            <nuxt-link to="/docs/led-bulbs/">LED Bulbs</nuxt-link>
           </div>
         </label>
 
         <label for="third">
           <div>Plant Advice</div>
           <div>
-            <nuxt-link to="/docs/coco-coir">Coco Coir</nuxt-link>            
-            <nuxt-link to="/docs/pest-control">Pest Control</nuxt-link>            
-            <nuxt-link to="/docs/plant-species">Plant Species</nuxt-link>            
-            <nuxt-link to="/docs/plant-training">Plant Training</nuxt-link>            
+            <nuxt-link to="/docs/coco-coir/">Coco Coir</nuxt-link>            
+            <nuxt-link to="/docs/pest-control/">Pest Control</nuxt-link>            
+            <nuxt-link to="/docs/plant-species/">Plant Species</nuxt-link>            
+            <nuxt-link to="/docs/plant-training/">Plant Training</nuxt-link>            
           </div>
         </label>
       </div>

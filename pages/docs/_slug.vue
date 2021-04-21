@@ -4,8 +4,8 @@
       <div class="docs-wrapper">
         <div class="search-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
-            <nuxt-link to="/docs">
-              <h1 style="padding-bottom: 15px;">DOCS</h1>
+            <nuxt-link to="/docs/">
+              <h1 style="margin:0">DOCS</h1>
             </nuxt-link>
             <docsnav />          
           </div>
@@ -43,7 +43,7 @@ export default {
     return {
       title: `Space Buckets - ${this.doc.t}`,
       meta: [{ hid: 'description', name: 'description', content: this.doc.d }],
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path + "/", },]
+      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
   },
 };

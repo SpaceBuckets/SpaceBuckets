@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="post-content">
-      <h1>SPACE BUCKETS MANIFESTO</h1>
+      <h2>SPACE BUCKETS MANIFESTO</h2>
       <div>
         Humans of the Earth! Hear the Space Buckets calling. It is time for a DIY indoor gardening revolution. We stand at the vanguard:
         <ul>

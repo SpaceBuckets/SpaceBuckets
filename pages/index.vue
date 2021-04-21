@@ -4,18 +4,18 @@
 
     <template v-slot:main>
       <div class="intro-home">
-        <nuxt-link to="/new" class="submit-link">
+        <nuxt-link to="/new/" class="submit-link">
           <h2>Submit your build!</h2>
           <div><icon-flask/>Add a bucket to the gallery.</div>
         </nuxt-link>        
-        <nuxt-link to="/materials">
+        <nuxt-link to="/materials/">
           <h2>Begin your journey</h2>
           <div>
             <div class="onlydesktop"><icon-plant/><span>Become a DIY gardener.</span></div>
             <div class="onlymobile"><icon-random/><span>Swipe for a random build.</span></div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/gallery" no-prefetch>
+        <nuxt-link to="/gallery/">
           <h2>Try a random build</h2>
           <div><icon-random/>Infinite bucket loop!</div>
         </nuxt-link>
@@ -33,7 +33,7 @@
         <card :id="mad" />
         <card :id="ekrof" />
         
-        <cardindex title="Start Here: simple DIY template" link="template" variation="doubled"/>
+        <cardindex title="Start Here: simple DIY template" link="u/simple-template" variation="doubled"/>
         <cardindex title="Tools and Parts" link="materials" />
         
         <card :id="forever" />
@@ -49,7 +49,6 @@
         <cardindex title="Space Buckets Manifesto" link="manifesto" />
 
         <card :id="hydro" />
-        <card :id="morri" />
         <card :id="garbo" />
         <card :id="tito" />
 
@@ -73,9 +72,9 @@ export default {
     const gnk = await singlePost("gnktote");
     const sag = await singlePost("superangryguy");
     const hydro = await singlePost("haplessastronaut");
-    const morri = await singlePost("morrigan_disapproves");
+    const morri = await singlePost("morrigan-disapproves");
     const tito = await singlePost("titobin");
-    const garbo = await singlePost("doublejallday_bin");
+    const garbo = await singlePost("doublejallday-bin");
 
     return { garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
   },
