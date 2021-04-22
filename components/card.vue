@@ -4,7 +4,7 @@
       {{ id.t }}
       <i v-if="id.v">{{ id.v }}</i>
     </h2>
-    <img :src="`/builds/${id.s}/cover.jpg`" alt />
+    <img :src="`/u/${id.s}/cover.jpg`" alt />
   </nuxt-link>
 </template>
 

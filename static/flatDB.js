@@ -1,7 +1,7 @@
 import sortArray from 'sort-array'
 
 function shuffle(r){for(var f,n,o=r.length;0!==o;)n=Math.floor(Math.random()*o),f=r[o-=1],r[o]=r[n],r[n]=f;return r}
-const getBuilds = async()=>{try{return(await import("../static/builds.json")).default}catch(t){return console.log(t),[]}};
+const getBuilds = async()=>{try{return(await import("../static/u.json")).default}catch(t){return console.log(t),[]}};
 const getDocs = async()=>{try{return(await import("../static/docs.json")).default}catch(t){return console.log(t),[]}};
 function searchpo(e,r){return e.filter(e=>r.every(r=>e.g.split(",").some(e=>e===r)))}
 

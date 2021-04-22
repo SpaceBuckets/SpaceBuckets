@@ -37,5 +37,5 @@ async function createDb(src) {
   console.log(`♥ ${src}.json generated`)
 }
 
-createDb("builds");
+createDb("u");
 createDb("docs")

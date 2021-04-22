@@ -55,7 +55,19 @@ export default {
   },  
   cssSourceMap: false,
   build: {
-    extractCSS: true
+    extractCSS: true,
+    optimization: {
+      splitChunks: {
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|vue)$/,
+            chunks: 'all',
+            enforce: true
+          }
+        }
+      }
+    }
   },  
   buildModules: [
     "@nuxtjs/eslint-module",

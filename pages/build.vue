@@ -206,137 +206,137 @@
         <section class="similar-bucket">
 
           <nuxt-link to="/u/the-mad-scientist/" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/builds/the-mad-scientist/cover.jpg" alt/>
+            <img src="/u/the-mad-scientist/cover.jpg" alt/>
             <h2>THE MAD SCIENTIST</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/ekrof/" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/builds/ekrof/cover.jpg" alt/>
+            <img src="/u/ekrof/cover.jpg" alt/>
             <h2>EKROF SPACE BUCKET</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/santiagosentme/" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/builds/santiagosentme/cover.jpg" alt/>
+            <img src="/u/santiagosentme/cover.jpg" alt/>
             <h2>SANTIAGO'S BUILD</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/levitatingchicken/" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/builds/levitatingchicken/cover.jpg" alt/>
+            <img src="/u/levitatingchicken/cover.jpg" alt/>
             <h2>LEVITATING BUCKET</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/kazel93/" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/builds/kazel93/cover.jpg" alt />
+            <img src="/u/kazel93/cover.jpg" alt />
             <h2>THE BULLET</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/ranger737/" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'ufo'">
-            <img src="/builds/ranger737/cover.jpg" alt/>
+            <img src="/u/ranger737/cover.jpg" alt/>
             <h2>RANGER BUILD</h2>
           </nuxt-link>
 
           <nuxt-link to="/articles/no-solder/" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/builds/no-solder-led/cover.jpg" alt/>
+            <img src="/u/no-solder-led/cover.jpg" alt/>
             <h2>NO SOLDER LED</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/ekrof-vero/" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/builds/ekrof-vero/cover.jpg" alt/>
+            <img src="/u/ekrof-vero/cover.jpg" alt/>
             <h2>EKROF VERO LED</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/mr-markheim/" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/builds/mr-markheim/cover.jpg" alt/>
+            <img src="/u/mr-markheim/cover.jpg" alt/>
             <h2>MARKHEIM BUCKET</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/buckettoss/" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'ufo'">
-            <img src="/builds/buckettoss/cover.jpg" alt/>
+            <img src="/u/buckettoss/cover.jpg" alt/>
             <h2>TOSS BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/gosu-sheep/" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/builds/gosu-sheep/cover.jpg" alt/>
+            <img src="/u/gosu-sheep/cover.jpg" alt/>
             <h2>GOSU BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/spacebidet/" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/builds/spacebidet/cover.jpg" alt/>
+            <img src="/u/spacebidet/cover.jpg" alt/>
             <h2>BIDET BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/southernspaceweed/" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/builds/southernspaceweed/cover.jpg" alt/>
+            <img src="/u/southernspaceweed/cover.jpg" alt/>
             <h2>SOUTHERN BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/shaddo/" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/builds/shaddo/cover.jpg" alt/>
+            <img src="/u/shaddo/cover.jpg" alt/>
             <h2>SHADDO'S BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/dubs-brute/" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/builds/dubs-brute/cover.jpg" alt/>
+            <img src="/u/dubs-brute/cover.jpg" alt/>
             <h2>DUBS BRUTE BUILD</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/bruteled/" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/builds/bruteled/cover.jpg" alt/>
+            <img src="/u/bruteled/cover.jpg" alt/>
             <h2>SIMPLE LED BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/doublejallday-bin/" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/builds/doublejallday_bin/cover.jpg" alt/>
+            <img src="/u/doublejallday_bin/cover.jpg" alt/>
             <h2>GARBO LED BUILD</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/haplessastronaut/" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/builds/haplessastronaut/cover.jpg" alt/>
+            <img src="/u/haplessastronaut/cover.jpg" alt/>
             <h2>HYDRO LED BRUTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/getitguh/" v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/builds/getitguh/cover.jpg" alt/>
+            <img src="/u/getitguh/cover.jpg" alt/>
             <h2>GETGUH'S TOTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/spacebucket-sue/" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/builds/spaceBucket_sue/cover.jpg" alt/>
+            <img src="/u/spaceBucket_sue/cover.jpg" alt/>
             <h2>SUE SPACE TOTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/arrrr32/" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/builds/arrrr32/cover.jpg" alt/>
+            <img src="/u/arrrr32/cover.jpg" alt/>
             <h2>PIRATE TOTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/dangerzone710/" v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/builds/dangerzone710/cover.jpg" alt/>
+            <img src="/u/dangerzone710/cover.jpg" alt/>
             <h2>DANGERZONE TOTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/spacetotebuilder/" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/builds/spacetotebuilder/cover.jpg" alt/>
+            <img src="/u/spacetotebuilder/cover.jpg" alt/>
             <h2>SPACE TOTE v3</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/funforpun/" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'ufo'">
-            <img src="/builds/funforpun/cover.jpg" alt/>
+            <img src="/u/funforpun/cover.jpg" alt/>
             <h2>PUN'S EURO BOX</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/vahpors-tote/" v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/builds/vahpors-tote/cover.jpg" alt/>
+            <img src="/u/vahpors-tote/cover.jpg" alt/>
             <h2>VAHPOR'S TOTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/spacebucketfu/" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/builds/spacebucketfu/cover.jpg" alt/>
+            <img src="/u/spacebucketfu/cover.jpg" alt/>
             <h2>STRAWBERRY TOTE</h2>
           </nuxt-link>
 
           <nuxt-link to="/u/cottonparachute/" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/builds/cottonparachute/cover.jpg" alt/>
+            <img src="/u/cottonparachute/cover.jpg" alt/>
             <h2>COTTON'S TOTE</h2>
           </nuxt-link>
         </section>
