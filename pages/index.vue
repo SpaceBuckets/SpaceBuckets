@@ -97,7 +97,7 @@ export default {
   },
   head() {
     return {
-      title: "Space Buckets - DIY indoor gardeners",
+      title: "Space Buckets - DIY indoor garden - Grow plants with LEDs",
       link: [ { rel: "canonical", href: "https://spacebuckets.com" },],
       meta: [{
         hid: 'description',

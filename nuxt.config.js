@@ -26,7 +26,7 @@ export default {
     titleTemplate: (chunk) => {
       if (chunk) { return `${chunk}`; }
       return "DIY indoor gardening - Space Buckets";
-    },
+    },  
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
     meta: [
       { charset: "utf-8" },
@@ -42,7 +42,13 @@ export default {
         content: 'DIY Indoor Gardening with stacked containers and LED or CFL lights. Grow plants indoors and join our community!'
       }      
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=auto'
+      }      
+    ],
   }, 
   components: true,
   loading: { color: "#fdd835" },
@@ -71,12 +77,6 @@ export default {
   },  
   buildModules: [
     "@nuxtjs/eslint-module",
-    ['@nuxtjs/google-fonts', {   
-      display: 'auto',
-      families: {
-      Montserrat: [600, 700],
-      },   
-    }],
     ['@nuxtjs/google-analytics', {
       id: 'UA-35759103-1',
       autoTracking: {
