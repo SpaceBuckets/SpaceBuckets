@@ -167,7 +167,7 @@
           <div
             class="recommend-stuff"
             v-if="containerActive == 'bucket'"
-          >A classic Space Bucket has enough room to fit exactly one plant. The best kind of buckets to build Space Buckets are of the 5gal variety. This size has a very small footprint and allows for one plant cultivation.</div>
+          >A classic Space Bucket garden has enough room to fit exactly one plant. The smallest kind of buckets to build Space Buckets are of the 5gal variety. This size has a very small footprint and it is perfect for one plant indoor cultivation.</div>
 
          
           <div class="recommend-stuff" v-if="containerActive == 'brute'">
@@ -196,12 +196,12 @@
           <div
             class="recommend-stuff"
             v-if="lightActive == 'cfl' "
-          >CFL bulbs should be installed facing horizontally.</div>
+          >CFL bulbs should be installed facing horizontally for an optimal lumen configuration.</div>
 
           <div
             class="recommend-stuff"
             v-if="lightActive == 'cfl' "
-          >These kind of bulbs are known to produce more heat inside the bucket. Typical installations require the use of electrical splices, so proceed with caution.</div>
+          >Please notice that CFL bulbs are known to produce more heat inside your indoor garden. Typical installations require the use of electrical splices, so proceed with caution if you are not familiar with the involved hazards.</div>
         </section>
         <section class="similar-bucket">
 

@@ -3,7 +3,7 @@ t: "MASSIVE SPACE BIN"
 s: "robemade"
 a: "robemade"
 d: "2019-12-29"
-c: "This is my first bucket, first post, fifth grow (but first in the bucket garden) so a noob all around. <strong>The build is still a work in progress, but its done for now. </strong><h3>BUILD SPECIFICATIONS</h3><strong>Using a 121L (32Gal) garbage bin, it should provide extra room to grow</strong>. The bin is already lightproof as it it doesn't let absolutely any light out when the lid is on. I use a mylar space blanket as a reflective surface, it is a bit of a pain in the ass as it has a lot of fold lines. I left a few extra inches of mylar off the top of the bin: once the lid is in place, it covers the gap between the 2. I'm also using a lot of zip ties to secure the componets to the main container, mainly the power strip and fans. 
+c: "This is my first bucket, first post, fifth grow (but first in this kind of DIY indoor garden) so I'm a noob all around. <strong>The build is still a work in progress, but its done for the moment. </strong><h3>BUILD SPECIFICATIONS</h3><strong>For the main container I'm using a 121L (32Gal) garbage bin, as it should provide extra room to grow my plants</strong>. The good thing is that the bin is already lightproof as it it doesn't let absolutely any light out when the lid is on. I use a mylar space blanket as a reflective surface, it is a bit of a pain in the ass as it has a lot of fold lines. I left a few extra inches of mylar off the top of the bin: once the lid is in place, it covers the gap between the 2. I'm also using a lot of zip ties to secure the componets to the main container, mainly the power strip and fans. 
 
     <h3>AIRFLOW</h3>
 

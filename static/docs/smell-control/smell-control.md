@@ -1,7 +1,7 @@
 ---
 t: "Smell Control"
 s: "smell-control"
-c: "Controlling odors from smelly plants is a very popular topic among indoor gardeners, and Space Buckets are not the exception. Even though there are many options for reducing/removing the odors some plants exhibit, <strong>it is difficult to assure 100% 'odor proofness.' For this reason, the bucket community never recommends growing in high risk situations.</strong>
+c: "Controlling odors and smells from smelly plants is a very popular topic among indoor gardeners, and Space Buckets are not the exception. Even though there are many options for reducing/removing the odors some plants exhibit, <strong>it is difficult to assure 100% 'odor proofness.' For this reason, the bucket community never recommends growing in high risk situations.</strong>
 
 It's advised against growing offensive plants, especially when others inside the home may have an issue with it, and one should also be at least acquainted with the laws and penalties of the jurisdiction in which they reside.
 
