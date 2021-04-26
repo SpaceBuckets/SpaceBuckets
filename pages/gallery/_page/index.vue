@@ -149,7 +149,7 @@ export default {
   },
   head() {
     return {
-      title: `Space Buckets - GALLERY - ${$route.params.page}`,
+      title: `Space Buckets - GALLERY - ${this.$route.params.page}`,
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of DIY indoor gardens from the community. More than 350 builds await!' }],
 
