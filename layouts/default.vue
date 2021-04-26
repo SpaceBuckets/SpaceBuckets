@@ -25,7 +25,7 @@
         <nuxt-link to="/materials">MATERIALS</nuxt-link>
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
-        <nuxt-link to="/gallery">GALLERY</nuxt-link>
+        <nuxt-link to="/gallery/1">GALLERY</nuxt-link>
         <nuxt-link to="/designer" no-prefetch>DESIGN</nuxt-link>
         <nuxt-link to="/drome" no-prefetch>DROME</nuxt-link>
       </div>
@@ -213,6 +213,7 @@ header {
 </style>
 
 <style lang="scss">
+
 button:focus {
   outline: 0;
 }

@@ -6,76 +6,35 @@
           <div class="sidebar-content">
             <h2>GALLERY</h2>
             <p>
-              Select categories to filter the buckets. Amazon links help support
-              this website ♥
+              Select categories to filter and browse the builds in the community garden collection.
             </p>
           </div>
           <div class="filters-container">
-            <div class="search-container">
-              <div class="filter-single-top">Search</div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                version="1.1"
-                id="Magnifying_glass"
-                x="0px"
-                y="0px"
-                viewBox="0 0 20 20"
-                enable-background="new 0 0 20 20"
-                xml:space="preserve"
-              >
-                <path
-                  fill="#FFFFFF"
-                  d="M17.545,15.467l-3.779-3.779c0.57-0.935,0.898-2.035,0.898-3.21c0-3.417-2.961-6.377-6.378-6.377  C4.869,2.1,2.1,4.87,2.1,8.287c0,3.416,2.961,6.377,6.377,6.377c1.137,0,2.2-0.309,3.115-0.844l3.799,3.801  c0.372,0.371,0.975,0.371,1.346,0l0.943-0.943C18.051,16.307,17.916,15.838,17.545,15.467z M4.004,8.287  c0-2.366,1.917-4.283,4.282-4.283c2.366,0,4.474,2.107,4.474,4.474c0,2.365-1.918,4.283-4.283,4.283  C6.111,12.76,4.004,10.652,4.004,8.287z"
-                />
-              </svg>
-              <input
-                v-on:keyup.enter="customSearch($refs.searchInput.value)"
-                ref="searchInput"
-                type="text"
-              />
-            </div>
 
             <div class="perpage-container">
-              <div class="results">{{ relatedInfo.total }} builds</div>
-<!--              <div class="sort-filters">
-              <div
-                ref="sortAsc"
-                :class="{ active: sort === 'asc' }"
-                @click="handleSort('asc')"
-              >
-                New
-              </div>
-              <div
-                ref="sortPop"
-                :class="{ active: sort === 'pop' }"
-                @click="handleSort('pop')"
-              >
-                Popular
-              </div>
-            </div> -->
+              <div class="results">{{ totalLength }} builds</div>
             </div>
 
             <h3>Filters</h3>
             <div class="select-filter-container">
               <div class="filter-single-top">Container</div>
-              <select ref="selectContainer" @change="handleChange('container')">
+              <select ref="selectContainer" @change="filterPosts('container')">
                 <option value="">All</option>
-                <option v-for="option in containerOptions" :key="option">{{option}}</option>
+                <option v-for="option in containerOptions" :key="option" :value="option">{{option}}</option>
               </select>
             </div>
             <div class="select-filter-container">
               <div class="filter-single-top">Lighting</div>
-              <select ref="selectLighting" @change="handleChange('lighting')">
+              <select ref="selectLighting" @change="filterPosts('lighting')">
                 <option value="">All</option>
-                <option v-for="option in lightingOptions" :key="option">{{option}}</option>
+                <option v-for="option in lightingOptions" :key="option" :value="option">{{option}}</option>
               </select>
             </div>
             <div class="select-filter-container">
               <div class="filter-single-top">Airflow</div>
-              <select ref="selectAirflow" @change="handleChange('airflow')">
+              <select ref="selectAirflow" @change="filterPosts('airflow')">
                 <option value="">All</option>
-                <option v-for="option in airflowOptions" :key="option">{{option}}</option>
+                <option v-for="option in airflowOptions" :key="option" :value="option">{{option}}</option>
               </select>
             </div>
           </div>
@@ -87,16 +46,13 @@
 
             <div class="top-wrapper">
               <div class="pagination">
-                <nuxt-link v-if="$route.params.page !== 1" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)-1, category: $route.params.category } }">
+                <nuxt-link v-if="$route.params.page > 1" :to="{ name: 'gallery-page', params: { page: parseInt($route.params.page)-1 } }">
                   « Prev
                 </nuxt-link>
-                <span>Page {{ $route.params.page }} of {{ relatedInfo.pages }}</span>
-                <nuxt-link v-if="$route.params.page !== undefined" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)+1, category: $route.params.category } }">
+                <nuxt-link :class="{active: page === $route.params.page }" :key="page" :to="{ name: 'gallery-page', params: { page: parseInt(page)} }" v-for="page in megapostLength">{{ page }}</nuxt-link>
+                <nuxt-link v-if="$route.params.page < megapostLength" :to="{ name: 'gallery-page', params: { page: parseInt($route.params.page)+1 } }">
                   Next »
-                </nuxt-link>
-                <nuxt-link v-if="$route.params.page === undefined" :to="{ name: 'gallery-page-category', params: { page: 2 } }">
-                  Next »
-                </nuxt-link>                
+                </nuxt-link>       
               </div>
             </div>
           </div>
@@ -112,22 +68,17 @@
 <script>
 import {
   filterBuilds,
-  singleRandom,
-  getBuilds,
-  getSearch,
-  randomize,
+  singleRandom
 } from "~/static/flatDB";
 export default {
   async asyncData({route}) {
-    var posts = await filterBuilds(36, 1, "pop");
-    if (route.params.page) {
-      posts = await filterBuilds(36, route.params.page, "pop");
-    }
-    if (route.params.page && route.params.category) {
-      posts = await filterBuilds(36, route.params.page, "pop",route.params.category.replace(/-/g,','));
-    }
-    const allPosts = await getBuilds();
-    return { posts, allPosts };
+    
+    var posts = await filterBuilds(36, route.params.page, "pop");
+    var megaposts = await filterBuilds(-1, 0, "pop");
+    var totalLength = megaposts.length
+    var megapostLength = Math.ceil(megaposts.length / 36)      
+  
+    return { posts, totalLength,megapostLength };
   },
   data() {
     return {
@@ -135,10 +86,7 @@ export default {
       lightingOptions: ['cfl','ufo','ledbulb','ledcustom'],
       airflowOptions: ['pcfan','linefan','inlinefan'],
       swipeItem: [],
-      loadingGallery: true,
       loadingSwipe: true,
-      relatedInfo: [],
-      allReposts: "",
       filterQuery: {
         container: "",
         lighting: "",
@@ -187,27 +135,21 @@ export default {
     }
   },  
   methods: {
-    async handleChange(type) {
-      this.$refs.searchInput.value = ""
+    filterPosts(type) {
       this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
-      await this.filterPosts();
-    },
-    async handleSort(name) {
-      this.page = 1;
-      this.sort = name;
-      await this.filterPosts();
-    },
-    filterPosts() {
       this.filterQuery.selected = this.filterQuery.container + "-" + this.filterQuery.lighting + "-" + this.filterQuery.airflow;
-      this.filterQuery.selected = this.filterQuery.selected.replace('--','-');
-      this.filterQuery.selected = this.filterQuery.selected.replace(/-$/,'');
-      this.filterQuery.selected = this.filterQuery.selected.replace(/^-/,'');
-      this.$router.push({ name: 'gallery-page-category', params: { page: '1', category: this.filterQuery.selected } });
+      this.filterQuery.selected = this.filterQuery.selected.replace('--','-').replace(/-$/,'').replace(/^-/,'');
+
+      if(this.filterQuery.selected === "") {
+        this.$router.push({ name: 'gallery-page', params: { page: '1' } });
+      } else {
+        this.$router.push({ name: 'gallery-page-category', params: { page: '1', category: this.filterQuery.selected } });
+      }
     },
   },
   head() {
     return {
-      title: `Space Buckets - GALLERY`,
+      title: `Space Buckets - GALLERY - ${$route.params.page}`,
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of DIY indoor gardens from the community. More than 350 builds await!' }],
 
@@ -241,6 +183,7 @@ export default {
     color: #fdd835;
   }
 }
+
 .top-wrapper {
   display: flex;
   width: 100%;
@@ -259,6 +202,7 @@ export default {
   .results {
     color: #eee;
     line-height: 35px;
+
   }
 }
 .sort-filters {
@@ -294,9 +238,28 @@ export default {
   font-size: 16px;
   color: #eee;
 
-  span {
-    display: inline-block;
-    margin: 0 10px;
+  a {
+    margin: 0 2px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    height: 28px;
+    color: #eee;
+    text-decoration: none;
+    width: max-content;
+    font-size: 15px;
+   &:hover {
+      color: #fdd835;
+      text-decoration: underline;
+    }    
+    &.nuxt-link-active {
+      background: #fdd835;
+      color: #333;
+      border-radius: 50%;
+      pointer-events: none;
+    } 
   }
   button {
     padding: 10px 15px;
