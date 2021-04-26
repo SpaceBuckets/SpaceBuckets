@@ -13,6 +13,5 @@ c: "Here's my first try with the Ekrof Space Bucket. His build features 56 watts
   Grand Daddy Purple, a fairly low yielding indica (note, I can get +3 oz per square foot under HPS with intracanopy LED lighting in soil off a related strain, Purple Arrow). 60 days flowering, right out of the cloning aeroponic chamber. I did leave it in the aero chamber an extra 7 days to rapidly build up the roots while doing a foliar feeding. I use Miracle-Gro Moisture Control soil. With ultra high lighting levels you either need to go hydroponics or use a soil that holds more moisture. You can add vermiculite or something but I hate vermiculite and perlite. When I first started growing in 1995 I used a 50/50 blend ebb and flow. Crap got everywhere! They're like little static electric magnets. Ignore the time release fertilizer claim- that's more suited to low light house plants and insignificant to this type of growing.
   Fertilizer: General Hydroponics 3 part Flora series at 1200 ppm, pH 6.5. I had to use a 50/50 grow/bloom mixture due to the higher lighting levels. A bloom mixture alone isn't going to cut it as I found out due to chlorosis (chlorophyll breakdown from too low of nitrogen). Every 3 days I would flush the plant with plain water at pH 6.8 and then add the fertilizer solution at 1200 ppm. Plain water flush for the last 10 days. So, I missed my projected goal of 28 grams by 2 grams. The nugs were surprisingly dense with all the extra photosynthesis going on."
 v: "18749"
-g: "5gal,pcfan,sag"
-e: "gallery,resources,led ideas"
+g: "bucket,pcfan"
 z: ""

@@ -9,6 +9,6 @@
 
 <script>
 export default {
-  name: 'icon-plant',
+  name: 'plant',
 };
 </script>

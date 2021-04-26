@@ -8,6 +8,6 @@ c: "This is my Space Bucket! <strong>I use 5M of 5050SMD LEDs and 4 <a href='htt
   <h3>PLANT NUTRIENTS</h3>
   Soil is 2:1 happy frog and perlite amended with ~6 tablespoons of dolomitic lime. I feed the plant whenever it's dry enough for the smart pot to feel light. When she gets a full feeding I use <strong>calmag and fox farms trio</strong> (grow big and big bloom during veg, tiger bloom and big bloom during flower) at the recommended dosage."
 v: "3268"
-g: "5050,5gal,cfl,pcfan"
+g: "sidelight,bucket,cfl,pcfan"
 
 z: "B002QVFN7G,B0091HO0FY,B00M6SR1JM,B01B7BBEGO"

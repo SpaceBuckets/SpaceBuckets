@@ -85,3 +85,9 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  name: "illus-cfl",
+};
+</script>

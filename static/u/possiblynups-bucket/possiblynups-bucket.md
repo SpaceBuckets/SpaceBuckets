@@ -14,6 +14,6 @@ c: "Hello Bucketeers! What great things these buckets are. I've been enjoying me
 
     A quick test of the loop/system has given good results, managing to keep the water and soil pretty stable. Bare in mind that the aim isn't to keep the soil at optimal temps 100% of the time, but rather to lessen the drop of the temperature at night and stop the bad stunning/reactions of the plant that occurred in the current (first) grow. Well that's all for now, <span style='font-size: 17.2px;line-heighg: 1.6em'>thanks for reading and a huge thanks to Ekrof, SAG and the rest of the super-active community."
 v: "1857"
-g: "5gal,custom,pcfan"
+g: "bucket,ledcustom,pcfan"
 
 z: "B000VBW17S,B009OXSFBA,B00CZ75TWA,B01339F06I"

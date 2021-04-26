@@ -21,6 +21,6 @@
 
 <script>
 export default {
-  name: 'icon-random',
+  name: 'random',
 };
 </script>

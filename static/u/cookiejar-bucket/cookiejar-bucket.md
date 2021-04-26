@@ -9,6 +9,6 @@ c: "After surfing this community over the past year, I finally made an attempt a
     Four 80mm computer fans, two intake and two exhaust. The fans vary in speed, and I initially intended to construct carbon filters over the two exhausts. I've since learned and found that these fans are definitely not strong enough to push/pull air through a proper carbon filter.
     Mylar interior, Plasti-dipped exterior. I like the look of the plasti-dip, although it needs a couple more coats. I sanded down the buckets first, and had a couple issues with it peeling where I made additional holes in the bucket after spraying. The mylar is secured using spray adhesive."
 v: "1935"
-g: "5630,5gal,ufo180"
+g: "sidelight,bucket,ufo"
 
 z: "B000VBW17S,B00FGFW0XO,B01339F06I"

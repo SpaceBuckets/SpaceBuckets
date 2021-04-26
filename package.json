@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "export": "nuxt export",
     "serve": "nuxt serve",
-    "generate": "node scripts/generateDb && nuxt generate",
+    "generate": "node --experimental-json-modules --no-warnings scripts/generateDb && nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
   },
   "devDependencies": {
@@ -27,5 +27,8 @@
     "nuxt": "2.14.12",
     "sass-loader": "^9.0.2",
     "sort-array": "^4.1.1"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.12.13"
   }
 }

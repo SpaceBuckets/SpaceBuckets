@@ -15,5 +15,5 @@ c: "This is my first build! I planed it for a month. <strong>It turned out aweso
     <strong>Power</strong>: a <a href='https://www.amazon.com/Yellow-Jacket-2762-1-Outlet-Adapter/dp/B000MM3Z6C/ref=as_li_ss_tl?s=electronics&ie=UTF8&qid=1538573523&sr=1-5&keywords=gfci&linkCode=ll1&tag=spacbuck-20&linkId=31acaff2200ed3e733eadde84d9879be'>GFCI</a> is recommended for safety.
     <a href='https://www.amazon.com/Belkin-BSE600-06BLK-WM-6-Outlet-Protector-6-Foot/dp/B0090YEVSE/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=3705d953e50acea5db93f8db5ded1c41'>Belkin 6-Outlet Power Strip</a>"
 v: "35626"
-g: "5630,5gal,linefan,ufo180"
+g: "sidelight,bucket,inlinefan,ufo"
 z: "B07312WKX2,B01339G2F6,B0090YEVSE,B075QBRR6S,B0716LG6J6"

@@ -37,3 +37,9 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  name: "illus-ufo",
+};
+</script>

@@ -11,5 +11,5 @@ c: "This has been nothing short of the excitement I felt when building useless t
   <h3>FUTURE PLANS</h3>
   PRIMER! Too many paint chips made this job a repaint hassle Install the fans BEFORE the LED strip. Things got in the way of each other. Make much smaller carbon filter Glue gun goes not work on the metal part, not well. Epoxy that part next time. Seriously exploring the idea of a square bucket. I feel that the higher cost will be evened out with the perfect fitting of the fans, vs using a ton of glue/tape/etc making square fans fit to round buckets High power LEDs. <strong>As of now, the inter-dimensional portal technology is still in its beta testing phase, but the exploding scoreboard is very likely.</strong>"
 v: "2077"
-g: "5050,5gal,pcfan"
+g: "sidelight,bucket,pcfan"
 z: "B000VBW17S,B01AHLY6WO,B01B7BBEGO,B01C82SZRM"

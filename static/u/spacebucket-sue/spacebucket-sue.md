@@ -11,6 +11,6 @@ c: "Check out my hybrid LED/CFL Space Tote! <strong>This build is still work in 
 
     <h3>AIRFLOW AND STUFF</h3><strong>For the ventilation configuration</strong> I have two AC Infinity 120 mm exhaust fans that should take care of the heat from the lights, plus a passive intake. That is some pretty powerful airflow, but I'm not sure how this will work out, so I'm planning on tossing in one or two intake fans. I'll keep tweaking my build as I get more information about its performance. <strong>Wish me luck bucketeers!</strong>"
 v: "4649"
-g: "110v,cfl,tote"
+g: "linefan,cfl,tote"
 
 z: "B000O8I474,B006WW8RHS,B00XC3LBI2,B01339F06I"

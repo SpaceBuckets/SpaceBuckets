@@ -11,6 +11,6 @@ c: "This is my first bucket, first post, fifth grow (but first in this kind of D
 
     <h3>LIGHTING STUFF</h3><strong>For the lighting configuration I'm using 4x23wCFL + 1x26wCFL on the lid</strong>, with adjustable height and a 5 meter, 300 LED strip (5050) outdoor use, pure white color. As the plant grows, the cords can be tied to raise the level of the light source. This is essential if you are using <a href='https://amzn.to/3jMfTYw'>CFL bulbs</a>, as they are most effective when placed really close to the leaves."
 v: "10647"
-g: "5050,bin,cfl"
+g: "sidelight,bin,cfl"
 
 z: "B004GZ8OOO,B009OXSFBA,B00M6SR1JM,B01B7BBEGO"

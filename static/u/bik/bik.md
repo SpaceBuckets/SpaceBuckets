@@ -7,6 +7,6 @@ c: "If you are reading this, you have probably unknowingly helped me through thi
 
   <strong>This has been the most supportive, intelligent, concentrated group of bad assess in this Green Movement were all living in.</strong> Hope you like my bucket!"
 v: "2194"
-g: "5gal,cfl"
+g: "bucket,cfl"
 
 z: "B000VBW17S,B00M6SR1JM,B01DO9EAH2"

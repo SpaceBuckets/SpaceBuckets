@@ -15,6 +15,6 @@ c: "Hello distinct members of this community. Greetings from South America. It's
 
   I hope this could inspire another bucketeer to build and have great harvest and change this world little by little to a better place. Jah Bless! "
 v: "2177"
-g: "5630,tote,ufo300"
+g: "sidelight,tote,ufo"
 
 z: "B00FGFW0XO,B00B8PAAJW,B01339F5ZO,B0013BKDO8"

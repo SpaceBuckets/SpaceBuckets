@@ -9,6 +9,6 @@ c: "This is my DWC build! <strong>I'm using standard 5gal buckets with <a href='
   You can also see the dripper tucked down in the netpot. This keeps the medium wet while the seedling is young, before the roots have reached down into the nutrient solution in the bucket. After that point the dripper is switch to the battery backup pump and only runs in the event of a power outage.
   <strong>The fill tube inlet is above the water line and so is only a very tight friction fit</strong>. The water level hole on the other hand is sealed with a rubber grommet as it's underwater. Also, you can see the holes drilled near the top for the various airlines that will run to air stones and the water drip system. The roots  fill the bucket, hang down into the 3gal of nutrient solution (about half the bucket)."
 v: "5380"
-g: "5gal,cfl"
+g: "bucket,cfl"
 
 z: ""

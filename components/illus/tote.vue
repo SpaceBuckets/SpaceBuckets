@@ -33,3 +33,9 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  name: "illus-tote",
+};
+</script>

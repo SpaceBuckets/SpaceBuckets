@@ -87,3 +87,9 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  name: "illus-led",
+};
+</script>

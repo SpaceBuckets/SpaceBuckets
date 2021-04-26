@@ -7,5 +7,5 @@ c: "Built from two 20 Gallon garbage cans, this Spacebucket design focuses on se
   <ul><li>Lower section: For plant growth and air intake.</li><li>Upper section: Contains the <a href='https://amzn.to/36NO5zr'>UFO LED light</a>, exhaust and air filtration.</li></ul>
   Cool air enters through the front facing fan and is pushed up from the lower compartment to cool the light in the upper section. Air is then exhausted out of the carbon filter located on top of the unit."
 v: "1665"
-g: "bin,pcfan,ufo180"
+g: "bin,pcfan,ufo"
 z: "B00FGFW0XO,B01339F06I,B01DL9DQ8O"

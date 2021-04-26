@@ -7,6 +7,6 @@ c: "<strong>Here is my submission for joining the Space Bucket ranks.</strong> I
 
     <strong>Under the hood is a custom COB </strong> LED I built with two VERO 29 (gen.7) powered by a Meanwell 1400b. I think I'll have to add another exhaust fan because it still gets warm inside with the lights on full. The <a href='https://amzn.to/3jMfTYw'>CFL bulb</a> is just temporary."
 v: "4099"
-g: "bin,custom,pcfan"
+g: "bin,ledcustom,pcfan"
 
 z: "B000MRHOAA,B073QYFDX1,B0752MNCRH"

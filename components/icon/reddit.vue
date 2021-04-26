@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'icon-reddit',
+  name: 'reddit',
 };
 </script>

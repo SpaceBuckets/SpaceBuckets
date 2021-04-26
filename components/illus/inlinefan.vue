@@ -78,3 +78,9 @@
     </g>
   </svg>
 </template>
+
+<script>
+export default {
+  name: "illus-inlinefan",
+};
+</script>

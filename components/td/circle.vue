@@ -16,3 +16,9 @@
     />
   </svg>
 </template>
+
+<script>
+export default {
+  name: "td-circle",
+};
+</script>

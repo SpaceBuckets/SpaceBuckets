@@ -9,6 +9,6 @@ c: "<strong>This tote is ~2.5 sq ft of space with a ~2 ft vertical limit.</stron
 
     In the future I'd like to automate some of the cooling and lighting with a controller and some more thermal probes."
 v: "2379"
-g: "custom,pcfan,tote"
+g: "ledcustom,pcfan,tote"
 
 z: "B002AQTQKC,B0063KVRFS,B00O0IO98W,B002JUY9I8"

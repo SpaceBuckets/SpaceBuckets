@@ -35,13 +35,16 @@
                 type="text"
               />
             </div>
-            <div class="sort-filters">
+
+            <div class="perpage-container">
+              <div class="results">{{ relatedInfo.total }} builds</div>
+<!--              <div class="sort-filters">
               <div
                 ref="sortAsc"
                 :class="{ active: sort === 'asc' }"
                 @click="handleSort('asc')"
               >
-                Latest
+                New
               </div>
               <div
                 ref="sortPop"
@@ -50,65 +53,33 @@
               >
                 Popular
               </div>
-            </div>
-            <div class="perpage-container">
-              <div class="results">{{ relatedInfo.total }} builds</div>
-              <div class="select-filter-container">
-                <div class="filter-single-top">Per Page</div>
-                <select ref="selectPerPage" @change="handlePerPage()">
-                  <option value="10">10</option>
-                  <option value="25" selected>25</option>
-                  <option value="50">50</option>
-                  <option value="100">100</option>
-                </select>
-              </div>
+            </div> -->
             </div>
 
             <h3>Filters</h3>
             <div class="select-filter-container">
               <div class="filter-single-top">Container</div>
               <select ref="selectContainer" @change="handleChange('container')">
-                <option value>All</option>
-                <option value="5gal">Bucket</option>
-                <option value="brute">Brute</option>
-                <option value="tote">Tote</option>
-                <option value="barrel">Barrel</option>
-                <option value="bin">Bin</option>
+                <option value="">All</option>
+                <option v-for="option in containerOptions" :key="option">{{option}}</option>
               </select>
             </div>
             <div class="select-filter-container">
               <div class="filter-single-top">Lighting</div>
               <select ref="selectLighting" @change="handleChange('lighting')">
-                <option value class="active">All</option>
-                <option value="ufo180">180w UFO</option>
-                <option value="ufo300">300w UFO</option>
-                <option value="cfl">CFL bulbs</option>
-                <option value="ledbulb">LED bulbs</option>
-                <option value="custom">Custom LED</option>
-              </select>
-            </div>
-            <div class="select-filter-container">
-              <div class="filter-single-top">Side-lighting</div>
-              <select ref="selectSide" @change="handleChange('side')">
-                <option value class="active">All</option>
-                <option value="5050">5050SMD</option>
-                <option value="5630">5630SMD</option>
-                <option value="7020">7020SMD</option>
+                <option value="">All</option>
+                <option v-for="option in lightingOptions" :key="option">{{option}}</option>
               </select>
             </div>
             <div class="select-filter-container">
               <div class="filter-single-top">Airflow</div>
               <select ref="selectAirflow" @change="handleChange('airflow')">
-                <option value class="active">All</option>
-                <option value="pcfan">PC fan</option>
-                <option value="110v">110v fan</option>
-                <option value="linefan">Inline fan</option>
+                <option value="">All</option>
+                <option v-for="option in airflowOptions" :key="option">{{option}}</option>
               </select>
             </div>
           </div>
         </div>
-        <client-only>
-        <template v-if="!loadingGallery">
           <div class="cards-wrapper">
             <div class="cards-container">
               <card v-for="post in posts" :key="post.s" :id="post" />
@@ -116,21 +87,19 @@
 
             <div class="top-wrapper">
               <div class="pagination">
-                <button :disabled="page === 1" @click="fetchNew('prev')">
+                <nuxt-link v-if="$route.params.page !== 1" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)-1, category: $route.params.category } }">
                   « Prev
-                </button>
-                <span>Page {{ page }} of {{ relatedInfo.pages }}</span>
-                <button
-                  :disabled="page === parseInt(relatedInfo.pages)"
-                  @click="fetchNew('next')"
-                >
+                </nuxt-link>
+                <span>Page {{ $route.params.page }} of {{ relatedInfo.pages }}</span>
+                <nuxt-link v-if="$route.params.page !== undefined" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)+1, category: $route.params.category } }">
                   Next »
-                </button>
+                </nuxt-link>
+                <nuxt-link v-if="$route.params.page === undefined" :to="{ name: 'gallery-page-category', params: { page: 2 } }">
+                  Next »
+                </nuxt-link>                
               </div>
             </div>
           </div>
-        </template>
-        </client-only>
 
       </div>
     </template>
@@ -149,13 +118,22 @@ import {
   randomize,
 } from "~/static/flatDB";
 export default {
-  async asyncData() {
-    const posts = await filterBuilds(24, 1, "pop");
+  async asyncData({route}) {
+    var posts = await filterBuilds(36, 1, "pop");
+    if (route.params.page) {
+      posts = await filterBuilds(36, route.params.page, "pop");
+    }
+    if (route.params.page && route.params.category) {
+      posts = await filterBuilds(36, route.params.page, "pop",route.params.category.replace(/-/g,','));
+    }
     const allPosts = await getBuilds();
     return { posts, allPosts };
   },
   data() {
     return {
+      containerOptions: ['bucket','brute','tote','barrel','bin'],
+      lightingOptions: ['cfl','ufo','ledbulb','ledcustom'],
+      airflowOptions: ['pcfan','linefan','inlinefan'],
       swipeItem: [],
       loadingGallery: true,
       loadingSwipe: true,
@@ -165,30 +143,11 @@ export default {
         container: "",
         lighting: "",
         airflow: "",
-        side: "",
-        extra: "",
         selected: "",
       },
     };
   },
-  async created() {
-    this.num = 25;
-    this.page = 1;
-    this.sort = "pop";
-
-    var numberPosts = this.allPosts.length;
-    var infoArr = {};
-    infoArr.total = numberPosts;
-    infoArr.pages = (numberPosts / this.num).toFixed();
-    this.relatedInfo = infoArr;
- 
-    
-    if (Object.keys(this.$route.query).length == 0) {
-      this.loadingGallery = false;
-    } else {
-      await this.getURL();
-      this.loadingGallery = false;
-    }    
+  async created() { 
 
     if (process.client) {
       this.swipeItem = await singleRandom();
@@ -198,147 +157,52 @@ export default {
       ) {
         this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
       }
-      //this.swipeItem.i = this.swipeItem.i.slice(0, 1);
-      this.loadingSwipe = false;
+       this.loadingSwipe = false;
     }
   },
-  methods: {
-    async getURL() {
-      if (this.$route.query.container) { this.filterQuery.container = this.$route.query.container; }
-      if (this.$route.query.light) { this.filterQuery.lighting = this.$route.query.light; }
-      if (this.$route.query.air) { this.filterQuery.airflow = this.$route.query.air; }
-      if (this.$route.query.side) { this.filterQuery.side = this.$route.query.side; }
-      if (this.$route.query.p) { this.page = parseInt(this.$route.query.p); }
-      if (this.$route.query.n) { this.num = parseInt(this.$route.query.n); }
-      if (this.$route.query.s) { this.sort = this.$route.query.s; }
-      if (this.$route.query.search) { await this.customSearch(this.$route.query.search); }
-
-      this.$nextTick(() => {
-        if (this.$route.query.container) { this.$refs.selectContainer.value = this.$route.query.container; }
-        if (this.$route.query.light) { this.$refs.selectLighting.value = this.$route.query.light; }
-        if (this.$route.query.air) { this.$refs.selectAirflow.value = this.$route.query.air; }
-        if (this.$route.query.side) { this.$refs.selectSide.value = this.$route.query.side; }
-        if (this.$route.query.search) { this.$refs.searchInput.value = this.$route.query.search; }
-        if (this.$route.query.n) { this.$refs.selectPerPage.value = this.$route.query.n; }
-        if (this.$route.query.s === "asc") { this.$refs.sortAsc.classList = "active"; }
-        if (this.$route.query.s === "pop") { this.$refs.sortPop.classList = "active"; }
-      });
-      if (!this.$route.query.search) {
-        await this.filterPosts();
-        this.relatedInfo.total = this.allposts.length;
-        this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
-           console.log(this.allposts.length)   
-           console.log(this.num)   
-           console.log(this.relatedInfo.total / this.num)   
-
-        if (this.relatedInfo.pages == 0) {
-          this.relatedInfo.pages = 1;
+  updated() {
+    if (this.$route.params.category) {
+      var slugCat = this.$route.params.category.split('-');
+      for (let i = 0; i < slugCat.length; i++) {
+        for (let e = 0; e < this.containerOptions.length; e++) {
+          if (slugCat[i] === this.containerOptions[e]) { 
+            this.$refs.selectContainer.value = slugCat[i] 
+            this.filterQuery.container = slugCat[i]  
+            
+          }
         }
+        for (let c = 0; c < this.lightingOptions.length; c++) {
+          if (slugCat[i] === this.lightingOptions[c]) { 
+            this.$refs.selectLighting.value = slugCat[i] 
+            this.filterQuery.lighting = slugCat[i]  
+          }
+        }
+        for (let d = 0; d < this.airflowOptions.length; d++) {
+          if (slugCat[i] === this.airflowOptions[d]) { 
+            this.$refs.selectAirflow.value = slugCat[i] 
+            this.filterQuery.airflow = slugCat[i]  
+          }
+        }  
       }
-
-    },
-    setURL() {
-      var newURL = "?p="+this.page+"&n="+this.num+"&s="+this.sort + 
-        (this.filterQuery.container ? "&container=" + this.filterQuery.container : "") +
-        (this.filterQuery.lighting ? "&light=" + this.filterQuery.lighting : "") +
-        (this.filterQuery.airflow ? "&air=" + this.filterQuery.airflow : "") +
-        (this.filterQuery.side ? "&side=" + this.filterQuery.side : "");
-
-      newURL = newURL.replace("?&", "?");
-      if (newURL === "?") {
-        history.pushState(null, null, window.location.pathname);
-      } else {
-        history.pushState(null, null, newURL);
-      }
-    },
-    async customSearch(query) {
-      this.$nextTick(() => {
-        this.$refs.selectContainer.value = "";
-        this.$refs.selectLighting.value = ""; 
-        this.$refs.selectAirflow.value = ""; 
-        this.$refs.selectSide.value = ""; 
-      });
-      this.posts = await getSearch(query.toLowerCase());
-      this.relatedInfo.total = this.posts.length;
-      this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
-      if (query === "") {
-        history.pushState(null, null, window.location.pathname);
-      } else {
-        history.pushState(null, null, "?search="+query.toLowerCase());
-      }
-    },
-    async fetchNew(type) {
-      if (type === "next") {
-        this.page = this.page + 1;
-      }
-      if (type === "prev") {
-        this.page = this.page - 1;
-      }
-      await this.filterPosts();
-      window.scrollTo(0, 0);
-    },
+    }
+  },  
+  methods: {
     async handleChange(type) {
       this.$refs.searchInput.value = ""
-      this.page = 1;
       this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
       await this.filterPosts();
-      this.relatedInfo.total = this.allposts.length;
-      this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
-      if (this.relatedInfo.pages == 0) {
-        this.relatedInfo.pages = 1;
-      }
     },
     async handleSort(name) {
       this.page = 1;
       this.sort = name;
       await this.filterPosts();
     },
-    async handlePerPage() {
-      this.num = parseInt(event.target.options[event.target.options.selectedIndex].value);
-      this.page = 1;
-      await this.filterPosts();
-      //await this.getURL();
-      this.relatedInfo.total = this.allposts.length;
-      this.relatedInfo.pages = (this.relatedInfo.total / this.num).toFixed();
-      if (this.relatedInfo.pages == 0) {
-        this.relatedInfo.pages = 1;
-      }
-    },
-    async filterPosts() {
-      this.setURL();
-      this.syncQuery();
-      this.posts = await filterBuilds(
-        this.num,
-        this.page,
-        this.sort,
-        this.filterQuery.selected
-      );
-      this.allposts = await filterBuilds(
-        -1,
-        0,
-        this.sort,
-        this.filterQuery.selected
-      );
-
-    },
-    syncQuery() {
-      this.filterQuery.selected =
-        this.filterQuery.container +
-        "," +
-        this.filterQuery.airflow +
-        "," +
-        this.filterQuery.lighting +
-        "," +
-        this.filterQuery.side +
-        "," +
-        this.filterQuery.extra;
-      this.filterQuery.selected = this.filterQuery.selected
-        .split(",")
-        .join(",");
-      this.filterQuery.selected = this.filterQuery.selected
-        .replace(/,+/g, ",")
-        .replace(/,\s*$/, "")
-        .replace(/^,|,$/g, "");
+    filterPosts() {
+      this.filterQuery.selected = this.filterQuery.container + "-" + this.filterQuery.lighting + "-" + this.filterQuery.airflow;
+      this.filterQuery.selected = this.filterQuery.selected.replace('--','-');
+      this.filterQuery.selected = this.filterQuery.selected.replace(/-$/,'');
+      this.filterQuery.selected = this.filterQuery.selected.replace(/^-/,'');
+      this.$router.push({ name: 'gallery-page-category', params: { page: '1', category: this.filterQuery.selected } });
     },
   },
   head() {
@@ -408,7 +272,7 @@ export default {
   div {
     flex: 1;
     color: #eee;
-    padding: 10px 15px;
+    padding: 10px 10px;
     cursor: pointer;
     &:first-of-type {
       border-right: 1px solid #333;
@@ -422,10 +286,14 @@ export default {
     }
   }
 }
-
+  a[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+  } 
 .pagination {
   font-size: 16px;
   color: #eee;
+
   span {
     display: inline-block;
     margin: 0 10px;
@@ -565,6 +433,11 @@ export default {
   font-size: 10px;
   color: #333;
   pointer-events: none;
+}
+
+select,
+select option {
+  text-transform: capitalize;
 }
 
 .search-container {

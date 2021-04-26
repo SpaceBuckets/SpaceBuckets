@@ -9,5 +9,5 @@ c: "Hey everyone! It has taken only several months, but I'm super happy with the
   <h3>JUNCTION BOX</h3>
   The junction box is used to hide various electronics and other gadgets and is mounted using various pieces of bent aluminum flatbar. Did I mention flatbars are pretty sweet? The dimmer is for the LED strips which is likely to be replaced with a resistor very soon. Unfortunately the temp/humidity monitor has only a probe for temperature and not for humidity thus it is measuring humidity inside the junction box and not the bucket. Behind the junction box is the passive intake. The intake is covered by a filter which is removable from inside the bucket. Flanges on the side of the mounting bracket act as light baffles/hoods. The glow from the bottom is for visual effect!"
 v: "20238"
-g: "5050,5gal,custom"
+g: "sidelight,bucket,custom"
 z: ""

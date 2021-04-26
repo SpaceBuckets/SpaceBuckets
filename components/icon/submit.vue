@@ -9,7 +9,7 @@
 
 <script>
 export default {
-  name: "icon-submit",
+  name: "submit",
 };
 </script>
 

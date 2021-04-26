@@ -23,6 +23,6 @@ c: "The original goal was building two 5-bucket tall towers. Due to some changes
     - I'm also investigating boosting the sidelighting in the both towers.
     - Redoing most of the wiring so that it flows through a power supply, inside of a box, attached to the buckets. Safety always."
 v: "2594"
-g: "5gal,ledbulb,pcfan"
+g: "bucket,ledbulb,pcfan"
 
 z: ""

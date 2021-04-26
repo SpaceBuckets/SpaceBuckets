@@ -40,6 +40,6 @@ c: "<strong>BUCKET ASSEMBLY</strong>
 
     High power LEDs, including COBs, need heatsinks to keep the LED itself (junction temperature) below the rated maximum so you don't burn them out, and preferably as low as possible to maximize the LED lifetime. You can <a href='http://www.eevblog.com/2009/12/19/eevblog-50-solid-state-led-lighting-and-how-thermal-design-sucks/'>estimate how hot the LED will get</a> (temperature rise) based on how much power you're dissipating, the ambient temperature, and the thermal resistance of the LED package, thermal grease, and heatsink, but these calculations almost always make too many assumptions to be accurate. So using an <a href='http://www.amazon.com/Etekcity-Lasergrip-Non-contact-Thermometer-Temperature/dp/B00837ZGRY/ref=sr_1_1?ie=UTF8&amp;qid=1439158513&amp;sr=8-1&amp;keywords=ir+thermometer'>IR thermometer</a>, I tested how much the temperature of the heatsink rose with two LED currents (700mA and 1050mA) and three cooling setups (no cooling, SynJet cooler, and PC fan). The full 1050mA with no cooling still kept the heatsink touch-able (below 50°C), and backing out the LED junction temperature from the heatsink temperature indicated the LED was well below its maximum temperature. The SynJet cooler worked, but not as well as the fan. And since it isn't strictly needed to keep the LED cool, a premature fan failure wouldn't be catastrophic."
 v: "12112"
-g: "5gal,custom,led,pcfan"
+g: "bucket,ledcustom,led,pcfan"
 
 z: ""

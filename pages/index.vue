@@ -6,26 +6,26 @@
       <div class="intro-home">
         <nuxt-link to="/new/" class="submit-link">
           <h2>Submit your build!</h2>
-          <div><icon-flask/>Add a bucket to the gallery.</div>
+          <div><flask/>Add a bucket to the gallery.</div>
         </nuxt-link>        
         <nuxt-link to="/materials/">
           <h2>Begin your journey</h2>
           <div>
-            <div class="onlydesktop"><icon-plant/><span>Become a DIY gardener.</span></div>
-            <div class="onlymobile"><icon-random/><span>Swipe for a random build.</span></div>
+            <div class="onlydesktop"><plant/><span>Become a DIY gardener.</span></div>
+            <div class="onlymobile"><random/><span>Swipe for a random build.</span></div>
           </div>
         </nuxt-link>
         <nuxt-link to="/gallery/">
           <h2>Try a random build</h2>
-          <div><icon-random/>Infinite bucket loop!</div>
+          <div><random/>Infinite bucket loop!</div>
         </nuxt-link>
         <a href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets">
           <h2>Join our subreddit</h2>
-          <div><icon-reddit/>110.000+ bucketeers await.</div>
+          <div><reddit/>110.000+ bucketeers await.</div>
         </a>
         <a href="mailto:info@spacebuckets.com" title="Contact us">
           <h2>Contact us!</h2>
-          <div><icon-mail/>info@spacebuckets.com</div>
+          <div><mail/>info@spacebuckets.com</div>
         </a>
       </div>
       <div class="post-wrapper">  

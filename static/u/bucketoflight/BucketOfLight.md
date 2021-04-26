@@ -7,6 +7,5 @@ c: "This idea is based off of <a href='/u/superangryguy'>SuperAngryGuy's hardwar
   The booster fan is rated at 100CFM, I don't have any way of verifying if it actually pushes that much air but <strong>has kept my bucket between 70-85F</strong>. You can feel the air being sucked into the bucket from the opening of the air intake. Depending on the ambient room temperature the temperatures will go higher(80-87F) when I attach to the ducting/carbon filter to the fan.
   I put an air conditioner into the room where I keep it, it helps to control the temperatures while also completely covering up the sound of the fan even when it's out in the open. I might be adding a helper fan if the filter adds problems to the airflow."
 v: "23820"
-g: "5050,5gal,pcfan"
-e: "gallery,classic,resources,led ideas"
+g: "sidelight,bucket,pcfan"
 z: "B000VBW17S,B01AHLY6WO,B01B7BBEGO,B01C82SZRM"

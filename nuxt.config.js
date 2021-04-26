@@ -1,4 +1,27 @@
-import { getBuilds } from "./static/flatDB";
+import { getBuilds, getCats } from "./static/flatDB";
+
+const dynamicRoutes = async() => {
+  const buildRoutes = await getBuilds().then(res => {
+    return res.map(post => {
+      return {
+        route: '/u/' + post.s,
+        payload: post
+      }
+    })
+  })
+
+  const galleryRoutes = await getCats().then(res => {
+    return res.map(post => {
+      return {
+        route: post,
+      }
+    })
+  })
+  const totalRoutes = buildRoutes.concat(galleryRoutes)
+
+  return galleryRoutes
+}
+
 
 export default {
   target: "static",
@@ -8,16 +31,10 @@ export default {
   generate: {
     //subFolders: false,
     concurrency: 1,
-    routes() {
-      return getBuilds().then(res => {
-        return res.map(post => {
-          return {
-            route: '/u/' + post.s,
-            payload: post
-          }
-        })
-      })
-    }    
+    exclude: [
+      /^\/gallery/ // path starts with /admin
+    ],    
+    routes: dynamicRoutes,  
   },
   head: {
     htmlAttrs: {
@@ -61,7 +78,7 @@ export default {
   },  
   cssSourceMap: false,
   build: {
-    extractCSS: true,
+    extractCSS: {ignoreOrder: true},
     optimization: {
       splitChunks: {
         cacheGroups: {
@@ -91,19 +108,15 @@ export default {
     }],
     "@nuxtjs/sitemap",
   ],   
-  router: {
-    trailingSlash: true,
-  },  
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://spacebuckets.com',
-    trailingSlash: true,
     exclude: [],
     routes() {
       return getBuilds().then(res => {
         return res.map(post => {
           return {
-            route: '/u/' + post.s + '/',
+            route: '/u/' + post.s,
             payload: post
           }
         })

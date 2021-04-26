@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: 'icon-mail',
+  name: 'mail',
 };
 </script>

@@ -9,6 +9,5 @@ c: "It is done. It is overly complicated, and I'll probably kill the plant with 
   <h3>UPDATE</h3>
   After the first week using this setup, a number of problems with the controller have become apparent. <strong>The first big flaw is not having data logging.</strong> Using the arduino as a readout for sensors is kinda pointless when you can buy a $15 device from HD that can do that already. The other big flaw is not having external environment sensors, without this the controller can never really know where the optimal settings for ventilation are. If your bucket is inside, this wouldn't be much of an issue but mine is outside where the environment is constantly changing. So I'm skipping the new light top and redoing the controller first. <strong>I've moved from the Uno to the pro mini platform</strong>, added an RTC, added SD card for logging, and swapped out the 7 segment + LED's for an I2C display to free up some pins on the ardunio."
 v: "12136"
-g: "arduino,brute,custom"
-e: "gallery,articles,resources,led ideas"
+g: "brute,ledcustom,arduino"
 z: ""

@@ -11,6 +11,6 @@ c: "Using a <a href='https://amzn.to/36NO5zr'>180w UFO LED light</a> with a 5gal
     Raised the fan up to the very top of the base bucket. The intake fan is zip tied into place and siliconed, and covered by a 4'-3' abs reducer, held in place securely with hot glue. The 3' 90 acts as a great light trap. I also cut a piece of filter media for the 90. Everything got a shot of paint to black it out. Inside is lined with foil tape.
     The lighting is a <a href='https://amzn.to/36NO5zr'>UFO LED light</a> and 5m of <a href='https://amzn.to/30OqRW0'>5050SMD LED</a>. Intake fan runs continuously and the lights are on a timer to run 16/8 at the moment. Thanks for looking!"
 v: "7288"
-g: "5050,5gal,pcfan,ufo,ufo135,ufo180"
+g: "sidelight,bucket,pacfan,ufo"
 
 z: "B000VBW17S,B002QVFN7G,B00FGFW0XO,B01B7BBEGO"

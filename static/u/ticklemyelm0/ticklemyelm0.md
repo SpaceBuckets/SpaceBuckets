@@ -10,6 +10,6 @@ c: "This is my <a href='https://amzn.to/36NO5zr'>UFO LED</a> Space Bucket! First
     For the soil, if you get the Fox Farm, <strong>it's cheaper at a local Hydroponics shop</strong>. For the pH control kit and the nutrients, chances are Amazon is cheaper(the places I checked were all more expensive for those products). <strong>A Dremel or box cutter</strong> are absolutely necessary for this. I personally didn't use the dremel I got for this very much because it was too loud, box cutters work well as a substitute, but be prepared to be very careful and have a very tired hand.
     I also bought <strong>Activated Carbon</strong> for a future carbon filter, still deciding what kind of design I want to go with though, that will probably be a future update."
 v: "2654"
-g: "5gal,7020,ufo,ufo180"
+g: "bucket,sidelight,ufo"
 
 z: "B000VBW17S,B002QVFN7G,B00FGFW0XO,B014SJ5X7S"

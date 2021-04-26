@@ -6,6 +6,5 @@ h: "https://www.reddit.com/r/SpaceBuckets/comments/3cos3f/custom_150w_ufo_led_al
 d: "2015-06-26"
 c: "LEDs are wired in series and the rings are independently powered. <strong>LEDs used: <a href='http://amzn.to/2mNnslb'>3W chips</a>, 445nm, 460nm, 630nm, 650nm.</strong> Veg will be for the inner 3 rings of the LED, Flower will be for the outer 2. During veg only the inner 3 rings should be turned on, once in to flower I will have both switched on. Each driver can handle up to 18x3w LEDs at 600mA and provides AC85-265V Constant Current, perfect for my needs. <strong>I'm using a <a href='http://amzn.to/2mNnvgM'>230mm fan</a>, 150 CFM and 26dBA.</strong>"
 v: "6590"
-g: "custom"
-e: "gallery,articles,resources,led ideas"
+g: "ledcustom"
 z: "B01DBZICDC,B008UZ0QVA"

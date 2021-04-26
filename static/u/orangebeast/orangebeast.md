@@ -13,6 +13,6 @@ c: "5 Gallon Home Depot Buckets
     MASSCOOL 80mm Cooling Fan x2
     Zip Ties to hold UFO LED in place"
 v: "1501"
-g: "5gal,pcfan,ufo180"
+g: "bucket,pcfan,ufo"
 
 z: "B00RWQ4B50,B0007Y5HIY"
