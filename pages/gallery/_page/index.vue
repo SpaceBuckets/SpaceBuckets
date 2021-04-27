@@ -11,32 +11,17 @@
           </div>
           <div class="filters-container">
 
-            <div class="perpage-container">
-              <div class="results">{{ totalLength }} builds</div>
-            </div>
-
-            <h3>Filters</h3>
-            <div class="select-filter-container">
-              <div class="filter-single-top">Container</div>
-              <select ref="selectContainer" @change="filterPosts('container')">
+          <h3>Filters</h3>
+            <div class="select-filter-container" :key="`${parent}`" v-for="(items, parent) in filterOptions">
+              <div class="filter-single-top">{{parent}}</div>
+              <select :ref="`select${parent}`" @change="filterPosts(parent)">
                 <option value="">All</option>
-                <option v-for="option in containerOptions" :key="option" :value="option">{{option}}</option>
+                <option v-for="option in items" :key="`${option}-${parent}`" :value="option">{{option}}</option>
               </select>
             </div>
-            <div class="select-filter-container">
-              <div class="filter-single-top">Lighting</div>
-              <select ref="selectLighting" @change="filterPosts('lighting')">
-                <option value="">All</option>
-                <option v-for="option in lightingOptions" :key="option" :value="option">{{option}}</option>
-              </select>
-            </div>
-            <div class="select-filter-container">
-              <div class="filter-single-top">Airflow</div>
-              <select ref="selectAirflow" @change="filterPosts('airflow')">
-                <option value="">All</option>
-                <option v-for="option in airflowOptions" :key="option" :value="option">{{option}}</option>
-              </select>
-            </div>
+          </div>
+          <div class="perpage-container">
+              <div class="results">Found {{ totalLength }} builds »</div>
           </div>
         </div>
           <div class="cards-wrapper">
@@ -82,9 +67,11 @@ export default {
   },
   data() {
     return {
-      containerOptions: ['bucket','brute','tote','barrel','bin'],
-      lightingOptions: ['cfl','ufo','ledbulb','ledcustom'],
-      airflowOptions: ['pcfan','linefan','inlinefan'],
+      filterOptions: {
+        container: ['bucket','brute','tote','barrel','bin'],
+        lighting: ['cfl','ufo','ledbulb','ledcustom'],
+        airflow: ['pcfan','linefan','inlinefan'],
+      },
       swipeItem: [],
       loadingSwipe: true,
       filterQuery: {
@@ -108,34 +95,11 @@ export default {
        this.loadingSwipe = false;
     }
   },
-  updated() {
-    if (this.$route.params.category) {
-      var slugCat = this.$route.params.category.split('-');
-      for (let i = 0; i < slugCat.length; i++) {
-        for (let e = 0; e < this.containerOptions.length; e++) {
-          if (slugCat[i] === this.containerOptions[e]) { 
-            this.$refs.selectContainer.value = slugCat[i] 
-            this.filterQuery.container = slugCat[i]  
-            
-          }
-        }
-        for (let c = 0; c < this.lightingOptions.length; c++) {
-          if (slugCat[i] === this.lightingOptions[c]) { 
-            this.$refs.selectLighting.value = slugCat[i] 
-            this.filterQuery.lighting = slugCat[i]  
-          }
-        }
-        for (let d = 0; d < this.airflowOptions.length; d++) {
-          if (slugCat[i] === this.airflowOptions[d]) { 
-            this.$refs.selectAirflow.value = slugCat[i] 
-            this.filterQuery.airflow = slugCat[i]  
-          }
-        }  
-      }
-    }
-  },  
+
   methods: {
     filterPosts(type) {
+            console.log(event.target.options[event.target.options.selectedIndex].value)
+
       this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
       this.filterQuery.selected = this.filterQuery.container + "-" + this.filterQuery.lighting + "-" + this.filterQuery.airflow;
       this.filterQuery.selected = this.filterQuery.selected.replace('--','-').replace(/-$/,'').replace(/^-/,'');
@@ -334,33 +298,7 @@ export default {
       border-radius: 3px;
       overflow: hidden;
     }
-    &.perpage-container {
-      border: 0;
-      display: flex;
-      @media (max-width: 980px) {
-        .results {
-          margin-right: 0;
-        }
-        .select-filter-container {
-          display: none;
-        }
-        + h3 {
-          display: none;
-        }
-      }
-      > div {
-        border: 1px solid #333;
-        flex: 1;
-        margin-right: 10px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        &:last-child {
-          margin: 0;
-        }
-      }
-    }
+
   }
   select {
     width: 100%;
@@ -377,6 +315,11 @@ export default {
     }
   }
 }
+
+.results {
+  font-size: 14px;
+}
+
 .filter-single-top {
   position: absolute;
   top: -9px;

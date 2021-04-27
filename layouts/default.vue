@@ -69,9 +69,6 @@ export default {
     },
   },
   methods: {
-    swipeRandom() {
-      document.getElementById("swiper").scrollBy(100, 0);
-    },
     hitStat() {
       this.$nextTick(() => {
         if (process.client) {
@@ -213,7 +210,9 @@ header {
 </style>
 
 <style lang="scss">
-
+body {
+      overflow-x: hidden !important;
+}
 button:focus {
   outline: 0;
 }
