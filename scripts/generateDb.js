@@ -76,6 +76,8 @@ async function createDb(src) {
 async function createGallery(src) {
   var folders = glob.sync('*', { cwd: `static/${src}/` })
   var posts = [];
+
+  postRoutes = []
   folders.forEach(singleFolder => {
     const documentes = glob.sync('*.md', {cwd: `static/${src}/${singleFolder}`})
     let post = {};
@@ -88,11 +90,26 @@ async function createGallery(src) {
     posts.push(post);
   });
 
-
   fs.writeFileSync(`./static/${src}-gallery.json`, JSON.stringify(posts));
   console.log(`♥ ${src}-gallery.json generated`)
 }
 
+async function createRoutes(src) {
+  var folders = glob.sync('*', { cwd: `static/${src}/` })
+  var postRoutes = [];
+
+  folders.forEach(singleFolder => {
+    const documentes = glob.sync('*.md', {cwd: `static/${src}/${singleFolder}`})
+    var contents = matter(fs.readFileSync(`static/${src}/${singleFolder}/${documentes}`, 'utf8').toString());
+    var post = `/${src}/${contents.data.s}`;
+
+    postRoutes.push(post);
+  });
+
+  fs.writeFileSync(`./static/${src}-routes.json`, JSON.stringify(postRoutes));
+
+  console.log(`♥ ${src}-routes.json generated`)
+}
 
 async function createCats() {
 
@@ -133,8 +150,9 @@ async function createCats() {
 
 }
 
-
+createDb("docs");
 createDb("u");
 createGallery("u");
-createDb("docs");
+createRoutes("docs");
+createRoutes("u");
 createCats();

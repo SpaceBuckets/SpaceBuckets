@@ -1,4 +1,6 @@
 import getCats from "./static/categories.json"
+import getuRoutes from "./static/u-routes.json"
+import getDocsRoutes from "./static/docs-routes.json"
 
 export default {
   target: "static",
@@ -6,9 +8,10 @@ export default {
     host: '0', // default: localhost,
   },   
   generate: {
+    //subFolders: false,
     concurrency: 1,
     exclude: [
-      /^\/gallery/ 
+      /^\/gallery/ // path starts with /admin
     ],    
     routes: getCats,  
   },
@@ -88,6 +91,6 @@ export default {
     path: '/sitemap.xml',
     hostname: 'https://spacebuckets.com',
     exclude: [],
-    routes: getCats,  
+    routes: getuRoutes, getDocsRoutes
   },  
 };
