@@ -73,6 +73,27 @@ async function createDb(src) {
   console.log(`♥ ${src}.json generated`)
 }
 
+async function createGallery(src) {
+  var folders = glob.sync('*', { cwd: `static/${src}/` })
+  var posts = [];
+  folders.forEach(singleFolder => {
+    const documentes = glob.sync('*.md', {cwd: `static/${src}/${singleFolder}`})
+    let post = {};
+    var contents = matter(fs.readFileSync(`static/${src}/${singleFolder}/${documentes}`, 'utf8').toString());
+    post.t = contents.data.t;
+    post.s = contents.data.s;
+    post.v = contents.data.v;
+    post.g = contents.data.g;
+    post.z = contents.data.z.length;
+    posts.push(post);
+  });
+
+
+  fs.writeFileSync(`./static/${src}-gallery.json`, JSON.stringify(posts));
+  console.log(`♥ ${src}-gallery.json generated`)
+}
+
+
 async function createCats() {
 
   var containerCombi = cartesian(containerOptions)
@@ -114,5 +135,6 @@ async function createCats() {
 
 
 createDb("u");
-createDb("docs")
-createCats()
+createGallery("u");
+createDb("docs");
+createCats();

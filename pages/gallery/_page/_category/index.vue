@@ -90,9 +90,9 @@ export default {
       this.swipeItem = await singleRandom();
       if (
         this.swipeItem.z !== "" ||
-        (this.swipeItem.z !== undefined && this.swipeItem.z.length > 0)
+        (this.swipeItem.z !== undefined && this.swipeItem.z > 0)
       ) {
-        this.swipeItem.itemCount = this.swipeItem.z.split(",").length;
+        this.swipeItem.itemCount = this.swipeItem.z;
       }
        this.loadingSwipe = false;
     }
