@@ -167,7 +167,7 @@
           <div
             class="recommend-stuff"
             v-if="containerActive == 'bucket'"
-          >A classic Space Bucket garden has enough room to fit exactly one plant. The smallest kind of buckets to build Space Buckets are of the 5gal variety. This size has a very small footprint and it is perfect for one plant indoor cultivation.</div>
+          >A classic Space Bucket garden has enough room to fit exactly one plant. The smallest kind of buckets to build Space Buckets are of the 5gal variety. This size of grow bucket has a very small footprint and it is perfect for one plant indoor gardening. They are specially suited for Auto seeds, as these plants are easier to train and stay naturally shorter inside the container.</div>
 
          
           <div class="recommend-stuff" v-if="containerActive == 'brute'">
@@ -387,7 +387,7 @@ export default {
   head() {
     return {
       title: `Space Buckets - BUILDER`,
-      content: 'Try the Bucket builder to plan your next DIY indoor garden. Mix containers, lighting and airflow and build your bucket!',
+      meta: [{ hid: 'description', name: 'description', content: 'Try the Bucket builder to plan your next DIY indoor garden. Mix containers, lighting and airflow and build your bucket!' }],
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
   },    
