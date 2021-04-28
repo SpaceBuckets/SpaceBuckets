@@ -82,9 +82,9 @@ async function createGallery(src) {
     var contents = matter(fs.readFileSync(`static/${src}/${singleFolder}/${documentes}`, 'utf8').toString());
     post.t = contents.data.t;
     post.s = contents.data.s;
+    post.g = contents.data.g; 
     post.v = contents.data.v;
-    post.g = contents.data.g;
-    post.z = contents.data.z.length;
+    post.z = contents.data.z.split(',').length;
     posts.push(post);
   });
 

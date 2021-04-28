@@ -1,27 +1,4 @@
-import { getBuilds, getCats } from "./static/flatDB";
-
-const dynamicRoutes = async() => {
-  const buildRoutes = await getBuilds().then(res => {
-    return res.map(post => {
-      return {
-        route: '/u/' + post.s,
-        payload: post
-      }
-    })
-  })
-
-  const galleryRoutes = await getCats().then(res => {
-    return res.map(post => {
-      return {
-        route: post,
-      }
-    })
-  })
-  const totalRoutes = buildRoutes.concat(galleryRoutes)
-
-  return galleryRoutes
-}
-
+import getCats from "./static/categories.json"
 
 export default {
   target: "static",
@@ -29,12 +6,11 @@ export default {
     host: '0', // default: localhost,
   },   
   generate: {
-    //subFolders: false,
     concurrency: 1,
     exclude: [
-      /^\/gallery/ // path starts with /admin
+      /^\/gallery/ 
     ],    
-    routes: dynamicRoutes,  
+    routes: getCats,  
   },
   head: {
     htmlAttrs: {
@@ -112,15 +88,6 @@ export default {
     path: '/sitemap.xml',
     hostname: 'https://spacebuckets.com',
     exclude: [],
-    routes() {
-      return getBuilds().then(res => {
-        return res.map(post => {
-          return {
-            route: '/u/' + post.s,
-            payload: post
-          }
-        })
-      })
-    } 
-  }, 
+    routes: getCats,  
+  },  
 };

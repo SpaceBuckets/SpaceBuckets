@@ -2,7 +2,6 @@
   <nuxt-link class="card" :to="{name: 'u-slug', params: { slug: `${id.s}`} }">
     <h2>
       {{ id.t }}
-      <i v-if="id.v">{{ id.v }}</i>
     </h2>
     <img :src="`/u/${id.s}/cover.jpg`" alt />
   </nuxt-link>
