@@ -32,11 +32,6 @@ export default {
       slowconn: true,
     };
   },  
-  fetch() {
-/*     if(!(navigator.connection && ((navigator.connection.effectiveType || '').includes('3g')))) {
-      this.slowconn = false
-    } */
-  },
   methods: {
     touchStart() {
       this.moving = true;

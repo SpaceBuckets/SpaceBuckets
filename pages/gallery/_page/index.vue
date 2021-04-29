@@ -199,7 +199,7 @@ export default {
     pointer-events: none;
   } 
 .pagination {
-  font-size: 16px;
+  font-size: 20px;
   color: #eee;
 
   a {
@@ -274,6 +274,8 @@ export default {
     text-transform: uppercase;
     margin-bottom: 15px;
     font-size: 16px;
+        display: block;
+width: 100%;
   }
   @media (max-width: 980px) {
     display: flex;
@@ -284,9 +286,7 @@ export default {
       margin-right: 10px;
       flex-basis: 100%;
       max-width: calc(50% - 10px);
-      &:last-of-type {
-        display: none;
-      }
+
     }
   }
   > div {

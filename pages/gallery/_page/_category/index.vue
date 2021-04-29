@@ -238,7 +238,7 @@ export default {
     color: #eee;
     text-decoration: none;
     width: max-content;
-    font-size: 15px;
+    font-size: 20px;
    &:hover {
       color: #fdd835;
       text-decoration: underline;
@@ -299,6 +299,9 @@ export default {
     text-transform: uppercase;
     margin-bottom: 15px;
     font-size: 16px;
+    display: block;
+    width: 100%;
+
   }
   @media (max-width: 980px) {
     display: flex;
@@ -309,9 +312,19 @@ export default {
       margin-right: 10px;
       flex-basis: 100%;
       max-width: calc(50% - 10px);
-      &:last-of-type {
-        display: none;
-      }
+
+    }
+  }
+    @media (max-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    > div {
+      flex: 1;
+      margin-right: 10px;
+      flex-basis: 100%;
+      max-width: calc(100% - 10px);
+
     }
   }
   > div {
