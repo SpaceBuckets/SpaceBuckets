@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import { getDocs } from "~/static/flatDB";
+import { getDocs } from "~/scripts/flatDB";
 
 export default {
   async asyncData() {

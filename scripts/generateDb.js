@@ -5,7 +5,7 @@ const sortArray = require('sort-array');
 const fs = require('fs');
 
 function cartesian(...n){var r=[],t=n.length-1;return function a(e,u){for(var c=0,h=n[u].length;c<h;c++){var i=e.slice(0);i.push(n[u][c]),u==t?r.push(i):a(i,u+1)}}([],0),r}
-const getBuilds = async()=>{try{return(await import("../static/u.json")).default}catch(t){return console.log(t),[]}};
+const getBuilds = async()=>{try{return(await import("../json/u.json")).default}catch(t){return console.log(t),[]}};
 function searchpo(e,r){return e.filter(e=>r.every(r=>e.g.split(",").some(e=>e===r)))}
 
 const containerOptions = ['bucket','brute','tote','barrel','bin'];
@@ -69,7 +69,7 @@ async function createDb(src) {
     post.i = postImages 
   }); 
 
-  fs.writeFileSync(`./static/${src}.json`, JSON.stringify(posts));
+  fs.writeFileSync(`./json/${src}.json`, JSON.stringify(posts));
   console.log(`♥ ${src}.json generated`)
 }
 
@@ -90,7 +90,7 @@ async function createGallery(src) {
     posts.push(post);
   });
 
-  fs.writeFileSync(`./static/${src}-gallery.json`, JSON.stringify(posts));
+  fs.writeFileSync(`./json/${src}-gallery.json`, JSON.stringify(posts));
   console.log(`♥ ${src}-gallery.json generated`)
 }
 
@@ -106,7 +106,7 @@ async function createRoutes(src) {
     postRoutes.push(post);
   });
 
-  fs.writeFileSync(`./static/${src}-routes.json`, JSON.stringify(postRoutes));
+  fs.writeFileSync(`./json/${src}-routes.json`, JSON.stringify(postRoutes));
 
   console.log(`♥ ${src}-routes.json generated`)
 }
@@ -145,7 +145,7 @@ async function createCats() {
   }
 
 
-  fs.writeFileSync(`./static/categories.json`, JSON.stringify(processCombinations));
+  fs.writeFileSync(`./json/categories.json`, JSON.stringify(processCombinations));
   console.log(`♥ categories.json generated`)
 
 }

@@ -19,22 +19,8 @@
 </template>
 
 <script>
-import { singlePost, randomize } from "~/static/flatDB";
 
 export default {
-  data() {
-    return {
-      relatedItems: [],
-    };
-  },
-  async created() {
-    if (process.client) {
-      this.relatedItems = await randomize(10);
-    }
-  },
-  mounted() {
-    this.loading = false;
-  },
   head() {
     return {
       title: `Space Buckets - MANIFESTO`,

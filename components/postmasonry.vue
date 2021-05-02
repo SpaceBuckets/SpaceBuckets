@@ -1,7 +1,6 @@
 <template>
   <div class="post-masonry" :class="variation">
     <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
-
     <div class="post-content">
       <h2>
         <span>{{ post.t }}</span>

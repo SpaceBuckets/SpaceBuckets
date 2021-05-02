@@ -9,19 +9,10 @@
         <nuxt-link :to="{ name: 'index' }" exact>SPACE BUCKETS</nuxt-link>
       </h1>
       <button class="nav-toggle active" @click="openNav = !openNav">
-        <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792">
-          <path
-            d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z"
-            fill="#eee"
-          />
-        </svg>
+        <icon-hamburger/>
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
-        <nuxt-link
-          to="/new/"
-          class="onlymobile"
-          >SUBMIT</nuxt-link
-        >
+        <nuxt-link to="/new" class="onlymobile">SUBMIT</nuxt-link>
         <nuxt-link to="/materials">MATERIALS</nuxt-link>
         <nuxt-link to="/build">BUILDER</nuxt-link>
         <nuxt-link to="/docs">DOCS</nuxt-link>
@@ -34,19 +25,8 @@
         class="nav-sep logger"
         style="padding: 0 15px"
       >
- 
-            <nuxt-link to="/new/" no-prefetch>
-              <span style="display: inline-block">SUBMIT</span>
-              <svg
-                style="height: auto; width: 24px; display: none"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path
-                  fill="#FFF"
-                  d="M6.803 18.998c-.194-.127 3.153-7.16 3.038-7.469-.116-.309-3.665-1.436-3.838-1.979-.174-.543 7.007-8.707 7.196-8.549.188.158-3.129 7.238-3.039 7.469.091.23 3.728 1.404 3.838 1.979.111.575-7.002 8.676-7.195 8.549z"
-                />
-              </svg>
+            <nuxt-link to="/new" no-prefetch>
+              SUBMIT
             </nuxt-link>
           <span id="stat"></span>
       </div>

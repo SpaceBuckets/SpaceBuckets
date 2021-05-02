@@ -1,10 +1,10 @@
 import sortArray from 'sort-array'
 
 function shuffle(r){for(var f,n,o=r.length;0!==o;)n=Math.floor(Math.random()*o),f=r[o-=1],r[o]=r[n],r[n]=f;return r}
-const getBuilds = async()=>{try{return(await import("../static/u.json")).default}catch(t){return console.log(t),[]}};
-const getGalleryBuilds = async()=>{try{return(await import("../static/u-gallery.json")).default}catch(t){return console.log(t),[]}};
-const getCats = async()=>{try{return(await import("../static/categories.json")).default}catch(t){return console.log(t),[]}};
-const getDocs = async()=>{try{return(await import("../static/docs.json")).default}catch(t){return console.log(t),[]}};
+const getBuilds = async()=>{try{return(await import("~/json/u.json")).default}catch(t){return console.log(t),[]}};
+const getGalleryBuilds = async()=>{try{return(await import("~/json/u-gallery.json")).default}catch(t){return console.log(t),[]}};
+const getCats = async()=>{try{return(await import("~/json/categories.json")).default}catch(t){return console.log(t),[]}};
+const getDocs = async()=>{try{return(await import("~/json/docs.json")).default}catch(t){return console.log(t),[]}};
 function searchpo(e,r){return e.filter(e=>r.every(r=>e.g.split(",").some(e=>e===r)))}
 
 async function filterBuilds(num,page,sort,tags) {
@@ -46,7 +46,6 @@ async function singleRandom() {
   var randNum = 0 + Math.random() * (posts.length - 0);
   return posts[randNum.toFixed()]
 }
-
 
 async function singlePost(slug) {
   var posts = await getBuilds()

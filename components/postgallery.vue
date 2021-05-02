@@ -94,7 +94,6 @@ export default {
   },    
   methods: {
     filterPosts(type) {
-      console.log(event.target.options[event.target.options.selectedIndex].value)
 
       this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
       this.filterQuery.selected = this.filterQuery.container + "-" + this.filterQuery.lighting + "-" + this.filterQuery.airflow;
@@ -201,7 +200,7 @@ export default {
     color: #eee;
     text-decoration: none;
     width: max-content;
-    font-size: 15px;
+    font-size: 16px;
    &:hover {
       color: #fdd835;
       text-decoration: underline;

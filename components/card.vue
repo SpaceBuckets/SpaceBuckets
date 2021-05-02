@@ -2,8 +2,8 @@
   <nuxt-link class="card" :to="{name: 'u-slug', params: { slug: `${id.s}`} }">
     <h2>
       {{ id.t }}
-      <i v-if="id.v">{{ id.v }}</i>
     </h2>
+    <i v-if="id.v">{{ id.v }}</i>
     <img :src="`/u/${id.s}/cover.jpg`" alt />
   </nuxt-link>
 </template>
@@ -55,15 +55,17 @@ export default {
 .card i {
   position: absolute;
   right: 10px;
+  top: 0;
+  line-height: 32px;
   font-size: 13px;
   font-weight: normal;
   font-style: normal;
   font-family: arial, Arial, Helvetica, sans-serif;
   letter-spacing: 0;
+  opacity: 0.8;
 }
 
 .card:hover h2 {
   color: #fdd835 !important;
-  i { color: #eee !important; }
  }
 </style>

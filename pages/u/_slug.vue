@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import { singlePost, singleRandom, randomize } from "~/static/flatDB";
+import { singlePost, singleRandom } from "~/scripts/flatDB";
 
 export default {
   scrollToTop: false,
@@ -27,7 +27,6 @@ export default {
     return {
       swipeItem: [],
       loadingSwipe: true,
-      disablePointers: false
     };
   },
   async created() {

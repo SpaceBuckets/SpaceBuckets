@@ -1,6 +1,6 @@
-import getCats from "./static/categories.json"
-import getuRoutes from "./static/u-routes.json"
-import getDocsRoutes from "./static/docs-routes.json"
+import getCats from "./json/categories.json"
+import getuRoutes from "./json/u-routes.json"
+import getDocsRoutes from "./json/docs-routes.json"
 
 export default {
   target: "static",

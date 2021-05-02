@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="cards-container" v-if="relatedItems">
-      <h2>RELATED BUILDS</h2>
+      <h2 v-if="relatedItems.length > 0">RELATED BUILDS</h2>
       <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
         <client-only>
           <card :id="post" />
@@ -22,7 +22,7 @@
 </template>
 
 <script>
-import { randomize, filterBuilds } from "~/static/flatDB";
+import { randomize, filterBuilds } from "~/scripts/flatDB";
 
 export default {
   name: "cardrelated",
@@ -53,9 +53,9 @@ export default {
         }                
         if (currCat.includes('bin')) {
           this.relatedItems = await filterBuilds(4, 1, 'rand', 'bin');
-        }        
+        }  
      }
-  },
+  }, 
 };
 </script>
 
