@@ -15,7 +15,7 @@
             <div class="onlymobile"><icon-random/><span>Swipe for a random build.</span></div>
           </div>
         </nuxt-link>
-        <nuxt-link to="/gallery">
+        <nuxt-link to="/gallery/1">
           <h2>Try a random build</h2>
           <div><icon-random/>Infinite bucket loop!</div>
         </nuxt-link>
@@ -29,14 +29,15 @@
         </a>
       </div>
       <div class="post-wrapper">  
-        
+        <card :id="randItem" />
+
         <card :id="mad" />
-        <card :id="ekrof" />
         
         <cardindex title="Start Here: simple DIY template" link="u/simple-template" variation="doubled"/>
         <cardindex title="Tools and Parts" link="materials" />
         
-        <card :id="forever" />
+        <card :id="randItem2" />
+
         <card :id="gnk" />
 
         <cardindex title="Grow your own food" link="docs" variation="doubled"/>
@@ -47,6 +48,8 @@
 
         <cardindex title="Play the Bucketdrome" link="drome" variation="doubled"/>
         <cardindex title="Space Buckets Manifesto" link="manifesto" />
+        <card :id="ekrof" />
+        <card :id="forever" />
 
         <card :id="hydro" />
         <card :id="garbo" />
@@ -75,8 +78,10 @@ export default {
     const morri = await singlePost("morrigan-disapproves");
     const tito = await singlePost("titobin");
     const garbo = await singlePost("doublejallday-bin");
+    const randItem = await singleRandom();
+    const randItem2 = await singleRandom();
 
-    return { garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
+    return { randItem2,randItem,garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
   },
   data() {
     return {
