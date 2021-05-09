@@ -3,7 +3,7 @@ t: "THE MAD SCIENTIST"
 s: "the-mad-scientist"
 a: "spkmonkey"
 d: "2020-06-04"
-c: "This is my first build! I planed it for a month. <strong>It turned out awesome! </strong>You can use this parts list as a starting point for your bucket. 
+c: "This is my first build! I planned it for a month. <strong>It turned out awesome! </strong>You can use this parts list as a starting point for your bucket. 
     All items were ordered from Amazon (which helps support this website!).
     <br><br>
     <strong>Fans</strong>: These are very easy to install as they come already wired with a plug.

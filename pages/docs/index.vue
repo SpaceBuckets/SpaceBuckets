@@ -140,8 +140,9 @@ export default {
   }
 }
 
-.faq-flex {
+.doc-single-content > div.faq-flex {
   column-count: 3;
+  max-width: 100% !important;
   > div {
     padding: 15px;
     overflow: auto;
@@ -151,6 +152,8 @@ export default {
     h3 {
       margin: 0;
       margin-bottom: 10px;
+      border-top: 0;
+      padding-top: 5px;
     }
   }
   @media (max-width: 980px) {

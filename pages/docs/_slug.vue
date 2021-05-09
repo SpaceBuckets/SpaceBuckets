@@ -59,17 +59,20 @@ export default {
 
 .doc-single-content {
   background: #fff;
-  padding: 15px;
+  padding: 20px 25px;
   border-right: 1px solid #1a1a1b;
-  div {
+  > div {
     line-height: 1.6em;
+    max-width: 100ch;
   }
   h3 {
-    margin: 15px 0 5px;
+    margin: 20px 0 5px;
+    padding-top: 15px;
+    border-top: 1px dashed #ddd;
   }
   h1,
   h2 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
 }
 </style>

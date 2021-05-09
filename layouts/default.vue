@@ -9,16 +9,20 @@
         <nuxt-link :to="{ name: 'index' }" exact>SPACE BUCKETS</nuxt-link>
       </h1>
       <button class="nav-toggle active" @click="openNav = !openNav">
-        <icon-hamburger/>
+        <icon-hamburger v-if="!openNav"/>
+        <icon-cross v-if="openNav"/>
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
-        <nuxt-link to="/new" class="onlymobile">SUBMIT</nuxt-link>
-        <nuxt-link to="/materials">MATERIALS</nuxt-link>
-        <nuxt-link to="/build">BUILDER</nuxt-link>
-        <nuxt-link to="/docs">DOCS</nuxt-link>
-        <nuxt-link to="/gallery/1">GALLERY</nuxt-link>
-        <nuxt-link to="/designer" no-prefetch>DESIGN</nuxt-link>
-        <nuxt-link to="/drome" no-prefetch>DROME</nuxt-link>
+        <nuxt-link to="/materials"><icon-tools/>MATERIALS</nuxt-link>
+        <nuxt-link to="/build"><icon-mix/>BUILDER</nuxt-link>
+        <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
+        <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
+        <nuxt-link to="/designer" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
+        <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
+        <nuxt-link to="/new" class="onlymobile">
+        <icon-flask/>
+        SUBMIT
+        </nuxt-link>
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
@@ -75,7 +79,7 @@ export default {
   },
 };
 </script>  
-<style lang="scss" scoped>
+<style lang="scss">
 header {
   background: #151515;
   color: #eee;
@@ -107,7 +111,16 @@ header {
     font-weight: 600;
     display: block;
     text-decoration: none;
-    &.nuxt-link-active,
+    &.nuxt-link-active {
+      color: #fdd835;
+    }
+    @media (max-width: 980px) {
+      &.nuxt-link-active {
+        background: #fdd835 !important;
+        color: #222;
+        path { fill: #222; }
+      }      
+    }
     &:hover {
       color: #fdd835;
     }
@@ -143,6 +156,7 @@ header {
       }
       &.nuxt-link-active {
         color: #fafafa;
+        background: transparent !important;
       }
     }
   }
@@ -156,17 +170,20 @@ header {
     display: block;
     flex: 1;
     padding: 0 20px;
+    svg {
+      display: none;
+    }
   }
 
   @media (max-width: 980px) {
     display: none;
+    padding: 0;
     &.open {
-      display: block;
-      padding-top: 5px;
-      padding-bottom: 5px;
+      display: flex;
+      padding-top: 0;
       min-height: calc(100vh - 50px);
       background: #151515;
-      width: 220px;
+      width: 100vw;
       z-index: 9999;
       + .nav-backdrop:before {
         content: "";
@@ -183,7 +200,19 @@ header {
     a {
       padding: 10px 0;
       flex: 1;
-      min-width: 33%;
+      min-width: 50%;
+      text-align: center;
+      align-items: center;
+      justify-content: center;   
+      display: flex;   
+      border-bottom: 1px solid #222;
+      border-right: 1px solid #222;
+      flex-direction: column;
+      svg {
+        display: block;
+        height: 32px;
+        margin-bottom: 10px;
+      }
     }
   }
 }

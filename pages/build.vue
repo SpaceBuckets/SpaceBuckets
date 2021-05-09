@@ -1,6 +1,6 @@
  <template>
   <div id="app">
-        <div class="search-sidebar">
+    <div class="search-sidebar">
       <div class="sidebar-content">
         <h2>BUCKET BUILDER</h2>
           <p>Select a combination of bucket parts to create your custom build. Shopping list, similar buckets and general tips will adapt to your preferences.</p>
@@ -9,124 +9,40 @@
     </div>
     <div class="new-builder">
       <div class="new-builder-accordion">
-        <section>
-          <span>CONTAINER</span>
+        <section v-for="(items, parent) in options">
+          <span>{{parent}}</span>
           <div
             class="item-title-container"
-            @click="clickContainer('bucket')"
-            :class="{ active: containerActive == 'bucket'}"
+            @click="clickMaster(child, parent)"
+            :class="{ active: active[parent] == child}"
+            v-for="(item, child) in items"
           >
-            <illus-bucket/>
-            <div class="item-title">Classic Bucket</div>
-            <div>A standard 5gal container: perfect match for UFO LEDs.</div>
-          </div>
-          <div
-            class="item-title-container"
-            @click="clickContainer('brute')"
-            :class="{ active: containerActive == 'brute'}"
-          >
-            <illus-brute/>
-            <div class="item-title">Supersized</div>
-             <div>Useful to get more yield and a bigger workspace.</div>
-          </div>
-          <div
-            class="item-title-container"
-            @click="clickContainer('tote')"
-            :class="{ active: containerActive == 'tote'}"
-          >
-            <illus-tote/>
-            <div class="item-title">Totes</div>
-            <div>These have an ideal rectangular shape for powerful lighting.</div>
-          </div>
-        </section>
-        <section>
-          <span>LIGHTING</span>
-          <div
-            class="item-title-container"
-            @click="clickLight('cfl')"
-            data-asin="B00M6SR1JM"
-            data-light="cfl"
-            :class="{ active: lightActive == 'cfl'}"
-          >
-            <illus-cfl/>
-            <div class="item-title">CFL bulbs</div>
-            <div>The cheapest option. Use them if LEDs are not an available.</div>
-          </div>
-
-          <div
-            class="item-title-container"
-            @click="clickLight('ufo')"
-            data-asin="B00RWYCRB2"
-            data-light="ufo"
-            :class="{ active: lightActive == 'ufo'}"
-          >
-            <illus-ufo/>
-            <div class="item-title">UFO LED</div>
-            <div>The best fit for a Space Bucket, with plug and play installation.</div>
-          </div>
-          <div
-            class="item-title-container"
-            @click="clickLight('led')"
-            :class="{ active: lightActive == 'led'}"
-          > 
-            <illus-led/>
-            <div class="item-title">High-Power LED</div>
-            <div>Custom chips can result in powerful lighting solutions.</div>
-          </div>
-        </section>
-        <section>
-          <span>AIRFLOW</span>
-          <div
-            class="item-title-container"
-            @click="clickAir('pcfan')"
-            :class="{ active: airActive == 'pcfan'}"
-          >
-            <illus-pcfan/>
-            <div class="item-title">PC fan</div>
-            <div>Easy to find and recycle, and they provide enough airflow.</div>
-          </div>
-          <div
-            class="item-title-container"
-            @click="clickAir('linefan')"
-            :class="{ active: airActive == 'linefan'}"
-          >
-            <illus-linefan/>
-            <div class="item-title">110v/220v fan</div>
-            <div>Better than PC fans, they run at line voltage (110v or 220v).</div>
-          </div>
-          <div
-            class="item-title-container"
-            @click="clickAir('inline')"
-            data-asin="B004Q2ER5C"
-            data-air="inline"
-            :class="{ active: airActive == 'inline'}"
-          >
-            <illus-inlinefan/>
-            <div class="item-title">Inline fan</div>
-            <div>The most poweful ernative for airflow and smell control.</div>
+            <component :is="item.illus"/>
+            <div class="item-title">{{ item.title }}</div>
+            <div>{{ item.description}}</div>
           </div>
         </section>
       </div>
 
       <section class="shopping-list">
         <span>SELECTED SHOPPING LIST <i>Product links help support this website <i>♥</i></i></span>
-
           <a
             v-for="(item, i) in items"
+            
             :key="`section-${i}`"
             :href="`${item.url}`"
             target="_blank"
             class="item-title-container item-title-container-shopping"
           >
-            <div class="product-image">
+            <div class="product-image" v-if="item.img">
               <img :src="`${item.img}`" />
             </div>
             <div class="product-title">{{item.title}}</div>
             <div class="product-brand-container">
-              <i class="product-brand">by {{item.brand}}</i>
-              <div class="product-price">{{item.price}}</div>
+              <i class="product-brand" v-if="item.img">by {{item.brand}}</i>
+              <div class="product-price" v-if="item.img">{{item.price}}</div>
             </div>
-          </a>          
+          </a>   
         <div class="total-price">
           <div class="amazon-btn">
             <form method="GET" target="_blank" action="https://www.amazon.com/gp/aws/cart/add.html">
@@ -152,200 +68,34 @@
       <div class="recomend-container">
         <section class="recommended">
           <span>TIPS FOR THIS BUILD</span>
-          <div class="recommend-stuff">
-            Always follow
-            <a target="_blank" href="https://www.reddit.com/r/HandsOnComplexity/comments/18fn67/space_bucket_electrical_safety_tips_posted_to/">SAGs Electrical Safety Guidelines!</a>
+          <div>
+            Always follow <a target="_blank" href="https://www.reddit.com/r/HandsOnComplexity/comments/18fn67/space_bucket_electrical_safety_tips_posted_to/">SAGs Electrical Safety Guidelines!</a>
           </div>
-          <div class="recommend-stuff">
-            A
-            <a target="_blank" href="https://www.amazon.com/Dr-Meter-LX1330B-Digital-Illuminance-Light/dp/B005A0ETXY/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=4801a3fd2b69a2bfd0e8240f3a70115c&language=en_US">lux meter</a> can be a great tool to measure your builds performance and tweak accordingly. View this <a target="_blank" href="https://www.reddit.com/r/HandsOnComplexity/comments/17nxpy/using_a_lux_meter_as_a_plant_light_meter/">SAG guide</a> for more information.
+          <div> A <a target="_blank" href="https://www.amazon.com/Dr-Meter-LX1330B-Digital-Illuminance-Light/dp/B005A0ETXY/ref=as_li_ss_tl?ie=UTF8&linkCode=ll1&tag=spacbuck-20&linkId=4801a3fd2b69a2bfd0e8240f3a70115c&language=en_US">lux meter</a> can be a great tool to measure your builds performance and tweak accordingly. View this <a target="_blank" href="https://www.reddit.com/r/HandsOnComplexity/comments/17nxpy/using_a_lux_meter_as_a_plant_light_meter/">SAG guide</a> for more information.
           </div>          
-          <div class="recommend-stuff" v-if="lightActive == 'led' ">
-            See
-            <a target="_blank" href="https://www.reddit.com/r/HandsOnComplexity">/r/HandsOnComplexity</a> for in-depth knowledge on LEDs.
+          <div v-if="active.light == 'led' "> See <a target="_blank" href="https://www.reddit.com/r/HandsOnComplexity">/r/HandsOnComplexity</a> for in-depth knowledge on LEDs.
           </div>
-          <div
-            class="recommend-stuff"
-            v-if="containerActive == 'bucket'"
-          >A classic Space Bucket garden has enough room to fit exactly one plant. The smallest kind of buckets to build Space Buckets are of the 5gal variety. This size of grow bucket has a very small footprint and it is perfect for one plant indoor gardening. They are specially suited for Auto seeds, as these plants are easier to train and stay naturally shorter inside the container.</div>
+          <div v-if="active.container == 'bucket'">A classic Space Bucket garden has enough room to fit exactly one plant. The smallest kind of buckets to build Space Buckets are of the 5gal variety. This size of grow bucket has a very small footprint and it is perfect for one plant indoor gardening. They are specially suited for Auto seeds, as these plants are easier to train and stay naturally shorter inside the container.</div>
 
-         
-          <div class="recommend-stuff" v-if="containerActive == 'brute'">
-            Supersized containers are great for gardeners that
-            <strong>wish to grow bigger plants</strong>
-, or for those who feel constrained by the dimensions of the 5gal bucket. There are 10gal, 20gal and 32gal options, which can all be used for Space Buckets.
+          <div v-if="active.container == 'brute'"> Supersized containers are great for gardeners that <strong>wish to grow bigger plants</strong>, or for those who feel constrained by the dimensions of the 5gal bucket. There are 10gal, 20gal and 32gal options, which can all be used for Space Buckets.
           </div>
 
-          <div
-            class="recommend-stuff"
-            v-if="containerActive == 'tote'"
-          >You can fit multiple plants inside stacked totes.</div>
-          <div
-            class="recommend-stuff"
-            v-if="containerActive == 'tote'"
-          >These rectangular containers are even bigger than supersized Brutes, and usually come in 32gal or 44gal versions. Given their massive size, SB totes need powerful lighting from all sides, with a 300w LED panel being the most recommended option.</div>
+          <div v-if="active.container == 'tote'">You can fit multiple plants inside stacked totes.</div>
+          <div v-if="active.container == 'tote'">These rectangular containers are even bigger than supersized Brutes, and usually come in 32gal or 44gal versions. Given their massive size, SB totes need powerful lighting from all sides, with a 300w LED panel being the most recommended option.</div>
 
-          <div
-            class="recommend-stuff"
-            v-if="lightActive == 'ufo' "
-          >LED heatshinks should be installed on the outside of the container when possible.</div>
-          <div
-            class="recommend-stuff"
-            v-if="lightActive == 'ufo' "
-          >UFOs come with a plug for easy installation, and they have fans on the back. There are many UFOs available, but most are rebrands of generic products from China. You will find them in 90w, 135w and 180w, all of which can be used in a Space Bucket.</div>
-          <div
-            class="recommend-stuff"
-            v-if="lightActive == 'cfl' "
-          >CFL bulbs should be installed facing horizontally for an optimal lumen configuration.</div>
-
-          <div
-            class="recommend-stuff"
-            v-if="lightActive == 'cfl' "
-          >Please notice that CFL bulbs are known to produce more heat inside your indoor garden. Typical installations require the use of electrical splices, so proceed with caution if you are not familiar with the involved hazards.</div>
+          <div v-if="active.light == 'ufo' ">LED heatshinks should be installed on the outside of the container when possible.</div>
+          <div v-if="active.light == 'ufo' ">UFOs come with a plug for easy installation, and they have fans on the back. There are many UFOs available, but most are rebrands of generic products from China. You will find them in 90w, 135w and 180w, all of which can be used in a Space Bucket.</div>
+          <div v-if="active.light == 'cfl' ">CFL bulbs should be installed facing horizontally for an optimal lumen configuration.</div>
+          <div v-if="active.light == 'cfl' ">Please notice that CFL bulbs are known to produce more heat inside your indoor garden. Typical installations require the use of electrical splices, so proceed with caution if you are not familiar with the involved hazards.</div>
         </section>
-        <section class="similar-bucket">
-
-          <nuxt-link to="/u/the-mad-scientist/" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/u/the-mad-scientist/cover.jpg" alt/>
-            <h2>THE MAD SCIENTIST</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/ekrof/" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/u/ekrof/cover.jpg" alt/>
-            <h2>EKROF SPACE BUCKET</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/santiagosentme/" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/u/santiagosentme/cover.jpg" alt/>
-            <h2>SANTIAGO'S BUILD</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/levitatingchicken/" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/u/levitatingchicken/cover.jpg" alt/>
-            <h2>LEVITATING BUCKET</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/kazel93/" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/u/kazel93/cover.jpg" alt />
-            <h2>THE BULLET</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/ranger737/" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'ufo'">
-            <img src="/u/ranger737/cover.jpg" alt/>
-            <h2>RANGER BUILD</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/articles/no-solder/" v-if="containerActive == 'bucket' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/u/no-solder-led/cover.jpg" alt/>
-            <h2>NO SOLDER LED</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/ekrof-vero/" v-if="containerActive == 'bucket' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/u/ekrof-vero/cover.jpg" alt/>
-            <h2>EKROF VERO LED</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/mr-markheim/" v-if="containerActive == 'bucket' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/u/mr-markheim/cover.jpg" alt/>
-            <h2>MARKHEIM BUCKET</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/buckettoss/" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'ufo'">
-            <img src="/u/buckettoss/cover.jpg" alt/>
-            <h2>TOSS BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/gosu-sheep/" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/u/gosu-sheep/cover.jpg" alt/>
-            <h2>GOSU BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/spacebidet/" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/u/spacebidet/cover.jpg" alt/>
-            <h2>BIDET BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/southernspaceweed/" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/u/southernspaceweed/cover.jpg" alt/>
-            <h2>SOUTHERN BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/shaddo/" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/u/shaddo/cover.jpg" alt/>
-            <h2>SHADDO'S BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/dubs-brute/" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/u/dubs-brute/cover.jpg" alt/>
-            <h2>DUBS BRUTE BUILD</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/bruteled/" v-if="containerActive == 'brute' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/u/bruteled/cover.jpg" alt/>
-            <h2>SIMPLE LED BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/doublejallday-bin/" v-if="containerActive == 'brute' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/u/doublejallday_bin/cover.jpg" alt/>
-            <h2>GARBO LED BUILD</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/haplessastronaut/" v-if="containerActive == 'brute' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/u/haplessastronaut/cover.jpg" alt/>
-            <h2>HYDRO LED BRUTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/getitguh/" v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'cfl'">
-            <img src="/u/getitguh/cover.jpg" alt/>
-            <h2>GETGUH'S TOTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/spacebucket-sue/" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'cfl'">
-            <img src="/u/spaceBucket_sue/cover.jpg" alt/>
-            <h2>SUE SPACE TOTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/arrrr32/" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'cfl'">
-            <img src="/u/arrrr32/cover.jpg" alt/>
-            <h2>PIRATE TOTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/dangerzone710/" v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'ufo'">
-            <img src="/u/dangerzone710/cover.jpg" alt/>
-            <h2>DANGERZONE TOTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/spacetotebuilder/" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'ufo'">
-            <img src="/u/spacetotebuilder/cover.jpg" alt/>
-            <h2>SPACE TOTE v3</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/funforpun/" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'ufo'">
-            <img src="/u/funforpun/cover.jpg" alt/>
-            <h2>PUN'S EURO BOX</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/vahpors-tote/" v-if="containerActive == 'tote' && airActive == 'pcfan' && lightActive == 'led'">
-            <img src="/u/vahpors-tote/cover.jpg" alt/>
-            <h2>VAHPOR'S TOTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/spacebucketfu/" v-if="containerActive == 'tote' && airActive == 'linefan' && lightActive == 'led'">
-            <img src="/u/spacebucketfu/cover.jpg" alt/>
-            <h2>STRAWBERRY TOTE</h2>
-          </nuxt-link>
-
-          <nuxt-link to="/u/cottonparachute/" v-if="containerActive == 'tote' && airActive == 'inline' && lightActive == 'led'">
-            <img src="/u/cottonparachute/cover.jpg" alt/>
-            <h2>COTTON'S TOTE</h2>
-          </nuxt-link>
-        </section>
+       <buildsimilar :active="active"/>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Buildsimilar from '../components/buildsimilar.vue';
 function getItems(itemsArr) {
   return fetch(
     "https://bucket-builder.herokuapp.com/bucket-builder/" + itemsArr.join(",")
@@ -383,7 +133,7 @@ function createItem(asin) {
 
 export default {
   name: "app",
-  components: {},
+  components: {Buildsimilar},
   head() {
     return {
       title: `Space Buckets - BUILDER`,
@@ -420,9 +170,64 @@ export default {
         createItem(asins.lightextra.powersupply),
         createItem(asins.ropeextra.ledstrip)
       ],
-      containerActive: "bucket",
-      lightActive: "ufo",
-      airActive: "linefan"
+      active: {
+        container: "bucket",
+        light: "ufo",
+        airflow: "linefan"
+      },
+      options: {
+        container: {
+          bucket: {
+            title: "Classic bucket",
+            description: "A standard 5gal container: perfect match for UFO LEDs.",
+            illus: "illus-bucket"
+          },
+          brute: {
+            title: "Supersized",
+            description: "Useful to get more yield and a bigger workspace.",
+            illus: "illus-brute"
+          },
+          tote: {
+            title: "Totes",
+            description: "These have an ideal rectangular shape for powerful lighting.",
+            illus: "illus-tote"
+          }          
+        },
+        light: {
+          cfl: {
+            title: "CFL Bulbs",
+            description: "The cheapest option. Use them if LEDs are not an available.",
+            illus: "illus-cfl"            
+          },
+          ufo: {
+            title: "UFO LED",
+            description: "The best fit for a Space Bucket, with plug and play installation.",
+            illus: "illus-ufo"                  
+          },
+          led: {
+            title: "High-Power LED",
+            description: "Custom chips can result in powerful lighting solutions.",
+            illus: "illus-led"
+          }
+        },
+        airflow: {
+          pcfan: {
+            title: "PC Fans",
+            description: "Easy to find and recycle, and they provide enough airflow.",
+            illus: "illus-pcfan"            
+          },
+          linefan: {
+            title: "110v/220v Fans",
+            description: "Better than PC fans, they run at line voltage (110v or 220v).",
+            illus: "illus-linefan"                
+          },
+          inline: {
+            title: "Inline Fans",
+            description: "The most poweful ernative for airflow and smell control.",
+            illus: "illus-inlinefan"                
+          }
+        }
+      }      
     };
   },
   mounted() {
@@ -455,18 +260,19 @@ export default {
   },
 
   methods: {
-    clickContainer(type) {
-      this.containerActive = type;
-      this.items[0].asin = asins.container[type];
-    },
-    clickLight(type) {
-      this.lightActive = type;
-      this.items[1].asin = asins.light[type];
-    },
-    clickAir(type) {
-      this.airActive = type;
-      this.items[2].asin = asins.air[type];
-    }
+    clickMaster(type, parent) {
+      this.active[parent] = type;
+      if (parent === 'container') {
+        this.items[0].asin = asins.container[type];
+      }
+      if (parent === 'light') {
+        this.items[1].asin = asins.light[type];
+      }
+      if (parent === 'airflow') {
+        this.items[2].asin = asins.air[type];
+      }            
+    },    
+
   }
 };
 </script>
@@ -536,6 +342,7 @@ section {
     font-weight: 600;
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
+    text-transform: uppercase;
   }
 }
 .item-title-container {
@@ -548,6 +355,7 @@ section {
   cursor: pointer;
   position: relative;
   opacity: 0.8;
+  min-height: 101px;
   &:nth-of-type(1) {
     border-bottom: 1px solid #eee;
   }
@@ -688,7 +496,7 @@ section {
   width: 75px;
 }
 
-.recommend-stuff {
+.recommended > div {
   font-size: 15px;
   padding: 10px 40px 10px 15px;
   border-bottom: 1px solid #eee;
@@ -761,6 +569,7 @@ section {
   }
   > div:last-child:after {
     content: "BUILD TOTAL";
+    font-family: "Montserrat", sans-serif;
     float: left;
     font-size: 14px;
     font-weight: 600;
