@@ -2,7 +2,7 @@
   <div class="gallery-container">
         <div class="search-sidebar">
           <div>
-            <h2>GALLERY</h2>
+            <h2>{{titler}}</h2>
             <p>
               Select categories to filter and browse the builds in the community garden collection.
             </p>
@@ -49,7 +49,7 @@
 
 export default {
   name: "postgallery",
-  props: ["posts","totalLength","megapostLength"],
+  props: ["posts","totalLength","megapostLength","titler"],
   data() {
     return {
       filterOptions: {

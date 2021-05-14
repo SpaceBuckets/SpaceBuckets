@@ -13,25 +13,24 @@
         <icon-cross v-if="openNav"/>
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
+        <div class="research onlymobile">
+          <input type="text">
+        </div>        
         <nuxt-link to="/materials"><icon-tools/>MATERIALS</nuxt-link>
         <nuxt-link to="/build"><icon-mix/>BUILDER</nuxt-link>
         <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
         <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
         <nuxt-link to="/designer" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
         <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
-        <nuxt-link to="/new" class="onlymobile">
-        <icon-flask/>
-        SUBMIT
-        </nuxt-link>
+
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
         class="nav-sep logger"
-        style="padding: 0 15px"
+        style="padding: 0"
       >
-            <nuxt-link to="/new" no-prefetch>
-              SUBMIT
-            </nuxt-link>
+      <icon-search />
+          <input placeholder="Enter Search..." type="text">
           <span id="stat"></span>
       </div>
     </header>
@@ -165,7 +164,27 @@ header {
   padding: 15px;
   display: flex;
   flex-wrap: wrap;
-
+  &.logger {
+    height: 50px;
+    position: relative;
+    svg {
+      width: 20px;
+      position: absolute;
+      left: 10px;
+      top: 14px;
+      path { fill: #004d47 }
+    }
+    input {
+      background: rgba(0, 77, 71, 0.3);
+      border: 0;
+      border-left: 2px solid #004d47;
+      color: #fff;
+      padding-left: 35px;
+      &:focus {
+        outline: 0;
+      }
+    }
+  }
   a {
     display: block;
     flex: 1;
