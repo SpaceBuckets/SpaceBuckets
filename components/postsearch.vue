@@ -2,27 +2,20 @@
   <div class="gallery-container">
         <div class="search-sidebar">
           <div>
-            <h2>GALLERY</h2>
-            <p>
-              Select categories to filter and browse the builds in the community garden collection.
-            </p>
+            <h2>SEARCH RESULTS: "{{ $route.query.q }}"</h2>
+            <p>Find and filter buckets from the community collection. </p>
           </div>
           <div class="filters-container">
-
-
-            <h3>Filters</h3>
-            <div class="select-filter-container" :key="`${parent}`" v-for="(items, parent) in filterOptions">
-              <div class="filter-single-top">{{parent}}</div>
-              <select :ref="`select${parent}`" @change="filterPosts(parent)">
-                <option value="">All</option>
-                <option v-for="option in items" :key="`${option}-${parent}`" :value="option">{{option}}</option>
-              </select>
+            <div class="select-filter-container search">
+              <button @click="submitSearch()"><icon-search /></button>
+              <input ref="searchInput" :value="$route.query.q" @keyup.enter="submitSearch()" type="text" placeholder="Search..." name="search">
             </div>
-         
+
+    
           </div>
           <div class="perpage-container">
-              <div class="results">Found {{ totalLength }} builds »</div>
-          </div>             
+            <div class="results">Found {{ posts.length }} builds »</div>
+          </div> 
         </div>
           <div class="cards-wrapper">
             <div class="cards-container">
@@ -49,7 +42,7 @@
 
 export default {
   name: "postgallery",
-  props: ["posts","totalLength","megapostLength","titler"],
+  props: ["posts","totalLength","megapostLength","titler", "query"],
   data() {
     return {
       filterOptions: {
@@ -93,47 +86,15 @@ export default {
    });
   },    
   methods: {
-    filterPosts(type) {
+    submitSearch() {
+      this.$router.push({ name: 'search', query: { 'q': this.$refs.searchInput.value } });
+    },        
 
-      this.filterQuery[type] = event.target.options[event.target.options.selectedIndex].value;
-      this.filterQuery.selected = this.filterQuery.container + "-" + this.filterQuery.lighting + "-" + this.filterQuery.airflow;
-      this.filterQuery.selected = this.filterQuery.selected.replace('--','-').replace(/-$/,'').replace(/^-/,'');
-
-      if(this.filterQuery.selected === "") {
-        this.$router.push({ name: 'gallery-page', params: { page: '1' } });
-      } else {
-        this.$router.push({ name: 'gallery-page-category', params: { page: '1', category: this.filterQuery.selected } });
-      }
-    },
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.load-more {
-  color: #eee;
-  border: 1px solid #333;
-  padding: 10px;
-  text-align: center;
-  cursor: pointer;
-  width: 300px;
-  margin: 20px auto 30px;
-  color: #fafafa;
-  background: transparent;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  user-select: none;
-  &:focus {
-    outline: 0;
-  }
-  &:hover {
-    color: #fdd835;
-  }
-}
+<style lang="scss">
 
 .top-wrapper {
   display: flex;
@@ -150,37 +111,14 @@ export default {
     flex: 1;
     max-width: max-content;
   }
+
+}
   .results {
     color: #eee;
     line-height: 35px;
 
   }
-}
-.sort-filters {
-  display: flex;
-  text-align: center;
-  max-width: 250px;
-  border: 1px solid #333;
-  align-content: center;
-  background: #101010;
 
-  div {
-    flex: 1;
-    color: #eee;
-    padding: 10px 10px;
-    cursor: pointer;
-    &:first-of-type {
-      border-right: 1px solid #333;
-    }
-    &:hover {
-      color: #fdd835;
-    }
-    &.active {
-      background: #fdd835;
-      color: #151515;
-    }
-  }
-}
   a[disabled] {
     opacity: 0.5;
     pointer-events: none;
@@ -257,6 +195,26 @@ export default {
 
 .filters-container {
   color: #eee;
+  .select-filter-container {
+    position: relative;
+
+    input {
+      padding-left: 35px;
+    }
+    button {
+      position: absolute;
+      background: transparent;
+      border: 0;
+      top: 0;
+      bottom: 0;
+      display: flex;
+      align-items: center;      
+      svg {
+        width: 20px;
+        path { fill: #666 !important; }
+      }
+    }
+  }
   h3 {
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -282,12 +240,11 @@ export default {
     position: relative;
     border: 1px solid #333;
     width: 100%;
-    &.sort-filters {
-      border-radius: 3px;
-      overflow: hidden;
-    }
+    max-width: 200px;
+    margin-right: 10px;
 
   }
+  input,
   select {
     width: 100%;
     background: #000;
@@ -329,7 +286,8 @@ export default {
   color: #333;
   pointer-events: none;
 }
-
+.select-filter-container.search { max-width: 100%; }
+.select-filter-container.search:after { display: none; }
 select,
 select option {
   text-transform: capitalize;

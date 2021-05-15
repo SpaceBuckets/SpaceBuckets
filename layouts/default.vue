@@ -14,24 +14,25 @@
       </button>
       <div class="nav-sep" :class="{ open: openNav }">
         <div class="research onlymobile">
-          <input type="text">
+          <button @click="submitSearch()"><icon-search /></button>
+          <input ref="searchInputMobile" :value="$route.query.q" @keyup.enter="submitSearchMobile()" type="text" placeholder="Search..." name="search">
         </div>        
         <nuxt-link to="/materials"><icon-tools/>MATERIALS</nuxt-link>
         <nuxt-link to="/build"><icon-mix/>BUILDER</nuxt-link>
         <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
         <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
         <nuxt-link to="/designer" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
-        <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
-
+        <nuxt-link to="/drome" no-prefetch><icon-game/>PLAY</nuxt-link>
+        <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets"><icon-reddit/>SUBREDDIT</a>
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
         class="nav-sep logger"
         style="padding: 0"
       >
-      <icon-search />
-          <input placeholder="Enter Search..." type="text">
-          <span id="stat"></span>
+        <button @click="submitSearch()"><icon-search /></button>
+        <input ref="searchInput" :value="$route.query.q" @keyup.enter="submitSearch()" type="text" placeholder="Search..." name="search">
+        <span id="stat"></span>
       </div>
     </header>
     <nuxt />
@@ -67,6 +68,12 @@ export default {
         }
       });
     },
+    submitSearch() {
+      this.$router.push({ name: 'search', query: { 'q': this.$refs.searchInput.value } });
+    },
+    submitSearchMobile() {
+      this.$router.push({ name: 'search', query: { 'q': this.$refs.searchInputMobile.value } });
+    }          
   },
   created() {
     if (process.client && window) {
@@ -167,12 +174,18 @@ header {
   &.logger {
     height: 50px;
     position: relative;
-    svg {
-      width: 20px;
+    button {
       position: absolute;
-      left: 10px;
+      left: 12px;
       top: 14px;
-      path { fill: #004d47 }
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 0;
+      svg {
+        width: 20px;
+        path { fill: #004d47 }
+      }
     }
     input {
       background: rgba(0, 77, 71, 0.3);
@@ -180,6 +193,7 @@ header {
       border-left: 2px solid #004d47;
       color: #fff;
       padding-left: 35px;
+      width: 200px;
       &:focus {
         outline: 0;
       }
@@ -198,9 +212,8 @@ header {
     display: none;
     padding: 0;
     &.open {
-      display: flex;
+      display: block;
       padding-top: 0;
-      min-height: calc(100vh - 50px);
       background: #151515;
       width: 100vw;
       z-index: 9999;
@@ -218,8 +231,9 @@ header {
     }
     a {
       padding: 10px 0;
-      flex: 1;
-      min-width: 50%;
+      float: left;
+      width: 50%;
+      height: 125px;
       text-align: center;
       align-items: center;
       justify-content: center;   
@@ -229,8 +243,8 @@ header {
       flex-direction: column;
       svg {
         display: block;
-        height: 32px;
-        margin-bottom: 10px;
+        height: 24px;
+        margin-bottom: 12px;
       }
     }
   }
@@ -364,6 +378,32 @@ p {
   opacity: 0;
   img {
     width: auto;
+  }
+}
+
+.research {
+  width: 100%;
+  position: relative;
+  height: 50px;
+  button {
+    position: absolute;
+    border: 0;
+    background: transparent;  
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    svg { width: 20px; }  
+  }
+  input {
+    width: 100%;
+    background: rgba(0, 77, 71, 0.3);
+    border: 0;
+    padding-left: 45px;
+    color: #fff;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+    }
   }
 }
 </style>

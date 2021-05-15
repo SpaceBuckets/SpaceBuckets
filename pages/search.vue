@@ -1,10 +1,7 @@
 <template>
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
-      <client-only>      
-        <div>No results found!</div>
-        <postgallery titler="SEARCH" :posts="posts"/>
-      </client-only>
+      <postsearch :query="$route.query.q" titler="SEARCH" :posts="posts"/>
     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
@@ -20,7 +17,7 @@ import {
 export default {
   async asyncData({route}) {
     
-    var posts = await getSearch(route.query.p);   
+    var posts = await getSearch(route.query.q);   
   
     return { posts };
   },
@@ -30,8 +27,14 @@ export default {
       loadingSwipe: true,
     };
   },
+
+  watch: {
+    $route(to, from) {
+      this.updatePosts(); 
+    },
+  },  
   async created() { 
-console.log(this.posts.length)
+
     if (process.client) {
       this.swipeItem = await singleRandom();
       if (
@@ -43,10 +46,14 @@ console.log(this.posts.length)
        this.loadingSwipe = false;
     }
   },
-
+  methods: {
+    async updatePosts() {
+      this.posts = await getSearch(this.$route.query.q);   
+    }
+  },
   head() {
     return {
-      title: `Space Buckets - SEARCH`,
+      title: `Space Buckets - SEARCH - ${this.$route.query.q}`,
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of DIY indoor gardens from the community. More than 350 builds await!' }],
 
