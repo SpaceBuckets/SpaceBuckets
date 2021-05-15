@@ -369,11 +369,11 @@ section {
 
   }
   @media screen and (max-width: 630px) {
-        border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 
     img { height: 60px !important;width: auto; } 
     .product-title { height: 20px; -webkit-line-clamp: 1; padding-right: 20px; }
-   &.active { min-height: 94px; }
+   &.active { min-height: 101px; }
   }
   &:hover {
     opacity: 1;

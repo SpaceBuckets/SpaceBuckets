@@ -17,7 +17,7 @@ import {
 export default {
   async asyncData({route}) {
     
-    var posts = await getSearch(route.query.q);   
+    var posts = await getSearch(route.query.q.toLowerCase());   
   
     return { posts };
   },
@@ -48,7 +48,7 @@ export default {
   },
   methods: {
     async updatePosts() {
-      this.posts = await getSearch(this.$route.query.q);   
+      this.posts = await getSearch(this.$route.query.q.toLowerCase());   
     }
   },
   head() {

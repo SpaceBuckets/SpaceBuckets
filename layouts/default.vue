@@ -233,7 +233,7 @@ header {
       padding: 10px 0;
       float: left;
       width: 50%;
-      height: 125px;
+      height: 115px;
       text-align: center;
       align-items: center;
       justify-content: center;   
