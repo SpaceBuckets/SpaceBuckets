@@ -23,10 +23,10 @@
           <h2>Join our subreddit</h2>
           <div><icon-reddit/>110.000+ bucketeers await.</div>
         </a>
-        <a href="mailto:info@spacebuckets.com" title="Contact us">
+        <nuxt-link to="/feedback">
           <h2>Contact us!</h2>
           <div><icon-mail/>info@spacebuckets.com</div>
-        </a>
+        </nuxt-link>
       </div>
       <div class="post-wrapper">  
         <card :id="randItem" />

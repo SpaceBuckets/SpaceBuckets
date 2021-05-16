@@ -171,7 +171,7 @@ export default {
 }
 
 .gallery-container {
-  margin: 10px auto;
+  margin: 0px auto;
   padding-left: 250px;
   @media (max-width: 980px) {
     padding: 0;

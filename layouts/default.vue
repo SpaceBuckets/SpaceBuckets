@@ -22,8 +22,10 @@
         <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
         <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
         <nuxt-link to="/designer" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
-        <nuxt-link to="/drome" no-prefetch><icon-game/>PLAY</nuxt-link>
+        <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
         <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets"><icon-reddit/>SUBREDDIT</a>
+        <nuxt-link to="/feedback" class="onlymobile feedback-item" no-prefetch>FEEDBACK</nuxt-link>
+
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div
@@ -249,6 +251,12 @@ header {
     }
   }
 }
+
+a.feedback-item {
+  min-width: 100%;
+  height: 50px;
+}
+
 </style>
 
 <style lang="scss">
