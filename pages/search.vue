@@ -2,7 +2,7 @@
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
       <client-only>
-        <postsearch v-if="posts" :query="$route.query.q" titler="SEARCH" :posts="posts"/>
+        <postsearch :query="$route.query.q" titler="SEARCH" :posts="posts"/>
       </client-only>
     </template>
     <template v-slot:next v-if="!loadingSwipe">
@@ -17,18 +17,12 @@ import {
   singleRandom
 } from "~/scripts/flatDB";
 export default {
-  async asyncData({route}) {
-    if (route.query.q) {
-      var posts = await getSearch(route.query.q.toLowerCase());   
 
-    }
-  
-    return { posts };
-  },
   data() {
     return {
       swipeItem: [],
       loadingSwipe: true,
+      posts: []
     };
   },
 
@@ -38,7 +32,7 @@ export default {
     },
   },  
   async created() { 
-
+    this.updatePosts(); 
     if (process.client) {
       this.swipeItem = await singleRandom();
       if (
@@ -52,7 +46,9 @@ export default {
   },
   methods: {
     async updatePosts() {
-      this.posts = await getSearch(this.$route.query.q.toLowerCase());   
+      if (process.client && window && this.$route.query.q) {
+        this.posts = await getSearch(this.$route.query.q.toLowerCase());   
+      }
     }
   },
   head() {
