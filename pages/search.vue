@@ -1,7 +1,7 @@
 <template>
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
-      <postsearch :query="$route.query.q" titler="SEARCH" :posts="posts"/>
+      <postsearch v-if="posts" :query="$route.query.q" titler="SEARCH" :posts="posts"/>
     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
@@ -16,8 +16,10 @@ import {
 } from "~/scripts/flatDB";
 export default {
   async asyncData({route}) {
-    
-    var posts = await getSearch(route.query.q.toLowerCase());   
+    if (route.query.q) {
+      var posts = await getSearch(route.query.q.toLowerCase());   
+
+    }
   
     return { posts };
   },
