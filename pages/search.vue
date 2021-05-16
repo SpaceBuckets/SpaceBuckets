@@ -1,7 +1,9 @@
 <template>
   <swiper :next="swipeItem" type="posts">
     <template v-slot:main>
-      <postsearch v-if="posts" :query="$route.query.q" titler="SEARCH" :posts="posts"/>
+      <client-only>
+        <postsearch v-if="posts" :query="$route.query.q" titler="SEARCH" :posts="posts"/>
+      </client-only>
     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
