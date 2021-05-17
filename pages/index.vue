@@ -33,7 +33,7 @@
 
         <card :id="mad" />
         
-        <cardindex title="Start Here: simple DIY template" link="u/simple-template" variation="doubled"/>
+        <cardindex title="Start Here: simple DIY template" link="template" variation="doubled"/>
         <cardindex title="Tools and Parts" link="materials" />
         
         <card :id="randItem2" />
