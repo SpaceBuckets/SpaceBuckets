@@ -102,15 +102,15 @@
       </div>
     </div>
 
-    <div
+    <a
       class="img-container"
       v-for="(img, ie) in post.i"
       :key="`section-${ie}`"
-    >
+      :href="`/u/${post.s}/${img.h}`">
       <img v-if="variation != 'skeleton'" :src="`/u/${post.s}/${img.h}`" alt />
       <img v-if="variation === 'skeleton'" loading="lazy" :src="`/u/${post.s}/${img.h}`" alt />
       <div :style="{ 'padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"></div>
-    </div>
+    </a>
   </div>
 </template>
 
@@ -232,13 +232,13 @@ export default {
 }
 
 .post-masonry {
-  column-count: 3;
+  column-count: 4;
   column-gap: 0;
   font-size: 0;
   background: #000;
   border-top: 1px solid #1a1a1b;
   @media (max-width: 1220px) {
-    column-count: 2;
+    column-count: 3;
     column-gap: 0;
   }
   @media (max-width: 660px) {
@@ -252,7 +252,8 @@ export default {
     max-height: 3000px;
     border: 1px solid #1a1a1b;
     user-select: none;
-    pointer-events: none;
+    //pointer-events: none;
+    display: block;
     img {
       position: absolute;
       top: 0;
