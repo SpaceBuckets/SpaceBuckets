@@ -52,6 +52,7 @@ export default {
   watch: {
     $route(to, from) {
       this.openNav = false;
+      this.hitStat();
     },
   },
   methods: {
@@ -81,9 +82,6 @@ export default {
     if (process.client && window) {
       this.hitStat();
     }    
-  },
-  updated() {
-    this.hitStat();
   },
 };
 </script>  
