@@ -2,6 +2,8 @@ import getCats from "./json/categories.json"
 import getuRoutes from "./json/u-routes.json"
 import getDocsRoutes from "./json/docs-routes.json"
 
+const reRoutes = getDocsRoutes.concat(getuRoutes)
+
 export default {
   target: "static",
    server: {
@@ -91,6 +93,6 @@ export default {
     path: '/sitemap.xml',
     hostname: 'https://spacebuckets.com',
     exclude: [],
-    routes: getuRoutes, getDocsRoutes
+    routes: reRoutes
   },  
 };

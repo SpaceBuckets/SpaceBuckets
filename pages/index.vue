@@ -107,7 +107,7 @@ export default {
       meta: [{
         hid: 'description',
         name: 'description',
-        content: 'DIY Indoor Gardening with stacked containers and LED or CFL lights. Build your garden, grow bucket plants indoors and join our community!'
+        content: 'DIY Indoor Gardening with stacked containers and LED lights or CFL bulbs. Learn how to build a DIY grow bucket, train plants to fit in tiny spaces and join our community of gardeners! '
       }]           
     };
   },
