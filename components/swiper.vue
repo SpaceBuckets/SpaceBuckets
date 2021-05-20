@@ -66,9 +66,9 @@ export default {
     overscroll-behavior-x: contain;
     scroll-snap-stop: always;
     scroll-snap-type: x mandatory;
-    height: calc(100vh - 50px);
+    height: 100vh;
     display: flex;
-    min-height: calc(100vh - 50px);
+    min-height: 100vh;
     will-change: scroll-position;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -80,9 +80,13 @@ export default {
       flex: 1;
       scroll-snap-align: center;
       scroll-snap-stop: always;
-      min-width: 100vw;
-      max-width: 100vw;
+      min-width: calc(100vw - 250px);
+      max-width: calc(100vw - 250px);
       overflow: auto;
+      @media (max-width: 980px) {
+        min-width: 100vw;
+        max-width: 100vw;        
+      }
       + .swipable {
         content-visibility: auto;
       }

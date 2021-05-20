@@ -8,6 +8,14 @@
       <h1 class="nav-logo">
         <nuxt-link :to="{ name: 'index' }" exact>SPACE BUCKETS</nuxt-link>
       </h1>
+      <div
+        class="nav-sep logger"
+        style="padding: 0"
+      >
+        <button @click="submitSearch()"><icon-search /></button>
+        <input ref="searchInput" :value="$route.query.q" @keyup.enter="submitSearch()" type="text" placeholder="Search..." name="search">
+        <span id="stat"></span>
+      </div>      
       <button class="nav-toggle active" @click="openNav = !openNav">
         <icon-hamburger v-if="!openNav"/>
         <icon-cross v-if="openNav"/>
@@ -21,21 +29,14 @@
         <nuxt-link to="/build"><icon-mix/>BUILDER</nuxt-link>
         <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
         <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
-        <nuxt-link to="/designer" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
+        <nuxt-link to="/designer" class="onlydesktop" no-prefetch><icon-images/>DESIGN</nuxt-link>
         <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
         <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets"><icon-reddit/>SUBREDDIT</a>
         <nuxt-link to="/feedback" class="onlymobile feedback-item" no-prefetch>FEEDBACK</nuxt-link>
 
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
-      <div
-        class="nav-sep logger"
-        style="padding: 0"
-      >
-        <button @click="submitSearch()"><icon-search /></button>
-        <input ref="searchInput" :value="$route.query.q" @keyup.enter="submitSearch()" type="text" placeholder="Search..." name="search">
-        <span id="stat"></span>
-      </div>
+
     </header>
     <nuxt />
   </div>
@@ -90,16 +91,16 @@ header {
   background: #151515;
   color: #eee;
   display: flex;
+  flex-direction: column;
   position: fixed;
   backface-visibility: hidden;
   left: 0;
   top: 0;
   right: 0;
-  max-height: 50px;
+  height: 100vh;
+  width: 250px;
   border-bottom: 1px solid #222;
-  align-items: center;
-  justify-content: space-between;
-  z-index: 9999;
+    z-index: 9999;
   user-select: none;
   &.drome {
     border-bottom: 2px solid #004d47;
@@ -117,8 +118,15 @@ header {
     font-weight: 600;
     display: block;
     text-decoration: none;
+
     &.nuxt-link-active {
-      color: #fdd835;
+      background: #fdd835;
+      color: #222;
+        path { fill: #222; }
+        &:hover {
+                color: #222;
+
+        }
     }
     @media (max-width: 980px) {
       &.nuxt-link-active {
@@ -129,6 +137,7 @@ header {
     }
     &:hover {
       color: #fdd835;
+
     }
   }
   .nav-toggle {
@@ -168,9 +177,6 @@ header {
   }
 }
 .nav-sep {
-  padding: 15px;
-  display: flex;
-  flex-wrap: wrap;
   &.logger {
     height: 50px;
     position: relative;
@@ -190,21 +196,25 @@ header {
     input {
       background: rgba(0, 77, 71, 0.3);
       border: 0;
-      border-left: 2px solid #004d47;
       color: #fff;
-      padding-left: 35px;
-      width: 200px;
+      padding-left: 40px;
+      width: 100%;
+      height: 50px;
       &:focus {
         outline: 0;
       }
     }
   }
   a {
-    display: block;
+    display: flex;
     flex: 1;
-    padding: 0 20px;
+    padding: 0 15px;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid #333;
     svg {
-      display: none;
+      width: 20px;
+      margin-right: 10px;
     }
   }
 
@@ -244,7 +254,9 @@ header {
       svg {
         display: block;
         height: 24px;
+        width: auto;
         margin-bottom: 12px;
+        margin-right: 0;
       }
     }
   }
@@ -273,7 +285,7 @@ button:focus {
 .onlydesktop {
   display: none !important;
   @media screen and (min-width: 980px) {
-    display: block !important;
+    display: flex !important;
   }
 }
 .onlymobile {
@@ -284,15 +296,11 @@ button:focus {
 }
 
 .search-sidebar {
-  height: 100vh;
-  max-width: 250px;
-  background: #000;
   color: #eee;
   padding: 15px;
-  position: fixed;
   backface-visibility: hidden;
-  left: 0;
-  top: 50px;
+  display: flex;
+  justify-content: space-between;
   a {
     text-decoration: none;
   }
@@ -331,7 +339,7 @@ html {
 body {
   background-color: #000;
   margin: 0;
-  padding-top: 50px;
+  padding-left: 250px;
 }
 
 a {

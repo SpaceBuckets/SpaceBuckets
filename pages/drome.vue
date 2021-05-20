@@ -35,11 +35,15 @@ export default {
 
 <style lang="scss">
 iframe {
-  width: 100%;
+  width: calc(100% - 250px);
   height: 100vh;
   border: 0;
   position: fixed;
-  top: 50px;
-  left: 0;
+  top: 0;
+  left: 250px;
+  @media (max-width: 980px) {
+    left: 0;
+    top: 50px;
+  }
 }
 </style>

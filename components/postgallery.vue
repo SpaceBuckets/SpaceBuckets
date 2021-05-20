@@ -10,7 +10,6 @@
           <div class="filters-container">
 
 
-            <h3>Filters</h3>
             <div class="select-filter-container" :key="`${parent}`" v-for="(items, parent) in filterOptions">
               <div class="filter-single-top">{{parent}}</div>
               <select :ref="`select${parent}`" @change="filterPosts(parent)">
@@ -234,7 +233,6 @@ export default {
 
 .gallery-container {
   margin: 0px auto;
-  padding-left: 250px;
   @media (max-width: 980px) {
     padding: 0;
   }
@@ -257,6 +255,7 @@ export default {
 
 .filters-container {
   color: #eee;
+  display: flex;
   h3 {
     text-transform: uppercase;
     margin-bottom: 15px;

@@ -278,12 +278,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#app {
-  padding-left: 250px;
-  @media (max-width: 980px) {
-    padding-left: 0;
-  }  
-}
+
 html {
   box-sizing: border-box;
 }
