@@ -17,11 +17,11 @@
                 <option v-for="option in items" :key="`${option}-${parent}`" :value="option">{{option}}</option>
               </select>
             </div>
-         
-          </div>
-          <div class="perpage-container">
+                  <div class="perpage-container">
               <div class="results">Found {{ totalLength }} builds »</div>
-          </div>             
+          </div>  
+          </div>
+            
         </div>
           <div class="cards-wrapper">
             <div class="cards-container">
@@ -256,6 +256,7 @@ export default {
 .filters-container {
   color: #eee;
   display: flex;
+  align-items: flex-start;
   h3 {
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -277,10 +278,10 @@ export default {
     }
   }
   > div {
-    margin-bottom: 15px;
     position: relative;
     border: 1px solid #333;
-    width: 100%;
+    width: max-content;
+    min-width: 100px;
     &.sort-filters {
       border-radius: 3px;
       overflow: hidden;

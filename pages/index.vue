@@ -30,24 +30,25 @@
       </div>
       <div class="post-wrapper">  
         <card :id="randItem" />
+        <cardindex title="Start Here: simple DIY template" link="template" variation="doubled"/>
+
+        <cardindex title="Bucket Builder" link="build" />
 
         <card :id="mad" />
-        
-        <cardindex title="Start Here: simple DIY template" link="template" variation="doubled"/>
-        <cardindex title="Tools and Parts" link="materials" />
-        
-        <card :id="randItem2" />
-
-        <card :id="gnk" />
-
         <cardindex title="Grow your own food" link="docs" variation="doubled"/>
-        <cardindex title="Bucket Builder" link="build" />
+
+        <cardindex title="Tools and Parts" link="materials" />
+
+        <card :id="randItem2" />
+        <cardindex title="Play the Bucketdrome" link="drome" variation="doubled"/>
+
+        <cardindex title="Space Buckets Manifesto" link="manifesto" />
+
 
         <card :id="simpleLED" />
         <card :id="sag" />
+        <card :id="gnk" />
 
-        <cardindex title="Play the Bucketdrome" link="drome" variation="doubled"/>
-        <cardindex title="Space Buckets Manifesto" link="manifesto" />
         <card :id="ekrof" />
         <card :id="forever" />
 

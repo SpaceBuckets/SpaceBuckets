@@ -297,10 +297,13 @@ button:focus {
 
 .search-sidebar {
   color: #eee;
-  padding: 15px;
+  padding: 15px 5px 0;
   backface-visibility: hidden;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  margin: 0 30px 20px;
   a {
     text-decoration: none;
   }
@@ -321,7 +324,7 @@ button:focus {
     font-size: 20px;
     color: #eee;
     padding-bottom: 0px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-align: left;
   }
 }
