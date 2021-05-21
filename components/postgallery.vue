@@ -31,11 +31,19 @@
 
             <div class="top-wrapper">
               <div class="pagination">
-                <nuxt-link v-if="$route.params.page > 1" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)-1, category: $route.params.category } }">
+                <nuxt-link v-if="$route.params.page > 1 && $route.params.category" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)-1, category: $route.params.category } }">
                   « Prev
                 </nuxt-link>
-                <nuxt-link v-if="megapostLength > 1" :class="{active: page === $route.params.page }" :key="page" :to="{ name: 'gallery-page-category', params: { page: parseInt(page), category: $route.params.category } }" v-for="page in megapostLength">{{ page }}</nuxt-link>
-                <nuxt-link v-if="$route.params.page < megapostLength" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)+1, category: $route.params.category } }">
+                <nuxt-link v-if="$route.params.page > 1 && !$route.params.category" :to="{ name: 'gallery-page', params: { page: parseInt($route.params.page)-1} }">
+                  « Prev
+                </nuxt-link>                
+                <nuxt-link v-if="megapostLength > 1 && $route.params.category" :class="{active: page === $route.params.page }" :key="page" :to="{ name: 'gallery-page-category', params: { page: parseInt(page), category: $route.params.category } }" v-for="page in megapostLength">{{ page }}</nuxt-link>
+                <nuxt-link v-if="megapostLength > 1 && !$route.params.category" :class="{active: page === $route.params.page }" :key="page" :to="{ name: 'gallery-page', params: { page: parseInt(page) } }" v-for="page in megapostLength">{{ page }}</nuxt-link>
+
+                <nuxt-link v-if="$route.params.page < megapostLength && !$route.params.category" :to="{ name: 'gallery-page', params: { page: parseInt($route.params.page)+1 } }">
+                  Next »
+                </nuxt-link>  
+                <nuxt-link v-if="$route.params.page < megapostLength && $route.params.category" :to="{ name: 'gallery-page-category', params: { page: parseInt($route.params.page)+1, category: $route.params.category } }">
                   Next »
                 </nuxt-link>       
               </div>
