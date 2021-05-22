@@ -25,7 +25,7 @@ export default {
     },  
     script: [
       { src: 'https://spacebuckets.com/statvars.js', type: 'text/javascript' },
-      { src: 'https://statcounter.com/counter/counter.js', type: 'text/javascript', async: true }
+      { src: 'https://statcounter.com/counter/counter.js', type: 'text/javascript' }
     ],    
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
     meta: [
