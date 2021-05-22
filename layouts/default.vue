@@ -42,6 +42,8 @@
 </template>
 
 <script>
+
+
 export default {
   scrollToTop: false,
   data() {
@@ -52,36 +54,15 @@ export default {
   watch: {
     $route(to, from) {
       this.openNav = false;
-      this.hitStat();
     },
   },
   methods: {
-    hitStat() {
-      this.$nextTick(() => {
-        if (process.client) {
-          var src = document.getElementById("stat");
-          if (src) {
-            src.innerHTML = "";
-            var img = document.createElement("img");
-            img.src =
-              "https://c.statcounter.com/8400951/0/f591167d/1/?t=" +
-              new Date().getTime();
-            src.appendChild(img);
-          }
-        }
-      });
-    },
     submitSearch() {
       this.$router.push({ name: 'search', query: { 'q': this.$refs.searchInput.value } });
     },
     submitSearchMobile() {
       this.$router.push({ name: 'search', query: { 'q': this.$refs.searchInputMobile.value } });
     }          
-  },
-  created() {
-    if (process.client && window) {
-      this.hitStat();
-    }    
   },
 };
 </script>  
