@@ -53,7 +53,7 @@ export default {
   },
   watch: {
     $route(to, from) {
-      this.openNav = false;
+      this.openNav = false;      
     },
   },
   methods: {

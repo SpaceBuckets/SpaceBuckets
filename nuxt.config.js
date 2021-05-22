@@ -25,7 +25,6 @@ export default {
     },  
     script: [
       { src: 'https://spacebuckets.com/statvars.js', type: 'text/javascript' },
-      { src: 'https://statcounter.com/counter/counter.js', type: 'text/javascript' }
     ],    
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
     meta: [
@@ -39,6 +38,7 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=auto' }      
     ],
   }, 
+  plugins: ['~/plugins/stat.client'],
   components: true,
   loading: { color: "#fdd835" },
   vueMeta: { refreshOnceOnNavigation: true },
