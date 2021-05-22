@@ -24,7 +24,7 @@ export default {
       return "DIY indoor gardening - Space Buckets";
     },  
     script: [
-      { src: './statvars.js', type: 'text/javascript', async: true },
+      { src: './statvars.js', type: 'text/javascript' },
       { src: 'https://statcounter.com/counter/counter.js', type: 'text/javascript', async: true }
     ],    
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
