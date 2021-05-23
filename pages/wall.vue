@@ -58,7 +58,7 @@ this.posts = selected
           hid: "description",
           name: "description",
           content:
-            "Are you enjoying this website? Your feedback is always welcome! Use this section to voice your opinion.",
+            "Check out the experimental wall of space bucket grows! More than 350 builds await.",
         },
       ],
     };
