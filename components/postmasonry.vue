@@ -105,6 +105,7 @@
     <a
       class="img-container"
       v-for="(img, ie) in post.i"
+      target="_blank"
       :key="`section-${ie}`"
       :href="`/u/${post.s}/${img.h}`">
       <img v-if="variation != 'skeleton'" :src="`/u/${post.s}/${img.h}`" alt />

@@ -18,36 +18,27 @@ export default {
     routes: getCats,  
   },
   head: {
-    htmlAttrs: {
-      lang: "en",
-    },
+    htmlAttrs: { lang: "en", },
     titleTemplate: (chunk) => {
       if (chunk) { return `${chunk}`; }
       return "DIY indoor gardening - Space Buckets";
     },  
+    script: [
+      { src: 'https://spacebuckets.com/statvars.js', type: 'text/javascript' },
+    ],    
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
     meta: [
       { charset: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      {
-        hid: 'theme-color',
-        name:"theme-color",
-        content:"#151515"
-      },
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'DIY Indoor Gardening with stacked containers and LED or CFL lights. Grow plants indoors and join our community!'
-      }      
+      { hid: 'theme-color', name:"theme-color", content:"#151515" },
+      { hid: 'description', name: 'description', content: 'DIY Indoor Gardening with stacked containers and LED or CFL lights. Grow plants indoors and join our community!' }      
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=auto'
-      }      
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=auto' }      
     ],
   }, 
+  plugins: ['~/plugins/stat.client'],
   components: true,
   loading: { color: "#fdd835" },
   vueMeta: { refreshOnceOnNavigation: true },
