@@ -5,9 +5,10 @@
         drome: $route.path.includes('/drome'),
       }"
     >
-      <h1 class="nav-logo">
-        <nuxt-link :to="{ name: 'index' }" exact>SPACE BUCKETS</nuxt-link>
-      </h1>
+      <div class="nav-logo">
+        <nuxt-link :to="{ name: 'index' }" exact><h1>SPACE BUCKETS</h1></nuxt-link>
+        <span>DIY indoor gardening</span>
+      </div>
       <div
         class="nav-sep logger"
         style="padding: 0"
@@ -29,9 +30,9 @@
         <nuxt-link to="/build"><icon-mix/>BUILDER</nuxt-link>
         <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
         <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
-        <nuxt-link to="/designer" class="onlydesktop" no-prefetch><icon-images/>DESIGN</nuxt-link>
+        <nuxt-link to="/designer" class="onlydesktop" no-prefetch><icon-bucket/>DESIGN</nuxt-link>
         <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
-        <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets"><icon-reddit/>SUBREDDIT</a>
+        <a href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets"><icon-reddit/>SUBREDDIT</a>
         <nuxt-link to="/feedback" class="onlymobile feedback-item" no-prefetch>FEEDBACK</nuxt-link>
 
       </div>
@@ -139,14 +140,23 @@ header {
     }
   }
   .nav-logo {
-    padding: 0 15px;
-    min-height: 50px;
-    display: flex;
-    align-items: center;
+    padding: 17px 15px;
+    align-items: flex-start;
+    text-align: left;
     margin: 0;
-    a {
+    display: flex;
+    flex-direction: column;
+    span {
+      font-size: 15px;
+      font-weight: normal;
+      font-family: monospace;
+      flex: 1;
+    }
+    a h1 {
       font-weight: 700;
       font-size: 21px;
+      flex: 1;
+      margin-bottom: 4px;
       &:hover {
         color: #fdd835 !important;
       }

@@ -239,7 +239,7 @@ export default {
     position: relative;
     border: 1px solid #333;
     width: 100%;
-    max-width: 200px;
+    max-width: 250px;
     margin-right: 10px;
 
   }

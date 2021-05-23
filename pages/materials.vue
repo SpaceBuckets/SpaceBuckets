@@ -217,7 +217,7 @@ export default {
   img {
     display: block;
     margin: 0 auto;
-    width: 200px;
+    width: 250px;
     height: auto;
     padding: 12px;
   }  
