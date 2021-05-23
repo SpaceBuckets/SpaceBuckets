@@ -147,7 +147,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .progress {
   display: flex;
   height: 2px;
