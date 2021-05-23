@@ -8,7 +8,7 @@
         </p>
       </div>
     </div>
-    <div class="textarea-content" :class="{active: sendingFeedback}">
+    <div class="textarea-contentw" :class="{active: sendingFeedback}">
       <form ref="submitFeedback" name="submit-to-google-sheet">
         <input name="name" placeholder="Enter name (optional)">
         <textarea name="message" placeholder="Enter feedback..."></textarea>
@@ -63,9 +63,12 @@ export default {
 </script>
 
 <style lang="scss">
-.textarea-content {
+.textarea-contentw {
   padding: 15px;
   background: #fff;
+  form {
+    width: 100%; 
+  }
   &.active {
     form {
       position: relative;
@@ -110,4 +113,6 @@ export default {
     }
   }
 }
+
+
 </style>
