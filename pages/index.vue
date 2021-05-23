@@ -4,50 +4,40 @@
 
     <template v-slot:main>
       <div class="intro-home">
-        <nuxt-link to="/new" class="submit-link">
-          <h2>Submit your build!</h2>
-          <div><icon-flask/>Add a bucket to the gallery.</div>
+        <nuxt-link :to="item.link" v-for="(item, i) in introItems" :key="i">
+          <h2>{{item.title}}</h2>
+          <div><component :is="item.icon"/>{{item.desc}}</div>
         </nuxt-link>        
-        <nuxt-link to="/materials">
-          <h2>Begin your journey</h2>
-          <div>
-            <div class="onlydesktop"><icon-plant/><span>Become a DIY gardener.</span></div>
-            <div class="onlymobile"><icon-random/><span>Swipe for a random build.</span></div>
-          </div>
-        </nuxt-link>
-        <nuxt-link to="/gallery/1">
-          <h2>Try a random build</h2>
-          <div><icon-random/>Infinite bucket loop!</div>
-        </nuxt-link>
+
         <a href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets">
           <h2>Join our subreddit</h2>
           <div><icon-reddit/>110.000+ bucketeers await.</div>
-        </a>
-        <nuxt-link to="/feedback">
-          <h2>Contact us!</h2>
-          <div><icon-mail/>info@spacebuckets.com</div>
-        </nuxt-link>
+        </a>        
       </div>
       <div class="post-wrapper">  
         <card :id="randItem" />
-
         <card :id="mad" />
-        
+
         <cardindex title="Start Here: simple DIY template" link="template" variation="doubled"/>
-        <cardindex title="Tools and Parts" link="materials" />
-        
-        <card :id="randItem2" />
 
-        <card :id="gnk" />
-
-        <cardindex title="Grow your own food" link="docs" variation="doubled"/>
         <cardindex title="Bucket Builder" link="build" />
 
+        <card :id="randItem2" />
         <card :id="simpleLED" />
-        <card :id="sag" />
 
+        <cardindex title="Grow your own food" link="docs" variation="doubled"/>
+
+        <cardindex title="Tools and Parts" link="materials" />
+
+      <card :id="sag" />
+        <card :id="gnk" />
         <cardindex title="Play the Bucketdrome" link="drome" variation="doubled"/>
+
         <cardindex title="Space Buckets Manifesto" link="manifesto" />
+
+
+  
+
         <card :id="ekrof" />
         <card :id="forever" />
 
@@ -80,13 +70,41 @@ export default {
     const garbo = await singlePost("doublejallday-bin");
     const randItem = await singleRandom();
     const randItem2 = await singleRandom();
+    var introItems = [
+        {
+          link: "/new",
+          title: "Submit your build!",
+          desc: "Add a bucket to the gallery.",
+          icon: "icon-flask"
+        },
+        {
+          link: "/materials",
+          title: "Begin your journey",
+          desc: "Become a DIY gardener.",
+          icon: "icon-plant"
+        },
+        {
+          link: "/gallery/1",
+          title: "Try a random bucket",
+          desc: "Infinite bucket loop!",
+          icon: "icon-random"
+        },
+        {
+          link: "/feedback",
+          title: "Contact us!",
+          desc: "Your feedback is welcome.",
+          icon: "icon-mail"
+        },                              
+      ]
+    introItems = introItems.sort(() => Math.random() - 0.5)
 
-    return { randItem2,randItem,garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
+    return { introItems, randItem2,randItem,garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
   },
   data() {
     return {
       swipeItem: [],
       loadingSwipe: true,
+
     };
   },
   async created() {
@@ -128,7 +146,7 @@ export default {
   text-align: center;
   font-size: 0;
   overflow: hidden;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 5px;
   width: 100%;
   height: 75px;
