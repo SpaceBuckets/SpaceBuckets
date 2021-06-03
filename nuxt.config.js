@@ -38,7 +38,7 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=auto' }      
     ],
   }, 
-  plugins: ['~/plugins/stat.client'],
+  plugins: ['~/plugins/stat'],
   components: true,
   loading: { color: "#fdd835" },
   vueMeta: { refreshOnceOnNavigation: true },
