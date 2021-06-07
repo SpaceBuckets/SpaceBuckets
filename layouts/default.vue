@@ -67,6 +67,13 @@ export default {
 };
 </script>  
 <style lang="scss">
+#statcount {
+  width: 0;
+  height: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
 header {
   background: #151515;
   color: #eee;
