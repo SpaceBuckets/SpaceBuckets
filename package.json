@@ -24,7 +24,7 @@
     "gray-matter": "^4.0.2",
     "image-size": "^0.8.3",
     "node-sass": "^4.14.1",
-    "nuxt": "2.15.6",
+    "nuxt": "2.15.7",
     "sass-loader": "^10.1.1",
     "sort-array": "^4.1.1"
   },
