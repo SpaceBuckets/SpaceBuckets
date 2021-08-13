@@ -75,26 +75,21 @@ export default {
           link: "/new",
           title: "Submit your build!",
           desc: "Add a bucket to the gallery.",
-          icon: "icon-flask"
+          icon: "iconflask"
         },
         {
           link: "/materials",
           title: "Begin your journey",
           desc: "Become a DIY gardener.",
-          icon: "icon-plant"
+          icon: "iconplant"
         },
         {
           link: "/gallery/1",
           title: "Try a random bucket",
           desc: "Infinite bucket loop!",
-          icon: "icon-random"
+          icon: "iconrandom"
         },
-        {
-          link: "/feedback",
-          title: "Contact us!",
-          desc: "Your feedback is welcome.",
-          icon: "icon-mail"
-        },                              
+                         
       ]
     introItems = introItems.sort(() => Math.random() - 0.5)
 

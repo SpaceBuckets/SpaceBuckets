@@ -180,51 +180,51 @@ export default {
           bucket: {
             title: "Classic bucket",
             description: "A standard 5gal container: perfect match for UFO LEDs.",
-            illus: "illus-bucket"
+            illus: "illusbucket"
           },
           brute: {
             title: "Supersized",
             description: "Useful to get more yield and a bigger workspace.",
-            illus: "illus-brute"
+            illus: "illusbrute"
           },
           tote: {
             title: "Totes",
             description: "These have an ideal rectangular shape for powerful lighting.",
-            illus: "illus-tote"
+            illus: "illustote"
           }          
         },
         light: {
           cfl: {
             title: "CFL Bulbs",
             description: "The cheapest option. Use them if LEDs are not an available.",
-            illus: "illus-cfl"            
+            illus: "illuscfl"            
           },
           ufo: {
             title: "UFO LED",
             description: "The best fit for a Space Bucket, with plug and play installation.",
-            illus: "illus-ufo"                  
+            illus: "illusufo"                  
           },
           led: {
             title: "High-Power LED",
             description: "Custom chips can result in powerful lighting solutions.",
-            illus: "illus-led"
+            illus: "illusled"
           }
         },
         airflow: {
           pcfan: {
             title: "PC Fans",
             description: "Easy to find and recycle, and they provide enough airflow.",
-            illus: "illus-pcfan"            
+            illus: "illuspcfan"            
           },
           linefan: {
             title: "110v/220v Fans",
             description: "Better than PC fans, they run at line voltage (110v or 220v).",
-            illus: "illus-linefan"                
+            illus: "illuslinefan"                
           },
           inline: {
             title: "Inline Fans",
             description: "The most poweful ernative for airflow and smell control.",
-            illus: "illus-inlinefan"                
+            illus: "illusinlinefan"                
           }
         }
       }      
