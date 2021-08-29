@@ -75,19 +75,19 @@ export default {
           link: "/new",
           title: "Submit your build!",
           desc: "Add a bucket to the gallery.",
-          icon: "iconflask"
+          icon: "icon-flask"
         },
         {
           link: "/materials",
           title: "Begin your journey",
           desc: "Become a DIY gardener.",
-          icon: "iconplant"
+          icon: "icon-plant"
         },
         {
           link: "/gallery/1",
           title: "Try a random bucket",
           desc: "Infinite bucket loop!",
-          icon: "iconrandom"
+          icon: "icon-random"
         },
                          
       ]

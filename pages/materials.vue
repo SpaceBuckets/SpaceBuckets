@@ -1,6 +1,6 @@
  <template>
     <div class="gallery-container">
-     <div style="padding: 10px 15px 20px;background: #fff;">
+     <div style="padding: 10px 15px 20px;background: #fafafa;">
       <br>
       <p>
         Welcome! You have reached the home of the Space Buckets movement. We're an <a href="https://www.reddit.com/r/SpaceBuckets">open community of indoor gardeners</a> who like to build DIY grow chambers. Space Buckets are easy to make, and only require common items for construction.
@@ -209,7 +209,7 @@ export default {
   flex-basis: calc(320px - 10px);
   margin: 0 20px 20px 0;
   border-radius: 2px;
-  background: #fff;
+  background: #fafafa;
   max-width: 250px;
   height: 300px;
   img {

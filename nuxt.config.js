@@ -23,9 +23,9 @@ export default {
       if (chunk) { return `${chunk}`; }
       return "DIY indoor gardening - Space Buckets";
     },  
-    script: [
+/*     script: [
       { src: 'https://spacebuckets.com/statvars.js', type: 'text/javascript' },
-    ],    
+    ],  */   
     headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', },
     meta: [
       { charset: "utf-8" },
@@ -38,7 +38,7 @@ export default {
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=auto' }      
     ],
   }, 
-  plugins: ['~/plugins/stat'],
+  plugins: ['~/plugins/stat','~/plugins/globalObject'],
   components: true,
   loading: { color: "#fdd835" },
   vueMeta: { refreshOnceOnNavigation: true },

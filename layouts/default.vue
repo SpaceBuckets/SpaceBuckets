@@ -3,6 +3,7 @@
     <header
       :class="{
         drome: $route.path.includes('/drome'),
+        docs: $route.path.includes('/docs')
       }"
     >
       <h1 class="nav-logo">
@@ -246,8 +247,22 @@ a.feedback-item {
 </style>
 
 <style lang="scss">
+
+header {
+  & + div {
+    background: #000;
+  }
+  &.docs + div {
+    //background: #fafafa;
+  }
+}
+
+
+
 body {
       overflow-x: hidden !important;
+          background: #000;
+
 }
 button:focus {
   outline: 0;
@@ -272,8 +287,11 @@ button:focus {
 }
 
 .search-sidebar {
-  height: 100vh;
+  bottom: 0;
+  overflow: auto;
+  padding-bottom: 100px;
   max-width: 250px;
+  width: 100%;
   background: #000;
   color: #eee;
   padding: 15px;
@@ -317,9 +335,9 @@ html {
 }
 
 body {
-  background-color: #000;
   margin: 0;
   padding-top: 50px;
+ 
 }
 
 a {

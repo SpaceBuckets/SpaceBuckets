@@ -65,7 +65,7 @@ export default {
 <style lang="scss">
 .textarea-contentw {
   padding: 15px;
-  background: #fff;
+  background: #fafafa;
   form {
     width: 100%; 
   }

@@ -169,7 +169,7 @@ export default {
 
 .post-content {
   padding: 10px 15px 20px;
-  background: #fff;
+  background: #fafafa;
   min-height: 150px;
   border-right: 1px solid #1a1a1b;
   overflow: auto;
@@ -281,7 +281,7 @@ export default {
     clear: both;
   }
   color: #343536;
-  background: #fff;
+  background: #fafafa;
   border-right: 1px solid #1a1a1b;
   border-bottom: 1px solid #1a1a1b;
   overflow: auto;
@@ -300,7 +300,7 @@ export default {
     padding: 10px 20px;
   }
   .listad-inline {
-    background: #fff;
+    background: #fafafa;
     width: 100%;
     float: left;
     border-top: 1px solid #eee;

@@ -1,31 +1,27 @@
 <template>
-  <swiper :next="swipeItem" type="docs">
-    <template v-slot:main>
-      <div class="docs-wrapper">
-        <div class="search-sidebar onlydesktop">
+ 
+      <div class="docs-container">
+        <div class="docs-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
             <nuxt-link to="/docs/">
-              <h1 style="margin:0">DOCS</h1>
+              <h2 style="margin:0">DOCS</h2>
             </nuxt-link>
             <docsnav />          
           </div>
         </div>
         <div class="doc-single-content">
           <h2>{{doc.t}}</h2>
+          <h5 v-if="doc.a">
+            by <a target="_blank" :href="`https://www.reddit.com/u/${doc.a}`">/u/{{doc.a}}</a> <span v-if="doc.a === 'SuperAngryGuy'">of <a target="_blank" :href="`https://www.reddit.com/r/HandsOnComplexity`">/r/HandsOnComplexity</a></span>
+
+          </h5>
           <div v-html="doc.c"></div>
         </div>
-        <div class="onlymobile">
+        <div class="docs-sidebar onlymobile">
           <docsnav />
         </div>
       </div>
-    </template>
-    <template v-slot:next>
-        <div class="doc-single-content">
-          <h1>{{swipeItem.t}}</h1>
-          <div v-html="swipeItem.c"></div>
-        </div>
-    </template>
-  </swiper>
+ 
 </template>
 
 <script>
@@ -51,28 +47,93 @@ export default {
 
 <style lang="scss">
 .docs-wrapper {
-  padding-left: 250px;
-  @media (max-width: 980px) {
+    @media (max-width: 980px) {
     padding-left: 0;
   }
 }
 
+:root {
+  --padder: 55px;
+}
+
 .doc-single-content {
-  background: #fff;
-  padding: 20px 25px;
-  border-right: 1px solid #1a1a1b;
+  background: #fafafa;
+  padding: 40px 0; 
+  //border-right: 1px solid #1a1a1b;
+  //max-width: 1280px;
+  width: calc(100% - 280px);
+  max-width: max-content;
+  float: left;
+  @media (max-width: 980px) {
+    padding: 10px 0;
+    width: 100%;
+  }  
+  p {
+    padding-right: 100px;
+    @media (max-width: 980px) {
+      padding-right: 0;
+    }    
+  }
   > div {
-    line-height: 1.6em;
-    max-width: 100ch;
+    line-height: 1.65;
+    font-size: 17px;
+    padding: 0 var(--padder);
+    max-width: 1280px;
+    @media (max-width: 980px) {
+      max-width: 100%;
+      padding: 0 15px;
+    }    
   }
   h3 {
-    margin: 20px 0 5px;
-    padding-top: 15px;
-    border-top: 1px dashed #ddd;
+    margin: 30px calc(var(--padder) * -1) 10px;
+    padding: 0 var(--padder);
+    padding-top: 25px;
+    border-top: 1px dashed #ccc;
+    @media (max-width: 980px) {
+      padding: 15px 15px 0;
+      margin: 20px -15px 10px;
+    }    
   }
   h1,
   h2 {
-    margin-bottom: 15px;
+    padding: 0 var(--padder);
+    margin-bottom: 6px;
+    @media (max-width: 980px) {
+      padding: 0 15px;
+    }    
   }
+  h5 {
+    padding: 0 var(--padder);
+    margin: 0;
+    font-weight: normal;
+        margin-bottom: 20px;
+    font-size: 15px;
+    @media (max-width: 980px) {
+      padding: 0 15px;
+    }    
+  }
+}
+
+strong {
+  //background: #f5d134;
+}
+.docs-sidebar {
+  padding: 0;
+  position: relative;
+  width: 280px;
+  float: left;
+  @media (max-width: 980px) {
+    width: 100%;
+  }  
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    font-size: 20px;
+    color: #eee;
+      text-align: left;
+    padding: 15px;
+  }
+
 }
 </style>

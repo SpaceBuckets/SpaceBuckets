@@ -35,7 +35,7 @@ export default {
 
 .post-content {
   padding: 10px 15px 20px;
-  background: #fff;
+  background: #fafafa;
   min-height: 150px;
   border-right: 1px solid #1a1a1b;
   overflow: auto;
