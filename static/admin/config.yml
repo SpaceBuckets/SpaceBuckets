@@ -10,6 +10,8 @@ collections:
     label: "Docs"
     label_singular: "Docs"
     identifier_field: t
+    nested:
+      depth: 100     
     folder: "static/docs"
     create: true
     fields:
