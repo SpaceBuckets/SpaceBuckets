@@ -10,6 +10,8 @@ pre {
   margin-bottom: 30px;
   background: #fff;
   border: 2px solid #eee;
+  white-space: normal;
+
 }
 @media (max-width: 620px) {
   pre {
