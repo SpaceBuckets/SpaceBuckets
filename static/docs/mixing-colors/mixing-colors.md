@@ -20,5 +20,5 @@ c: "I go with _3000K or 3500K for all around use for plant growing_, but experim
 
     Although we tend to use higher color temperature white light for vegging and a lower color temperature for flowering, I've gotten great veg growth with 2100K HPS for cannabis when LST (low stress training) techniques and higher lighting levels were used (500 umol/m2/sec). **I've found greater growth at higher lighting levels but at lower color temperatures with various microgreens testing 2000K, 3000K, and 5000K light**. If longer stems is what want (and what you get with lower lighting levels), but still want aggressive growth with larger leaves, play around with 2000K white LEDs at higher lighting levels for microgreens."
 o: "3"
-d: "Blue light decreases acid growth which is different than growth through photosynthesis."
+d: "I go with 3000K or 3500K for all around use for plant growing, but experiment with various 1750K to 6500K COBs as well (1750K is about what candle light is). In my opinion, mixing warm white and cool white LEDs in a grow light makes no sense, and I consider it a marketing gimmick at best."
 ---

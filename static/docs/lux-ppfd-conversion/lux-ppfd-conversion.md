@@ -140,4 +140,6 @@ c: "_I've tested dozens of LEDs with my spectroradiometer to get these numbers t
     red: 21 | far red: 01
 
     ![](https://i.imgur.com/9VT7LYL.jpeg)"
+d: "I've tested dozens of LEDs with my spectroradiometer to get these numbers to always be within 10%._ These are true measurements and not tied to any specific lux meter. The claims are also backed by peer reviewed literature that uses 67 lux = 1 µmol/m2/sec as a generalization for all white LEDs and not taking CRI into account."
+
 ---

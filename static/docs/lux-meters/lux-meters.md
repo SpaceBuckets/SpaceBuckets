@@ -41,5 +41,5 @@ c: "A **quantum light meter** is called 'quantum' because their measurement is i
 
 
     _Your phone is a poor light meter if it has no cosine correction_ (highly likely does not). I can set up conditions where my Samsung A51 (and Samsung S7) are ten times off a true reading. This is a hardware limitation that can not be corrected with an app. Phones are basically worthless for color LEDs due to the luminous efficiency issue. Based on hands-on experience, I automatically discount all lux measurements done with phones."
-
+d: "A quantum light meter is called 'quantum' because their measurement is in the amount a photons hitting a specific point in space per second and a photon is a quanta of light. A lux meter is called 'lux' since they measure luminous flux."
 ---

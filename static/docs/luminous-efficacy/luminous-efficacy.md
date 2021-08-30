@@ -28,5 +28,6 @@ c: "It's easy to get **'efficacy' (how well something works)** and ['efficiency'
     *   **Question:** what is the electrical efficiency of a 660nm LED with a PPE of 2.8 µmol/joule? (1240/660=1.88eV) (10.37/1.88=5.52 µmol/joule) (2.8 µmol/joule/5.52 µmol/joule=50.7% efficient)
 
     *   **Question:** what is the electrical efficiency of a 450nm LED with a PPE of 2.8 µmol/joule? (1240/450=2.76eV) (10.37/2.76=3.76 µmol/joule) (2.8 µmol/joule/3.76 µmol/joule=74% efficient)"
+d: "It's easy to get 'efficacy' (how well something works) and 'efficiency' (ratio of useful work) confused. As we'll see, knowing this difference helps us make LED efficiency calculations and understand why red LEDs are used in grow lights."
 
 ---

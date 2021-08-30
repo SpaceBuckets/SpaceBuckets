@@ -26,4 +26,5 @@ c: "It is important to understand that the light bulbs in your home are rated in
 
 
     _An economic metric you might use is umol/sec per dollar or PPF/dollar._ If that '100 watt equivalent' 18.8 umol/sec light bulb is costs $2.50 then 18.8/2.5= 7.52 umol/sec per dollar is the cost of the light. As a comparison, a 1000 HPS consumes 1000 watts and outputs 1800 uMol/sec of light. That 1000 HPS lighting setup costs $200. 1800/200= 9 umol/sec per dollar. The HPS provides 25% more light per dollar than the LED light bulb."
+d: "It is important to understand that the light bulbs in your home are rated in wattage equivalent to an incandescent bulb and **don't actually use 100 watts**. For example, a '100 watt' light bulb is around 1600 lumens and a '60 watt' bulb is around 800 lumens."
 ---

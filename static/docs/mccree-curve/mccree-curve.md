@@ -29,4 +29,6 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
     *   The work of McCree demonstrated that _both sides of a leaf can be used efficiently for photosynthesis_. Dicotyledons may reflect more green light on the abaxial (underside) of a leaf, while monocotyledons will have the same green reflectance on both sides of a leaf.
 
     *   **YPF (YPFD) or 'yield photon flux (density)'** is PPFD that has been weighed to the McCree curve. It is fortunately rarely used in botany but you do sometimes see it. There are special PAR sensors that give measurements in YPFD instead of PPFD, as well as spectroradiometers that can do this."
+d: "The McCree curve is a quantum efficiency lighting curve used in botany and should be used only as an initial foundation for understanding photosynthesis rates by wavelength. It is far more accurate than charts for chlorophyll dissolved in a solvent or charts for green algae, and it is common for these charts to get mixed up."
+
 ---

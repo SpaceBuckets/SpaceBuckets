@@ -29,5 +29,6 @@ c: "To maximize an LED grow light's idealized efficacy, _we want the LED current
     ### Optical losses
 
     Using secondary optics (i.e a lens) over an LED can focus the light so an LED grow light maker can post some impressive PPFD (intensity) numbers right below the light, but the PPF number (total light output) is going to drop as well. _There will always be optical losses with a lens of perhaps 7-9%._ This same loss applies to grow lights that have a glass/plastic/silicon cover over the LEDs for splash proofing the light. If you grow hydroponically, and a prone to splashing hydro nute solution around, it may be worth it to take this inefficiency hit to keep the salt solution away from the electronics. Electrical safety is another very important reason glass covers are used for the ingress protection they provide."
+d: "The upper limit of LED fixture efficacy is determined by the LED package efficacy multiplied by four factors inherent to all fixtures: current droop, thermal droop, driver (power supply) inefficiencies, and optical losses."
 
 ---

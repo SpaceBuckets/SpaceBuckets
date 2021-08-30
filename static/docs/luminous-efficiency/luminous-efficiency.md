@@ -23,5 +23,5 @@ c: "Luminous efficiency is **a percentage correction factor for wavelengths of l
 
     If we know that the white light coming from the bulb with a CRI of 80 has a theoretical maximum efficacy of 320 lumens per watt and our light is rated for 110 lumens per watt, **then the bulb is 34% efficient**. If the light bulb is using 450nm blue LEDs as a phosphor pump source, and the maximum theoretical efficacy of a 450nm photon is 3.76 umol/joule, **then we know that the light is putting out 1.28 umol/joule of light**. The light will be drawing 14.5 watts (1600 lumens light output / 110 lumens per watt) giving a total PPF of 18.8 umol/sec of light. If that 18.8 umol/sec of light is spread evenly over a square meter of plant canopy then the average light intensity in the square meter will have a PPFD of 18.8 umol/m2/sec."
 o: "3"
-d: "Blue light decreases acid growth which is different than growth through photosynthesis."
+d: "Luminous efficiency is a percentage correction factor for wavelengths of light (relative to 555nm) that takes in to account the spectral sensitivity of the human eye. 555nm is what our eyes are most sensitive to and has a luminous efficiency of 1.0002."
 ---

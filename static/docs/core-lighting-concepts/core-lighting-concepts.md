@@ -88,6 +88,5 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
     *   [Learn more about the McCree Curve »](/docs/mccree-curve)
     
     *   [Learn more about the Emerson Effect »](/docs/emerson-effect)"
-
-
+d: "The topics below represent the core concepts in Horticulture Lighting Theory: learn about PAR, PPFD, PPE, CCT, McCree Curve and the Emerson far red Effect. This article features basic definitions to get you started on this amazing science."
 ---

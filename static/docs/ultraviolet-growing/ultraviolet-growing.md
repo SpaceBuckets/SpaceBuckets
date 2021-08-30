@@ -22,7 +22,7 @@ c: "Adding UV LEDs (with about 100 to 400nm wavelength) are typically only used 
 
     *   _UV-C (100–280nm) should be considered dangerous_, and in testing I have damaged a number of plants with higher amounts of UV-C."
 o: "3"
-d: "The Emerson effect is about driving photosynthesis with part of the light PAR (400-680nm in this case), and part of the light far red (700nm-740nm or so), combined can result in photosynthesis rates higher than normal."
+d: "Adding UV LEDs (with about 100 to 400nm wavelength) are typically only used for light sensitive protein reactions effects, not as photosynthesis drivers per se. The pure UV-A grows I've done did result in slow grow and stunted plants."
 ---
 
 
