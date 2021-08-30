@@ -9,8 +9,10 @@ collections:
   - name: "docs"
     label: "Docs"
     label_singular: "Docs"
-    folder: "static/docs"
+    identifier_field: t
+    format: frontmatter
+    folder: "static/docs/"
     create: true
     fields:
        - {label: "Title", name: "t", widget: "string"}
-       - {label: "Body", name: "c", widget: "markdown"}
+       - {label: "Body", name: "c", widget: "string"}
