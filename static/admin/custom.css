@@ -103,3 +103,7 @@ h3 {
 h2 {
   margin-bottom: 10px;
 }
+
+html {
+  font-family: Arial,Helvetica,sans-serif;
+}

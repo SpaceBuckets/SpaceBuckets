@@ -54,10 +54,6 @@ async function createDb(src) {
     post = contents.data
     if(src === 'docs') {
       post.c = md.render(post.c);
-      if(post.t === "CRI (Color Rendering Index)") {
-
-      console.log(post.c)
-    }
     }
     posts.push(post);
   });
