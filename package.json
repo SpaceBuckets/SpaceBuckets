@@ -26,10 +26,8 @@
     "node-sass": "^4.14.1",
     "nuxt": "2.15.8",
     "sass-loader": "^10.1.1",
-    "sort-array": "^4.1.1"
-  },
-  "dependencies": {
+    "sort-array": "^4.1.1",
     "@babel/preset-env": "^7.12.13",
-    "marked": "^3.0.2"
+    "marked": "^3.0.2"    
   }
 }
