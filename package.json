@@ -24,13 +24,10 @@
     "gm": "^1.23.1",
     "gray-matter": "^4.0.2",
     "image-size": "^0.8.3",
-    "marked": "^3.0.2",
+    "markdown-it": "^12.2.0",
     "node-sass": "^4.14.1",
     "nuxt": "2.15.8",
     "sass-loader": "^10.1.1",
     "sort-array": "^4.1.1"
-  },
-  "dependencies": {
-    "markdown-it": "^12.2.0"
   }
 }

@@ -3,7 +3,6 @@ const sizeOf = require('image-size');
 const glob = require('glob');
 const sortArray = require('sort-array');
 const fs = require('fs');
-const marked = require("marked");
 var md = require('markdown-it')({html:true,xhtmlOut:true});
 
 function cartesian(...n){var r=[],t=n.length-1;return function a(e,u){for(var c=0,h=n[u].length;c<h;c++){var i=e.slice(0);i.push(n[u][c]),u==t?r.push(i):a(i,u+1)}}([],0),r}
