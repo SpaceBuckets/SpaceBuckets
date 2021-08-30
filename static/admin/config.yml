@@ -10,8 +10,7 @@ collections:
     label: "Docs"
     label_singular: "Docs"
     identifier_field: t
-    format: frontmatter
-    folder: "static/docs/"
+    folder: "static/docs"
     create: true
     fields:
        - {label: "Title", name: "t", widget: "string"}
