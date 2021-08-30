@@ -1,6 +1,8 @@
 <template>
-  <swiper :next="swipeItem" type="docs">
-    <template v-slot:main>
+<div>
+
+<!--   <swiper :next="swipeItem" type="docs">
+    <template v-slot:main> -->
       <div class="docs-container">
         <div class="docs-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
@@ -73,14 +75,16 @@
           <docsnav />
         </div>
       </div>
-    </template>
+<!--     </template>
     <template v-slot:next>
       <div class="doc-single-content">
         <h2>{{swipeItem.t}}</h2>
         <div v-html="swipeItem.c"></div>
       </div>
     </template>
-  </swiper>
+  </swiper> -->
+  </div>
+
 </template>
 
 <script>
@@ -105,7 +109,7 @@ export default {
 
 <style lang="scss">
 
-.floatedimg {
+pre {
   max-width: 400px;
   min-width: 400px;
   float:right;
@@ -121,7 +125,7 @@ export default {
       padding:10px;
       padding-bottom: 0;
   }
-  > div {
+  > figcaption {
     background: #eee;
     color: #333;
     font-size: 14px;
@@ -161,7 +165,10 @@ export default {
       font-weight: bold;
     }
   }
+  em,
   strong {
+    font-style: normal;
+    font-weight: bold;
     background: rgba(253,216,53,0.7);
   }
   .quote {

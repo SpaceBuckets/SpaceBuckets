@@ -2,10 +2,10 @@
 t: "Luminous efficacy"
 s: "luminous-efficacy"
 a: "SuperAngryGuy"
-c: "<div class='floatedimg'>
+c: "<pre>
     <img style='width: 100%' src='https://i.imgur.com/D0Kr45G.png'/>
     <div> Luminous efficacy of pure blackbody radiation as a function of temperature</div>
-    </div>
+    </pre>
     <p>It's easy to get <b>'efficacy' (how well something works)</b> and <a href='/docs/luminous-efficiency'>'efficiency' (ratio of useful work)</a> confused. As we'll see, knowing this difference helps us make LED efficiency calculations and understand why red LEDs are used in grow lights.</p>
 
     <p class='quote'>As lighting efficiency improves, it is useful to understand the theoretical limits to luminous efficacy for light that we perceive as white. Independent of the efficiency with which photons are generated, <b>there exists a spectrally imposed limit to the luminous efficacy of any source of photons</b>. We find that, depending on the acceptable bandpass and—to a lesser extent—the color temperature of the light, <b>the ideal white light source achieves a spectral luminous efficacy of 250–370 lm/W</b>.

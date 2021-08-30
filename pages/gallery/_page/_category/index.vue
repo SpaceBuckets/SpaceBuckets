@@ -1,12 +1,12 @@
 <template>
-  <swiper :next="swipeItem" type="posts">
-    <template v-slot:main>
+<!--   <swiper :next="swipeItem" type="posts">
+    <template v-slot:main> -->
       <postgallery :posts="posts" :totalLength="totalLength" :megapostLength="megapostLength"/>
-    </template>
+<!--     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
-  </swiper>
+  </swiper> -->
 </template>
 
 <script>

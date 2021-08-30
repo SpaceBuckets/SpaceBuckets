@@ -1,6 +1,7 @@
-<template>
-  <swiper :next="swipeItem" type="posts">
-    <template v-slot:main>
+<template>  <div>
+
+<!--   <swiper :next="swipeItem" type="posts">
+    <template v-slot:main> -->
 
   <div class="post-masonry">
     <div class="post-content">
@@ -117,11 +118,13 @@
 
 
       <cardrelated :cat="post.g"/>
-    </template>
+<!--     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
-  </swiper>
+  </swiper> -->
+    
+  </div>
 </template>
 
 <script>

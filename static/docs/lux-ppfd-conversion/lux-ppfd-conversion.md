@@ -2,7 +2,7 @@
 t: "Lux to PPFD conversions"
 s: "lux-ppfd-conversion"
 a: "SuperAngryGuy"
-c: "<p><strong>I've tested dozens of LEDs with my spectroradiometer to get these numbers to always be within 10%.</strong> These are true measurements and not tied to any specific lux meter. The claims are also backed by peer reviewed literature that uses <b>67 lux = 1 µmol/m2/sec as a generalization</b> for all white LEDs and not taking CRI into account. The following conversions will get you within 10% for white light.</p>
+c: "<p><em>I've tested dozens of LEDs with my spectroradiometer to get these numbers to always be within 10%.</em> These are true measurements and not tied to any specific lux meter. The claims are also backed by peer reviewed literature that uses <b>67 lux = 1 µmol/m2/sec as a generalization</b> for all white LEDs and not taking CRI into account. The following conversions will get you within 10% for white light.</p>
     <ul>
     <li><b>55 lux</b> = 1 µmol/m2/sec (sunlight)</li>
     <li><b>63 lux</b> = 1 µmol/m2/sec (white light - CRI 90)</li>
@@ -10,12 +10,12 @@ c: "<p><strong>I've tested dozens of LEDs with my spectroradiometer to get these
     <li><b>80 lux</b> = 1 µmol/m2/sec (HPS)</li>
     </ul>
 
-    <div class='floatedimg'>
+    <pre>
         <img style='width: 100%' src='https://i.imgur.com/70AXfJS.png'/>
         <div>Comparing different lighting spectrums</div>
-    </div>
+    </pre>
 
-    <p class='quote'>Dependencies have been shown and conversion factors have been determined, which <b>allow to estimate PPFD, YPFD and radiometric power density of white LED light</b> according to the known illumination in lux. The most adequate estimation of the photosynthetically active white light flux is achieved if one measures the illumination E in kilolumens using a luxmeter, neglects the influence of spectral parameters, and <strong>estimates the PPFD of white LED light according to the formula: PPFD [μmol/s/m2] = 15·E [klx]</strong>.
+    <p class='quote'>Dependencies have been shown and conversion factors have been determined, which <b>allow to estimate PPFD, YPFD and radiometric power density of white LED light</b> according to the known illumination in lux. The most adequate estimation of the photosynthetically active white light flux is achieved if one measures the illumination E in kilolumens using a luxmeter, neglects the influence of spectral parameters, and <em>estimates the PPFD of white LED light according to the formula: PPFD [μmol/s/m2] = 15·E [klx]</em>.
     <i>Anton Sharakshane, <a href='https://www.biorxiv.org/content/biorxiv/early/2018/03/30/289280.full.pdf'>An easy estimate of the PFDD for a plant illuminated with white LEDs</a></i></p>
     <h3>Bridgelux phosphor guide</h3>
     <p>This section covers spectrum charts, conversion factors, and color ratios of the Bridgelux COB array LEDs. <b>The conversion factor is luminous flux (lux) to photosynthetic photon flux density (PPFD) in uMol/m2/sec (micro moles per square meter per second) of PAR (photosynthetic active radiation 400-700nm)</b>. This is so that low cost lux meters can be used as plant lighting meters. The color ratios will not add up to 100. Blue is 400-499nm, green is 500-599nm, red is 600-699nm, far red is 700-799nm. The average wavelength of phosphor pump blue LEDs in my samples was about 453.5nm.</p>

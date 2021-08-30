@@ -1,13 +1,17 @@
 <template>
-  <swiper :next="swipeItem" type="posts">
-    <template v-slot:main>
+<div>
+
+<!--   <swiper :next="swipeItem" type="posts">
+    <template v-slot:main> -->
       <postmasonry :post="post" />
       <cardrelated :cat="post.g"/>
-    </template>
+<!--     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
-  </swiper>
+  </swiper> -->
+  </div>
+
 </template>
 
 <script>

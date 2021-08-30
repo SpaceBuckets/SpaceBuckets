@@ -1,14 +1,14 @@
 <template>
-  <swiper :next="swipeItem" type="posts">
-    <template v-slot:main>
+<!--   <swiper :next="swipeItem" type="posts">
+    <template v-slot:main> -->
       <client-only>
         <postsearch :query="$route.query.q" titler="SEARCH" :posts="posts"/>
       </client-only>
-    </template>
+<!--     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
-  </swiper>
+  </swiper> -->
 </template>
 
 <script>

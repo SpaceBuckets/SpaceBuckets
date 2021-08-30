@@ -1,8 +1,10 @@
 <template>
+<div>
 
+<!-- 
   <swiper :next="swipeItem" type="posts">
 
-    <template v-slot:main>
+    <template v-slot:main> -->
       <div class="intro-home">
         <nuxt-link :to="item.link" v-for="(item, i) in introItems" :key="i">
           <h2>{{item.title}}</h2>
@@ -46,11 +48,13 @@
         <card :id="tito" />
 
       </div>
-    </template>
+<!--     </template>
     <template v-slot:next v-if="!loadingSwipe">
       <postmasonry :post="swipeItem" variation="skeleton" />
     </template>
-  </swiper>
+  </swiper> -->
+  </div>
+
 </template>
 
 <script>
