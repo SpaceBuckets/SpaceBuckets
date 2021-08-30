@@ -181,12 +181,6 @@ pre {
     @media (max-width: 980px) {
       padding: 10px;
     }    
-/*     &:before {
-      content: open-quote;
-      font-size: 40px;
-      font-family: Georgia, "Times New Roman", Times, serif;
-      color: #888;
-    } */
     i {
       display: block;
       padding-top: 5px;
