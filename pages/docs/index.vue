@@ -110,12 +110,14 @@ export default {
 <style lang="scss">
 
 pre {
+  margin: 0;
   max-width: 400px;
   min-width: 400px;
   float:right;
   margin-left:30px;
   margin-bottom: 30px;
   background:#fff;
+  white-space: normal;
   border:2px solid #eee;
   @media (max-width: 620px) {
     max-width: 100%;
@@ -125,7 +127,7 @@ pre {
       padding:10px;
       padding-bottom: 0;
   }
-  > figcaption {
+  > div {
     background: #eee;
     color: #333;
     font-size: 14px;
@@ -165,14 +167,14 @@ pre {
       font-weight: bold;
     }
   }
-  em,
-  strong {
+  em {
     font-style: normal;
     font-weight: bold;
     background: rgba(253,216,53,0.7);
   }
+  blockquote,
   .quote {
-    margin-bottom: 15px;
+    margin: 0;
     background: #eee;
     display: block;
     padding: 15px;

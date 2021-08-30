@@ -6,7 +6,7 @@ c: "_CRI (Color Rendering Index) tells us how well a light source does at accura
 
     <pre>
         <img style='width: 100%' src='https://i.imgur.com/xHuRtoY.jpg'/>
-        <figcaption>The CIE 1960 UCS Color Space</figcaption>
+        <div>The CIE 1960 UCS Color Space</div>
     </pre>
 
     **CRI plays a larger role in lux to PPFD (umol/m2/sec) conversions than color temperature.** Higher CRI lighting will have a greater amount of deeper reds, which naturally have a lower luminous flux at the same radiant flux (because it takes into account the sensitivity of our eyes by wavelength). In other words, the deeper reds have a lower luminous efficiency. You can see the differences in my [spectroradiometer SPD charts](/docs/lux-ppfd-conversion).

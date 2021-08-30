@@ -3,6 +3,7 @@ em {
 }
 
 pre {
+  margin: 0;
   max-width: 400px;
   min-width: 400px;
   float: right;
@@ -24,7 +25,7 @@ pre > img {
   width: 100%;
   padding-bottom: 0;
 }
-pre > figcaption {
+pre > div {
   background: #eee;
   color: #333;
   font-size: 14px;
@@ -65,8 +66,8 @@ strong {
   background: rgba(253, 216, 53, 0.7);
 }
 
-.quote {
-  margin-bottom: 15px;
+blockquote {
+  margin: 0;
   background: #eee;
   display: block;
   padding: 15px;
