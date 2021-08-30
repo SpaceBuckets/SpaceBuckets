@@ -1,6 +1,6 @@
 export default ({ app }) => {
   app.router.afterEach((to, from) => {
-/*       if (process.client) {
+       if (process.client) {
         var current = document.getElementById('statcount')
         if (current) {
           current.src = "https://c.statcounter.com/8400951/0/f591167d/1/?t=" + new Date().getTime();
@@ -10,6 +10,6 @@ export default ({ app }) => {
           s.src = "https://c.statcounter.com/8400951/0/f591167d/1/?t=" + new Date().getTime();
           document.body.appendChild(s); 
         }
-      } */
+      } 
   })
 }
