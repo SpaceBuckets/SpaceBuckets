@@ -16,4 +16,4 @@ collections:
     create: true
     fields:
        - {label: "Title", name: "t", widget: "string"}
-       - {label: "Body", name: "c", widget: "string"}
+       - {label: "Body", name: "c", widget: "markdown"}
