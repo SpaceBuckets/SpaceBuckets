@@ -3,6 +3,7 @@ const sizeOf = require('image-size');
 const glob = require('glob');
 const sortArray = require('sort-array');
 const fs = require('fs');
+const marked = require("marked");
 
 function cartesian(...n){var r=[],t=n.length-1;return function a(e,u){for(var c=0,h=n[u].length;c<h;c++){var i=e.slice(0);i.push(n[u][c]),u==t?r.push(i):a(i,u+1)}}([],0),r}
 const getBuilds = async()=>{try{return(await import("../json/u.json")).default}catch(t){return console.log(t),[]}};
@@ -51,6 +52,10 @@ async function createDb(src) {
     //Parse Markdown
     var contents = matter(fs.readFileSync(`static/${src}/${singleFolder}/${documentes}`, 'utf8').toString());
     post = contents.data
+    if(src === 'docs') {
+      post.c = marked(post.c);
+
+    }
     posts.push(post);
   });
 
