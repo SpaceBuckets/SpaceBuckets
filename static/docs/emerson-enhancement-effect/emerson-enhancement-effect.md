@@ -26,8 +26,7 @@ c: "<div class='floatedimg'>
 
 
     <li><strong>I think most far red driver boards are gimmicks</strong> because they are likely not putting out enough far red light to make a noticeable difference.</li>
-    </ul>
-"
+    </ul>"
 o: "3"
 d: "The Emerson effect is about driving photosynthesis with part of the light PAR (400-680nm in this case), and part of the light far red (700nm-740nm or so), combined can result in photosynthesis rates higher than normal."
 ---

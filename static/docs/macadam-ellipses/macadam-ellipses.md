@@ -14,6 +14,5 @@ c: "<p>The MacAdam ellipses, or SDCM (standard deviation of color matching), are
 
     <p><b>With LED grow lights we don't really care about minor variations in light</b>, and the Samsung LM301H (horticulture) series of medium power LEDs use a 5-step MacAdam ellipse binning, while the LM301B (general illumination) uses a 3-step. In other words, the LM301H has a lot more binning slop that is basically irrelevant to plant growth, but could be relevant for general illumination. The highest MacAdam step number used with LEDs is seven.</p>
 
-    <p>In conclusion: don't worry if you can perceive slight color differences in the LEDs of LED grow lights! <b>Your plants don't care.</b></p>
-"
+    <p>In conclusion: don't worry if you can perceive slight color differences in the LEDs of LED grow lights! <b>Your plants don't care.</b></p>"
 ---

@@ -16,8 +16,7 @@ c: "<p>Adding UV LEDs (with about 100 to 400nm wavelength) are typically only us
     <li><strong>UV-A light (315–400nm) is fairly safe</strong> (it can be dangerous when you stick your eye close to a light source that appears dim yet has a high radiant flux) and at the time of this writing, only UV-A LEDs are used in LED grow lights if UV light is used. </li>
     <li><b>The UV-B (280–315nm) light sources</b> I've seen in grow lights are still tube based because UV-B LEDs are still inefficient (5-10% range).</li>
     <li><strong>UV-C (100–280nm) should be considered dangerous</strong>, and in testing I have damaged a number of plants with higher amounts of UV-C. </li>
-    </ul>
-"
+    </ul>"
 o: "3"
 d: "The Emerson effect is about driving photosynthesis with part of the light PAR (400-680nm in this case), and part of the light far red (700nm-740nm or so), combined can result in photosynthesis rates higher than normal."
 ---
