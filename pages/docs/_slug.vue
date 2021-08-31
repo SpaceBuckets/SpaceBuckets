@@ -57,13 +57,14 @@ export default {
   background: #000;
   color: #fff;
   border-radius: 50%;
-    width: 45px;
-    height: 45px;  
+    width: 50px;
+    height: 50px;  
     display: block;
     padding: 10px;
   svg {
     width: 100%;
     stroke:#fff;
+    pointer-events: none;
   }
 }
 
