@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "Only the energy input not radiated as light needs to be taken in to account for LED heat sink calculations. _This is called thermal wattage._ For example, a 100 watt COB that is 50% efficient would need a heat sink good for 50 watts of heat. A 100 watt COB that is 80% efficient would need a heat sink good for 20 watts of heat.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/uqrvsdV.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/TjFMmCu.jpg'/>
         <div>Duct around a heat sink with a heat source on its base.  <a href='https://en.wikipedia.org/wiki/File:Heat_sink_control_volume.png'>(source)</a></div>
     </pre>
 

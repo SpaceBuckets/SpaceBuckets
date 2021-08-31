@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "It's easy to get **'efficacy' (how well something works)** and ['efficiency' (ratio of useful work)](/docs/luminous-efficiency) confused. As we'll see, knowing this difference helps us make LED efficiency calculations and understand why red LEDs are used in grow lights.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/D0Kr45G.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/BKYs1Jj.jpg'/>
         <div>Luminous efficacy of pure blackbody radiation as a function of temperature</div>
     </pre>
 

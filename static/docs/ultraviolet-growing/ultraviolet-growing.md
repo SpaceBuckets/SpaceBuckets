@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "Adding UV LEDs (with about 100 to 400nm wavelength) are typically only used for light sensitive protein reactions effects, **not as photosynthesis drivers per se**. The pure UV-A grows I've done did result in slow grow and stunted plants. If I wanted to keep a tiny, important plant alive for a long duration I would be using pure UV-A. But, _the effects of UV-A on a plant can be unpredictable_ and needs to be tested by cultivar. The main UV light sensitive protein known about currently is the UVR8 protein which is a 280-315nm UV-B receptor, not a UV-A receptor.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/Tfria5M.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/gMLy1OJ.jpg'/>
         <div>The Electromagnetic Spectrum <a href='https://en.wikipedia.org/wiki/Electromagnetic_radiation#/media/File:EM_spectrumrevised.png'>(source)</a></div>
     </pre>
 

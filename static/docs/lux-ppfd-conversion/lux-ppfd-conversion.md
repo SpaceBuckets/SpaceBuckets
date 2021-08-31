@@ -13,7 +13,7 @@ c: "_I've tested dozens of LEDs with my spectroradiometer to get these numbers t
     *   **80 lux** = 1 µmol/m2/sec (HPS)
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/70AXfJS.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/WYulYES.jpg'/>
         <div>Comparing different lighting spectrums</div>
     </pre>
 
