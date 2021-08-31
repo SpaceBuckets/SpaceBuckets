@@ -20,9 +20,9 @@
         <div class="docs-sidebar onlymobile" id="docslug">
           <docsnav />
         </div>
-        <a class="navigator onlymobile" href="#docslug"><svg fill='none' stroke='#0E1A27' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><line x1="20" y1="80" x2="80" y2="80" />
+        <nuxt-link class="navigator onlymobile" to="#docslug"><svg fill='none' stroke='#0E1A27' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><line x1="20" y1="80" x2="80" y2="80" />
 <line x1="50" y1="15" x2="50" y2="65" />
-<polyline fill="none" points="30,50 50,65 70,50" /></svg></a>
+<polyline fill="none" points="30,50 50,65 70,50" /></svg></nuxt-link>
       </div>
  
 </template>
