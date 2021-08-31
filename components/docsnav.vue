@@ -2,7 +2,7 @@
 
       <div class="search-filters">
         <section ref="section-1" :class="{ractive: $state.docsActive === 1}" @click="$state.docsActive = 1">
-          <div>Getting Started <span>(7)</span></div>
+          <div>Getting Started <span>(9)</span></div>
           <div ref="content-1" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
 <!--             <nuxt-link to="/docs/" :class="{ractive: $route.path.includes('/docs/')}">Begin your Journey</nuxt-link>
  -->            <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
