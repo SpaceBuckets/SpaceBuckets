@@ -88,12 +88,12 @@
               Another option is <b>ONA gel</b>, as SAG says: 'ONA does wonders particularly during a harvest where a simple charcoal filter may not cut it'. You have to put the gel outside of the bucket, near the exhaust fan.
             </div>
          </div>
-        <div class="docs-sidebar onlymobile">
+        <div class="docs-sidebar onlymobile" id="docsluge">
           <docsnav />
         </div>
-         <nuxt-link class="navigator onlymobile" to="/docs/#docslug"><svg fill='none' stroke='#0E1A27' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><line x1="20" y1="80" x2="80" y2="80" />
+         <a class="navigator onlymobile" href="#docsluge"><svg fill='none' stroke='#0E1A27' stroke-width='8' stroke-dashoffset='0' stroke-dasharray='0' stroke-linecap='round' stroke-linejoin='round' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><line x1="20" y1="80" x2="80" y2="80" />
 <line x1="50" y1="15" x2="50" y2="65" />
-<polyline fill="none" points="30,50 50,65 70,50" /></svg></nuxt-link>
+<polyline fill="none" points="30,50 50,65 70,50" /></svg></a>
       </div>
 <!--     </template>
     <template v-slot:next>
