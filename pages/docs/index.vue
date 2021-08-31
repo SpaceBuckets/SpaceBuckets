@@ -133,6 +133,7 @@ pre {
   margin: 0;
   max-width: 400px;
   min-width: 400px;
+  min-height: 200px;
   float:right;
   margin-left:30px;
   margin-bottom: 30px;

@@ -7,7 +7,7 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
     It was developed in the early 1970s by **Keith McCree**, a Ph.D physicist that was a professor of Soil and Crop Sciences at Texas A&M University. He tested 22 different crop plant types for photosynthesis rates with a PPFD of 18-150 µmol/m2/sec, in monochromatic light at 25nm intervals from 350nm to 750nm, and using the single leaf model. **The McCree curve is only valid for these conditions.** Monitoring CO2 uptake was used to measure photosynthesis rates.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/SZdu6hW.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/bSdzTiu.jpg'/>
         <div>Assimilation chamber for measuring photosynthesis</div>
     </pre>
 
@@ -16,7 +16,7 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
     ### Key Takeaways
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/C8k429I.jpeg'/>
+        <img style='width: 100%' src='https://i.imgur.com/U5lUGp1.jpg'/>
         <div>Weighting factor for photosynthesis <a href='https://en.wikipedia.org/wiki/Photosynthetically_active_radiation#/media/File:Photosynthesis_yield_photon_flux_spectral_weighting.svg'>(source)</a></div>
     </pre>
 

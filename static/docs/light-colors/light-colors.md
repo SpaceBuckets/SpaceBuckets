@@ -7,7 +7,7 @@ c: "### BLUE
 _Blue light decreases [acid growth](https://en.wikipedia.org/wiki/Acid_growth)_ (which is different than growth through photosynthesis). Excess acid growth, or 'stretching', in seedlings/veg is all about greater cell expansion in the stem that we get from **lower lighting levels or not enough blue light**. We typically only want as much blue in a light source to help prevent any excess stem elongation. Blue photons have much more energy needed for photosynthesis, and **this extra energy is wasted as heat that the plant has to dissipate**. The associated blue light sensitive proteins are the [phototropins](https://en.wikipedia.org/wiki/Phototropin) and [cryptochromes](https://en.wikipedia.org/wiki/Cryptochrome).
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/fkuQnyz.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/muECkJI.jpg'/>
         <div>The green gap problem for LEDs <a href='https://www.researchgate.net/figure/The-green-gap-Maximum-external-quantum-efficiency-EQE-of-different-commercial-nitride_fig3_283335209'>(source)</a></div>
     </pre>
 

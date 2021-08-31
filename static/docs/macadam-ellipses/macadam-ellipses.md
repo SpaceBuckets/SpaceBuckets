@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "The MacAdam ellipses, or SDCM (standard deviation of color matching), are standard deviations of perceived color differences in LED binning including white LEDs. The higher the step or standard deviation, the lower the binning tolerances which lowers LED costs.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/IVcNOgr.png'/>
+        <img style='width: 100%' src='https://i.imgur.com/jWOIqzS.jpg'/>
         <div>MacAdam Ellipses steps illustration</div>
     </pre>
 
