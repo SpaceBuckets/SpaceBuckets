@@ -16,15 +16,21 @@
           <h2>Begin your Journey</h2>
           <br />
                     <div>
-
+    <pre>
+        <img style='width: 100%' src='https://spacebuckets.com/template/3e3d32.jpg'/>
+        <div>A group of Space Buckets</div>
+    </pre>
           <p>
-            <b>A Space Bucket is a DIY indoor garden</b> that is made by stacking plastic containers alongside lighting (CFL or LED) and airflow (PC or other fans).
+            <em>A Space Bucket is a DIY indoor garden</em> that is made by stacking plastic containers alongside lighting (CFL or LED) and airflow (PC or other fans).
             <b>It is an enclosed growth chamber that can be used to garden many kinds of plants.</b> A Space Bucket is a versatile gardening tool that can be adapted to the users needs. Every variable of the bucket environment can be
             <b>tweaked and upgraded</b> at any time. For example, some plants require more light intensity than others, or different humidity conditions.
           </p>
+
+
+
           <p>
             Space Buckets is also
-            <b>a movement of gardeners, a community of botanically inclined individuals</b> who like to grow plants indoors and share information freely. The
+            <em>a movement of gardeners, a community of botanically inclined individuals</em> who like to grow plants indoors and share information freely. The
             <a
               href="https://www.reddit.com/r/SpaceBuckets"
             >/r/SpaceBuckets subreddit</a> is our main forum, and this website is its companion. Bucketeers are open, friendly and thorough, as the manifesto states.
@@ -40,8 +46,13 @@
               <b>You can grow any plant you can imagine!</b> Space Buckets can be used for the entire life of most plants, and also works great for germinating seeds or maintaining clones. You will see that Cannabis is a very popular choice among bucketeers, but its not the only thing that thrives in a Space Bucket. Users from the subreddit community have grown <b>Tomatoes, Peppers, Dill, Chives, Basil, and even Wasabi and Avocado!</b> You are invited to try new types of plants, every species deserves a bucket.
             </div>
             <div>
+                  <pre>
+        <img style='width: 100%' src='https://spacebuckets.com/template/19140e.jpg'/>
+        <div>A group of Space Buckets</div>
+    </pre>
               <h3>What type of lighting should I use?</h3>
-              <b>You can choose CFL or LED for your bucket.</b> In both cases a minimum of 100w true watts is recommended. The LED option can be solved with a UFO light. The recommended size is the '180w' model for a typical Space Bucket. If you go the CFL route, about 4 bulbs will be needed. You can mix spectrums (2700K and 6500K) during the whole life of the plant, though warm-white is preferred in flowering. Either configuration can be used along 5050SMD LED light strips. These lights stick to the walls of the bucket for extra photosynthesis and higher yields.
+              
+              <em>You can choose CFL or LED for your bucket.</em> In both cases a minimum of 100w true watts is recommended. The LED option can be solved with a UFO light. The recommended size is the '180w' model for a typical Space Bucket. If you go the CFL route, about 4 bulbs will be needed. You can mix spectrums (2700K and 6500K) during the whole life of the plant, though warm-white is preferred in flowering. Either configuration can be used along 5050SMD LED light strips. These lights stick to the walls of the bucket for extra photosynthesis and higher yields.
               <br>
               A note on color temperature:
               Higher Color Temperature (CCT) is used for veg growth (4000k+), as bluer light helps inhibit stem elongation.
@@ -58,7 +69,11 @@
             </div>
             <div>
               <h3>Can I grow two plants at the same time?</h3>
-              It is generally not recommended. <b>A single well-trained plant</b> with sufficient root space is the way to go.
+                   <pre>
+        <img style='width: 100%' src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
+        <div>An inline filtered Space Buckets</div>
+    </pre>
+              It is generally not recommended. <em>A single well-trained plant</em> with sufficient root space is the way to go.
             </div>
             <div>
               <h3>Which training techniques work best?</h3>
@@ -66,7 +81,9 @@
             </div>
             <div>
               <h3>What to do about smelly plants?</h3>
-              To control odors from your plants, you will need <b>powerful ventilation and some type of carbon filter</b>. If you want to get rid of mostly all the smell, you should look into inline fans and filters, which can be connected with ducting to one or more buckets.
+
+   
+              To control odors from your plants, you will need <em>powerful ventilation and some type of carbon filter</em>. If you want to get rid of mostly all the smell, you should look into inline fans and filters, which can be connected with ducting to one or more buckets.
 
               Another option is <b>ONA gel</b>, as SAG says: 'ONA does wonders particularly during a harvest where a simple charcoal filter may not cut it'. You have to put the gel outside of the bucket, near the exhaust fan.
             </div>

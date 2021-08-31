@@ -6,7 +6,7 @@
           <div ref="content-1" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
 <!--             <nuxt-link to="/docs/" :class="{ractive: $route.path.includes('/docs/')}">Begin your Journey</nuxt-link>
  -->            <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
-            <nuxt-link to="/docs/light-top/">Lighting Solutions</nuxt-link>
+            <nuxt-link to="/docs/lighting-solutions/">Lighting Solutions</nuxt-link>
             <nuxt-link to="/docs/side-lighting/">Side-Lighting</nuxt-link>  
             <nuxt-link to="/docs/led-bulbs/">LED bulbs</nuxt-link>
             <nuxt-link to="/docs/airflow-solutions/">Airflow Solutions</nuxt-link>
