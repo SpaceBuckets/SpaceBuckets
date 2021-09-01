@@ -1,3 +1,5 @@
 # Redirects from what the browser requests to what we serve
 /u/simple-template      /template
 /admin#/                /admin/
+/ventilation            /docs/airflow-solutions
+/lighting               /docs/lighting-solutions
