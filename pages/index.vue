@@ -24,8 +24,11 @@
 
         <cardindex title="Bucket Builder" link="build" />
 
-        <card :id="randItem2" />
-        <card :id="simpleLED" />
+        <nuxt-link class="recard" to="/docs">
+            <img :src="`/index/docs2.jpg`" />
+            <h2>SB KNOWLEDGE BASE</h2>
+          </nuxt-link>
+          <card :id="simpleLED" />
 
         <cardindex title="Grow your own food" link="docs" variation="doubled"/>
 
@@ -188,6 +191,44 @@ export default {
       height: 32px;
       width: auto;
     }  
+  }
+}
+
+
+
+.recard {
+  width: 300px;
+  height: 387px;
+  margin: 10px;
+  float: left;
+  position: relative;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
+  user-select: none;
+  > h2 {
+position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fafafa;
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: -1px;
+    line-height: 32px;
+    padding-left: 15px;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-transform: uppercase;  
+  }
+  > p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 20px;
+    line-height: 1.5em;
+    color: #aaa;
   }
 }
  
