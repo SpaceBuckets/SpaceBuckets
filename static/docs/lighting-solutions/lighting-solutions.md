@@ -1,5 +1,5 @@
 ---
-t: "Lighting SOlutions"
+t: "Lighting Solutions"
 s: "lighting-solutions"
 a: "ekrof"
 c: "The Light-Top is the heart of a Space Bucket. <b>It contains the main lighting configuration, and as such determines the performance of the indoor garden.</b> If the light-top is underpowered, plants will grow long and thin which makes it unstable; if it is overpowered, heat and photosynthesis issues will be common (there is such thing as too much light for a plant). A light-top can be made with either <a href='https://amzn.to/3jMfTYw'>CFL</a> or LED lighting.
@@ -19,11 +19,13 @@ c: "The Light-Top is the heart of a Space Bucket. <b>It contains the main lighti
     One solution to the problems caused by the uncovered <a href='https://amzn.to/3lyKIRa'>LED bulbs</a> is to install a <b>heat shield</b>, which is fitted between the lights and the plant chamber. This is an essential upgrade for buckets that have high temperatures, and a great way to cover the exposed parts of the light fixture. The preferred material for heat shields is glass, which can be custom cut and stays cold to the touch. Acrylic or plexiglass can also be used, but is has to be monitored more closely (acrylic can melt or warp under high heat conditions).
 
     <h3>UFO LED</h3>
-    <b>The best option for LED Space Buckets are definitely <a href='https://amzn.to/36NO5zr'>UFO LED light</a></b>, which come in a round shape that fits a 5gal bucket perfectly. With this option, it is just a matter of putting the light on top of the lid and plugging it into the wall. <a href='https://amzn.to/36NO5zr'>UFO LED light</a> are the true <b>plug and play solution for Space Buckets</b>.
+
           <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/newhs-disco/1f040a.jpg'/>
+        <img style='width: 100%' src='https://spacebuckets.com/u/adnatop/2a180e.jpg'/>
         <div>A typical UFO LED light</div>
     </pre>
+
+    <b>The best option for LED Space Buckets are definitely <a href='https://amzn.to/36NO5zr'>UFO LED light</a></b>, which come in a round shape that fits a 5gal bucket perfectly. With this option, it is just a matter of putting the light on top of the lid and plugging it into the wall. <a href='https://amzn.to/36NO5zr'>UFO LED light</a> are the true <b>plug and play solution for Space Buckets</b>.
 
     These lights can be found in a variety of wattages. For the classic Space Bucket with 5gal containers, a <a href='https://amzn.to/36NO5zr'>135w UFO LED light</a> is enough. For supersized builds that feature 10gal containers, 180w are a better option. For Space Buckets that use stacked tote, a 300w UFO will be essential. As a general rule of thumb, the bigger the container, the more wattage will be needed for optimal results.
 

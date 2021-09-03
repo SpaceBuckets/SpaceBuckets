@@ -6,6 +6,11 @@ c: "A very important kind of lighting for bucket gardening are LED strips, which
 
     ### LED strip types
 
+    <pre>
+        <img style='width: 100%' src='https://spacebuckets.com/u/vanr/d0ba96.jpg'/>
+        <div>5gal are the smallest size for Space Buckets</div>
+    </pre>
+    
     There are many types of SMD LEDs: **for Space Buckets, 5050, 5630 and 7020 chips are recommended**, while 3528 should be avoided. The [5630SMD LED](https://amzn.to/30TZOZn) offer the best heat to lumen ratio, and are much brighter than the [5050SMD strips](https://amzn.to/30OqRW0). Meanwhile, 7020 chips are harder to find and less reliable, with a higher heat footprint. All of the LED strips can be purchased in waterproof and non-waterproof variants. For SB, the waterproof strips are the most durable and recommended.
 
     ### Single chips

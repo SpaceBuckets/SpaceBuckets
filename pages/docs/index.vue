@@ -18,7 +18,7 @@
                     <div>
     <pre>
         <img style='width: 100%' src='https://spacebuckets.com/template/3e3d32.jpg'/>
-        <div>A group of Space Buckets</div>
+        <div>A group of Space Buckets in their natural habitat</div>
     </pre>
           <p>
             <em>A Space Bucket is a DIY indoor garden</em> that is made by stacking plastic containers alongside lighting (CFL or LED) and airflow (PC or other fans).
@@ -35,49 +35,56 @@
               href="https://www.reddit.com/r/SpaceBuckets"
             >/r/SpaceBuckets subreddit</a> is our main forum, and this website is its companion. Bucketeers are open, friendly and thorough, as the manifesto states.
           </p>
-          <p>
-            A Space Bucket can be used very effectively for cannabis cultivation, but that is not its only function.
-            <b>All plants enjoy the bucket garden, especially herbs</b> (basil, chives, thyme, rosemary, mint and more) and fruits like cherry tomatoes and hot peppers. Bucket plant experimentation is encouraged! Why not some SB avocados, succulents or potatoes?
-          </p>
+     <ul>
+                <li><nuxt-link to='/docs/main-container'>Start by choosing a main container »</nuxt-link></li>
+                </ul>
             </div> 
 
              <div> 
+                 
               <h3>What plants can I grow with this setup?</h3>    
-              <b>You can grow any plant you can imagine!</b> Space Buckets can be used for the entire life of most plants, and also works great for germinating seeds or maintaining clones. You will see that Cannabis is a very popular choice among bucketeers, but its not the only thing that thrives in a Space Bucket. Users from the subreddit community have grown <b>Tomatoes, Peppers, Dill, Chives, Basil, and even Wasabi and Avocado!</b> You are invited to try new types of plants, every species deserves a bucket.
+                  <pre>
+
+ <img style='width: 100%' src='https://spacebuckets.com/u/cherry-tomato-journal/1e190b.jpg'/>
+        <div>Cherry tomatoes love to grow in Space Buckets</div>
+    </pre>      
+              <em>You can grow any plant you can imagine!</em> Space Buckets can be used for the entire life of most plants, and also works great for germinating seeds or maintaining clones. You will see that Cannabis is a very popular choice among bucketeers, but its not the only thing that thrives in a Space Bucket. Users from the subreddit community have grown <b>Tomatoes, Peppers, Dill, Chives, Basil, and even Wasabi and Avocado!</b> All plants enjoy the bucket garden, especially herbs and fruits. You are invited to try new types of plants, every species deserves a bucket. Plant experimentation is encouraged! Why not some SB avocados, succulents or potatoes?
+              <ul>
+                <li><nuxt-link to='/docs/plant-species'>Learn more about bucket plant species »</nuxt-link></li>
+                </ul>
             </div>
             <div>
-                  <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/template/19140e.jpg'/>
-        <div>A group of Space Buckets</div>
-    </pre>
+
               <h3>What type of lighting should I use?</h3>
-              
+                    <pre>
+        <img style='width: 100%' src='https://spacebuckets.com/template/19140e.jpg'/>
+        <div>CFL bulbs are a low cost alternative to LED</div>
+    </pre>            
               <em>You can choose CFL or LED for your bucket.</em> In both cases a minimum of 100w true watts is recommended. The LED option can be solved with a UFO light. The recommended size is the '180w' model for a typical Space Bucket. If you go the CFL route, about 4 bulbs will be needed. You can mix spectrums (2700K and 6500K) during the whole life of the plant, though warm-white is preferred in flowering. Either configuration can be used along 5050SMD LED light strips. These lights stick to the walls of the bucket for extra photosynthesis and higher yields.
               <br>
-              A note on color temperature:
-              Higher Color Temperature (CCT) is used for veg growth (4000k+), as bluer light helps inhibit stem elongation.
-              Lower CCT is used for flowering (2700-4000k) as red/yellow light is associated with flowering growth.
-              Lower CCT can be used for veg if compensated by higher light intensity (to inhibit stem elongation.)
+         <ul>
+                <li><nuxt-link to='/docs/lighting-solutions'>Learn more about lighting solutions »</nuxt-link></li>
+                </ul>
             </div>
             <div>
-              <h3>How much power does a bucket use? Will my electrical bill suffer?</h3>
-              Great answer by /u/bent42: 'Two factors: <b>the wattage of your lights, and your cost per Kilowatt.</b> Electricity is billed by the Kilowatt/hour. So if you know the 'true' watts of your lights (and fans) and how long they are on, you can easily calculate the cost. For example: 150 watts total x 24 hours of veg = 3600 watts in 24 hours, or 3.6 kilowatts a day. The average price per kilowatt/hour in the US is around 12 cents, so 3.6*$0.12=$0.43/day in veg, or about $13/mo, and about half that in flower.'
+              <h3>Will my electrical bill increase?</h3>
+              Great answer by <a href='https://www.reddit.com/u/bent42'>/u/bent42</a>: 'There are two factors: <b>the wattage of your lights, and your cost per Kilowatt.</b> Electricity is billed by the Kilowatt/hour. So if you know the 'true' watts of your lights (and fans) and how long they are on, you can easily calculate the cost. For example: 150 watts total x 24 hours of veg = 3600 watts in 24 hours, or 3.6 kilowatts a day. The average price per kilowatt/hour in the US is around 12 cents, so 3.6*$0.12=$0.43/day in veg, or about $13/mo, and about half that in flower.'
             </div>
-            <div>
-              <h3>How much soil do I use? Can I plant directly in the bucket?</h3>
-              <b>About 2 or 3 gallons of soil should be enough for a bucket plant.</b> Remember that you are growing in a tight space, and height can be an issue. You can put the plant directly in the bucket, but a separate pot (like a 10L mini bucket) is recommended. With a pot with handles you can remove the plant and water or train.
-            </div>
-            <div>
-              <h3>Can I grow two plants at the same time?</h3>
-                   <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
-        <div>An inline filtered Space Buckets</div>
-    </pre>
-              It is generally not recommended. <em>A single well-trained plant</em> with sufficient root space is the way to go.
-            </div>
-            <div>
+ 
+               
+             <div>
+                  
               <h3>Which training techniques work best?</h3>
+                 <pre>
+        <img style='width: 100%' src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
+        <div>An inline filtered Space Bucket with 5gal buckets</div>
+    </pre>
               <b>LST (low-stress training)</b> is a basic tool for keeping the height of the plant under control. You can use hooks to tie the branches to the soil or the side of the pot. You can even create a <b>SCROG net</b> to grow as horizontally as possible. <b>Topping</b> is another recommended training technique for a bucket grow: you have to cut the top-most growth of the plant. This will cause it to bush out, and two tops will appear from the 'shoulders' of the node. <b>Pruning</b> can be a good idea too: you can remove some leaves if they're blocking too much light from the tops. This is better done in moderation.
+                            <br>
+              <br>
+
+                <li><nuxt-link to='/docs/plant-training'>Learn more about plant training »</nuxt-link></li>
+
             </div>
             <div>
               <h3>What to do about smelly plants?</h3>
@@ -86,6 +93,10 @@
               To control odors from your plants, you will need <em>powerful ventilation and some type of carbon filter</em>. If you want to get rid of mostly all the smell, you should look into inline fans and filters, which can be connected with ducting to one or more buckets.
 
               Another option is <b>ONA gel</b>, as SAG says: 'ONA does wonders particularly during a harvest where a simple charcoal filter may not cut it'. You have to put the gel outside of the bucket, near the exhaust fan.
+                      <ul>
+                <li><nuxt-link to='/docs/airflow-solutions'>Learn more about airflow solutions »</nuxt-link></li>
+                <li><nuxt-link to='/docs/smell-control'>Learn more about smell control »</nuxt-link></li>
+                </ul>
             </div>
          </div>
         <div class="docs-sidebar onlymobile" id="docsluge">
@@ -131,21 +142,23 @@ export default {
 
 pre {
   margin: 0;
-  max-width: 400px;
-  min-width: 400px;
+  max-width: 500px;
+  min-width: 500px;
   min-height: 200px;
   float:right;
   margin-left:30px;
   margin-bottom: 30px;
   background:#fff;
   white-space: normal;
-  border:2px solid #eee;
+  //border:2px solid #eee;
+  position: relative;
   @media (max-width: 620px) {
     max-width: 100%;
     min-width: 100%;
   }  
   > img {
-      padding:10px;
+    width: 100%;
+      //padding:10px;
       padding-bottom: 0;
   }
   > div {
@@ -153,13 +166,17 @@ pre {
     color: #333;
     font-size: 14px;
     padding: 2px 10px;
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    right: 0;
   }
 }
 
 .doc-single-content {
   background: #fafafa;
   padding: 15px;
-  min-height: 100vh;
+  //min-height: 100vh;
   @media (max-width: 980px) {
     min-height: auto;
   }
