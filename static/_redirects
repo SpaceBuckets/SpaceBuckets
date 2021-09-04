@@ -3,3 +3,5 @@
 /admin#/                /admin/
 /ventilation            /docs/airflow-solutions
 /lighting               /docs/lighting-solutions
+/drome                  /play
+/designer               /design

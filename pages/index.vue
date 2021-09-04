@@ -13,7 +13,7 @@
 
         <a href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets">
           <h2>Join our subreddit</h2>
-          <div><icon-reddit/>110.000+ bucketeers await.</div>
+          <div><icon-reddit/>115.000+ bucketeers await.</div>
         </a>        
       </div>
       <div class="post-wrapper">  
