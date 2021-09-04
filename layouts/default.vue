@@ -157,7 +157,7 @@ header {
   }
 }
 .nav-sep {
-  padding: 15px;
+  padding: 0 15px;
   display: flex;
   flex-wrap: wrap;
   &.logger {
@@ -191,7 +191,7 @@ header {
   a {
     display: block;
     flex: 1;
-    padding: 0 20px;
+    padding: 15px 20px;
     svg {
       display: none;
     }
