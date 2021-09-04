@@ -6,7 +6,7 @@
       <div class="docs-container">
         <div class="docs-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
-            <nuxt-link to="/docs/">
+            <nuxt-link to="/docs/begin-your-journey">
               <h2 style="margin:0">DOCS</h2>
             </nuxt-link>
             <docsnav />
@@ -17,7 +17,7 @@
           <br />
                     <div>
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/template/3e3d32.jpg'/>
+        <img src='https://spacebuckets.com/template/3e3d32.jpg'/>
         <div>A group of Space Buckets in their natural habitat</div>
     </pre>
           <p>
@@ -40,27 +40,14 @@
                 </ul>
             </div> 
 
-             <div> 
-                 
-              <h3>What plants can I grow with this setup?</h3>    
-                  <pre>
-
- <img style='width: 100%' src='https://spacebuckets.com/u/cherry-tomato-journal/1e190b.jpg'/>
-        <div>Cherry tomatoes love to grow in Space Buckets</div>
-    </pre>      
-              <em>You can grow any plant you can imagine!</em> Space Buckets can be used for the entire life of most plants, and also works great for germinating seeds or maintaining clones. You will see that Cannabis is a very popular choice among bucketeers, but its not the only thing that thrives in a Space Bucket. Users from the subreddit community have grown <b>Tomatoes, Peppers, Dill, Chives, Basil, and even Wasabi and Avocado!</b> All plants enjoy the bucket garden, especially herbs and fruits. You are invited to try new types of plants, every species deserves a bucket. Plant experimentation is encouraged! Why not some SB avocados, succulents or potatoes?
-              <ul>
-                <li><nuxt-link to='/docs/plant-species'>Learn more about bucket plant species »</nuxt-link></li>
-                </ul>
-            </div>
             <div>
 
               <h3>What type of lighting should I use?</h3>
                     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/template/19140e.jpg'/>
+        <img src='https://spacebuckets.com/template/19140e.jpg'/>
         <div>CFL bulbs are a low cost alternative to LED</div>
     </pre>            
-              <em>You can choose CFL or LED for your bucket.</em> In both cases a minimum of 100w true watts is recommended. The LED option can be solved with a UFO light. The recommended size is the '180w' model for a typical Space Bucket. If you go the CFL route, about 4 bulbs will be needed. You can mix spectrums (2700K and 6500K) during the whole life of the plant, though warm-white is preferred in flowering. Either configuration can be used along 5050SMD LED light strips. These lights stick to the walls of the bucket for extra photosynthesis and higher yields.
+              <em>You can choose CFL or LED for your bucket.</em> In both cases a minimum of 100w true watts is recommended. The LED option can be solved with a UFO light. The recommended size is the '180w' model for a typical Space Bucket. If you go the CFL route, about 4 bulbs will be needed. You can mix spectrums (2700K and 6500K) during the whole life of the plant, though warm-white is preferred in flowering. <b>Either configuration can be used along 5050SMD LED light strips</b>. These lights stick to the walls of the bucket for extra photosynthesis.
               <br>
          <ul>
                 <li><nuxt-link to='/docs/lighting-solutions'>Learn more about lighting solutions »</nuxt-link></li>
@@ -68,15 +55,27 @@
             </div>
             <div>
               <h3>Will my electrical bill increase?</h3>
-              Great answer by <a href='https://www.reddit.com/u/bent42'>/u/bent42</a>: 'There are two factors: <b>the wattage of your lights, and your cost per Kilowatt.</b> Electricity is billed by the Kilowatt/hour. So if you know the 'true' watts of your lights (and fans) and how long they are on, you can easily calculate the cost. For example: 150 watts total x 24 hours of veg = 3600 watts in 24 hours, or 3.6 kilowatts a day. The average price per kilowatt/hour in the US is around 12 cents, so 3.6*$0.12=$0.43/day in veg, or about $13/mo, and about half that in flower.'
+              Great answer by <a href='https://www.reddit.com/u/bent42'>/u/bent42</a>: <i>'There are two factors: <b>the wattage of your lights, and your cost per Kilowatt.</b> Electricity is billed by the Kilowatt/hour. So if you know the 'true' watts of your lights (and fans) and how long they are on, you can easily calculate the cost. For example: 150 watts total x 24 hours of veg = 3600 watts in 24 hours, or 3.6 kilowatts a day. The average price per kilowatt/hour in the US is around 12 cents, so 3.6*$0.12=$0.43/day in veg, or about $13/mo, and about half that in flower.'</i>
             </div>
  
-               
+                            <div> 
+                 
+              <h3>What plants can I grow with this setup?</h3>    
+                  <pre>
+
+ <img src='https://spacebuckets.com/u/cherry-tomato-journal/1e190b.jpg'/>
+        <div>Cherry tomatoes love to grow in Space Buckets</div>
+    </pre>      
+              <em>You can grow any plant you can imagine!</em> Space Buckets can be used for the entire life of most plants, and also works great for germinating seeds or maintaining clones. You will see that Cannabis is a very popular choice among bucketeers, but its not the only thing that thrives in a Space Bucket. Users from the subreddit community have grown <b>Tomatoes, Peppers, Dill, Chives, Basil, and even Wasabi and Avocado!</b> All plants enjoy the bucket garden, especially herbs and fruits. You are invited to try new types of plants, every species deserves a bucket. Plant experimentation is encouraged! Why not some SB avocados, succulents or potatoes?
+              <ul>
+                <li><nuxt-link to='/docs/plant-species'>Learn more about bucket plant species »</nuxt-link></li>
+                </ul>
+            </div>
              <div>
                   
               <h3>Which training techniques work best?</h3>
                  <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
+        <img src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
         <div>An inline filtered Space Bucket with 5gal buckets</div>
     </pre>
               <b>LST (low-stress training)</b> is a basic tool for keeping the height of the plant under control. You can use hooks to tie the branches to the soil or the side of the pot. You can even create a <b>SCROG net</b> to grow as horizontally as possible. <b>Topping</b> is another recommended training technique for a bucket grow: you have to cut the top-most growth of the plant. This will cause it to bush out, and two tops will appear from the 'shoulders' of the node. <b>Pruning</b> can be a good idea too: you can remove some leaves if they're blocking too much light from the tops. This is better done in moderation.
@@ -160,14 +159,15 @@ pre {
     width: 100%;
       //padding:10px;
       padding-bottom: 0;
+      border:2px solid #eee;
   }
   > div {
     background: #eee;
     color: #333;
     font-size: 14px;
-    padding: 2px 10px;
+    padding: 3px 10px;
     position: absolute;
-    bottom: -15px;
+    bottom: -20px;
     left: 0;
     right: 0;
   }

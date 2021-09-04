@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "To maximize an LED grow light's idealized efficacy, _we want the LED current as low as possible_ (throw more LEDs at the problem as they become cheaper and underdrive them), _keep them as cool as possible_ (a little airflow goes a long ways, maybe 2-10 times so), _get the most efficient driver_ (you want to look up the efficiency by current level curves in the data sheet), **and don't use lenses or a glass cover**. But, by not using a cover means we lose ingress protection leaving exposed voltages so there are potential safety concerns, and exposing the LEDs directly to the environment can potentially lower their longevity and the grow light's longer term reliability.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/2LweZxA.jpg'/>
+        <img src='https://i.imgur.com/2LweZxA.jpg'/>
         <div> Historical, current, and projected LED efficacy</div>
     </pre>
 

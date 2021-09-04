@@ -19,14 +19,14 @@
           <input ref="searchInputMobile" :value="$route.query.q" @keyup.enter="submitSearchMobile()" type="text" placeholder="Search..." name="search">
         </div>        
         <nuxt-link to="/materials"><icon-tools/>MATERIALS</nuxt-link>
-        <nuxt-link to="/build"><icon-mix/>BUILDER</nuxt-link>
-        <nuxt-link to="/docs"><icon-docz/>DOCS</nuxt-link>
+        <nuxt-link to="/docs/begin-your-journey"><icon-docz/>DOCS</nuxt-link>
         <nuxt-link to="/gallery/1"><icon-images/>GALLERY</nuxt-link>
-        <nuxt-link to="/designer" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
-        <nuxt-link to="/drome" no-prefetch><icon-game/>DROME</nuxt-link>
+<!--         <a href="#" class="onlydesktop" style="opacity: 0.2;pointer-events:none">|</a>
+ -->        <nuxt-link to="/build"><icon-mix/>BUILD</nuxt-link>
+        <nuxt-link to="/design" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
+        <nuxt-link to="/play" no-prefetch><icon-game/>PLAY</nuxt-link>
         <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets"><icon-reddit/>SUBREDDIT</a>
-        <nuxt-link to="/feedback" class="onlymobile feedback-item" no-prefetch>FEEDBACK</nuxt-link>
-
+ 
       </div>
       <div class="nav-backdrop onlymobile" @click="openNav = false"></div>
       <div

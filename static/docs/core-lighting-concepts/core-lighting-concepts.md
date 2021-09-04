@@ -13,7 +13,7 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
     ### PPFD (Photosynthetic Photon Flux Density)
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/tbSX33P.jpg'/>
+        <img src='https://i.imgur.com/tbSX33P.jpg'/>
         <div>Photosynthetic Light Response Curves (<a href='https://fluence.science/science-articles/horticulture-lighting-metrics/'>source</a>)</div>
     </pre>
 
@@ -38,7 +38,7 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
     ### PPE (Photosynthetic Photon Efficacy)
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/Jnwqhfa.jpg'/>
+        <img src='https://i.imgur.com/Jnwqhfa.jpg'/>
         <div>A high efficacy LED example (<a href='https://www.nature.com/articles/s41438-020-0283-7'>source</a>)</div>
     </pre>
 
@@ -67,7 +67,7 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
     *   [Read about how light colors affect plants »](/docs/light-colors)
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/zTmt4oa.jpg'/>
+        <img src='https://i.imgur.com/zTmt4oa.jpg'/>
         <div>Chromaticity diagram for CCT (<a href='https://www.nextgenerationled.be/EN/CorrelatedColorTemperature.html'>source</a>)</div>
     </pre>
 

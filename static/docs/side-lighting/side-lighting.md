@@ -7,7 +7,7 @@ c: "A very important kind of lighting for bucket gardening are LED strips, which
     ### LED strip types
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/vanr/d0ba96.jpg'/>
+        <img src='https://spacebuckets.com/u/vanr/d0ba96.jpg'/>
         <div>5gal are the smallest size for Space Buckets</div>
     </pre>
     

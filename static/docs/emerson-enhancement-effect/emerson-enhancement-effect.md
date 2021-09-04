@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "The Emerson effect is about driving photosynthesis with part of the light PAR (400-680nm in this case), and part of the light far red color (700nm-740nm or so wavelength), _which combined can result in photosynthesis rates higher than normal_.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/4ge0ohi.jpg'/>
+        <img src='https://i.imgur.com/4ge0ohi.jpg'/>
         <div>Emerson Effect <a href='https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/pce.13730'>(source)</a></div>
     </pre>
 
@@ -18,7 +18,7 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
     ### Key Takeaways 
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/THvJ1Lc.jpeg'/>
+        <img src='https://i.imgur.com/THvJ1Lc.jpeg'/>
         <div>The Emerson Enhancement Effect</div>
     </pre>
     

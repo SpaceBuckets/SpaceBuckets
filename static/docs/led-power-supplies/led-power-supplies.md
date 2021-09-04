@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "Power supplies have historically been the weak link in an LED grow light system and **cheap capacitors are the main issue**. The cheap boost converters you can buy on Amazon and eBay will work, but don't expect more than about 6 months use out of them. Again, it's the capacitors that tend to fail.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/lhB50hG.jpg'/>
+        <img src='https://i.imgur.com/lhB50hG.jpg'/>
         <div>XLG Series Mean Well Power Supply</div>
     </pre>
 

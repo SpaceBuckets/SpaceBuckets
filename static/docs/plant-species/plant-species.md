@@ -5,7 +5,7 @@ a: "ekrof"
 c: "Space Buckets can be used to grow nearly all species of plants, **specially those that are naturally short or react well to training.** For this reason, plants like cannabis, hot peppers, cherry tomatoes, and leafy herbs are all very recommended. Even if the plant is a tree, a SB can function as a highly effective growth chamber: tree saplings can be started indoors to strenghten them before planting in an outside location. **Bucket gardens also have great performance for all kinds of cuttings and clones, and can be used to sustain plants during the winter time.**
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/cherry-tomato-journal/3f341a.jpg'/>
+        <img src='https://spacebuckets.com/u/cherry-tomato-journal/3f341a.jpg'/>
         <div>Cherry tomatoes love to grow in Space Buckets</div>
     </pre>
 
@@ -20,7 +20,7 @@ c: "Space Buckets can be used to grow nearly all species of plants, **specially 
     ### Hot Peppers
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/bucket-potatoes/9a8a6f.jpg'/>
+        <img src='https://spacebuckets.com/u/bucket-potatoes/9a8a6f.jpg'/>
         <div>How about some bucket potatoes?</div>
     </pre>
 

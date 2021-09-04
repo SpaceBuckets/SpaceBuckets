@@ -7,7 +7,7 @@ c: "Space Buckets can be created with a **wide variety of containers.** The orig
     ### Buckets
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/morrigan-disapproves/c7c3bf.jpg'/>
+        <img src='https://spacebuckets.com/u/morrigan-disapproves/c7c3bf.jpg'/>
         <div>5gal are the smallest size for Space Buckets</div>
     </pre>
 
@@ -24,7 +24,7 @@ c: "Space Buckets can be created with a **wide variety of containers.** The orig
     ### Totes
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/spacetotebuilder/564b45.jpg'/>
+        <img src='https://spacebuckets.com/u/spacetotebuilder/564b45.jpg'/>
         <div>Totes can be used to grow two plants at once</div>
     </pre>
 

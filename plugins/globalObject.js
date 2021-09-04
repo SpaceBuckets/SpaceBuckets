@@ -4,7 +4,7 @@ import Vue from 'vue'
  
  
 const state = {
-    docsActive: 2,     
+    docsActive: 1,     
     docsScroll: 0    
 }
 

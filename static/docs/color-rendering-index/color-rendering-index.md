@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "_CRI (Color Rendering Index) tells us how well a light source does at accurately reproducing colors_ in an object relative to a natural or black body radiation source (like the sun, incandescent bulb). It really falls flat, though, and a different standard has come out called TM-30. TM-30 doesn't actually replace CRI because they are standards from two different organizations, the [CIE (International Commission on Illumination)](https://cie.co.at/) for CRI, and [ANSI/IES (American National Standards Institute/Illuminating Engineering Society)](https://www.ies.org/) for TM-30.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/xHuRtoY.jpg'/>
+        <img src='https://i.imgur.com/xHuRtoY.jpg'/>
         <div>The CIE 1960 UCS Color Space</div>
     </pre>
 

@@ -5,7 +5,7 @@ a: "ekrof"
 c: "Proper air circulation is essential for Space Buckets (and every other kind of indoor garden). **Your bucket needs good ventilation to extract the heat** from the [CFL bulbs](https://amzn.to/3jMfTYw) (or LED lights), and also to give the plant breaths of fresh air and plenty of CO2. In this section we review good ventilation solutions that you can use for cooling your always trusty bucket garden.
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/ekrof/27221f.jpg'/>
+        <img src='https://spacebuckets.com/u/ekrof/27221f.jpg'/>
         <div>Line fans are the plug and play airflow option</div>
     </pre>
 
@@ -16,7 +16,7 @@ c: "Proper air circulation is essential for Space Buckets (and every other kind 
     ### 12v PC fans
 
     <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/ranger737/403731.jpg'/>
+        <img src='https://spacebuckets.com/u/ranger737/403731.jpg'/>
         <div>Inline fans can be used with filters to control smells</div>
     </pre>
 

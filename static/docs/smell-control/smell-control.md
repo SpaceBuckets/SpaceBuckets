@@ -6,6 +6,11 @@ c: "Controlling odors and smells from smelly plants is a very popular topic amon
 
     ### Inline filtering
 
+    <pre>
+        <img src='https://spacebuckets.com/u/titobin/3e3220.jpg'/>
+        <div>Inline fans with filters are the best way to keep odors at bay</div>
+    </pre>
+    
     The most effective solution for controlling plant odors in Space Bucket gardens are **inline fans with a specially designed filter**. These are the same filters that tent growers use, and because of that they tend to be bulky, expensive, quite loud and is another piece of equipment using electricity. The upside is that inline fans are exceptionally powerful, and thus can filter the air extracted from one or many interconnected buckets. A 4 inch inline fan with a capacity of 300m3/h should be more than enough. The SB gallery features many builds that use this kind of filtering. These inline fans are a centrifugal type fan, and are very effective by design at creating pressure, which is what is needed to push air through a carbon filter. For this reason cheaper DIY solutions using PC fans are pretty difficult to make effective.
 
     ### Homemade filters

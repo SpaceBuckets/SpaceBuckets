@@ -6,7 +6,7 @@ c: "The Light-Top is the heart of a Space Bucket. <b>It contains the main lighti
 
     <h3>CFL lighting</h3>
       <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/ekrof/191c18.jpg'/>
+        <img src='https://spacebuckets.com/u/ekrof/191c18.jpg'/>
         <div>An array of CFL bulbs with glass shielding</div>
     </pre>
     Compact Fluorescent Lights are the cheapest option, but also the hardest to optimize. <b><a href='https://amzn.to/3jMfTYw'>CFL bulbs</a> emit a lot of heat that needs to be extracted from the plant chamber</b>, and because of that, extra airflow is needed. The best CFL bulbs for Space Buckets are the 23 and 42 watt versions, which feature a good balance between heat and lumen output. Bulbs over 42w can be a safety hazard in an enclosed container, while bulbs under 23w are not an effective option.
@@ -21,7 +21,7 @@ c: "The Light-Top is the heart of a Space Bucket. <b>It contains the main lighti
     <h3>UFO LED</h3>
 
           <pre>
-        <img style='width: 100%' src='https://spacebuckets.com/u/adnatop/2a180e.jpg'/>
+        <img src='https://spacebuckets.com/u/adnatop/2a180e.jpg'/>
         <div>A typical UFO LED light</div>
     </pre>
 

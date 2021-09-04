@@ -4,8 +4,8 @@
         <section ref="section-1" :class="{ractive: $state.docsActive === 1}" @click="$state.docsActive = 1">
           <div>Getting Started <span>(9)</span></div>
           <div ref="content-1" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
-<!--             <nuxt-link to="/docs/" :class="{ractive: $route.path.includes('/docs/')}">Begin your Journey</nuxt-link>
- -->            <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
+             <nuxt-link to="/docs/begin-your-journey">Begin your Journey</nuxt-link>
+             <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
             <nuxt-link to="/docs/lighting-solutions/">Lighting Solutions</nuxt-link>
             <nuxt-link to="/docs/side-lighting/">Side-Lighting</nuxt-link>  
             <nuxt-link to="/docs/led-bulbs/">LED bulbs</nuxt-link>

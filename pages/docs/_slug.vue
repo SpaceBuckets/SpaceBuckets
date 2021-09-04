@@ -3,7 +3,7 @@
       <div class="docs-container">
         <div class="docs-sidebar onlydesktop">
           <div class="sidebar-content docs-links">
-            <nuxt-link to="/docs/">
+            <nuxt-link to="/docs/begin-your-journey">
               <h2 style="margin:0">DOCS</h2>
             </nuxt-link>
             <docsnav />          

@@ -10,7 +10,7 @@ c: "Luminous efficiency is **a percentage correction factor for wavelengths of l
     ### Wavelengths and Efficiency
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/SJwYfJr.jpeg'/>
+        <img src='https://i.imgur.com/SJwYfJr.jpeg'/>
         <div>Transmission characteristics of the filter for a <a href='https://amzn.to/3BlCiEr'>Dr.Meter LX1010B lux meter</a></div>
     </pre>       
 

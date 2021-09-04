@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "_DLI is the amount of light that the plant receives in a 24 hour period._ The unit of measurement is mol/m2/day or 'moles per square meter per day'. This usually only counts the top light, and intracanopy or side lighting can greatly increase these numbers. DLI does not take in to account that as the intensity of the light increases in PPFD that the photosynthetic efficiency of the plant decreases.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/FbiClOM.jpg'/>
+        <img src='https://i.imgur.com/FbiClOM.jpg'/>
         <div>Daily Lighting Integral representation <a href='https://dutchlightinginnovations.com/blog/daily-light-integral/'>(source)</a></div>
     </pre>
 

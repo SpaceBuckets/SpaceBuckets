@@ -8,7 +8,7 @@ c: "I go with _3000K or 3500K for all around use for plant growing_, but experim
     I consider **mixing red LEDs (like 630nm and 660nm, or 450nm and 470nm)** to also be a marketing gimmick, unless a clear demonstration as to their combined efficacy can be demonstrated in controlled grows (temperature, humidity, CO2, and lighting levels consistent and does not significantly fluctuate to remove as many variables as possible). My first non-controlled experiments were in 2008 where **I found no significant difference in 450-660, 450-630, 450-630-660nm, and white light for a leafy lettuce cultivar**. I soldered up a few thousand low power 5mm LEDs to do these early experiments.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/0gyuyGX.jpg'/>
+        <img src='https://i.imgur.com/0gyuyGX.jpg'/>
         <div>Planckian locus in the CIE 1960 color space (<a href='https://en.wikipedia.org/wiki/File:Planckian-locus.png'>source</a>)</div>
     </pre>
 

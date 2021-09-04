@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "A **quantum light meter** is called 'quantum' because their measurement is in the amount a photons hitting a specific point in space per second and a photon is a quanta of light. **A lux meter** is called 'lux' since they measure luminous flux.
 
     <pre>
-        <img style='width: 100%' src='https://i.imgur.com/FYH1jRa.jpg'/>
+        <img src='https://i.imgur.com/FYH1jRa.jpg'/>
         <div>Spectral response curve</div>
     </pre>
 

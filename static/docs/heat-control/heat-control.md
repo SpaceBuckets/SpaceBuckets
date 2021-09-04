@@ -4,6 +4,10 @@ s: "heat-control"
 a: "ekrof"
 c: "A common problem with small enclosed gardens is high temperatures. Space Buckets can suffer from these problems, **but there are many solutions available for high heat bucketeers.** A proper lighting configuration and airflow design are essential for solving these issues. 
 
+    <pre>
+        <img src='https://i.imgur.com/bQhWnTu.jpg'/>
+        <div>CFL bulbs run hotter than LED alternatives</div>
+    </pre>
 
     A thermometer is an indispensable tool when trying to solve heat issues. There devices are tiny, and can fit without problems inside the bucket. It is best to take more than one reading for more accurate results: **the temperature will vary in the canopy and other areas of the growth chamber**. Most thermometers also include a humidity sensor, which can be an important factor in the performance of the plant. It is also useful to measure the ambient temperature in which the bucket lives, as that will be the baseline to aim for. If the ambient temperature is already high, the bucket will naturally struggle with heat issues.
 
@@ -13,8 +17,12 @@ c: "A common problem with small enclosed gardens is high temperatures. Space Buc
 
     ### Airflow Issues
 
-    Most of the heating problems in a SB can be tracked back to an **improper airflow configuration**. The amount of ventilation needs to be proportional to the power of the main lighting, and specially so when using [CFL bulbs](https://amzn.to/3jMfTYw). A minimum of 2 PC fans is recommended for 5gal builds, one exhaust and one intake. As heat rises, the exhaust works better on top of the bucket. An active intake blowing directly on the bulbs can lower their temperature drastically; for this reason, 3 PC fans are usually recommended when growing plants with bulbs. 
+    <pre>
+        <img src='https://spacebuckets.com/u/ekrof-ufo-led/2c3234.jpg'/>
+        <div>Keeping the UFO on the outside of the container is better for thermal management</div>
+    </pre>
 
+    Most of the heating problems in a SB can be tracked back to an **improper airflow configuration**. The amount of ventilation needs to be proportional to the power of the main lighting, and specially so when using [CFL bulbs](https://amzn.to/3jMfTYw). A minimum of 2 PC fans is recommended for 5gal builds, one exhaust and one intake. As heat rises, the exhaust works better on top of the bucket. An active intake blowing directly on the bulbs can lower their temperature drastically; for this reason, 3 PC fans are usually recommended when growing plants with bulbs. 
 
     Builds with [UFO LED lights](https://amzn.to/36NO5zr) don't usually have heat issues, **specially if the light is kept outside of the bucket**. UFOs include a fan that keeps it mostly cool. That being said, UFO buckets still need proper airflow with at least 1 PC fan for intake. Humidity issues may appear if there is poor airflow.
 
