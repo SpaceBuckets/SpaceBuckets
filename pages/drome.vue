@@ -43,7 +43,6 @@ iframe {
   position: fixed;
   top: 50px;
   left: 0;
-      opacity: 0.8;
 
 }
   .reload {
@@ -55,5 +54,7 @@ iframe {
     display: flex;
     margin: auto;
     pointer-events: none;
+          opacity: 0.8;
+
   }
 </style>
