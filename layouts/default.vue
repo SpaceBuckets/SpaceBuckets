@@ -342,6 +342,10 @@ body {
 
 a {
   color: #136baf;
+  &:hover {
+          color: #093557;
+
+  }
 }
 
 h1,

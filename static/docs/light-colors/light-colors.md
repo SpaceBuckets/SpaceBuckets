@@ -31,4 +31,5 @@ _Blue light decreases [acid growth](https://en.wikipedia.org/wiki/Acid_growth)_ 
     *   [Learn more about Ultraviolet growing »](/docs/lux-ppfd-conversion)"
 o: "3"
 d: "Blue light decreases acid growth (which is different than growth through photosynthesis). Excess acid growth, or 'stretching', in seedlings/veg is all about greater cell expansion in the stem that we get from lower lighting levels or not enough blue light. We typically only want as much blue in a light source to help prevent any excess stem elongation."
+f: "Generally speaking, in healthy plants up to <b>80-90% of green light is being absorbed</b> and is available for the photosynthesis process."
 ---

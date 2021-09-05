@@ -82,7 +82,7 @@
           </nuxt-link>
 
           <nuxt-link to="/u/doublejallday-bin" v-if="active.container == 'brute' && active.airflow == 'inline' && active.light == 'led'">
-            <img src="/u/doublejallday_bin/cover.jpg" alt/>
+            <img src="/u/doublejallday-bin/cover.jpg" alt/>
             <h2>GARBO LED BUILD</h2>
           </nuxt-link>
 

@@ -27,6 +27,6 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
     *   You can see this **jamming of electrons** in chlorophyll fluorescence shots with proteins associated with the PSII and much less fluorescence associated with the PSI (the single 750nm hump). Higher fluorescence means lower photosynthesis efficiency.
 
     *   _I think most far red driver boards are gimmicks_ because they are likely not putting out enough far red light to make a noticeable difference."
-o: "3"
 d: "The Emerson effect is about driving photosynthesis with part of the light PAR (400-680nm in this case), and part of the light far red (700nm-740nm or so), combined can result in photosynthesis rates higher than normal."
+f: "The Emerson Effect is about driving photosynthesis with <b>PAR light</b> (400-680nm) and <b>far red color</b> (700nm-740nm), which can increase efficiency."
 ---

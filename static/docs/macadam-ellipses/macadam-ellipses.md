@@ -1,5 +1,5 @@
 ---
-t: "MacAdam ellipses and steps"
+t: "MacAdam Ellipses"
 s: "macadam-ellipses"
 a: "SuperAngryGuy"
 c: "The MacAdam ellipses, or SDCM (standard deviation of color matching), are standard deviations of perceived color differences in LED binning including white LEDs. The higher the step or standard deviation, the lower the binning tolerances which lowers LED costs.
@@ -20,5 +20,6 @@ c: "The MacAdam ellipses, or SDCM (standard deviation of color matching), are st
 
     In conclusion: don't worry if you can perceive slight color differences in the LEDs of LED grow lights! **Your plants don't care.**"
 d: "The MacAdam ellipses, or SDCM (standard deviation of color matching), are standard deviations of perceived color differences in LED binning including white LEDs. The higher the step or standard deviation, the lower the binning tolerances which lowers LED costs."
+f: "The MacAdam ellipses or SDCM are <b>standard deviations of perceived color differences</b> in LED binning including white LEDs."
 
 ---

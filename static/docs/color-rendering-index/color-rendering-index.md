@@ -19,4 +19,5 @@ c: "_CRI (Color Rendering Index) tells us how well a light source does at accura
 
     _Gamut Index (Gf)_ with TM-30 ranges from 80-120 and is basically the amount of saturation with 100 being a neutral saturation. **It is the color gamut area.** Lower Gf white lights will make objects appear duller with higher Gf having colors more saturated."
 d: "The CRI (Color Rendering Index) measurement tells us how well a light source does at accurately reproducing colors in an object relative to a natural or black body radiation source (like the sun, or an incandescent bulb). It really falls flat, though, and a different standard has come out called TM-30."
+f: "<b>CRI (Color Rendering Index)</b> tells us how well a light source does at accurately reproducing colors in an object relative to a radiation source."
 ---

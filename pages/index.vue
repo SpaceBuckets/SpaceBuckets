@@ -18,33 +18,40 @@
       </div>
       <div class="post-wrapper">  
         <card :id="randItem" />
-        <card :id="mad" />
+        <nuxt-link class="recard" to="/docs">
+            <img :src="`/index/docs2.jpg`" />
+            <h2>SB KNOWLEDGE BASE</h2>
+          </nuxt-link>
 
         <cardindex title="Start Here: simple DIY template" link="template" variation="doubled"/>
 
         <cardindex title="Bucket Builder" link="build" />
 
-        <nuxt-link class="recard" to="/docs">
-            <img :src="`/index/docs2.jpg`" />
-            <h2>SB KNOWLEDGE BASE</h2>
-          </nuxt-link>
-          <card :id="simpleLED" />
+
+        <card :id="mad" />
+        <carddoc :doc="randDoc"/>
+
 
         <cardindex title="Grow your own food" link="docs" variation="doubled"/>
 
         <cardindex title="Tools and Parts" link="materials" />
+          <card :id="simpleLED" />
+        <carddoc :doc="randDoc2"/>
 
-      <card :id="sag" />
-        <card :id="gnk" />
-        <cardindex title="Play the Bucketdrome" link="drome" variation="doubled"/>
+        <cardindex title="Play the Bucketdrome" link="play" variation="doubled"/>
 
         <cardindex title="Space Buckets Manifesto" link="manifesto" />
 
 
-  
+        <card :id="sag" />
+ 
+        <card :id="gnk" />
+        <card :id="exactly" />
 
         <card :id="ekrof" />
         <card :id="forever" />
+         <card :id="nosolder" />
+        <card :id="tridi" />
 
         <card :id="hydro" />
         <card :id="garbo" />
@@ -61,7 +68,7 @@
 </template>
 
 <script>
-import { singlePost, singleRandom } from "~/scripts/flatDB";
+import { singlePost, singleRandom, singleRandomDoc } from "~/scripts/flatDB";
 
 export default {
   async asyncData({ params }) {
@@ -74,10 +81,17 @@ export default {
     const hydro = await singlePost("haplessastronaut");
     const morri = await singlePost("morrigan-disapproves");
     const tito = await singlePost("titobin");
+    const exactly = await singlePost("exactly");
+    const meepsi = await singlePost("meepsi");
+        const nosolder = await singlePost("no-solder-led");
+        const tridi = await singlePost("3drenders");
+
     const garbo = await singlePost("doublejallday-bin");
     const randItem = await singleRandom();
     const randItem2 = await singleRandom();
-    var introItems = [
+    const randDoc = await singleRandomDoc();
+    const randDoc2 = await singleRandomDoc();
+     var introItems = [
         {
           link: "/new",
           title: "Submit your build!",
@@ -100,7 +114,7 @@ export default {
       ]
     introItems = introItems.sort(() => Math.random() - 0.5)
 
-    return { introItems, randItem2,randItem,garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
+    return { tridi,nosolder,meepsi,exactly,randDoc,randDoc2,introItems, randItem2,randItem,garbo,tito,morri,hydro, sag, ekrof, simpleLED, gnk, mad, forever };
   },
   data() {
     return {

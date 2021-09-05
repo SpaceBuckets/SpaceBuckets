@@ -30,5 +30,6 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
 
     *   **YPF (YPFD) or 'yield photon flux (density)'** is PPFD that has been weighed to the McCree curve. It is fortunately rarely used in botany but you do sometimes see it. There are special PAR sensors that give measurements in YPFD instead of PPFD, as well as spectroradiometers that can do this."
 d: "The McCree curve is a quantum efficiency lighting curve used in botany and should be used only as an initial foundation for understanding photosynthesis rates by wavelength. It is far more accurate than charts for chlorophyll dissolved in a solvent or charts for green algae, and it is common for these charts to get mixed up."
+f: "The McCree curve illustrates that <b>all of 400-700nm wavelength is useful for photosynthesis</b> including green light, and not just red and blue."
 
 ---

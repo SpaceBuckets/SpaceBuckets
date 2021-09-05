@@ -47,6 +47,13 @@ async function singleRandom() {
   return posts[randNum.toFixed()]
 }
 
+async function singleRandomDoc() {
+  var docs = await getDocs()
+  var filtereddocs = docs.filter(doc => doc.f)
+  var randNum = 0 + Math.random() * (filtereddocs.length - 0);
+  return filtereddocs[Math.floor(randNum)]
+}
+
 async function singlePost(slug) {
   var posts = await getBuilds()
   var single = []
@@ -75,4 +82,4 @@ async function getSearch(query) {
   return single
 }
 
-export { getSearch, getAuthor, getDocs, singleDoc, getBuilds, getCats, filterBuilds, singlePost, randomize, singleRandom };
+export { singleRandomDoc, getSearch, getAuthor, getDocs, singleDoc, getBuilds, getCats, filterBuilds, singlePost, randomize, singleRandom };

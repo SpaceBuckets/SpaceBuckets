@@ -4,4 +4,6 @@
 /ventilation            /docs/airflow-solutions
 /lighting               /docs/lighting-solutions
 /drome                  /play
+/drome/                 /play
 /designer               /design
+/tomato                 /docs/plant-species

@@ -1,5 +1,5 @@
 ---
-t: "DLI (Daily Lighting Integral) calculations"
+t: "DLI (Daily Lighting Integral)"
 s: "daily-lighting-integral"
 a: "SuperAngryGuy"
 c: "_DLI is the amount of light that the plant receives in a 24 hour period._ The unit of measurement is mol/m2/day or 'moles per square meter per day'. This usually only counts the top light, and intracanopy or side lighting can greatly increase these numbers. DLI does not take in to account that as the intensity of the light increases in PPFD that the photosynthetic efficiency of the plant decreases.
@@ -18,6 +18,7 @@ c: "_DLI is the amount of light that the plant receives in a 24 hour period._ Th
     *   **Example:** 200 µmol/m2/sec on 18 hours per day. (200/100=2) (2 * 8.6=17.2) (17.2 * 0.75=12.9 mol/m2/day)
 
     *   **Example:** 1200 µmol/m2/sec on 12 hours per day. (1200/100=12) (12 * 8.6=103.2) (103.2 * 0.50=51.6 mol/m2/day)"
-d: "DLI is the amount of light that the plant receives in a 24 hour period._ The unit of measurement is mol/m2/day or 'moles per square meter per day'. This usually only counts the top light, and intracanopy or side lighting can greatly increase these numbers."
+d: "DLI is the amount of light that the plant receives in a 24 hour period._The unit of measurement is mol/m2/day or 'moles per square meter per day'. This usually only counts the top light, and intracanopy or side lighting can greatly increase these numbers."
+f: "DLI is the <b>amount of light that the plant receives in a 24 hour period.</b> The unit of measurement is 'moles per square meter per day'."
 
 ---

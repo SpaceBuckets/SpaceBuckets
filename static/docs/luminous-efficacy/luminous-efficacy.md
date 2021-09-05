@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "It's easy to get **'efficacy' (how well something works)** and ['efficiency' (ratio of useful work)](/docs/luminous-efficiency) confused. As we'll see, knowing this difference helps us make LED efficiency calculations and understand why red LEDs are used in grow lights.
 
     <pre>
-        <img src='https://i.imgur.com/BKYs1Jj.jpg'/>
+        <img src='https://i.imgur.com/3i1MYgX.jpg'/>
         <div>Luminous efficacy of pure blackbody radiation as a function of temperature</div>
     </pre>
 
@@ -14,6 +14,11 @@ c: "It's easy to get **'efficacy' (how well something works)** and ['efficiency'
     ### Key Efficacy Concepts
 
     The following points mean that we can theoretically get about 47% more light for the energy input with 660nm LEDs versus 450nm LEDs. It explains why red LEDs are breaking the 4 µmol/joule barrier, and white LEDs based on blue LEDs with a phosphor never will. Green LEDs are electrically inefficient and is a physics/semiconductor issue (our eyes are most sensitive to green light so we don't notice).
+
+    <pre>
+        <img src='https://i.imgur.com/teNXDG5.jpg'/>
+        <div>Comparison of various light source technology's luminous efficacy (<a href='https://www.researchgate.net/figure/Comparison-of-various-light-source-technologys-luminous-efficacy-4_fig1_286570536'>source</a>)</div>
+    </pre>
 
     *   **1240/wavelength of light in nanometers** = energy of a photon in eV (electron volts).
 
@@ -29,5 +34,6 @@ c: "It's easy to get **'efficacy' (how well something works)** and ['efficiency'
 
     *   **Question:** what is the electrical efficiency of a 450nm LED with a PPE of 2.8 µmol/joule? (1240/450=2.76eV) (10.37/2.76=3.76 µmol/joule) (2.8 µmol/joule/3.76 µmol/joule=74% efficient)"
 d: "It's easy to get 'efficacy' (how well something works) and 'efficiency' (ratio of useful work) confused. As we'll see, knowing this difference helps us make LED efficiency calculations and understand why red LEDs are used in grow lights."
+f: "As lighting efficiency improves alongside LED technology, it <b>is useful to understand the theoretical limits</b> to luminous efficacy for lights."
 
 ---

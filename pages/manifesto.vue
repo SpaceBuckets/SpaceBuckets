@@ -13,8 +13,7 @@
       </div>
     </div>
 
-    <cardrelated />
-
+ 
   </div>
 </template>
 
