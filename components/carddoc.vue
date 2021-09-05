@@ -76,6 +76,7 @@ export default {
       height: auto;
       width: 100%;
     margin: 0 auto;
+    pointer-events:none;
     display: block;          
     }
   }
