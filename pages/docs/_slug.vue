@@ -75,7 +75,7 @@ export default {
 }
 
 :root {
-  --padder: 55px;
+  --padder: 45px;
 }
 
 .doc-single-content {

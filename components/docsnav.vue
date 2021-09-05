@@ -7,7 +7,7 @@
              <nuxt-link to="/docs/begin-your-journey">Begin your Journey</nuxt-link>
              <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
             <nuxt-link to="/docs/lighting-solutions/">Lighting Solutions</nuxt-link>
-            <nuxt-link to="/docs/side-lighting/">Side-Lighting</nuxt-link>  
+            <nuxt-link to="/docs/led-sidelighting/">Side-Lighting</nuxt-link>  
             <nuxt-link to="/docs/led-bulbs/">LED bulbs</nuxt-link>
             <nuxt-link to="/docs/airflow-solutions/">Airflow Solutions</nuxt-link>
             <nuxt-link to="/docs/heat-control/">Heat Control</nuxt-link>
