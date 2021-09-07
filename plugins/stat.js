@@ -10,7 +10,8 @@ export default ({ app }) => {
         //   s.src = "https://c.statcounter.com/8400951/0/f591167d/1/?t=" + new Date().getTime();
         //   document.body.appendChild(s); 
         // }
-        fetch('https://bucket-st.herokuapp.com/');
+        fetch('https://bucket-st.herokuapp.com/', {mode: 'cors'});
+
       } 
   })
 }
