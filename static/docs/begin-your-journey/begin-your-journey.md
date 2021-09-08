@@ -14,7 +14,7 @@ c: "<pre>
 
     *   [Start by choosing a main container »](/docs/main-container)
 
-    *   [Read the Space Buckets Manifesto »](/manifesto)
+    *   [Always follow SAG's safety guidelines »](/docs/safety-guidelines)
     
     *   [View over 350 build examples in the Gallery »](/gallery)
 
