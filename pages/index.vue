@@ -18,7 +18,7 @@
       </div>
       <div class="post-wrapper">  
         <card :id="randItem" />
-        <nuxt-link class="recard" to="/docs">
+        <nuxt-link class="recard" to="/docs/begin-your-journey">
             <img :src="`/index/docs2.jpg`" />
             <h2>SB KNOWLEDGE BASE</h2>
           </nuxt-link>
