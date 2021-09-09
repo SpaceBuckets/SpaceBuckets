@@ -25,7 +25,7 @@ c: "The Light-Top is the heart of a Space Bucket. **It contains the main lightin
         <div>A typical UFO LED light</div>
     </pre>
 
-    _The best option for LED Space Buckets are <a href='https://amzn.to/36NO5zr'>UFO LED lights</a>_, which come in a round shape that fits a bucket perfectly. With this option, it is just a matter of putting the light on top of the lid and plugging it into the wall. <a href='https://amzn.to/36NO5zr'>UFO LED light</a> are the true **plug and play solution for Space Buckets**.
+    _The best option for LED Space Buckets are <a href='https://amzn.to/36NO5zr'>UFO LED grow lights</a>_, which come in a round shape that fits a bucket perfectly. With this option, it is just a matter of putting the light on top of the lid and plugging it into the wall. <a href='https://amzn.to/36NO5zr'>UFO LED grow light</a> are the **plug and play solution for Space Buckets**.
 
 
     These lights can be found in a variety of wattages. For the classic Space Bucket with 5gal containers, a <a href='https://amzn.to/36NO5zr'>135w UFO LED light</a> is enough. For supersized builds that feature 10gal containers, 180w are a better option. For Space Buckets that use stacked tote, a 300w UFO will be essential. As a general rule of thumb, the bigger the container, the more wattage will be needed for optimal results.
