@@ -28,7 +28,7 @@ c: "Only the energy input not radiated as light needs to be taken in to account 
 
     When working with a heat sink and a constant current power supply, you can monitor the voltage on the LEDs to see very tiny temperature variations that might not normally be measured with a temperature probe. With a constant voltage power supply, you can monitor the current to see very tiny temperature variations. This is because the I/V curves for LEDs are temperature dependent, and strings of LEDs make very high resolution temperature sensors. I use a 50,000 count data logging Fluke 287 for this purpose (I recommend a 6000 count multimeter for lower cost DIY. Every low cost meter I've ever tested reads within their listed specs when referenced to my Fluke 287, except for the occasional generic $5 meter that companies like Harbor Freight give away for free)."
 o: "3"
-d: "I often size heat sinks that prevent the LEDs from going above 85-125 C for safety, and then use a quite fan to keep them at a temperature I want them to be. This provides an inherent fail-safe feature when experimenting.My personal do not go over temperature is 145°F (63°C), or where I can keep my finger on the heat sink for an honest one second."
+d: "I often size heat sinks that prevent the LEDs from going above 85-125 C for safety, and then use a quite fan to keep them at a temperature I want them to be. This provides an inherent fail-safe feature when experimenting."
 ---
 
 

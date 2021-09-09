@@ -34,4 +34,4 @@ c: "Space Buckets can be used to grow nearly all species of plants, **specially 
 
     Over the years, bucketeers have experimented with many plant species, like strawberry, potatoes, wasabi and even an avocado sapling. Expanding the bucket plant portfolio is a good cause!"
 o: "12"
-d: "DIY indoor gardens can be used to grow all species of plants, specially those that are naturally short or react well to training."
+d: "DIY indoor gardens can be used to grow all species of plants, specially those that are naturally short or react well to training. Plants like cannabis, hot peppers, cherry tomatoes, and leafy herbs are all very recommended!"

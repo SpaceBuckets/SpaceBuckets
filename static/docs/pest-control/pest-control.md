@@ -16,4 +16,4 @@ c: "Pests are one of the biggest challenges that a gardener has to face, and thi
 
     One of the easiest and most effective pest control techniques is to **put a layer of material on top of the soil of the plang: Diatomaceous Earth, perlite or aquarium gravel all work well for this application.** Once the top part of the soil is covered, the pests ability to reproduce will be greatly reduced, interrupting their remaining life-cycle. Perlite is usually the best choice for this application, as Diatomaceous Earth can get muddy after a few waterings."
 o: "11"
-d: "Pests are one of the biggest challenges that a gardener has to face, and this is also true in DIY setups like Space Buckets."
+d: "Pests are one of the biggest challenges that a gardener has to face, and this is also true in DIY setups like Space Buckets. A pest invasion can ruin a garden at any point, so it is important to know how to keep them at bay."

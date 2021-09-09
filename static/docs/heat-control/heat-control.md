@@ -33,4 +33,4 @@ c: "A common problem with small enclosed gardens is high temperatures. Space Buc
 
     * [Learn more about airflow alternatives »](/docs/airflow-solutions)"
 o: "7"
-d: "Learn how to control high temperatures in your DIY indoor garden. Proper lighting and airflow are essential for solving these issues."
+d: "A common problem with small enclosed DIY gardens is controlling high temperatures. A proper lighting configuration and airflow design are essential for solving these issues."

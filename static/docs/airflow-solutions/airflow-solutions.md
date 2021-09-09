@@ -21,5 +21,5 @@ c: "Proper air circulation is essential for Space Buckets (and every other kind 
 
     Duct fans are a great (and often overlooked) alternative for cooling Space Buckets, as they provide good airflow: the 4' version provides about 100 CFM, which is 70% more than standard PC fans. **These inline fans can be used in high temperature situations** to extract the heat from the bulbs. These fans also work at line voltage (110v or 220v), and they come already wired with a plug, so installation is a matter of fitting it in the bucket and turning it on. Booste fans are cheaper kind of inline fan, which can be also used for odor carbon filtering."
 o: "3"
-d: "Proper airflow is essential for Space Buckets and indoor gardening. You need good ventilation to extract the heat away from your plants."
+d: "Proper air circulation is essential for Space Buckets (and every other kind of indoor garden). Your bucket needs good ventilation to extract the heat from the CFL bulbs (or LED lights), and also to give the plant breaths of fresh air and plenty of CO2."
 ---

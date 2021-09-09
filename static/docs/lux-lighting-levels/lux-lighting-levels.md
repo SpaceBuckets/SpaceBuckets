@@ -19,4 +19,5 @@ c: "**There are several different 'ideal' levels of light intensity, depending o
 
 
     _These values is only valid for white light._ Except for unrooted cuttings, you want to stay above these numbers. I've grown seedlings fine at 35klx, and many people on [the /r/SpaceBuckets subreddit](https://reddit.com/r/SpaceBuckets/) are running their plants at >75klk or equivalent. **You really want to stay above 40klx for flowering, and many professionals are going to be closer to 75-90klx**. I tend to grow plants at higher lighting levels myself. As a general rule, if your seedlings are 'stretching' then you need more total light or a higher color temperature light."
+d: "There are several different 'ideal' levels of light intensity, depending on the stage of growth your plant is in. The following information is useful when figuring out how much 'headroom' you need, or distance between your light source and the canopy of your plant"    
 ---
