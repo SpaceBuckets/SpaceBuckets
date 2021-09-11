@@ -136,7 +136,7 @@ export default {
   components: {Buildsimilar},
   head() {
     return {
-      title: `Space Buckets - BUILDER`,
+      title: `Bucket Builder - Space Buckets: DIY Indoor Gardening`,
       meta: [{ hid: 'description', name: 'description', content: 'Try the Bucket builder to plan your next DIY indoor garden. Mix containers, lighting and airflow and build your bucket!' }],
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };

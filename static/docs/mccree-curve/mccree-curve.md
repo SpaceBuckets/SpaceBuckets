@@ -4,12 +4,13 @@ s: "mccree-curve"
 a: "SuperAngryGuy"
 c: "**The McCree curve is a quantum efficiency lighting curve used in botany** and should be used only as an initial foundation for understanding photosynthesis rates by wavelength. It is far more accurate than charts for chlorophyll dissolved in a solvent or charts for green algae, and it is common for these charts to get mixed up.
 
-    It was developed in the early 1970s by **Keith McCree**, a Ph.D physicist that was a professor of Soil and Crop Sciences at Texas A&M University. He tested 22 different crop plant types for photosynthesis rates with a PPFD of 18-150 µmol/m2/sec, in monochromatic light at 25nm intervals from 350nm to 750nm, and using the single leaf model. **The McCree curve is only valid for these conditions.** Monitoring CO2 uptake was used to measure photosynthesis rates.
-
     <pre>
         <img src='https://i.imgur.com/bSdzTiu.jpg'/>
         <div>Assimilation chamber for measuring photosynthesis</div>
     </pre>
+
+    
+    It was developed in the early 1970s by **Keith McCree**, a Ph.D physicist that was a professor of Soil and Crop Sciences at Texas A&M University. He tested 22 different crop plant types for photosynthesis rates with a PPFD of 18-150 µmol/m2/sec, in monochromatic light at 25nm intervals from 350nm to 750nm, and using the single leaf model. **The McCree curve is only valid for these conditions.** Monitoring CO2 uptake was used to measure photosynthesis rates.
 
     > The measurements were made to provide a basis for discussion of **the definition of 'photosynthetically active radiation'**. The action spectrum, absorptance and spectral quantum yield of CO2 uptake were measured, for leaves of 22 species of crop plant, over the wavelength range 350 to 750nm. The following factors were varied: species, variety, age of leaf, growth conditions (field or growth chamber), test conditions such as temperature, COs concentration, flux of monochromatic radiation, flux of supplementary white radiation, orientation of leaf (adaxial or abaxial surface exposed), For all species and conditions **the quantum yield curve had 2 broad maxima, centered at 620 and 440nm, with a shoulder at 670nm**. The average height of **the blue peak was 70% of that of the red peak**. K. J. McCree, [The action spectrum, absorptance and quantum yield of photosynthesis in crop plants](http://www.esalq.usp.br/lepse/imgs/conteudo_thumb/mini/The-action-spectrum-absorptance-and-quantum-yield-of-photosynthesis-in-crop-plants.pdf).
 

@@ -9,6 +9,7 @@
             <docsnav />          
           </div>
         </div>
+        <div class="doc-single-wrapper">
         <div class="doc-single-content">
           <h2>{{doc.t}}</h2>
           <h5 v-if="doc.a">
@@ -16,7 +17,13 @@
 
           </h5>
           <div v-html="doc.c"></div>
+
         </div>
+     <!--      <section class='featured-docs'>
+            <carddoc v-for="(redoc, i) in redocs" :doc="redoc" :key="`${i}-redoc`"/>
+          </section> -->
+        </div>
+
         <div class="docs-sidebar onlymobile" id="docslug">
           <docsnav />
         </div>
@@ -28,15 +35,16 @@
 </template>
 
 <script>
-import { getDocs, singleDoc } from "~/scripts/flatDB";
+import { featuredDocs, getDocs, singleDoc } from "~/scripts/flatDB";
 
 export default {
   async asyncData({ params }) {
     const doc = await singleDoc(params.slug);
     const docs = await getDocs();
+    const redocs = await featuredDocs()
     docs.sort(function(a, b) { return a.o- b.o; })
     const swipeItem = docs[doc.o]
-    return { doc, docs, swipeItem };
+    return { doc, docs, swipeItem, redocs };
   },
   head() {
     return {
@@ -52,15 +60,17 @@ export default {
 
 .navigator {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 18px;
+  right: 18px;
   background: #000;
   color: #fff;
   border-radius: 50%;
-    width: 50px;
-    height: 50px;  
+  padding: 20px;
+    width: 55px;
+    height: 55px;  
     display: block;
-    padding: 10px;
+    padding: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.5);
   svg {
     width: 100%;
     stroke:#fff;
@@ -78,18 +88,34 @@ export default {
   --padder: 45px;
 }
 
-.doc-single-content {
-  background: #fafafa;
-  padding: 40px 0; 
-  //border-right: 1px solid #1a1a1b;
-  //max-width: 1280px;
-  width: calc(100% - 280px);
+.featured-docs {
+  overflow: auto;
+  background: #000;
+  padding-top: 40px;
+}
+
+.doc-single-wrapper {
+    width: calc(100% - 280px);
   max-width: max-content;
   float: left;
+    background: #000;
   @media (max-width: 980px) {
-    padding: 10px 0;
     width: 100%;
   }  
+}
+
+.doc-single-content {
+  background: #fafafa;
+  padding: 40px 0 20px; 
+  //border-right: 1px solid #1a1a1b;
+  max-width: 1440px;
+    @media (max-width: 980px) {
+  padding: 15px 0 20px; 
+
+  }  
+  &:after { content: ""; display: table; clear: both; }
+
+
   p {
     padding-right: 100px;
     @media (max-width: 980px) {
@@ -99,8 +125,8 @@ export default {
   > div {
     line-height: 1.65;
     font-size: 17px;
+    margin-bottom: 40px;
     padding: 0 var(--padder);
-    max-width: 1280px;
     @media (max-width: 980px) {
       max-width: 100%;
       padding: 0 15px;

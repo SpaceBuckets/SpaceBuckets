@@ -27,7 +27,7 @@ export default {
   },  
    head() {
     return {
-      title: `Space Buckets - BUCKETDROME`,
+      title: `BUCKETDROME - Space Buckets: DIY Indoor Gardening`,
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Try the DIY indoor gardening simulator, from digital seed to flower.' }],
     };

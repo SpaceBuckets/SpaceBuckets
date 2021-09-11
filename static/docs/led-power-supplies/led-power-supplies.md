@@ -16,5 +16,5 @@ c: "Power supplies have historically been the weak link in an LED grow light sys
 
 
     I often use [lab power supplies](https://amzn.to/2WAllHI) as my LED drivers. If you only get one lab power supply make sure it's a linear power supply and not a noisy switching power supply. **Lower cost linear power supplies typically have a fan** that will turn on at certain current levels while more expensive and much heavier ones are entirely passive cooled."
-d: "Power supplies have historically been the weak link in an LED grow light system and cheap capacitors are the main issue. The cheap boost converters you can buy on Amazon and eBay will work, but don't expect more than about 6 months use out of them. Again, it's the capacitors that tend to fail."    
+d: "Power supplies have historically been the weak link in an LED grow light system and cheap capacitors are the main issue. The cheap boost converters you can buy on Amazon and eBay will work, but don't expect more than about 6 months use out of them."    
 ---

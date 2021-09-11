@@ -1,55 +1,13 @@
 <template>
 
       <div class="search-filters">
-        <section ref="section-1" :class="{ractive: $state.docsActive === 1}" @click="$state.docsActive = 1">
-          <div>Getting Started <span>(9)</span></div>
-          <div ref="content-1" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
-             <nuxt-link to="/docs/begin-your-journey">Begin your Journey</nuxt-link>
-             <nuxt-link to="/docs/main-container/">Main Container</nuxt-link>
-            <nuxt-link to="/docs/lighting-solutions/">Lighting Solutions</nuxt-link>
-            <nuxt-link to="/docs/led-sidelighting/">Side-Lighting</nuxt-link>  
-            <nuxt-link to="/docs/led-bulbs/">LED bulbs</nuxt-link>
-            <nuxt-link to="/docs/airflow-solutions/">Airflow Solutions</nuxt-link>
-            <nuxt-link to="/docs/heat-control/">Heat Control</nuxt-link>
-            <nuxt-link to="/docs/smell-control/">Smell Control</nuxt-link>
-             <nuxt-link to="/docs/electrical-basics/">Electrical Basics</nuxt-link>
-            <nuxt-link to="/docs/safety-guidelines/">Safety Guidelines</nuxt-link>
-          </div>
-        </section>
 
-        <section ref="section-2" :class="{ractive: $state.docsActive === 2}"  @click="$state.docsActive = 2">
-          <div>SAG Knowledge Base <span>(18)</span></div>
-          <div ref="content-2" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
-            <nuxt-link to="/docs/core-lighting-concepts/">Core Lighting Concepts</nuxt-link>   
-            <nuxt-link to="/docs/lux-meters">Lux Meters and Sensors</nuxt-link>            
-            <nuxt-link to="/docs/color-rendering-index/">Color Rendering Index (CRI)</nuxt-link>            
-            <nuxt-link to="/docs/daily-lighting-integral/">Daily Lighting Integral (DLI)</nuxt-link>    
-            <nuxt-link to="/docs/lux-ppfd-conversion/">Lux-PPFD Conversions</nuxt-link>            
-            <nuxt-link to="/docs/lux-lighting-levels/">Lux Lighting Levels</nuxt-link>    
-            <nuxt-link to="/docs/equivalent-wattage/">Equivalent Wattage</nuxt-link>    
-            <nuxt-link to="/docs/luminous-efficiency/">Luminous Efficiency</nuxt-link>            
-            <nuxt-link to="/docs/luminous-efficacy/">Luminous Efficacy</nuxt-link> 
-            <nuxt-link to="/docs/efficacy-limits/">Efficacy Limits</nuxt-link>                     
-            <nuxt-link to="/docs/macadam-ellipses/">MacAdam Ellipses</nuxt-link>            
-            <nuxt-link to="/docs/mccree-curve/">McCree Curve</nuxt-link>          
-            <nuxt-link to="/docs/emerson-enhancement-effect/">Emerson Enhancement Effect</nuxt-link>    
-            <nuxt-link to="/docs/light-colors/">Light Colors Effects</nuxt-link>            
-            <nuxt-link to="/docs/mixing-colors/">Mixing Light Colors</nuxt-link>            
-            <nuxt-link to="/docs/ultraviolet-growing/">Ultraviolet Growing</nuxt-link>            
-            <nuxt-link to="/docs/led-heat-sinks/">LED Heat Sinks</nuxt-link>            
-            <nuxt-link to="/docs/led-power-supplies/">LED Power Supplies</nuxt-link>            
+        <section :ref="`section-${item.order}`" class="tes" v-for="(item, i) in nav" :key="`parent-${i}`" :class="{ractive: $state.docsActive === item.order}" @click="$state.docsActive = item.order">
+          <div>{{i}} <span>({{item.items.length}})</span> </div>
+          <div :ref="`content-${item.order}`" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
+            <nuxt-link v-for="(single, o) in item.items" :to="single.url" :key="`single-${o}`" > {{single.title}}</nuxt-link>
           </div>
-        </section>   
-        <section ref="section-3" :class="{ractive: $state.docsActive === 3}" @click="$state.docsActive = 3">
-          <div>Plant Advice <span>(4)</span></div>
-          <div ref="content-3" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
-            <nuxt-link to="/docs/plant-species/">Plant Species</nuxt-link>            
-            <nuxt-link to="/docs/plant-training/">Plant Training</nuxt-link>       
-            <nuxt-link to="/docs/pest-control/">Pest Control</nuxt-link>            
-            <nuxt-link to="/docs/coco-coir/">Coco Coir</nuxt-link>            
-
-          </div>
-        </section>             
+        </section>           
       </div>
 </template>
 
@@ -57,10 +15,168 @@
 export default {
   name: "docsnav",
   props: [""],
+  data() {
+    return {
+      "nav": {
+        "GETTING STARTED":{
+            order: 1,
+            items: [{
+              url:"/docs/begin-your-journey",
+              title:"Begin your Journey"
+            },
+            {
+              url:"/docs/main-container",
+              title:"Main Container"
+            },
+            {
+              url:"/docs/lighting-solutions",
+              title:"Lighting Solutions"
+            },
+            {
+              url:"/docs/led-sidelighting",
+              title:"Side-Lighting"
+            },
+            {
+              url:"/docs/led-bulbs",
+              title:"LED bulbs"
+            },
+            {
+              url:"/docs/airflow-solutions",
+              title:"Airflow Solutions"
+            },
+            {
+              url:"/docs/heat-control",
+              title:"Heat Control"
+            },
+            {
+              url:"/docs/smell-control",
+              title:"Smell Control"
+            },
+            {
+              url:"/docs/electrical-basics",
+              title:"Electrical Basics"
+            },
+            {
+              url:"/docs/safety-guidelines",
+              title:"Safety Guidelines"
+            },
+            {
+              url:"/docs/manifesto",
+              title:"SB Manifesto"
+            }]
+        },
+        "SAG's KNOWLEDGE BASE":{
+           order: 2,
+            items: [{
+              url:"/docs/core-lighting-concepts",
+              title:"Core Lighting Concepts"
+            },
+            {
+              url:"/docs/lux-meters",
+              title:"Lux Meters and Sensors"
+            },
+            {
+              url:"/docs/color-rendering-index",
+              title:"Color Rendering Index (CRI)"
+            },
+            {
+              url:"/docs/daily-lighting-integral",
+              title:"Daily Lighting Integral (DLI)"
+            },
+            {
+              url:"/docs/lux-ppfd-conversion",
+              title:"Lux-PPFD Conversions"
+            },
+            {
+              url:"/docs/lux-lighting-levels",
+              title:"Lux Lighting Levels"
+            },
+            {
+              url:"/docs/equivalent-wattage",
+              title:"Equivalent Wattage"
+            },
+            {
+              url:"/docs/luminous-efficiency",
+              title:"Luminous Efficiency"
+            },
+            {
+              url:"/docs/luminous-efficacy",
+              title:"Luminous Efficacy"
+            },
+            {
+              url:"/docs/efficacy-limits",
+              title:"Efficacy Limits"
+            },
+            {
+              url:"/docs/macadam-ellipses",
+              title:"MacAdam Ellipses"
+            },
+            {
+              url:"/docs/mccree-curve",
+              title:"McCree Curve"
+            },
+            {
+              url:"/docs/emerson-enhancement-effect",
+              title:"Emerson Enhancement Effect"
+            },
+            {
+              url:"/docs/light-colors",
+              title:"Light Colors Effects"
+            },
+            {
+              url:"/docs/mixing-colors",
+              title:"Mixing Light Colors"
+            },
+            {
+              url:"/docs/ultraviolet-growing",
+              title:"Ultraviolet Growing"
+            },
+            {
+              url:"/docs/led-heat-sinks",
+              title:"LED Heat Sinks"
+            },
+            {
+              url:"/docs/led-power-supplies",
+              title:"LED Power Supplies"
+            }]
+        },
+        "PLANT ADVICE":{
+           order: 3,
+            items: [{          
+              url:"/docs/plant-species",
+              title:"Plant Species"
+            },
+            {
+              url:"/docs/plant-training",
+              title:"Plant Training"
+            },
+            {
+              url:"/docs/pest-control",
+              title:"Pest Control"
+            },
+            {
+              url:"/docs/coco-coir",
+              title:"Coco Coir"
+            }]
+        }
+      }      
+    }
+  },
   mounted() {
+   this.$nextTick(() => {
+
     this.$refs[`content-${this.$state.docsActive}`].scrollTop = this.$state.docsScroll
-   }
+
+      Object.keys(this.nav).forEach((key, index) => {
+         for (let e = 0; e < this.nav[key].items.length; e++) {
+          if(this.nav[key].items[e].url === this.$route.path.replace(/\/$/, '')) {
+            this.$state.docsActive = this.nav[key].order
+          } 
+        }
+      });
  
+   });
+  }
 };
 </script>
 
@@ -79,7 +195,7 @@ section.ractive > div + div {
   color: #eee;
   padding: 0 0;
   @media (max-width: 980px) {
-    padding: 15px;
+    width: 100%;
   }
   a { 
     color: #eee; 

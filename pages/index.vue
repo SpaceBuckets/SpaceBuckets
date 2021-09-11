@@ -40,8 +40,8 @@
 
         <cardindex title="Play the Bucketdrome" link="play" variation="doubled"/>
 
-        <cardindex title="Space Buckets Manifesto" link="manifesto" />
-
+<!--         <cardindex title="Space Buckets Manifesto" link="manifesto" />
+ -->
 
         <card :id="sag" />
  
@@ -136,12 +136,12 @@ export default {
   },
   head() {
     return {
-      title: "Space Buckets - DIY indoor garden - Grow plants with LEDs",
+      title: "Space Buckets: DIY indoor gardening - Grow plants with LEDs",
       link: [ { rel: "canonical", href: "https://spacebuckets.com" },],
       meta: [{
         hid: 'description',
         name: 'description',
-        content: 'DIY Indoor Gardening with stacked containers and LED lights or CFL bulbs. Learn how to build a DIY grow bucket, train plants to fit in tiny spaces and join our community of gardeners! '
+        content: 'DIY Indoor Garden with LED lights or CFL bulbs. Learn how to build a DIY grow bucket, train plants for small spaces and join our community! '
       }]           
     };
   },

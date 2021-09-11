@@ -10,7 +10,7 @@
 export default {
    head() {
     return {
-      title: `Space Buckets - DESIGN`,
+      title: `Bucket Designer - Space Buckets: DIY Indoor Gardening`,
       meta: [{ hid: 'description', name: 'description', content: 'Check out our tridimensional designer for DIY indoor gardens. Create your 3D build!' }],
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };

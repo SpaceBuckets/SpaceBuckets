@@ -53,7 +53,7 @@ export default {
   },
   head() {
     return {
-      title: `Space Buckets - SEARCH - ${this.$route.query.q}`,
+      title: `Search '${this.$route.query.q}' - Space Buckets: DIY Indoor Gardening`,
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },],
       meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of DIY indoor gardens from the community. More than 350 builds await!' }],
 

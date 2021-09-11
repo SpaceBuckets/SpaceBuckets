@@ -16,16 +16,15 @@ c: "A **quantum light meter** is called 'quantum' because their measurement is i
 
     ### Recommended Meters
 
-    <pre>
-        <img src='https://i.imgur.com/6Upfidy.jpg'/>
-        <div>Apogee MQ-500 quantum light meter</div>
-    </pre>
-
     For red/blue 'blurple' lighting and for professional or academic use for all lighting, I recommend either the [Apogee MQ-500 quantum light meter](https://amzn.to/3DoAOv1) or the [Apogee SQ-520 quantum light sensor](https://amzn.to/3mFcYFp). If that is not an option, the Dr.Meter lux meters may be a good alternative, like the [1330B-V](https://amzn.to/2UXW5dH). **For pro/academic use or advanced hobby use, get the MQ-500** if you are doing more field use, get the SQ-520 if you are doing more lab use and don't need to be portable.
 
 
     According to **Bruce Bugbee**, founder of [Apogee Instruments](https://www.apogeeinstruments.com/) and the Director of the Crop Physiology Laboratory at [Utah State University](https://caas.usu.edu/labs/cpl/), _your light meter should never have more than a 5% error over 400-700nm_ for academic purposes. A lux meter should keep you within 10% error for most white light sources (as per my testing), as long as a rough conversion value is known.
 
+    <pre>
+        <img src='https://i.imgur.com/6Upfidy.jpg'/>
+        <div>Apogee MQ-500 quantum light meter</div>
+    </pre>
 
     Quantum light meters and lux meters are basically worthless for far red lights and far red LEDs. **For those you need a spectrometer**, a far red sensitive spectral sensor, or something like an Apogee SQ-620 which is PAR and far red sensitive. Red/far red sensors for microcontrollers start at about $25.
 

@@ -182,7 +182,7 @@ export default {
 
   head() {
     return {
-      title: `Space Buckets - ${this.post.t}`,
+      title: `${this.post.t} - Space Buckets: DIY Indoor Gardening`,
       meta: [{ hid: 'description', name: 'description', content: this.post.c.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "") }],
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
