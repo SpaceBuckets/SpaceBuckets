@@ -2,7 +2,7 @@
 t: "Green leaves and green light: what's really going on"
 s: "green-leaves-green-light"
 a: "SuperAngryGuy"
-c: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is [the McCree curve](/docs/mccree-curve) is used in botany, and every paper on photosynthesis studies by wavelength demonstrates that _most plants use green light efficiently_ (particularly compared to blue light and at higher lighting levels).
+c: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is [the McCree curve](/docs/mccree-curve) used in botany, and every paper on photosynthesis studies by wavelength demonstrates that _most plants use green light efficiently_ (particularly compared to blue light and at higher lighting levels).
 
 
     ### The claim and my problem with it
@@ -104,5 +104,5 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
 
     *   [Cryptochromes integrate green light signals into the circadian system](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pce.13643)"
 o: "3"
-d: "Proper air circulation is essential for Space Buckets (and every other kind of indoor garden). Your bucket needs good ventilation to extract the heat from the CFL bulbs (or LED lights), and also to give the plant breaths of fresh air and plenty of CO2."
+d: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is the McCree curve used in botany, and every paper on photosynthesis studies by wavelength "
 ---

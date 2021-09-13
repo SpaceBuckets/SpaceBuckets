@@ -33,7 +33,7 @@
           <i class="product-brand" v-if="filterItems !== 8">{{item.brand}}</i>
           <div class="product-price" v-if="filterItems !== 8">{{item.price}}</div>
         </div>
-        <div class="product-image">
+        <div class="product-image"  v-if="filterItems !== 8">
           <img :src="`${item.img}`" />
         </div>
 
@@ -226,8 +226,8 @@ export default {
 flex-basis: calc(50% - 10px);
     max-width: calc(50% - 10px);
     margin: 5px;
-    height: auto;
-    img { width: 100% }
+    //height: auto;
+    //img { width: 100% }
  }
 
   &:hover {

@@ -12,5 +12,5 @@ c: "Humans of the Earth! Hear the Space Buckets calling. It is time for a DIY in
 
     *   _IV. Bucketeers matter._ Every gardener can make an impact in his inner self and social circle. Watching a plant thrive is a perspective-gaining experience. This bucket mindset pushes us forward."
 o: "3"
-d: "Proper air circulation is essential for Space Buckets (and every other kind of indoor garden). Your bucket needs good ventilation to extract the heat from the CFL bulbs (or LED lights), and also to give the plant breaths of fresh air and plenty of CO2."
+d: "Humans of the Earth! Hear the Space Buckets calling. It is time for a DIY indoor gardening revolution. We stand at the vanguard."
 ---
