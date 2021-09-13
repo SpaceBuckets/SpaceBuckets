@@ -1,14 +1,12 @@
 <template>
-
-      <div class="search-filters">
-
-        <section :ref="`section-${item.order}`" class="tes" v-for="(item, i) in nav" :key="`parent-${i}`" :class="{ractive: $state.docsActive === item.order}" @click="$state.docsActive = item.order">
-          <div>{{i}} <span>({{item.items.length}})</span> </div>
-          <div :ref="`content-${item.order}`" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
-            <nuxt-link v-for="(single, o) in item.items" :to="single.url" :key="`single-${o}`" > {{single.title}}</nuxt-link>
-          </div>
-        </section>           
+  <div class="search-filters">
+    <section :ref="`section-${item.order}`" class="tes" v-for="(item, i) in nav" :key="`parent-${i}`" :class="{ractive: $state.docsActive === item.order}" @click="$state.docsActive = item.order">
+      <div>{{i}} <span>({{item.items.length}})</span> </div>
+      <div :ref="`content-${item.order}`" @scroll="$state.docsScroll = $refs[`content-${$state.docsActive}`].scrollTop">
+        <nuxt-link v-for="(single, o) in item.items" :to="single.url" :key="`single-${o}`" > {{single.title}}</nuxt-link>
       </div>
+    </section>           
+  </div>
 </template>
 
 <script>
@@ -105,7 +103,7 @@ export default {
             },
             {
               url:"/docs/efficacy-limits",
-              title:"Efficacy Limits"
+              title:"LED Efficacy Limits"
             },
             {
               url:"/docs/macadam-ellipses",
@@ -120,13 +118,17 @@ export default {
               title:"Emerson Enhancement Effect"
             },
             {
-              url:"/docs/light-colors",
-              title:"Light Colors Effects"
+              url:"/docs/photomorphogenesis",
+              title:"Photomorphogenesis"
             },
             {
               url:"/docs/mixing-colors",
               title:"Mixing Light Colors"
             },
+            {
+              url:"/docs/green-leaves-green-light",
+              title:"Green Leaves and Green Light"
+            },            
             {
               url:"/docs/ultraviolet-growing",
               title:"Ultraviolet Growing"

@@ -1,5 +1,5 @@
 ---
-t: "Mixing colors"
+t: "Mixing Light Colors"
 s: "mixing-colors"
 a: "SuperAngryGuy"
 c: "I go with _3000K or 3500K for all around use for plant growing_, but experiment with various 1750K to 6500K COBs as well (1750K is about what candle light is). In my opinion, mixing warm white and cool white LEDs in a grow light makes no sense, and I consider it a marketing gimmick at best. **An exception is if you want a variable color temperature grow light**, then it makes sense to to mix warm white and cool white dimmable separately, or use dimmable warm white and blue LEDs to control the color temperature.

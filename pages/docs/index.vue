@@ -12,6 +12,8 @@
             <docsnav />
           </div>
         </div>
+                <div class="doc-single-wrapper">
+
         <div class="doc-single-content">
           <h2>Begin your Journey</h2>
           <br />
@@ -97,6 +99,7 @@
                 <li><nuxt-link to='/docs/smell-control'>Learn more about smell control »</nuxt-link></li>
                 </ul>
             </div>
+         </div>
          </div>
         <div class="docs-sidebar onlymobile" id="docsluge">
           <docsnav />
@@ -216,6 +219,10 @@ pre {
     padding: 15px;
     padding-right: 50px;
     font-style: italic;
+    margin-bottom: 15px;
+    p {
+      margin-bottom: 0;
+    }
     @media (max-width: 980px) {
       padding: 10px;
     }    
