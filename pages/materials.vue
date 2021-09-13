@@ -30,8 +30,8 @@
       >
         <div class="product-title">{{item.title}}</div>
         <div class="product-brand-container">
-          <i class="product-brand">by {{item.brand}}</i>
-          <div class="product-price">{{item.price}}</div>
+          <i class="product-brand" v-if="filterItems !== 8">{{item.brand}}</i>
+          <div class="product-price" v-if="filterItems !== 8">{{item.price}}</div>
         </div>
         <div class="product-image">
           <img :src="`${item.img}`" />
@@ -146,7 +146,7 @@ export default {
   name: "app",
   data() {
     return {
-      filterItems: [],
+      filterItems: 8,
       wishlist: [],
       filterActive: "",
       options: {
@@ -209,7 +209,7 @@ export default {
   flex-basis: calc(320px - 10px);
   margin: 0 20px 20px 0;
   border-radius: 2px;
-  background: #fafafa;
+  background: #fff;
   max-width: 250px;
   height: 300px;
   img {
@@ -218,6 +218,9 @@ export default {
     width: 200px;
     height: auto;
     padding: 12px;
+    &[src='undefined'] {
+      opacity: 0;
+    }
   }  
       @media (max-width: 980px) {
 flex-basis: calc(50% - 10px);
