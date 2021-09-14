@@ -2,7 +2,7 @@
 t: "Photomorphogenesis: How Light Colors Affect Plants Growth"
 s: "photomorphogenesis"
 a: "SuperAngryGuy"
-c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike photosynthesis, can be very wavelength dependent in a plant's response. The [phytochromes](https://en.wikipedia.org/wiki/Phytochrome) are predominately red and far red with Pr peaking around 660nm. The *blue sensitive proteins** are the [crytochromes](https://en.wikipedia.org/wiki/Cryptochrome) and [phototropins](https://en.wikipedia.org/wiki/Phototropin) have what's known as the 'three finger blue action response' with peaks at roughly 430nm, 450nm, and 470nm depending on the specific protein.
+c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike photosynthesis, can be very wavelength dependent in a plant's response. The [phytochromes](https://en.wikipedia.org/wiki/Phytochrome) are predominately red and far red with Pr peaking around 660nm. The **blue sensitive proteins** are the [crytochromes](https://en.wikipedia.org/wiki/Cryptochrome) and [phototropins](https://en.wikipedia.org/wiki/Phototropin) have what's known as the 'three finger blue action response' with peaks at roughly 430nm, 450nm, and 470nm depending on the specific protein.
 
     <pre>
         <img src='https://i.imgur.com/3eqaUCv.jpg'/>
