@@ -33,8 +33,7 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
     ### Terashima et al has entered the chat
 
     <pre>
-        <img src='https://i.imgur.com/MjTkqON.jpg'/>
-        <div>The green gap problem for LEDs <a href='https://www.researchgate.net/publication/24043711_Green_Light_Drives_Leaf_Photosynthesis_More_Efficiently_than_Red_Light_in_Strong_White_Light_Revisiting_the_Enigmatic_Question_of_Why_Leaves_are_Green'>(source)</a></div>
+        <img src='https://i.imgur.com/MjTkqON.jpg'/> 
     </pre>
 
     > The intra-leaf light absorption profile is in most cases steeper than the photosynthetic capacity profile. In strong white light, therefore, the quantum yield of photosynthesis would be lower in the upper chloroplasts, located near the illuminated surface, than that in the lower chloroplasts. Because **green light can penetrate further into the leaf** than red or blue light, in strong white light, _any additional green light absorbed by the lower chloroplasts would increase leaf photosynthesis_ to a greater extent than would additional red or blue light. **Ichiro Terashima et al**, [Green Light Drives Leaf Photosynthesis More Efficiently than Red Light in Strong White Light](https://www.researchgate.net/publication/24043711_Green_Light_Drives_Leaf_Photosynthesis_More_Efficiently_than_Red_Light_in_Strong_White_Light_Revisiting_the_Enigmatic_Question_of_Why_Leaves_are_Green).
