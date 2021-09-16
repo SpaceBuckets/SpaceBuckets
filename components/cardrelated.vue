@@ -1,12 +1,12 @@
 <template>
   <div>
-    <div class="cards-container" v-if="relatedItems">
-      <h2 v-if="relatedItems.length > 0">RELATED BUILDS</h2>
+    <div class="cards-container">
+<!--       <h2 v-if="relatedItems.length > 0">RELATED BUILDS</h2>
       <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
         <client-only>
           <card :id="post" />
         </client-only>
-      </div>
+      </div> -->
 
 
       <h2>RANDOM BUILDS</h2>
@@ -30,7 +30,7 @@ export default {
   data() {
     return {
       relatedItems: [],
-      randomItems: [],
+      randomItems: 4,
     };
   },
   async created() {
