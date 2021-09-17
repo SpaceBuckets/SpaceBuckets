@@ -4,7 +4,7 @@
       {{ id.t }}
     </h2>
     <i v-if="id.v">{{ id.v }}</i>
-    <img :src="`/u/${id.s}/cover.jpg`" alt />
+    <img v-if="isNaN(this.id)" :src="`/u/${id.s}/cover.jpg`" alt />
   </nuxt-link>
 </template>
 
