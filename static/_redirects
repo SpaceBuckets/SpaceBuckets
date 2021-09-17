@@ -2,8 +2,6 @@
 /u/simple-template      /template
 /template/              /template
 /admin#/                /admin/
-/ventilation            /docs/airflow-solutions
-/lighting               /docs/lighting-solutions
 /drome                  /play
 /drome/                 /play
 /designer               /design
