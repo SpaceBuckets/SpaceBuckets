@@ -93,9 +93,9 @@ export default {
     const randDoc2 = await singleRandomDoc();
      var introItems = [
         {
-          link: "/new",
-          title: "Submit your build!",
-          desc: "Add a bucket to the gallery.",
+          link: "/docs",
+          title: "SB Knowledge Base",
+          desc: "Browse the Space Buckets Docs",
           icon: "icon-flask"
         },
         {
