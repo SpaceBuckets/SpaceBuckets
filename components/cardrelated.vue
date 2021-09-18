@@ -1,22 +1,10 @@
 <template>
   <div>
     <div class="cards-container">
-<!--       <h2 v-if="relatedItems.length > 0">RELATED BUILDS</h2>
-      <div class="card-skeleton" v-for="post in relatedItems" :key="post.s">
-        <client-only>
-          <card :id="post" />
-        </client-only>
-      </div> -->
-
-
       <h2>RANDOM BUILDS</h2>
 
-      <div class="card-skeleton" v-for="post in randomItems" :key="post.s">
-        <client-only>
-          <card :id="post" />
-        </client-only>
-      </div>      
-    </div>
+         <card v-for="post in randomItems" :key="post.s" :id="post" />
+     </div>
     <nuxt-link class="load-more" :to="{name: 'gallery'}">View All</nuxt-link>
   </div>
 </template>

@@ -1,6 +1,5 @@
 <template>
   <div class="post-masonry" :class="variation">
-    <div class="progress" :style="{ '--value': progressValue * 100 }"></div>
     <div class="post-content">
       <h2>
         <span>{{ post.t }}</span>
@@ -73,16 +72,16 @@
         </div>
       </div>
     </div>
-
+    
     <a
-      class="img-container"
+      class="img-c"
       v-for="(img, ie) in post.i"
       target="_blank"
       :key="`section-${ie}`"
+      :style="{ 'display':'block','padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"
       :href="`/u/${post.s}/${img.h}`">
       <img v-if="variation != 'skeleton'" :src="`/u/${post.s}/${img.h}`" alt />
       <img v-if="variation === 'skeleton'" loading="lazy" :src="`/u/${post.s}/${img.h}`" alt />
-      <div :style="{ 'padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"></div>
     </a>
   </div>
 </template>
@@ -98,8 +97,7 @@ export default {
       relatedItems: [],
       swipeItem: [],
       progressScroll: 0,
-      progressValue: 0,
-      savedActive: false,
+       savedActive: false,
     };
   },
   async created() {  
@@ -225,7 +223,7 @@ export default {
     column-count: auto;
     column-gap: 0;
   }
-  .img-container {
+  .img-c {
     background: #151515;
     position: relative;
     overflow: auto;
@@ -234,22 +232,15 @@ export default {
     user-select: none;
     //pointer-events: none;
     display: block;
+    width: 100%;
     img {
       position: absolute;
       top: 0;
       left: 0;
       bottom: 0;
       right: 0;
+      height: 100%;
     }
-  }
-  &.skeleton {
-    /*     display: flex;
-    flex-direction: column;
-    .post-support,
-    .post-content {
-      min-height: initial;
-      overflow: initial;
-    } */
   }
 }
 

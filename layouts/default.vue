@@ -21,8 +21,7 @@
         <nuxt-link to="/materials">MATERIALS</nuxt-link>
         <nuxt-link to="/docs/begin-your-journey">DOCS</nuxt-link>
         <nuxt-link to="/gallery/1">GALLERY</nuxt-link>
-<!--         <a href="#" class="onlydesktop" style="opacity: 0.2;pointer-events:none">|</a>
- -->        <nuxt-link to="/build">BUILD</nuxt-link>
+        <nuxt-link to="/build">BUILD</nuxt-link>
         <nuxt-link to="/design" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
         <nuxt-link to="/play" no-prefetch>PLAY</nuxt-link>
         <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets">SUBREDDIT</a>
@@ -125,7 +124,7 @@ header {
     position: absolute;
     top: 0px;
     right: 0px;
-    padding: 15px 10px;
+    padding: 15px 12px 15px 18px;
     cursor: pointer;
     background: transparent;
     border: 0;
@@ -150,7 +149,7 @@ header {
     padding: 0 15px;
     min-height: 50px;  
         font-size: 21px;
-         
+
     &:hover svg path{
         fill: #fdd835 !important;
       }

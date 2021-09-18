@@ -1,11 +1,19 @@
 <template>
-  <nuxt-link class="card" :to="{name: 'u-slug', params: { slug: `${id.s}`} }">
-    <h2>
-      {{ id.t }}
-    </h2>
-    <i v-if="id.v">{{ id.v }}</i>
-    <img v-if="isNaN(this.id)" :src="`/u/${id.s}/cover.jpg`" alt />
-  </nuxt-link>
+  <div>
+    <template v-if="isNaN(this.id)">
+      <nuxt-link class="card" :to="{name: 'u-slug', params: { slug: `${id.s}`} }">
+        <h2>
+          {{ id.t }}
+        </h2>
+        <i v-if="id.v">{{ id.v }}</i>
+        <img :src="`/u/${id.s}/cover.jpg`" alt />
+      </nuxt-link>    
+    </template>
+    <template v-if="!isNaN(this.id)">
+      <div style="width:300px;height:387px;margin:10px;float:left;background:#1a1a1a;"></div>        
+    </template>  
+  </div>
+
 </template>
 
 <script>

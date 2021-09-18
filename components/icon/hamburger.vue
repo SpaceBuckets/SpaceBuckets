@@ -1,7 +1,5 @@
 <template>
-  <svg id="Menu" width="21" height="21" viewBox="0 0 1792 1792">
-    <path d="M1664 1344v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45zm0-512v128q0 26-19 45t-45 19h-1408q-26 0-45-19t-19-45v-128q0-26 19-45t45-19h1408q26 0 45 19t19 45z" fill="#eee" />
-  </svg>
+<svg fill="none" width="21" height="21" stroke="#eee" stroke-width="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M15 20h83M15 49h83M15 79h83"/></svg>
 </template>
 
 <script>
