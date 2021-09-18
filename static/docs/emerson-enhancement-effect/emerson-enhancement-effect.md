@@ -18,7 +18,7 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
     ### Key Takeaways 
 
     <pre>
-        <img src='https://i.imgur.com/THvJ1Lc.jpeg'/>
+        <img src='https://i.imgur.com/SW36L6E.png'/>
         <div>The Emerson Enhancement Effect</div>
     </pre>
     

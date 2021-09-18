@@ -163,16 +163,19 @@ pre {
       //padding:10px;
       padding-bottom: 0;
       border:2px solid #eee;
+      float: left;
   }
   > div {
     background: #eee;
     color: #333;
     font-size: 14px;
     padding: 3px 10px;
-    position: absolute;
+      float: left;
+      width: 100%;
+   /*  position: absolute;
     bottom: -20px;
     left: 0;
-    right: 0;
+    right: 0; */
   }
 }
 

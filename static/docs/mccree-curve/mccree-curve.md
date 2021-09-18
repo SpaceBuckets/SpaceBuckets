@@ -23,7 +23,7 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
 
     *   _The McCree curve illustrates that all of 400-700nm is useful for photosynthesis_ including green light, and not just red and blue.
 
-    *   The McCree curve should not be used for **very high lighting levels**.
+    *   The McCree curve should not be used for **very high lighting levels**. It is only valid at about 15-150 umol/m2/sec of monochromatic light.
 
     *   The McCree curve **only looks at the single leaf model of plant growth, not the whole plant model**. It also **does not take in to account multi-wavelength lights** including mixing in far red to try to increase photosynthesis efficiency (see the [Emerson enhancement effect](/docs/emerson-enhancement-effect) for more).
 

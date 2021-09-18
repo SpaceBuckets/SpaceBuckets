@@ -118,6 +118,10 @@ export default {
               title:"Emerson Enhancement Effect"
             },
             {
+              url:"/docs/photosynthesis",
+              title:"Photosynthesis"
+            },            
+            {
               url:"/docs/photomorphogenesis",
               title:"Photomorphogenesis"
             },
