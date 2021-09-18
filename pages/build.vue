@@ -416,9 +416,9 @@ section {
   svg {
     width: 65px;
     height: auto;
-    float: right;
-    margin-right: -5px;
-    margin-left: 5px;
+    float: left;
+    margin-right: 5px;
+    margin-left: -5px;
     margin-top: 0;
     opacity: 0.6;
     pointer-events: none;

@@ -49,7 +49,7 @@ export default {
   head() {
     return {
       title: `${this.post.t} - Space Buckets: DIY Indoor Gardening`,
-      meta: [{ hid: 'description', name: 'description', content: this.post.c.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "") }],
+      meta: [{ hid: 'description', name: 'description', content: this.post.c.replace(/<\/?("[^"]*"|'[^']*'|[^>])*(>|$)/g, "").substring(0, 160) + '...' }],
       link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
     };
   },

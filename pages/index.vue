@@ -93,7 +93,7 @@ export default {
     const randDoc2 = await singleRandomDoc();
      var introItems = [
         {
-          link: "/docs",
+          link: "/docs/begin-your-journey",
           title: "SB Knowledge Base",
           desc: "Browse the Space Buckets Docs",
           icon: "icon-flask"
