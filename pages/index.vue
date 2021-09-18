@@ -32,7 +32,7 @@
         <carddoc :doc="randDoc"/>
 
 
-        <cardindex title="Grow your own food" link="docs" variation="doubled"/>
+        <carddocindex title="Grow your own food" link="begin-your-journey" variation="doubled" img="docs"/>
 
         <cardindex title="Tools and Parts" link="materials" />
           <card :id="simpleLED" />
