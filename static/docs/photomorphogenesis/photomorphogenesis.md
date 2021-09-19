@@ -38,13 +38,12 @@ c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike p
 
     ### GREEN
 
-
-    In healthy cannabis, _80-90% of green light is being absorbed and available for photosynthesis_. Green is the opposite of blue in photomorphogenesis responses in that green causes stretching also called the [shade avoidance responses](https://en.wikipedia.org/wiki/Shade_avoidance). **Pretty much anything blue does, green does the opposite**. 
-
     <pre>
         <img src='https://i.imgur.com/lWOB3ij.png'/>
         <div>Maximum external quantum efficiency (EQE) of different commercial nitride and phosphide LEDs (spheres), illustrating the green gap problem. <a href='https://www.researchgate.net/figure/The-green-gap-Maximum-external-quantum-efficiency-EQE-of-different-commercial-nitride_fig3_283335209'>(original source)</a></div>
     </pre>
+
+    In healthy cannabis, _80-90% of green light is being absorbed and available for photosynthesis_. Green is the opposite of blue in photomorphogenesis responses in that green causes stretching also called the [shade avoidance responses](https://en.wikipedia.org/wiki/Shade_avoidance). **Pretty much anything blue does, green does the opposite**. 
     
     Green can help make leaves larger due to the reversibility of blue light sensitive proteins and this in turn increases the LAI (leaf area index) for greater light capture. Green light can also cause the **stomata (gaseous exchange pores) of plants to close** a bit more than normal, which is the opposite of blue light. 
 
