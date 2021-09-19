@@ -70,9 +70,33 @@ export default {
               title:"Core Lighting Concepts"
             },
             {
-              url:"/docs/lux-meters",
-              title:"Lux Meters and Sensors"
+              url:"/docs/photosynthesis",
+              title:"Photosynthesis"
+            },            
+            {
+              url:"/docs/photomorphogenesis",
+              title:"Photomorphogenesis"
+            },            
+            {
+              url:"/docs/mccree-curve",
+              title:"McCree Curve"
             },
+            {
+              url:"/docs/emerson-enhancement-effect",
+              title:"Emerson Enhancement Effect"
+            },
+            {
+              url:"/docs/green-leaves-green-light",
+              title:"Green Leaves and Green Light"
+            },   
+            {
+              url:"/docs/mixing-colors",
+              title:"Mixing Light Colors"
+            },           
+            {
+              url:"/docs/ultraviolet-growing",
+              title:"Ultraviolet Growing"
+            },              
             {
               url:"/docs/color-rendering-index",
               title:"Color Rendering Index (CRI)"
@@ -108,35 +132,11 @@ export default {
             {
               url:"/docs/macadam-ellipses",
               title:"MacAdam Ellipses"
-            },
+            },                    
             {
-              url:"/docs/mccree-curve",
-              title:"McCree Curve"
-            },
-            {
-              url:"/docs/emerson-enhancement-effect",
-              title:"Emerson Enhancement Effect"
-            },
-            {
-              url:"/docs/photosynthesis",
-              title:"Photosynthesis"
+              url:"/docs/lux-meters",
+              title:"Lux Meters and Sensors"
             },            
-            {
-              url:"/docs/photomorphogenesis",
-              title:"Photomorphogenesis"
-            },
-            {
-              url:"/docs/mixing-colors",
-              title:"Mixing Light Colors"
-            },
-            {
-              url:"/docs/green-leaves-green-light",
-              title:"Green Leaves and Green Light"
-            },            
-            {
-              url:"/docs/ultraviolet-growing",
-              title:"Ultraviolet Growing"
-            },
             {
               url:"/docs/led-heat-sinks",
               title:"LED Heat Sinks"
