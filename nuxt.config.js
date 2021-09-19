@@ -79,7 +79,13 @@ export default {
       }      
     }],
     "@nuxtjs/sitemap",
+    //'@nuxtjs/pwa',
   ],   
+/*   pwa: {
+    icon: {
+      purpose: 'any'
+    }
+  },   */
   sitemap: {
     path: '/sitemap.xml',
     hostname: 'https://spacebuckets.com',

@@ -6,7 +6,7 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
 
     <pre>
         <img src='https://i.imgur.com/4ge0ohi.jpg'/>
-        <div>Emerson Effect <a href='https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/pce.13730'>(source)</a></div>
+        <div>Several recent studies have shown that far-red photons synergistically interact with shorter wavelength photons to increase leaf photochemical efficiency. <a href='https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/pce.13730'>(source)</a></div>
     </pre>
 
     Robert Emerson used his work with red and far red light to deduce that there must be **[two photosystems](https://en.wikipedia.org/wiki/Photosystem), called photosystem I (PSI) and photosystem II (PSII)**. These are named in the order of discovery, but for photosynthesis the process starts with the PSII first.
@@ -18,8 +18,9 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
     ### Key Takeaways 
 
     <pre>
-        <img src='https://i.imgur.com/SW36L6E.png'/>
-        <div>The Emerson Enhancement Effect</div>
+        <img src='https://i.imgur.com/rUyjqbe.png'/>
+        <div>Action spectra of the Emerson Enhancement Effect in photosynthesis in Chlorella cells (algae). Far-red light beam (PSI) was kept constant and enhancement was measured by varying the wavelength of the orange-red light (PSII). <a href='https://www.researchgate.net/figure/Action-spectra-of-the-Emerson-Enhancement-Effect-in-photosynthesis-upper-graph_fig4_263100830'>(original source)</a>
+</div>
     </pre>
     
     *   Far red light can drive the PSI independently of the PSII, and PAR is more efficient with the PSII while not as well excited with the PSI. Basically how the Emerson effect works is **freeing up electrons between the PSI and PSII** by driving them more efficiently in parallel, and _photosynthesis becomes more efficient as a result_.

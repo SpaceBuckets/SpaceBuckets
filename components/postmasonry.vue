@@ -205,7 +205,7 @@ export default {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     color: #343536;
-    line-height: 1.6em;
+    line-height: 1.6;
   }
 }
 

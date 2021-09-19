@@ -1,5 +1,5 @@
 {
-  "name": "space-buckets-site",
+  "name": "space-buckets",
   "version": "0.0.2",
   "description": "Space Buckets - DIY indoor gardeners",
   "author": "ekrof",
@@ -28,6 +28,7 @@
     "node-sass": "^4.14.1",
     "nuxt": "2.15.8",
     "sass-loader": "^10.1.1",
-    "sort-array": "^4.1.1"
+    "sort-array": "^4.1.1",
+    "@nuxtjs/pwa": "^3.3.5"
   }
 }

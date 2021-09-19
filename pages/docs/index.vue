@@ -142,6 +142,34 @@ export default {
 
 <style lang="scss">
 
+details {
+  background: #eee;
+  padding: 10px;
+  ul {
+    column-count: 2;
+    margin-bottom: 0;
+    @media (max-width: 980px) {
+      column-count: 1;
+    }
+    li {
+      margin-right: 20px;
+      //border-bottom: 1px dashed #ccc;
+      padding-bottom: 10px;
+      margin-bottom: 0px !important;
+        break-inside: avoid;
+        font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+  summary {
+    cursor: pointer;
+    padding-left: 5px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
 pre {
   margin: 0;
   max-width: 500px;
@@ -238,7 +266,7 @@ pre {
   }
   li,
   div {
-    line-height: 1.6em;
+    line-height: 1.6;
   }
   ul {
     padding-left: 25px;

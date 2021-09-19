@@ -20,7 +20,20 @@ c: "Adding UV LEDs (with about 100 to 400nm wavelength) are typically only used 
 
     *   **The UV-B (280–315nm) light sources** I've seen in grow lights are still tube based because UV-B LEDs are still inefficient (5-10% range).
 
-    *   _UV-C (100–280nm) should be considered dangerous_, and in testing I have damaged a number of plants with higher amounts of UV-C."
+    *   _UV-C (100–280nm) should be considered dangerous_, and in testing I have damaged a number of plants with higher amounts of UV-C.
+    
+    <details>
+        <summary>View related studies and papers (4)</summary>
+    
+
+        *   Chen et al. [UVA Radiation Is Beneficial for Yield and Quality of Indoor Cultivated Lettuce](https://www.frontiersin.org/articles/10.3389/fpls.2019.01563/full)
+
+        *   Loconsole and Santamaria. [UV Lighting in Horticulture: A Sustainable Tool for Improving Production Quality and Food Safety](https://www.researchgate.net/publication/348591781_UV_Lighting_in_Horticulture_A_Sustainable_Tool_for_Improving_Production_Quality_and_Food_Safety)
+
+        *   Romen Naorem. [The Secret Beauty of Ultraviolet Radiation in Plants](https://www.researchgate.net/profile/Romen-Naorem/publication/303989688_The_Secret_Beauty_of_Ultraviolet_Radiation_in_Plants/links/5761eb0208aeeada5bc5033a/The-Secret-Beauty-of-Ultraviolet-Radiation-in-Plants.pdf)
+
+        *   Jansen et al. [Higher plants and UV-B radiation: balancing damage, repair and acclimation](https://www.sciencedirect.com/science/article/pii/S1360138598012151?casa_token=yDXAFPKqbcUAAAAA:7sM5p_1Sm4gza7fgszCOFUHorQmGyyqZsKUiC2edeunkgm9wQNxWdaxRUb94nCckY3naOZSLx3s)
+    </details>"
 o: "3"
 d: "Adding UV LEDs (with about 100 to 400nm wavelength) are typically only used for light sensitive protein reactions effects, not as photosynthesis drivers per se. The pure UV-A grows I've done did result in slow grow and stunted plants."
 ---

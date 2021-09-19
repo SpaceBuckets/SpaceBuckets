@@ -33,7 +33,8 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
     ### Terashima et al has entered the chat
 
     <pre>
-        <img src='https://i.imgur.com/MjTkqON.jpg'/> 
+        <img src='https://i.imgur.com/SgP4sbt.png'/> 
+        <div>Schematic of penetration of monochromatic blue, green, and red light. Green light may reach the bottom layer of cells due to the chlorophyll’s weak absorption in the green (the green window) and scattering of green light within the leaf (the detour effect). <a href='https://academic.oup.com/jxb/article/68/9/2099/3857754'>(source)</a></div>
     </pre>
 
     > The intra-leaf light absorption profile is in most cases steeper than the photosynthetic capacity profile. In strong white light, therefore, the quantum yield of photosynthesis would be lower in the upper chloroplasts, located near the illuminated surface, than that in the lower chloroplasts. Because **green light can penetrate further into the leaf** than red or blue light, in strong white light, _any additional green light absorbed by the lower chloroplasts would increase leaf photosynthesis_ to a greater extent than would additional red or blue light. **Ichiro Terashima et al**, [Green Light Drives Leaf Photosynthesis More Efficiently than Red Light in Strong White Light](https://www.researchgate.net/publication/24043711_Green_Light_Drives_Leaf_Photosynthesis_More_Efficiently_than_Red_Light_in_Strong_White_Light_Revisiting_the_Enigmatic_Question_of_Why_Leaves_are_Green).
@@ -63,45 +64,50 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
 
     It should be noted that **the maximum absorption wavelength for chlorophyll in leaves in vivo is 675-680 nm (chlorophyll A)**, and not 660 nm as often cited (chlorophyll B is about 645 nm). This can be seen in the spectrometer shot as a dip in the 675-680 nm range from small amounts of chlorophyll A left over. The blue absorption are carotenoids which have perhaps a 30-70% efficiency at transferring the absorbed light energy to a photosynthetic reaction center through chlorophyll A. Depending on the plant, there may be 2.5ish-7 or so chlorophyll A molecules for every chlorophyll B molecule but mostly around a 3:1 ratio.
 
-
-    The 30-70% efficiency claim (depending on type and the paper) about carotenoids is why I've always thought it is odd that any grow light seller would brag about targeting carotenoids. _Carotenoids are there to help the plant with intense lighting_ and shunting some of the higher energy blue photons absorbed away from chlorophyll. 
-
     <pre>
         <img src='https://i.imgur.com/47jFDno.jpg'/>
         <div>Space Bucket with a high power green LED and a pole bean <a href='https://www.reddit.com/r/HandsOnComplexity/comments/28gp4e/space_bucket_with_a_high_power_green_led_and_a/'>(source)</a>. </div>
     </pre>
 
+    The 30-70% efficiency claim (depending on type and the paper) about carotenoids is why I've always thought it is odd that any grow light seller would brag about targeting carotenoids. _Carotenoids are there to help the plant with intense lighting_ and shunting some of the higher energy blue photons absorbed away from chlorophyll. 
+
+
     ### So... Why not use green LEDs?
 
     _Green LEDs are electrically inefficient compared to red and blue LEDs_, and this problem is known as the 'green gap' in physics/engineering. The most efficient green LEDs that I know are actually **blue LEDs with a green phosphor**. That is why white LEDs are used instead that have a strong green light component. [**I've done pure LED green grows**](https://www.reddit.com/r/HandsOnComplexity/comments/28gp4e/space_bucket_with_a_high_power_green_led_and_a/), using green COBs in a Space Bucket, and just to prove the point that it can be done.
     
-    ### Open access papers on green light and plants
 
-    *   Terashima et al. [Green Light Drives Leaf Photosynthesis More Efficiently than Red Light in Strong White Light: Revisiting the Enigmatic Question of Why Leaves are Green](https://www.researchgate.net/publication/24043711_Green_Light_Drives_Leaf_Photosynthesis_More_Efficiently_than_Red_Light_in_Strong_White_Light_Revisiting_the_Enigmatic_Question_of_Why_Leaves_are_Green)
+    <details>
+        <summary>View related studies and papers (14)</summary>
+        
 
-    *   Sun et al. [Green Light Drives CO2 Fixation Deep within Leaves](https://www.researchgate.net/publication/31345848_Green_Light_Drives_CO2_Fixation_Deep_within_Leaves)
+        *   Terashima et al. [Green Light Drives Leaf Photosynthesis More Efficiently than Red Light in Strong White Light](https://www.researchgate.net/publication/24043711_Green_Light_Drives_Leaf_Photosynthesis_More_Efficiently_than_Red_Light_in_Strong_White_Light_Revisiting_the_Enigmatic_Question_of_Why_Leaves_are_Green)
 
-    *   [Nitrogen-improved photosynthesis quantum yield is driven by increased thylakoid density, enhancing green light absorption](https://www.researchgate.net/profile/Thaise-Moriwaki/publication/328414354_Nitrogen-improved_photosynthesis_quantum_yield_is_driven_by_increased_thylakoid_density_enhancing_green_light_absorption/links/5bd3542592851c6b2791f4e7/Nitrogen-improved-photosynthesis-quantum-yield-is-driven-by-increased-thylakoid-density-enhancing-green-light-absorption.pdf)
+        *   Sun et al. [Green Light Drives CO2 Fixation Deep within Leaves](https://www.researchgate.net/publication/31345848_Green_Light_Drives_CO2_Fixation_Deep_within_Leaves)
 
-    *   Nishio (2000). [Why are higher plants green? Evolution of the higher plant photosynthetic pigment complement](https://onlinelibrary.wiley.com/doi/pdf/10.1046/j.1365-3040.2000.00563.x)
+        *   Moriwaki et al. [Nitrogen-improved photosynthesis quantum yield is driven by increased thylakoid density, enhancing green light absorption](https://www.researchgate.net/profile/Thaise-Moriwaki/publication/328414354_Nitrogen-improved_photosynthesis_quantum_yield_is_driven_by_increased_thylakoid_density_enhancing_green_light_absorption/links/5bd3542592851c6b2791f4e7/Nitrogen-improved-photosynthesis-quantum-yield-is-driven-by-increased-thylakoid-density-enhancing-green-light-absorption.pdf)
 
-    *   Johkan et al. [Effect of green light wavelength and intensity on photomorphogenesis and photosynthesis in Lactuca sativa](https://www.plantgrower.org/uploads/6/5/5/4/65545169/1-s2.0-s0098847211001924-main.pdf)
+        *   Nishio. [Why are higher plants green? Evolution of the higher plant photosynthetic pigment complement](https://onlinelibrary.wiley.com/doi/pdf/10.1046/j.1365-3040.2000.00563.x)
 
-    *   Wang, Folta. [Contributions of green light to plant growth and development](https://www.researchgate.net/publication/234029403_Contributions_of_green_light_to_plant_growth_and_development)
+        *   Johkan et al. [Effect of green light wavelength and intensity on photomorphogenesis and photosynthesis in Lactuca sativa](https://www.plantgrower.org/uploads/6/5/5/4/65545169/1-s2.0-s0098847211001924-main.pdf)
 
-    *   [Cost and Color of Photosynthesis](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807594/) - Why plants evolved green.
+        *   Marosvölgyi and van Gorkom. [Cost and Color of Photosynthesis](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC2807594/)
+        
+        *   Snowden. [Effects of Blue and Green Light on Plant Growth and Development at Low and High Photosynthetic Photon Flux](https://digitalcommons.usu.edu/etd/4613/)
+        
+        *   Snowden, Cope, Bugbee. [Sensitivity of Seven Diverse Species to Blue and Green Light: Interactions With Photon Flux](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0163121)
+        
+        *   Wang and Folta. [Contributions of green light to plant growth and development](https://www.researchgate.net/publication/234029403_Contributions_of_green_light_to_plant_growth_and_development)
 
-    *   [Effects of Blue and Green Light on Plant Growth and Development at Low and High Photosynthetic Photon Flux](https://digitalcommons.usu.edu/etd/4613/) - Master Thesis
-
-    *   [Sensitivity of Seven Diverse Species to Blue and Green Light: Interactions With Photon Flux](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0163121)
-
-    *   [Green light augments far-red-light-induced shade response](https://www.researchgate.net/profile/Yihai-Wang-3/publication/273916681_Green_light_augments_far-red-light-induced_shade_response/links/564c966308aeab8ed5e9fe25/Green-light-augments-far-red-light-induced-shade-response.pdf)
-
-    *   [Green light signaling and adaptive response](https://www.tandfonline.com/doi/pdf/10.4161/psb.7.1.18635)
-
-    *   [Green light drives photosynthesis in mosses](https://www.researchgate.net/profile/Robert-Griffin-Nolan/publication/328104902_Green_light_drives_photosynthesis_in_mosses/links/5bb7929e92851c7fde2f19bd/Green-light-drives-photosynthesis-in-mosses.pdf)
-
-    *   [Cryptochromes integrate green light signals into the circadian system](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pce.13643)"
+        *   Wang, Zhang and Folta. [Green light augments far-red-light-induced shade response](https://www.researchgate.net/profile/Yihai-Wang-3/publication/273916681_Green_light_augments_far-red-light-induced_shade_response/links/564c966308aeab8ed5e9fe25/Green-light-augments-far-red-light-induced-shade-response.pdf)
+        
+        *   Zhang and Folta. [Green light signaling and adaptive response](https://www.tandfonline.com/doi/pdf/10.4161/psb.7.1.18635)
+        
+        *   Griffin-Nolan et al. [Green light drives photosynthesis in mosses](https://www.researchgate.net/profile/Robert-Griffin-Nolan/publication/328104902_Green_light_drives_photosynthesis_in_mosses/links/5bb7929e92851c7fde2f19bd/Green-light-drives-photosynthesis-in-mosses.pdf)
+        
+        *   Battle and Jones. [Cryptochromes integrate green light signals into the circadian system](https://onlinelibrary.wiley.com/doi/pdfdirect/10.1111/pce.13643)
+        
+    </details>"
 o: "3"
 d: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is the McCree curve used in botany, and every paper on photosynthesis studies by wavelength "
 ---

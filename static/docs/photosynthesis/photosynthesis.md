@@ -25,7 +25,7 @@ c: "The light that we're interested in for photosynthesis is about **400nm (UV-A
     _The relative quantum yield chart is what we want to use_ since it is a measure of how much sugar is produced. This is the correct chart for land plants and are the average of dozens of plants. Keep in mind that **this is only for monochromatic light** which below you'll see why may be problematic. These are relative charts and not absolute charts.
 
     <pre>
-        <img src='https://i.imgur.com/eiiwTmj.png'/>
+        <img src='https://i.imgur.com/AiPFhLl.png'/>
         <div>For leaves grown in the field and in a growth chamber, normalized leaf yield relative to quantum of energy absorbed <a href='http://www.ecosearch.info/sites/default/files/prodotti_documentazione/TechNote126_quanti.pdf'>(original source)</a></div>
     </pre>
 
