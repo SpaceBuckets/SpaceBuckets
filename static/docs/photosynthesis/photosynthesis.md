@@ -19,7 +19,7 @@ c: "The light that we're interested in for photosynthesis is about **400nm (UV-A
 
     ### The dreaded charts
 
-    **There's four charts that people often get confused**: chlorophyll and other pigments [dissolved in a solvent](https://imgur.com/a/cr807U6), leaf absorption, action spectra and relative quantum yield. If you're going off a chart that has sharp peaks and talk about very specific wavelengths needed for photosynthesis optimization, **then you're probably using the wrong chart** (pigments dissolved in a solvent). If you're using a chart with a really deep dip in the green/yellow/orange area then it's likely for algae or aquatic plants. 
+    **There's four charts that people often get confused**: chlorophyll and other pigments dissolved in a solvent, [leaf absorption](https://imgur.com/a/cr807U6), action spectra and relative quantum yield. If you're going off a chart that has sharp peaks and talk about very specific wavelengths needed for photosynthesis optimization, **then you're probably using the wrong chart** (pigments dissolved in a solvent). If you're using a chart with a really deep dip in the green/yellow/orange area then it's likely for algae or aquatic plants. 
 
 
     _The relative quantum yield chart is what we want to use_ since it is a measure of how much sugar is produced. This is the correct chart for land plants and are the average of dozens of plants. Keep in mind that **this is only for monochromatic light** which below you'll see why may be problematic. These are relative charts and not absolute charts.
