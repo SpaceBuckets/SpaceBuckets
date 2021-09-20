@@ -16,8 +16,6 @@ c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike p
 
     _Blue light decreases [acid growth](https://en.wikipedia.org/wiki/Acid_growth)_ (which is different than growth through photosynthesis). Excess acid growth, or 'stretching', in seedlings/veg is all about greater cell expansion in the stem that we get from **lower lighting levels or not enough blue light**. We typically only want as much blue in a light source to help prevent any excess stem elongation. Blue photons have much more energy needed for photosynthesis, and **this extra energy is wasted as heat that the plant has to dissipate**. The associated blue light sensitive proteins are the [phototropins](https://en.wikipedia.org/wiki/Phototropin) and [cryptochromes](https://en.wikipedia.org/wiki/Cryptochrome).
 
-    > Fresh biomass **increased significantly under treatments with blue light** percentages of 50, 60, and 75%, with 50% blue-light-grown seedlings accumulating significantly more dry mass. **The 25% blue-light-grown seedlings were weaker** than those from the other LED treatments. _An increase in net photosynthetic rate upon blue light exposure (25–60%)_ was associated with increases in leaf mass per unit leaf area, leaf area, leaf density, stomatal number, chloroplast and mesophyll cell development, and chlorophyll contents. **Liu, Jiao et al.** [Photosynthesis and leaf development under different LED-based blue and red photon flux ratios](https://ps.ueb.cas.cz/pdfs/phs/2018/04/25.pdf)
-
     <details>
         <summary>View related studies and papers (6)</summary>
         
@@ -38,13 +36,13 @@ c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike p
 
     ### GREEN
 
+    In healthy cannabis, _80-90% of green light is being absorbed and available for photosynthesis_. Green is the opposite of blue in photomorphogenesis responses in that green causes stretching also called the [shade avoidance responses](https://en.wikipedia.org/wiki/Shade_avoidance). **Pretty much anything blue does, green does the opposite**. 
+    
     <pre>
         <img src='https://i.imgur.com/lWOB3ij.png'/>
         <div>Maximum external quantum efficiency (EQE) of different commercial nitride and phosphide LEDs (spheres), illustrating the green gap problem. <a href='https://www.researchgate.net/figure/The-green-gap-Maximum-external-quantum-efficiency-EQE-of-different-commercial-nitride_fig3_283335209'>(original source)</a></div>
     </pre>
 
-    In healthy cannabis, _80-90% of green light is being absorbed and available for photosynthesis_. Green is the opposite of blue in photomorphogenesis responses in that green causes stretching also called the [shade avoidance responses](https://en.wikipedia.org/wiki/Shade_avoidance). **Pretty much anything blue does, green does the opposite**. 
-    
     Green can help make leaves larger due to the reversibility of blue light sensitive proteins and this in turn increases the LAI (leaf area index) for greater light capture. Green light can also cause the **stomata (gaseous exchange pores) of plants to close** a bit more than normal, which is the opposite of blue light. 
 
 
