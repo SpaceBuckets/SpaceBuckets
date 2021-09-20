@@ -93,5 +93,5 @@ c: "The light that we're interested in for photosynthesis is about **400nm (UV-A
         * Sirohiwal et al. [Chlorophyll excitation energies and structural stability of the CP47 antenna of photosystem II](https://pubs.rsc.org/fa/content/articlehtml/2021/sc/d0sc06616h)
 
     </details>"
-d: 'The whole concept of photosynthesis is a plant takes in water, carbon dioxide and light to make sugar and oxygen. It's all about making sugar which is **transported through the plant via the phloem network'    
+d: "The whole concept of photosynthesis is a plant takes in water, carbon dioxide and light to make sugar and oxygen. It's all about making sugar which is transported through the plant via the phloem network" 
 ---

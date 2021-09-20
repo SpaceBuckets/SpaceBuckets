@@ -68,7 +68,7 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
 
     <pre>
         <img src='https://i.imgur.com/zTmt4oa.jpg'/>
-        <div>Chromaticity diagram for CCT (<a href='https://www.nextgenerationled.be/EN/CorrelatedColorTemperature.html'>source</a>)</div>
+        <div>Planckian locus in the CIE 1931 chromaticity diagram (<a href='https://en.wikipedia.org/wiki/Planckian_locus#/media/File:PlanckianLocus.png'>source</a>)</div>
     </pre>
 
     ### CCT (Correlated Color Temperature)
