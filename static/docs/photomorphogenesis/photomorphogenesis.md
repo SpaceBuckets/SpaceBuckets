@@ -16,8 +16,10 @@ c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike p
 
     _Blue light decreases [acid growth](https://en.wikipedia.org/wiki/Acid_growth)_ (which is different than growth through photosynthesis). Excess acid growth, or 'stretching', in seedlings/veg is all about greater cell expansion in the stem that we get from **lower lighting levels or not enough blue light**. We typically only want as much blue in a light source to help prevent any excess stem elongation. Blue photons have much more energy needed for photosynthesis, and **this extra energy is wasted as heat that the plant has to dissipate**. The associated blue light sensitive proteins are the [phototropins](https://en.wikipedia.org/wiki/Phototropin) and [cryptochromes](https://en.wikipedia.org/wiki/Cryptochrome).
 
+    > Several studies have shown that _some blue light is necessary for normal growth and development_, but the effects of blue light **appear to be species-dependent and may interact with other wavelengths of light** as well as photosynthetic photon flux (PPF). Overall, **the low blue light from warm white LEDs increased stem elongation and leaf expansion, whereas the high blue light from cool white LEDs resulted in more compact plants**. The optimal amount of blue light likely changes with plant age because plant communities balance the need for rapid leaf expansion, which is necessary to maximize radiation capture, with prevention of excessive stem elongation. Cope and Bugbee. [Spectral Effects of Three Types of White Light-emitting Diodes on Plant Growth and Development: Absolute versus Relative Amounts of Blue Light](https://journals.ashs.org/hortsci/view/journals/hortsci/48/4/article-p504.xml)
+
     <details>
-        <summary>View related studies and papers (6)</summary>
+        <summary>View related studies and papers (7)</summary>
         
 
         *   Park and Runkle. [Spectral effects of LED on plant growth, visual color quality, and photosynthetic photon efficacy](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0202386)
@@ -31,6 +33,9 @@ c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike p
         *   Jie He et al. [Plant Growth and Photosynthetic Characteristics under Different Blue and Red LEDs](https://www.frontiersin.org/articles/10.3389/fpls.2017.00361/full)
 
         *   Li-Jun Liu et al. [COP1-Mediated Ubiquitination of CONSTANS Is Implicated in Cryptochrome Regulation of Flowering](http://www.plantcell.org/content/plantcell/20/2/292.full.pdf)
+
+        *   Cope and Bugbee. [Spectral Effects of Three Types of White Light-emitting Diodes on Plant Growth and Development: Absolute versus Relative Amounts of Blue Light](https://journals.ashs.org/hortsci/view/journals/hortsci/48/4/article-p504.xml)
+
     </details>
     
 

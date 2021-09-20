@@ -16,12 +16,6 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
     > Adding far-red photons (up to 40%) to a background of shorter wavelength photons **caused an increase in canopy photosynthesis equal to adding 400-700nm photons**. Far-red alone minimally increased photosynthesis. This indicates that far-red photons are equally efficient at driving canopy photosynthesis when acting synergistically with traditionally defined photosynthetic photons.These results suggest that farred photons (701-750 nm) should be included in the definition of photosynthetically active radiation. Shuyang Zhen and Bruce Bugbee, [Far-red photons have equivalent efficiency to traditional photosynthetic photons](https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/pce.13730).
 
     ### Key Takeaways 
-
-    <pre>
-        <img src='https://i.imgur.com/rUyjqbe.png'/>
-        <div>Action spectra of the Emerson Enhancement Effect in photosynthesis in Chlorella cells (algae). Far-red light beam (PSI) was kept constant and enhancement was measured by varying the wavelength of the orange-red light (PSII). <a href='https://www.researchgate.net/figure/Action-spectra-of-the-Emerson-Enhancement-Effect-in-photosynthesis-upper-graph_fig4_263100830'>(original source)</a>
-</div>
-    </pre>
     
     *   Far red light can drive the PSI independently of the PSII, and PAR is more efficient with the PSII while not as well excited with the PSI. Basically how the Emerson effect works is **freeing up electrons between the PSI and PSII** by driving them more efficiently in parallel, and _photosynthesis becomes more efficient as a result_.
 
