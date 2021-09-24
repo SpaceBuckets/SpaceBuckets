@@ -8,6 +8,10 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
 
     _PAR is light from the 400-700nm wavelengths by standard definition_ (far red light that has a wavelength longer than 700nm is not be included). It is important to understand PAR is what we measure and not a unit of measurement: for example, '300 PAR' makes no sense because the person could be talking about PAR watts. As a reference, around 4.6 µmol/m2/sec is one PAR watt/m2 for white light (CRI 80).
 
+    *   [Learn more about Photosynthesis »](/docs/photosynthesis)
+
+    *   [Learn more about light spectrum and Photomorphogenesis »](/docs/photomorphogenesis)
+
     *   [Learn how to use Lux Meters and Sensors »](/docs/lux-meters)
 
     ### PPFD (Photosynthetic Photon Flux Density)

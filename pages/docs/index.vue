@@ -212,6 +212,16 @@ pre {
   @media (max-width: 980px) {
     min-height: auto;
   }
+/*   .retable tr {
+    border: 1px solid #888;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    margin: 0 10px 10px 0;
+    padding: 10px;
+    height: 300px;
+    background: #fff;
+} */
   table {
     border-collapse: collapse;
     width: 100%;

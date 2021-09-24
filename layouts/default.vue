@@ -268,7 +268,7 @@ header {
 
 
 body {
-      overflow-x: hidden !important;
+      //overflow-x: hidden !important;
           background: #000;
 
 }

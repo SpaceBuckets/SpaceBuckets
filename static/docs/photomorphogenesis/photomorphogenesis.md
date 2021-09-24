@@ -5,7 +5,7 @@ a: "SuperAngryGuy"
 c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike photosynthesis, can be very wavelength dependent in a plant's response. The [phytochromes](https://en.wikipedia.org/wiki/Phytochrome) are predominately red and far red with Pr peaking around 660nm. The **blue sensitive proteins** are the [crytochromes](https://en.wikipedia.org/wiki/Cryptochrome) and [phototropins](https://en.wikipedia.org/wiki/Phototropin) have what's known as the 'three finger blue action response' with peaks at roughly 430nm, 450nm, and 470nm depending on the specific protein.
 
 
-    In most papers, **blue is counted as 400-500 nm, green is 500-600 nm, red is 600-700 nm, and far red is 700-750 nm (or so)**. This means in many papers that cyan and yellow/amber will count as green light although their photosynthesis rates are different. Cyan has lower photosynthesis rates due to the higher absorption of cyan light by carotenoids, which is only 30-70% efficient at transferring energy to chlorophyll. You'll see in the [McCree curve](/docs/mccree-curve) that yellow/amber light is very efficient.
+    In most papers, **blue is counted as 400-500nm, green is 500-600nm, red is 600-700nm, and far red is 700-750nm (or so)**. This means in many papers that cyan and yellow/amber will count as green light although their photosynthesis rates are different. You'll see in the [McCree curve](/docs/mccree-curve) that yellow/amber light is very efficient. 
 
     <pre>
         <img src='https://i.imgur.com/eDcMiz4.png'/>

@@ -29,7 +29,22 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
 
     *   McCree also **tested the underside (abaxial) of leaves, and found that they were also performing photosynthesis**. In many cases the underside of a leaf will have a lower chlorophyll density, and may reflect more green light than the topside (adaxial) of a leaf, which may lower green light photosynthesis. The work of McCree demonstrated that _both sides of a leaf can be used efficiently for photosynthesis_. Dicotyledons may reflect more green light on the abaxial (underside) of a leaf, while monocotyledons will have the same green reflectance on both sides of a leaf.
 
-    *   **YPF (YPFD) or 'yield photon flux (density)'** is PPFD that has been weighed to the McCree curve. It is fortunately rarely used in botany but you do sometimes see it. There are special PAR sensors that give measurements in YPFD instead of PPFD, as well as spectroradiometers that can do this."
+    *   **YPF (YPFD) or 'yield photon flux (density)'** is PPFD that has been weighed to the McCree curve. It is fortunately rarely used in botany but you do sometimes see it. There are special PAR sensors that give measurements in YPFD instead of PPFD, as well as spectroradiometers that can do this.
+    
+    > **The McCree curve describes the quantum efficiency of photosynthesis at different wavelengths at low light**. The action spectrum describes actual photosynthetic rates and thus is the curve on which to base spectral selections. However, **it is still largely unknown how the McCree curve translates to yield**, appearance, desired development (e.g., flowering), good nutritional composition, and high levels of extractable products (e.g., aromatics, oils, pharmaceuticals) for a wide variety of crops and light sources. Tessa Pocock. [The McCree Curve Demystified](https://www.biophotonics-digital.com/biophotonics/may_june_2018/MobilePagedArticle.action?articleId=1394083#articleId1394083) 
+
+    <details>
+        <summary>View related studies and papers (3)</summary>
+        
+        * McCree. [The Action Spectrum, Absorptance and Quantum Yield of Photosynthesis in Crop Plants](https://www.vegenaut.com/pl/wp-content/uploads/sites/2/2017/07/PPFD_essential_article.pdf)
+
+        * McCree. [Significance of Enhancement for Calculations Based on the Action Spectrum for Photosynthesis](http://www.plantphysiol.org/content/plantphysiol/49/5/704.full.pdf) 
+            
+        * Tessa Pocock. [The McCree Curve Demystified](https://www.biophotonics-digital.com/biophotonics/may_june_2018/MobilePagedArticle.action?articleId=1394083#articleId1394083) 
+
+
+    </details>
+    "
 d: "The McCree curve is a quantum efficiency lighting curve used in botany for understanding photosynthesis rates by wavelength. It is far more accurate than charts for chlorophyll dissolved in a solvent or charts for green algae."
 f: "The McCree curve illustrates that <b>all of 400-700nm wavelength is useful for photosynthesis</b> including green light, and not just red and blue."
 
