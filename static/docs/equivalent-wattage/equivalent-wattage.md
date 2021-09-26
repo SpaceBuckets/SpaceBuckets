@@ -17,6 +17,10 @@ c: "It is important to understand that the light bulbs in your home are rated in
 
     *   Greater than 100 watts equivalent is not necessarily very well defined
 
+
+    For a Space Bucket _we want 3000-5000 lumens for a five gallon bucket_ for cannabis in flowering. At the time of this writing a 100 watt equivalent bulb draws about 15 actual watts so we would want about 40-45 actual watts of LED light bulbs. **This convention of equivalent watts is not going away any time soon** and is useful since we can choose light bulbs based on how much light they give off rather by how many watts they actually use.
+
+
     ### Marketing gimmicks
 
     A cheap '600w' LED grow light you might find on Amazon or eBay is not drawing anything close to 600 watts, nor is it 600 watt equivalent to anything particularly HPS (high pressure sodium) lighting. **It's a deceptive marketing practice and they will not perform as advertised**. I've seen 50 true watt lights advertised as '600w'. Same with the '1000w' and other lights.

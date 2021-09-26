@@ -207,6 +207,15 @@ pre {
   }
 }
 
+pre + pre {
+  max-width: 300px;
+  min-width: 300px;
+    @media (max-width: 720px) {
+    max-width: 100%;
+    min-width: 100%;
+  }  
+}
+
 .doc-single-content {
  
   @media (max-width: 980px) {

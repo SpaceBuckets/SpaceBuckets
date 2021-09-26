@@ -65,7 +65,12 @@ export default {
         },
         "SAG's KNOWLEDGE BASE":{
            order: 2,
-            items: [{
+            items: [
+            {
+              url:"/docs/grow-lights",
+              title:"Grow Lights Reviews"
+            },               
+            {
               url:"/docs/core-lighting-concepts",
               title:"Core Lighting Concepts"
             },
@@ -136,7 +141,7 @@ export default {
             {
               url:"/docs/lux-meters",
               title:"Lux Meters and Sensors"
-            },            
+            },                       
             {
               url:"/docs/led-heat-sinks",
               title:"LED Heat Sinks"

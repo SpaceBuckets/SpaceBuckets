@@ -108,7 +108,7 @@ export default {
   background: #fafafa;
   padding: 40px 0 20px; 
   //border-right: 1px solid #1a1a1b;
-  max-width: 1440px;
+  max-width: 1600px;
     @media (max-width: 980px) {
   padding: 15px 0 20px; 
 
