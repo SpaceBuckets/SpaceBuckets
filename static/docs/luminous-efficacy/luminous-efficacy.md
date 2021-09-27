@@ -15,14 +15,14 @@ c: "It's easy to get **'efficacy' (how well something works)** and ['efficiency'
 
     The following points mean that we can theoretically get about 47% more light for the energy input with 660nm LEDs versus 450nm LEDs. It explains why red LEDs are breaking the 4 µmol/joule barrier, and white LEDs based on blue LEDs with a phosphor never will. Green LEDs are electrically inefficient and is a physics/semiconductor issue (our eyes are most sensitive to green light so we don't notice).
 
+    *   **1240/wavelength of light in nanometers** = energy of a photon in eV (electron volts).
+
+    *   **10.37/eV of photon** = µmol/joule or the maximum possible PPE (photosynthetic photon efficacy).
+
     <pre>
         <img src='https://i.imgur.com/teNXDG5.jpg'/>
         <div>Comparison of various light source technology's luminous efficacy (<a href='https://www.researchgate.net/figure/Comparison-of-various-light-source-technologys-luminous-efficacy-4_fig1_286570536'>source</a>)</div>
     </pre>
-
-    *   **1240/wavelength of light in nanometers** = energy of a photon in eV (electron volts).
-
-    *   **10.37/eV of photon** = µmol/joule or the maximum possible PPE (photosynthetic photon efficacy).
 
     *   _**Max possible PPE * LED efficiency** = the PPE for the specific LED_
 

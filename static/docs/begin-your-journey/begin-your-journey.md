@@ -61,16 +61,18 @@ c: "<pre>
                   
     <h3>Which training techniques work best?</h3>
     
-    <pre>
-        <img src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
-        <div>An inline filtered Space Bucket with 5gal buckets</div>
-    </pre>
+
     
 
     <b>LST (low-stress training)</b> is a basic tool for keeping the height of the plant under control. You can use hooks to tie the branches to the soil or the side of the pot. You can even create a <b>SCROG net</b> to grow as horizontally as possible. <b>Topping</b> is another recommended training technique for a bucket grow: you have to cut the top-most growth of the plant. This will cause it to bush out, and two tops will appear from the 'shoulders' of the node. <b>Pruning</b> can be a good idea too: you can remove some leaves if they're blocking too much light from the tops. This is better done in moderation.
 
 
     *   [Learn more about plant training for small spaces »](/docs/plant-training)
+
+    <pre>
+        <img src='https://spacebuckets.com/u/levitatingchicken/aba09f.jpg'/>
+        <div>An inline filtered Space Bucket with 5gal buckets</div>
+    </pre>
 
     <h3>What to do about smelly plants?</h3>
 

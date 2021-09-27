@@ -15,13 +15,16 @@ c: "This article provides the basic electronics knowledge you'll need to build a
     _Electricity can be dangerous, especially to power coming from the wall_. Make sure you understand and take responsibility for your actions when working with mains electricity. Power tells us about how much energy we're using in a given amount of time. **It's important to figure out whether we have a good enough heatsink, a big enough power supply, or fat enough wires.** Power equals voltage times current, or P = I x V. Power is measured in Watts, abbreviated with the letter W. So say you have a high power LED with a 30V forward voltage and a 1A forward current. That means the LED dissipates 30W, and you'd need a power supply greater than 30W to drive it. Some of that power gets turned into light, and some of that power gets turned into heat. While LEDs convert a greater proportion of power to light than, say, incandescent bulbs, they still generate plenty of heat that must be heatsinked.
 
     ### Voltage, Current and Ohm's Law
- 
+
+
+    **Electricity is all about the flow of electrons to transfer energy**. The best way to understand how this works is with the water analogy. Current is like flow; how much electricity is flowing through a circuit, or how much water is flowing through a pipe. Voltage is like pressure; the harder you push, the more flow you get. Resistance limits how much flow you get; a resistor resists the flow of electrons like a skinny pipe resists the flow of water. 
+    
     <pre>
         <img src='https://i.imgur.com/c0KIOxJ.jpg'/> 
         <div>Ohm's law is the law for electricity. It's what relates current to voltage and resistance!</div>
     </pre>
 
-    **Electricity is all about the flow of electrons to transfer energy**. The best way to understand how this works is with the water analogy. Current is like flow; how much electricity is flowing through a circuit, or how much water is flowing through a pipe. Voltage is like pressure; the harder you push, the more flow you get. Resistance limits how much flow you get; a resistor resists the flow of electrons like a skinny pipe resists the flow of water. Ohm's law is the law for electricity. It's what relates current to voltage and resistance. Specifically, voltage equals current times resistance, or V = I x R. For a given resistance (measured in Ohms), the more current you'll get (measure in Amperes, or amps) for a given voltage (measured in volts). You might see these units expressed in units like millivolts or milliamps. These are just prefixes that act like multipliers on the units. For example, a milliamp is one one-thousandth of an amp. Volts are abbreviated with the letter V, amps with the letter A, and Ohms with the greek letter Omega.
+    **Ohm's law is the law for electricity**. It's what relates current to voltage and resistance. Specifically, voltage equals current times resistance, or V = I x R. For a given resistance (measured in Ohms), the more current you'll get (measure in Amperes, or amps) for a given voltage (measured in volts). You might see these units expressed in units like millivolts or milliamps. These are just prefixes that act like multipliers on the units. For example, a milliamp is one one-thousandth of an amp. Volts are abbreviated with the letter V, amps with the letter A, and Ohms with the greek letter Omega.
 
     ### Electrical Circuits
 

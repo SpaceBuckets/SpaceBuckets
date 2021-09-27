@@ -119,6 +119,10 @@ export default {
               title:"Lux Lighting Levels"
             },
             {
+              url:"/docs/macadam-ellipses",
+              title:"MacAdam Ellipses"
+            },                 
+            {
               url:"/docs/equivalent-wattage",
               title:"Equivalent Wattage"
             },
@@ -133,11 +137,7 @@ export default {
             {
               url:"/docs/efficacy-limits",
               title:"LED Efficacy Limits"
-            },
-            {
-              url:"/docs/macadam-ellipses",
-              title:"MacAdam Ellipses"
-            },                    
+            },               
             {
               url:"/docs/lux-meters",
               title:"Lux Meters and Sensors"

@@ -95,7 +95,7 @@ export default {
 }
 
 .doc-single-wrapper {
-    width: calc(100% - 280px);
+    width: calc(100% - 300px);
   max-width: max-content;
   float: left;
     background: #000;
@@ -168,7 +168,7 @@ strong {
 .docs-sidebar {
   padding: 0;
   position: relative;
-  width: 280px;
+  width: 300px;
   float: left;
   @media (max-width: 980px) {
     width: 100%;
