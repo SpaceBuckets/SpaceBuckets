@@ -7,10 +7,10 @@ c: "<pre>
         <div>A group of Space Buckets in their natural habitat</div>
     </pre>
     
-    <em>A Space Bucket is a DIY indoor garden</em> that is made by stacking plastic containers alongside [lighting (CFL or LED)](/docs/lighting-solutions) and [airflow (PC or other fans)](/docs/airflow-solutions). It is an enclosed growth chamber that can be used to garden many kinds of plants. 
+    <em>A Space Bucket is a DIY indoor garden</em> that is made by stacking plastic containers alongside [lighting (CFL or LED)](/docs/lighting-solutions) and [airflow (PC or other fans)](/docs/airflow-solutions). It is an intensive growth chamber that can be used to grow many kinds of plants. 
     
     
-    <b>A Space Bucket is a versatile gardening tool</b> that can be adapted to the users needs. Every variable of its environment can be <b>tweaked and upgraded</b>: for example, some plants may require more light intensity than others, or different humidity conditions.
+    <b>A Space Bucket is a versatile gardening tool</b> that can be adapted to the users needs. Every variable of its environment can be <b>tweaked and upgraded</b>: for example, some species may require more light intensity than others, or different humidity conditions.
 
 
     Space Buckets is also <em>a movement of gardeners, a community of botanically inclined individuals</em> who like to grow plants indoors and share information freely. The <a href='https://www.reddit.com/r/SpaceBuckets'>/r/SpaceBuckets subreddit</a> is our main forum, and this website is its companion. Bucketeers are open, friendly and thorough, as the [manifesto states](/docs/manifesto).
@@ -29,7 +29,7 @@ c: "<pre>
     </pre>            
     
 
-    <em>You can choose CFL or LED for your bucket.</em> The LED option can be solved with a [UFO LED grow light](https://amzn.to/3nnX3eV). The recommended size is the '180w' model for a typical 5gal Space Bucket. If you go the CFL route, about [4x23w bulbs will be needed](https://amzn.to/393Ihl2). You can [mix light spectrums](/docs/light-colors) (like 2700K and 6500K) during the whole life of the plant, though warm-white is preferred for all around plant growth. <b>Either configuration can be used along [5630SMD LED light strips](https://amzn.to/3hj99Cn)</b>. These lights stick to the walls of the bucket for extra photosynthesis.
+    <em>You can choose CFL or LED for your bucket.</em> The LED option can be solved with a [UFO LED grow light](https://amzn.to/3nnX3eV). The recommended size is the '180w' model for a typical 5gal Space Bucket. If you go the CFL route, about [4x23w bulbs will be needed](https://amzn.to/393Ihl2). You can [mix light spectrums](/docs/mixing-colors) (like 2700K and 6500K) during the whole life of the plant, though warm-white is preferred for all around plant growth. <b>Either configuration can be used along [5630SMD LED light strips](https://amzn.to/3hj99Cn)</b>. These lights stick to the walls of the bucket for extra photosynthesis.
     
 
     *   [Learn more about lighting solutions »](/docs/lighting-solutions)

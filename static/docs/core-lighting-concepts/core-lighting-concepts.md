@@ -68,7 +68,7 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
 
     *   [Learn more about the Color Rendering Index »](/docs/color-rendering-index)
 
-    *   [Read about how light colors affect plants »](/docs/light-colors)
+    *   [Read about how light colors affect plants »](/docs/photomorphogenesis)
 
     <pre>
         <img src='https://i.imgur.com/zTmt4oa.jpg'/>

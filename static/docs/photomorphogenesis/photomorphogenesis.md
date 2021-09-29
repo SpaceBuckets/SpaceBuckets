@@ -199,6 +199,11 @@ c: "Photomorphogenesis has to do with **light sensitive proteins**, and unlike p
 
     ### UV
 
+    <pre>
+        <img src='https://i.imgur.com/Tb8BDPzh.jpeg'/>
+        <div>Space Buckets can be a great framework for photomorphogenesis experimentation</div>
+    </pre>
+
     _Ultraviolet is a wild card_ and I can make no rhyme or reason of it working with a variety of plants. **It tends to cause dwarfing** when used as an only light source (UVA). For cannabis, the idea is to try to increase trichome and THC levels by adding UV, but some researchers including [Bruce Bugbee are saying this does not happen](https://www.reddit.com/r/IAmA/comments/paoigz/im_dr_bruce_bugbee_professor_of_crop_physiology/ha6jc88/?context=3). The only identified UV protein is the [UVR8 protein](https://en.wikipedia.org/wiki/UVR8), **which is only UVB sensitive, not UVA sensitive** (285nm peak sensitivity).
 
     *   [Learn more about Ultraviolet growing »](/docs/lux-ppfd-conversion)

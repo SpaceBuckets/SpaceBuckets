@@ -9,7 +9,7 @@ c: "Power supplies have historically been the weak link in an LED grow light sys
         <div>XLG Series Mean Well Power Supply</div>
     </pre>
 
-    Get a Mean Well LED driver for your DIY projects.**[The XLG series](https://amzn.to/3sYoSeH) are constant power and work quite well with a Vero 18 or 29.** The nice thing about that configuraion is that a Vero 18 or 29 can be quickly interchanged at the same power level so you can rapidly measure the differences between the two if needed.
+    Get a Mean Well LED driver for your DIY projects. **[The XLG series](https://amzn.to/3sYoSeH) are constant power and work quite well with a Vero 18 or 29.** The nice thing about that configuraion is that a Vero 18 or 29 can be quickly interchanged at the same power level so you can rapidly measure the differences between the two if needed.
 
 
     _External LED drivers keep you off line voltage_ which is the compelling reason to use them for DIY use. The better ones are ['UR' marked](https://www.pcscsecurity.com/wp-content/uploads/2018/04/ULversusUR_PCSC.pdf), with a reverse 'UR', which means it has been tested for safety for a factory install component of an electrical device (as opposed to a UL marking for a field install of a complete electrical device although there are plenty of ANSI/UL 8750 listed LED drivers).

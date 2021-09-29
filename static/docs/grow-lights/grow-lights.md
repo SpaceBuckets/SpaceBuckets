@@ -1,8 +1,8 @@
 ---
-t: "Evaluation of tiny grow lights"
+t: "Evaluation of tiny LED grow lights"
 s: "grow-lights"
 a: "SuperAngryGuy"
-c: "_This is a review of grow lights suitable for small spaces_ and Space Buckets, most of which are available on Amazon. If I gave the light a fail for electrical safety then the full test is not being published since I do not recommend buying the light. Some of the shots from my spectrometer may be a bit different from others since I'm showing raw images from “scope” mode.
+c: "_This is a review of LED grow lights suitable for small spaces_ and Space Buckets, most of which are available on Amazon. If I gave the light a fail for electrical safety then the full test is not being published since I do not recommend buying the light. Some of the shots from my spectrometer may be a bit different from others since I'm showing raw images from “scope” mode.
 
 
 The conversion factor is **how you change the lux reading to PPFD in umol/m2/sec** (which is the unit of light intensity used in botany). This is so people can spend $20 lux on a light meter rather than hundreds on a quality quantum PAR meter. The following resources are a useful reference:
