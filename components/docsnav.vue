@@ -143,9 +143,13 @@ export default {
               title:"Lux Meters and Sensors"
             },                       
             {
-              url:"/docs/led-heat-sinks",
-              title:"LED Heat Sinks"
+              url:"/docs/led-heatsinks",
+              title:"LED Heatsinks Tips"
             },
+            {
+              url:"/docs/mount-heatsinks",
+              title:"How to Mount Heatsinks"
+            },            
             {
               url:"/docs/led-power-supplies",
               title:"LED Power Supplies"

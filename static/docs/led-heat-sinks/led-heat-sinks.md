@@ -1,6 +1,6 @@
 ---
 t: "LED Heat Sinks"
-s: "led-heat-sinks"
+s: "led-heatsinks"
 a: "SuperAngryGuy"
 c: "Only the energy input not radiated as light needs to be taken in to account for LED heat sink calculations. _This is called thermal wattage._ For example, a 100 watt COB that is 50% efficient would need a heat sink good for 50 watts of heat. A 100 watt COB that is 80% efficient would need a heat sink good for 20 watts of heat.
 

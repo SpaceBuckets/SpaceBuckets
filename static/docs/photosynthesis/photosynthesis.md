@@ -11,10 +11,19 @@ c: "The light that we're interested in for photosynthesis is about **400nm (UV-A
 
     The whole concept of photosynthesis is _a plant takes in water, carbon dioxide and light to make sugar and oxygen_. It's all about making sugar which is **transported through the plant via the [phloem network](https://en.wikipedia.org/wiki/Phloem)**. 
 
+
     This is expressed in the simplified equation of **6CO2** (six carbon dioxide molecules from the air) + **6H2O** (six water molecules from the roots) powered by light = **C6H12O6** (one sugar molecule that the plant uses for energy) + **6O2** (six oxygen molecules given off as a gas).
 
 
-    **The uptake of water and nutrients is via the [xylem network](https://en.wikipedia.org/wiki/Xylem) from the roots**, and that doesn't mean adding sugar to your soil is absorbed by the plant. Also, _no fresh air means a low photosynthesis rate_ in a small volume since the carbon dioxide in the air is rapidly consumed unless CO2 enhancement is used. For that purpose you could use solutions such as a tank/regulator, or just being in the same room with the plants. As a reference, a typical exhaled breath is 4500-5000 ppm CO2.
+    Roots have the ability to uptake nutrients selectively through transport proteins. They can also alter the pH of its immediate surroundings by releasing organic acids. There are two transport structures in a land plant:
+
+
+    *   [Xylem](https://en.wikipedia.org/wiki/Xylem): one way, powered by the [transpiration](https://en.wikipedia.org/wiki/Transpiration) process. Nutrients that are nonmobile can only be translocated through the xylem which is why nonmobile deficiencies show up in new growth.
+
+    *   [Phloem](https://en.wikipedia.org/wiki/Phloem): two way powered by the [pressure flow hypothesis](https://en.wikipedia.org/wiki/Pressure_Flow_Hypothesis). Can transport sugars, amino acids, some proteins, mobile nutrients. Mobile nutrient deficiencies can show up in old growth because enzymes (proteins) can release them from the leaves in to the phloem to go to new growth areas of the plant.
+
+
+    There is very weak evidence that land plants can uptake sugars and carbohydrates through their roots and have these sugars and carbohydrates translocated to the upper plant. Also, _no fresh air means a low photosynthesis rate_ in a small volume since the carbon dioxide in the air is rapidly consumed unless CO2 enhancement is used. For that purpose you could use solutions such as a tank/regulator, or just being in the same room with the plants. As a reference, a typical exhaled breath is 4500-5000 ppm CO2.
 
 
     ### The dreaded charts

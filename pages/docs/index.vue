@@ -171,6 +171,19 @@ details {
   }
 }
 
+code {
+  overflow: auto;
+  display: block;
+  margin: 20px 0;
+  background: #eee;
+  padding: 10px;
+  img {
+    float: left;
+    width: 25%;
+    border: 2px solid #eee;
+  }
+}
+
 pre {
   margin: 0;
   max-width: 500px;
