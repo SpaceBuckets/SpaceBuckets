@@ -182,6 +182,11 @@ code {
     width: 25%;
     border: 2px solid #eee;
   }
+  @media (max-width: 980px) {
+    img {
+      width: 50%;
+    }
+  }  
 }
 
 pre {
