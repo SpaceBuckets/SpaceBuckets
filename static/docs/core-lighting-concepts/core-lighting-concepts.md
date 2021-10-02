@@ -87,10 +87,22 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
 
     ### McCree Curve
 
-    This is a chart averaged of 22 different types of plants used in botany that **shows the amount of photosynthesis that occurs by wavelength**. The McCree curve is only valid at 50 uMol/m2/sec of monochromatic light with the single leaf model but a useful starting point. The McCree curve is different than absorption curves of pigments isolated from a plant leaf and gives much more realistic information as to how plants respond to photosynthesis by wavelength.
+    This is a chart averaged of 22 different types of plants used in botany that _shows the amount of photosynthesis that occurs by wavelength_. The McCree curve is only valid at 50 uMol/m2/sec of monochromatic light with the single leaf model but a useful starting point. The McCree curve is different than absorption curves of pigments isolated from a plant leaf and gives much more realistic information as to how plants respond to photosynthesis by wavelength.
 
     *   [Learn more about the McCree Curve »](/docs/mccree-curve)
     
-    *   [Learn more about the Emerson Effect »](/docs/emerson-effect)"
+    *   [Learn more about the Emerson Effect »](/docs/emerson-effect)
+    
+    ### BAR (Biologically Active Radiation)
+
+    This is **light that has a biological affect on plants** (photosynthesis and light sensitive proteins) with a wavelength from 280-800nm. You'll rarely see BAR used but still it's important to know since in this definition far red light is included as well as UV light that may also affect plant growth and response. The numbers 280-800nm seem entirely arbitrary.
+
+    ### Joule
+
+    This is a **unit of energy equal to one watt per second**. Since a watt is volt times amperage you'll sometimes see this as VA for volt-ampere. If I have a 1000 watt light running for one second then 1000 joules of energy is consumed: if it runs for one hour then 3600 seconds * 1000 watts = 3,600,00 joules or 3.6 megajoules is consumed. So 3.6 megajoules is a kilowatt-hour (kWh) which is the unit of energy on your electrical bill. I pay about $.09 per kWh for my electricity which equals one penny for 400,000 joules of electricity.
+
+    ### eV (electronvolt)
+
+    For our purposes the electronvolt, or eV, is **how much energy an individual photon has** (although it is also be used to measure mass of electrons, protons, and the like due to mass-energy equivalence). Even though a photon has no mass it still has energy in the form of momentum. PAR photons have an energy range of 1.77 eV for a 700nm photon to 3.10 eV for a 400nm photon. One eV equals 1.602 * 10-19 joules of energy."
 d: "The topics below represent the core concepts in Horticulture Lighting Theory: learn about PAR, PPFD, PPE, CCT, McCree Curve and the Emerson far red Effect. This article features basic definitions to get you started on this amazing science."
 ---
