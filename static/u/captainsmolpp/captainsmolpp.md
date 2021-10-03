@@ -1,6 +1,6 @@
 ---
 t: "CAPTAIN BUCKET"
-s: "captainpp"
+s: "captainsmolpp"
 a: "CaptainSmolPP"
 h: "https://www.reddit.com/r/SpaceBuckets/comments/q081ka/current_bucket_very_satisfied/"
 c: "Here's my current bucket that I've slowly upgraded over the past few months and I think I'm at an end point for this build. <b>I've learned so much and had a blast with this project.</b> Big shoutout to <a href='https://www.reddit.com/r/SuperGreenLab/'>r/SuperGreenLab</a> and <a href='https://www.reddit.com/u/Dwarkas/'>u/Dwarkas</a> for the timelapse software powered by a Raspberry Pi!
