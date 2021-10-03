@@ -116,7 +116,7 @@ const asins = {
   },
   air: {
     pcfan: "B0007Y5HIY",
-    linefan: "B07SDDSCY1",
+    linefan: "B07QX3QCP5",
     inline: "B01CTM0H6I"
   },
   lightextra: {
