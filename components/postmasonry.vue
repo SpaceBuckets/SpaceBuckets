@@ -80,9 +80,8 @@
       :key="`section-${ie}`"
       :style="{ 'display':'block','padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"
       :href="`/u/${post.s}/${img.h}`">
-      <img v-if="variation != 'skeleton'" :src="`/u/${post.s}/${img.h}`" alt />
-      <img v-if="variation === 'skeleton'" loading="lazy" :src="`/u/${post.s}/${img.h}`" alt />
-    </a>
+      <img :src="`/u/${post.s}/${img.h}`" alt />
+     </a>
   </div>
 </template>
 
