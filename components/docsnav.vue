@@ -141,7 +141,11 @@ export default {
             {
               url:"/docs/lux-meters",
               title:"Lux Meters and Sensors"
-            },                       
+            },          
+            {
+              url:"/docs/canopy-penetration",
+              title:"Canopy Penetration"
+            },                           
             {
               url:"/docs/led-heatsinks",
               title:"LED Heatsinks Tips"
