@@ -7,7 +7,7 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
 
 The conversion factor is **how you change the lux reading to PPFD in umol/m2/sec** (which is the unit of light intensity used in botany). This is so people can spend $20 lux on a light meter rather than hundreds on a quality quantum PAR meter. The following resources are a useful reference:
 
-    *   [Learn how to use Lux Meters and Sensors »](/docs/lux-meters)
+    *   [Learn how to use Lux Meters and Sensors »](/docs/light-meters)
 
     *   [Learn more about Lux to PPFD conversions »](/docs/lux-ppfd-conversion)
 

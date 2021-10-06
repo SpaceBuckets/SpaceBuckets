@@ -79,6 +79,10 @@ export default {
               title:"Photosynthesis"
             },            
             {
+              url:"/docs/light-intensity",
+              title:"Light Intensity"
+            },                
+            {
               url:"/docs/photomorphogenesis",
               title:"Photomorphogenesis"
             },            
@@ -139,7 +143,7 @@ export default {
               title:"LED Efficacy Limits"
             },               
             {
-              url:"/docs/lux-meters",
+              url:"/docs/light-meters",
               title:"Lux Meters and Sensors"
             },          
             {

@@ -1,6 +1,6 @@
 ---
-t: "Lux meters, quantum light meters, and spectrometers"
-s: "lux-meters"
+t: "Light meters and spectrometers"
+s: "light-meters"
 a: "SuperAngryGuy"
 c: "A **quantum light meter** is called 'quantum' because their measurement is in the amount a photons hitting a specific point in space per second and a photon is a quanta of light. **A lux meter** is called 'lux' since they measure luminous flux.
 
