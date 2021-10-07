@@ -102,7 +102,7 @@ In the end I'm left with a hypothesis on green light blasting since I don't real
 
     *   [Learn more about the McCree Curve »](/docs/mccree-curve)"
 o: "3"
-d: "I often size heat sinks that prevent the LEDs from going above 85-125 C for safety, and then use a quite fan to keep them at a temperature I want them to be. This provides an inherent fail-safe feature when experimenting."
+d: "The main purpose of this grow is to demonstrate that some plants can robustly grow under green lights, to show flowering under 24 hour lighting and to demonstrate that a normally tall plant can be grown inside of a 5 gallon bucket using selective light training."
 ---
 
 
