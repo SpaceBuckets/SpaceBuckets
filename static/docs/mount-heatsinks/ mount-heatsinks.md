@@ -36,7 +36,6 @@ Below are some examples and references of how I go about mounting my LED heatsin
 
     <code>
         <img src='https://i.imgur.com/ZwFRWv8l.jpeg'/>
-        <img src='https://i.imgur.com/DD7O1IBl.jpeg'/>
         <img src='https://i.imgur.com/havASopl.jpeg'/>
         <img src='https://i.imgur.com/WCAyxkdl.jpeg'/>
     </code>
@@ -51,7 +50,6 @@ Also shown is a _VERO 18_ with a 50mm heat sink that I use with my Space Buckets
 
     <code>
         <img src='https://i.imgur.com/lBjjNG8l.jpeg'/>
-        <img src='https://i.imgur.com/DHklIEPl.jpeg'/>
         <img src='https://i.imgur.com/hHMtHNkl.jpeg'/>
         <img src='https://i.imgur.com/S8x73Y1l.jpeg'/>
 

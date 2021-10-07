@@ -74,7 +74,7 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
 
     ### So... Why not use green LEDs?
 
-    _Green LEDs are electrically inefficient compared to red and blue LEDs_, and this problem is known as the 'green gap' in physics/engineering. The most efficient green LEDs that I know are actually **blue LEDs with a green phosphor**. That is why white LEDs are used instead that have a strong green light component. [**I've done pure LED green grows**](https://www.reddit.com/r/HandsOnComplexity/comments/28gp4e/space_bucket_with_a_high_power_green_led_and_a/), using green COBs in a Space Bucket, and just to prove the point that it can be done.
+    _Green LEDs are electrically inefficient compared to red and blue LEDs_, and this problem is known as the 'green gap' in physics/engineering. The most efficient green LEDs that I know are actually **blue LEDs with a green phosphor**. That is why white LEDs are used instead that have a strong green light component. [**I've done pure LED green grows**](/docs/green-bucket-bean), using green COBs in a Space Bucket, and just to prove the point that it can be done.
     
 
     <details>

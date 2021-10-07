@@ -173,20 +173,26 @@ details {
 
 code {
   overflow: auto;
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
   margin: 20px 0;
   background: #eee;
   padding: 10px;
   img {
-    float: left;
-    width: 25%;
+    flex: 1;
+    min-width: 33.3%;
     border: 2px solid #eee;
   }
   @media (max-width: 980px) {
     img {
-      width: 50%;
+      min-width: 50%;
     }
-  }  
+  } 
+  @media (max-width: 520px) {
+    img {
+      min-width: 100%;
+    }
+  }     
 }
 
 pre {

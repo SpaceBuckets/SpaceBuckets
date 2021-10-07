@@ -99,6 +99,10 @@ export default {
               title:"Green Leaves and Green Light"
             },   
             {
+              url:"/docs/green-bucket-bean",
+              title:"Green LEDs and Pole Beans"
+            },               
+            {
               url:"/docs/mixing-colors",
               title:"Mixing Light Colors"
             },           
