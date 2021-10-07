@@ -13,6 +13,7 @@ c: "**In photobiology the only unit of measurement currently used is uMol/m2/sec
 
 
 *   **Full sunlight: 2000-2200uM**. It makes no sense to run plants at this level and it will reduce your yield.
+
 *   _Most plants saturation point: 1000-1200uM_. The saturation point is the lighting level where you just can't get anymore growth rate without adding CO2. A lot of this has to do with the effects of [photorespiration](http://en.wikipedia.org/wiki/Photorespiration) in C3 plants like cannabis and non-photochemical quenching for all plants at higher lighting levels. If you just want high yield per area or volume without consideration of wattage, **you should run you plants at this level**. You want to completely blast Space Buckets at this level if you just want as much yield as possible. I run plants around this level in flowering with CO2 enhancement.
 
 *   _Most plants optimal point: 500uM_. Want high yields per watts claim? Run your plants at or below this level. Above about 500uM, plants start becoming CO2 limited in their growth rate but if you want good, tight nuggets this should be their minimum lighting level. This is why you need to use reflectors with CFL. Between about 50uM and 500uM the growth rate is linear with lighting levels. From 500um to 1000uM it's a compressed curve.
