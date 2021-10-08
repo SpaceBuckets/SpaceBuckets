@@ -101,7 +101,11 @@ export default {
             {
               url:"/docs/green-bucket-bean",
               title:"Green LEDs and Pole Beans"
-            },               
+            },  
+            {
+              url:"/docs/leaf-optical-properties",
+              title:"Leaf Optical Properties"
+            },                           
             {
               url:"/docs/mixing-colors",
               title:"Mixing Light Colors"
