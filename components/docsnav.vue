@@ -77,11 +77,7 @@ export default {
             {
               url:"/docs/photosynthesis",
               title:"Photosynthesis"
-            },            
-            {
-              url:"/docs/light-intensity",
-              title:"Light Intensity"
-            },                
+            },                          
             {
               url:"/docs/photomorphogenesis",
               title:"Photomorphogenesis"
@@ -95,16 +91,16 @@ export default {
               title:"Emerson Enhancement Effect"
             },
             {
+              url:"/docs/light-intensity",
+              title:"Light Intensity"
+            },              
+            {
               url:"/docs/green-leaves-green-light",
               title:"Green Leaves and Green Light"
             },   
             {
               url:"/docs/green-bucket-bean",
               title:"Green LEDs and Pole Beans"
-            },  
-            {
-              url:"/docs/selective-light-training",
-              title:"Selective Light Training"
             },              
             {
               url:"/docs/leaf-optical-properties",

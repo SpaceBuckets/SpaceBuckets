@@ -55,7 +55,7 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
     ### Your eyes can deceive you, don't trust them
 
     <pre>
-        <img src='https://i.imgur.com/qo5ZnJ0.jpeg'/>
+        <img src='https://i.imgur.com/qo5ZnJ0l.jpeg'/>
         <div>Spectrometer shot of a chlorotic (yellow) leaf</div>
     </pre>
 
@@ -65,7 +65,7 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
     It should be noted that **the maximum absorption wavelength for chlorophyll in leaves in vivo is 675-680 nm (chlorophyll A)**, and not 660 nm as often cited (chlorophyll B is about 645 nm). This can be seen in the spectrometer shot as a dip in the 675-680 nm range from small amounts of chlorophyll A left over. The blue absorption are carotenoids which have perhaps a 30-70% efficiency at transferring the absorbed light energy to a photosynthetic reaction center through chlorophyll A. Depending on the plant, there may be 2.5ish-7 or so chlorophyll A molecules for every chlorophyll B molecule but mostly around a 3:1 ratio.
 
     <pre>
-        <img src='https://i.imgur.com/47jFDno.jpg'/>
+        <img src='https://i.imgur.com/47jFDnol.jpg'/>
         <div>Space Bucket with a high power green LED and a pole bean <a href='https://www.reddit.com/r/HandsOnComplexity/comments/28gp4e/space_bucket_with_a_high_power_green_led_and_a/'>(source)</a>. </div>
     </pre>
 
