@@ -36,6 +36,7 @@ c: "**The McCree curve is a quantum efficiency lighting curve used in botany** a
     <details>
         <summary>View related studies and papers (3)</summary>
         
+        
         * McCree. [The Action Spectrum, Absorptance and Quantum Yield of Photosynthesis in Crop Plants](https://www.vegenaut.com/pl/wp-content/uploads/sites/2/2017/07/PPFD_essential_article.pdf)
 
         * McCree. [Significance of Enhancement for Calculations Based on the Action Spectrum for Photosynthesis](http://www.plantphysiol.org/content/plantphysiol/49/5/704.full.pdf) 

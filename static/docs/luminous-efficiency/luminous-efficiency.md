@@ -19,6 +19,9 @@ c: "Luminous efficiency is **a percentage correction factor for wavelengths of l
 
     _A lux meter with cosine correction can be used accurately with any visible lighting spectrum for relative measurements_. The cheap $20 lux meters I examined where using silicon diodes with an appropriate short pass filter. This, combined with the response curve of a generic silicon photodiode, gets fairly close to a true lux curve response that a spectroradiometer can give that takes into account the luminous efficiency by wavelength.
 
+     *   [Learn how to use Light Meters and Sensors »](/docs/light-meters)
+
+
     ### Efficiency Examples
 
     If we know that the white light coming from the bulb with a CRI of 80 has a theoretical maximum efficacy of 320 lumens per watt and our light is rated for 110 lumens per watt, **then the bulb is 34% efficient**. If the light bulb is using 450nm blue LEDs as a phosphor pump source, and the maximum theoretical efficacy of a 450nm photon is 3.76 umol/joule, **then we know that the light is putting out 1.28 umol/joule of light**. The light will be drawing 14.5 watts (1600 lumens light output / 110 lumens per watt) giving a total PPF of 18.8 umol/sec of light. If that 18.8 umol/sec of light is spread evenly over a square meter of plant canopy then the average light intensity in the square meter will have a PPFD of 18.8 umol/m2/sec."

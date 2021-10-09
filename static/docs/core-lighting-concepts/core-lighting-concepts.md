@@ -10,7 +10,7 @@ c: "The topics below represent the core concepts in Horticulture Lighting Theory
 
     *   [Learn more about Photosynthesis »](/docs/photosynthesis)
 
-    *   [Learn how to use Lux Meters and Sensors »](/docs/light-meters)
+    *   [Learn how to use Light Meters and Sensors »](/docs/light-meters)
 
     ### PPFD (Photosynthetic Photon Flux Density)
 

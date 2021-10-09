@@ -73,5 +73,5 @@ It is important to note that _you can not just use [blue side lighting](http://i
 
 
 Also, I should point out that the blue LEDs only need to be used on the growing parts of a plant (zone of division and zone of elongation). I've tested this with hardwoods, like Fuji Apple on a P-22 rootstock, and it does work for making more compact grafts as long as you hit the growing part of a hardwood before the bark has formed. More compact apple trees means more productive root stocks may be used. Coffee is usually cut back to six feet or so each year. **More lower branching from SLT could mean higher yields**. If should also allow new bonsai tree techniques. There's a whole lot of testing yet to be done!"
-d: "This is a review of grow lights suitable for small spaces_ and Space Buckets, most of which are readily available and feature LED technology."
+d: "SLT (Selective Light Training) is about hitting certain parts of a plant with light for the purpose of light sensitive protein manipulation and their cascade affects through signal transduction pathways. A typical plant will have in excess of 1,000 light sensitive plant proteins."
 ---
