@@ -9,7 +9,7 @@ collections:
   - name: "docs"
     label: "Docs"
     label_singular: "Docs"
-    identifier_field: t
+    identifier_field: s
     nested:
       depth: 100     
     folder: "static/docs"
