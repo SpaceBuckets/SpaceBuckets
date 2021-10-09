@@ -4,7 +4,13 @@ s: "leaf-optical-properties"
 a: "SuperAngryGuy"
 c: "This article covers the optical characteristics of a pole bean leaf, grown in a [Space Bucket with a 100w pure green LED light](/docs/green-bucket-bean). 
 
+  <pre>
+        <img src='https://i.imgur.com/nR5h12U.png'/> 
+        <div>The transmission plot is spot on for perpendicular light relative to a typical pole bean leaf.</div>
+    </pre>
+
 *   _Reflectivity Plot._ [The reflectivity plot](http://i.imgur.com/ZXENVr8.jpg) of this bean has to be taken with a grain of salt. It's pretty similar to this [USGS reflectivity plot of green vegetation](http://speclab.cr.usgs.gov/PAPERS/tetracorder/FIGURES/fig15-3.gif) **but mine shows a much higher far red reflectivity**. The error is in the way I'm making the measurement (since I'm not using an integrating sphere, gonionmeter or the like). It is going to read a bit high and much of the reflected light is going to be reflected right back on to the plant in a small Space Bucket chamber with the inside covered in highly reflective material.
+
 
 *   _Transmission Plot._ [The transmission plot](http://i.imgur.com/QxCRP3i.jpg) is spot on for perpendicular light relative to a typical pole bean leaf. What is interesting is that **there's a transmission of almost 20% green light at 525nm**, the peak wavelength out the green LED used. **This means that the leaf beneath the top leaf has enough light to photosynthesize**. 700 uMol/meter2/sec means that, minus the reflectivity of the leaf (most which gets reflected right back to bottom of the upper leaf), 140uM of light is illuminating a lower leaf at a lighting level that is very photosynthetically efficient.
 

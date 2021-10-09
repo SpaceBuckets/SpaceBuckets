@@ -39,6 +39,10 @@ export default {
               title:"LED bulbs"
             },
             {
+              url:"/docs/grow-lights",
+              title:"Grow Lights Reviews"
+            },                 
+            {
               url:"/docs/airflow-solutions",
               title:"Airflow Solutions"
             },
@@ -65,11 +69,7 @@ export default {
         },
         "SAG's KNOWLEDGE BASE":{
            order: 2,
-            items: [
-            {
-              url:"/docs/grow-lights",
-              title:"Grow Lights Reviews"
-            },               
+            items: [                     
             {
               url:"/docs/core-lighting-concepts",
               title:"Core Lighting Concepts"
@@ -102,6 +102,10 @@ export default {
               url:"/docs/green-bucket-bean",
               title:"Green LEDs and Pole Beans"
             },  
+            {
+              url:"/docs/selective-light-training",
+              title:"Selective Light Training"
+            },              
             {
               url:"/docs/leaf-optical-properties",
               title:"Leaf Optical Properties"
