@@ -6,7 +6,8 @@
     <div class="img-container">
       <img :src="`/docs/${doc.s}/cover.jpg`" :alt="doc.t" />
     </div>
-    <h2>{{ doc.t }}</h2>
+    <h2 v-if="!doc.tf">{{ doc.t }}</h2>
+    <h2 v-if="doc.tf">{{ doc.tf }}</h2>
     <p v-html="doc.f"></p>
     <i>Learn more in the Docs »</i>
   </nuxt-link>

@@ -103,5 +103,6 @@ c: "The light that we're interested in for photosynthesis is about **400nm (UV-A
 
     </details>"
 d: "The whole concept of photosynthesis is a plant takes in water, carbon dioxide and light to make sugar and oxygen. It's all about making sugar which is transported through the plant via the phloem network" 
+f: "The whole concept of photosynthesis is <b>a plant takes in water, carbon dioxide and light</b> to make sugar and oxygen. It's all about making sugar!"
 ---
  

@@ -1,5 +1,6 @@
 ---
 t: "Evaluation of tiny LED grow lights"
+tf: "Grow Lights Reviews"
 s: "grow-lights"
 a: "SuperAngryGuy"
 c: "_This is a review of LED grow lights suitable for small spaces_ and Space Buckets, most of which are available on Amazon. If I gave the light a fail for electrical safety then the full test is not being published since I do not recommend buying the light. Some of the shots from my spectrometer may be a bit different from others since I'm showing raw images from “scope” mode.
@@ -23,7 +24,7 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
         </pre>
 
         <pre>
-            <img src='https://i.imgur.com/n8vNQt0.png'/>
+            <img src='https://i.imgur.com/n8vNQt0l.png'/>
 
         </pre>
 
@@ -45,12 +46,12 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
     ### GE PAR38 Grow Bulb (32 watts)
 
     <pre>
-        <img src='https://i.imgur.com/mipUatO.jpg'/>
+        <img src='https://i.imgur.com/mipUatOl.jpg'/>
         <div>GE Lighting 93101232 LED Grow Light</div>
     </pre>
 
             <pre>
-                <img src='https://i.imgur.com/Tmkanvd.png'/>
+                <img src='https://i.imgur.com/Tmkanvdl.png'/>
             </pre>
 
     The [GE Lighting PAR38 93101232 LED Grow bulb](https://www.amazon.com/GE-Lighting-93101232-Balanced-Spectrum/dp/B07NNT3G7J) draws 32 actual watts and has a PPF of 50 umol/sec. This is a white light bulb with 665nm red LEDs although the light may appear to just be white. The PPE is 1.6 umol/joule. Lux to umol/m2/sec conversion factor is 61. CCT is 5250K. 
@@ -76,12 +77,12 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
     ### GE BR30 Grow Bulb (9 watts)
 
         <pre>
-            <img src='https://i.imgur.com/nE3ZzYP.jpg'/>
+            <img src='https://i.imgur.com/nE3ZzYPl.jpg'/>
             <div>GE Lighting BR30 93101230 LED Grow Light</div>
         </pre>
 
         <pre>
-            <img src='https://i.imgur.com/E9FVxNt.png'/>
+            <img src='https://i.imgur.com/E9FVxNtl.png'/>
         </pre>
 
 
@@ -104,12 +105,12 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
     ### SANSI Grow Bulb (15 watts)
 
         <pre>
-            <img src='https://i.imgur.com/MfY5uwK.jpg'/>
+            <img src='https://i.imgur.com/MfY5uwKl.jpg'/>
             <div>SANSI Grow Light Bulb (15w)</div>
         </pre>
 
         <pre>
-            <img src='https://i.imgur.com/pC8LuPQ.png'/>
+            <img src='https://i.imgur.com/pC8LuPQl.png'/>
         </pre>
 
     [This SANSI Grow Light Bulb](https://www.amazon.com/SANSI-Houseplants-Commercial-Hydroponic-Horticulture/dp/B07KXBY2YH/ref=pd_lpo_sbs_86_t_1?_encoding=UTF8&psc=1&refRID=ZW9Y3EFDMTHXDMSD4PJ8) draws about 15 actual watts. Lux to umol/m2/sec conversion factor is 65. CCT is 6000K. 
@@ -135,12 +136,12 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
     ### UFO LED with Cree COB (150 watts)
 
         <pre>
-            <img src='https://i.imgur.com/9CA7AuY.jpg'/>
+            <img src='https://i.imgur.com/9CA7AuYl.jpg'/>
             <div>Growstar UFO LED with Cree COB (150 watts)</div>
         </pre>
 
         <pre>
-            <img src='https://i.imgur.com/8SSp3Eq.png'/>
+            <img src='https://i.imgur.com/8SSp3Eql.png'/>
         </pre>
 
     [The Growstar UFO Led Grow Light 150W](https://www.amazon.com/Growstar-Spectrum-Switch-Flowering-Growing/dp/B07312WKX2) draws about 55 actual watts from the wall. I kind of doubt that this light uses a real top end Cree COB and that is more likely a marketing gimmick to sell more lights. 
@@ -173,7 +174,7 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
     ### Not recommended: Red/Blue LED Grow Bulbs
 
         <pre>
-            <img src='https://i.imgur.com/wywo9o3.jpg'/>
+            <img src='https://i.imgur.com/wywo9o3l.jpg'/>
             <div>Not recommended: Red/Blue LED Grow Bulb</div>
         </pre>
 
@@ -191,4 +192,5 @@ c: "_This is a review of LED grow lights suitable for small spaces_ and Space Bu
 
     * [Read a discussion on the safety of red/blue LED Grow Bulbs »](https://www.reddit.com/r/GrowDeals/comments/dc5kdc/100_watt_led_i_use_for_my_1_plant_grow_only_22/f265f2a/)"
 d: "This is a review of grow lights suitable for small spaces_ and Space Buckets, most of which are readily available and feature LED technology."
+f: "This is a review of <b>LED grow lights suitable for small spaces and Space Buckets</b>, most of which are available and easy to get on Amazon."
 ---

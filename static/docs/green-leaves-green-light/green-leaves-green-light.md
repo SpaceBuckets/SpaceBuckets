@@ -1,5 +1,6 @@
 ---
 t: "Green leaves and green light: what's really going on"
+tf: "Green leaves and green light"
 s: "green-leaves-green-light"
 a: "SuperAngryGuy"
 c: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is [the McCree curve](/docs/mccree-curve) used in botany, and every paper on photosynthesis studies by wavelength demonstrates that _most plants use green light efficiently_ (particularly compared to blue light and at higher lighting levels).
@@ -8,7 +9,7 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
     ### The claim and my problem with it
 
     <pre>
-        <img src='https://i.imgur.com/fgH5Kjj.jpg'/>
+        <img src='https://i.imgur.com/fgH5Kjjl.jpg'/>
         <div>Leaf penetration by light color <a href='https://www.publish.csiro.au/fp/Fulltext/fp09262?subscribe=false'>(source)</a></div>
     </pre>
 
@@ -33,7 +34,7 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
     ### Terashima et al has entered the chat
 
     <pre>
-        <img src='https://i.imgur.com/SgP4sbt.png'/> 
+        <img src='https://i.imgur.com/SgP4sbtl.png'/> 
         <div>Schematic of penetration of monochromatic blue, green, and red light. Green light may reach the bottom layer of cells due to the chlorophyll’s weak absorption in the green (the green window) and scattering of green light within the leaf (the detour effect). <a href='https://academic.oup.com/jxb/article/68/9/2099/3857754'>(source)</a></div>
     </pre>
 
@@ -109,5 +110,6 @@ c: "This article challenges the claim that 'plants can't use green light', 'plan
         
     </details>"
 o: "3"
-d: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is the McCree curve used in botany, and every paper on photosynthesis studies by wavelength "
+d: "This article challenges the claim that 'plants can't use green light', 'plants are green because they reflect all green light', and other iterations. My counterclaim is the McCree curve used in botany, and every paper on photosynthesis studies by wavelength"
+f: "This article challenges the claim that <b>'plants can't use green light'</b>, 'plants are green because they reflect all green light', and other iterations."
 ---

@@ -68,4 +68,5 @@ c: "**In photobiology the only unit of measurement currently used is uMol/m2/sec
 
     *   [Read about how canopy light penetration »](/docs/canopy-penetration)"
 o: "2"
-d: "The Light-Top is the heart of a Space Bucket. It contains the main lighting configuration, and determines the performance of the indoor garden."
+d: In photobiology the only unit of measurement currently used is uMol/m2/sec. It's often written micromoles s-1 m-2 or something close. It means the equivalent of micromoles of photons falling in a one square meter area per second."
+f: "In photobiology the measurement used is <b>uMol/m2/sec</b>: the equivalent of micromoles of photons falling in a one square meter area per second."

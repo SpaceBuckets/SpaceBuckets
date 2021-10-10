@@ -1,5 +1,6 @@
 ---
-t: "Canopy penetration and beam angle"
+t: "Canopy Penetration and Beam Angle"
+tf: "Canopy Penetration"
 s: "canopy-penetration"
 a: "SuperAngryGuy"
 c: "Plant canopy penetration is _a function of both optical power output and how focused that light source is_. This is a huge consideration when building or buying a LED grow light. 
@@ -8,7 +9,7 @@ c: "Plant canopy penetration is _a function of both optical power output and how
     **Growing lettuce without much vertical space?** Get a LED grow light with wider beam angles. **Growing a 3 foot tall plant where you want the bottom leaves receiving a lager amount of light?** Get a LED grow light with a narrow beam angle but have the light higher (further away from the plant) than a light with a wider beam angle.
 
         <pre>
-            <img src='https://i.imgur.com/qSQa8fD.jpg'/>
+            <img src='https://i.imgur.com/qSQa8fDl.jpg'/>
             <div>Lighting beam angle concepts (<a href='https://www.led2work.com/en/support/led-technology/light-guidance'>source</a>)</div>
         </pre>
 
@@ -44,4 +45,5 @@ c: "Plant canopy penetration is _a function of both optical power output and how
 
         *   [Read about how different light colors penetrate canopies »](/docs/green-leaves-green-light)"
 d: "Plant canopy penetration is a function of both optical power output and how focused that light source is. This is a huge consideration when building or buying a LED grow light."
+f: "Plant <b>canopy penetration of light</b> is a function of both optical power output and how focused that source is at the moment of measurement."
 ---

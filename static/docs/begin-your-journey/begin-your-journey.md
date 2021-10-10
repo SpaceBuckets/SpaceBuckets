@@ -36,6 +36,8 @@ c: "<pre>
 
     *   [Learn more about LED sidelighting »](/docs/led-sidelighting)
 
+    *   [Read the collection of LED grow lights reviews »](/docs/grow-lights)
+
     <h3>Will my electrical bill increase?</h3>
 
 
