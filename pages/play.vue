@@ -38,7 +38,7 @@ export default {
 <style lang="scss">
 iframe {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 50px);
   border: 0;
   position: fixed;
   top: 50px;
