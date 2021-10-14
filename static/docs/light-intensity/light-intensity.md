@@ -66,7 +66,7 @@ c: "**In photobiology the only unit of measurement currently used is uMol/m2/sec
 
     The concept of light penetration has a lot to do with the inverse square law. LEDs, for example, that have a 130 degree beam angle would have much less penetration than one in the 45-60 degree range.
 
-    *   [Read about how canopy light penetration »](/docs/canopy-penetration)"
+    *   [Read about canopy light penetration »](/docs/canopy-penetration)"
 o: "2"
 d: In photobiology the only unit of measurement currently used is uMol/m2/sec. It's often written micromoles s-1 m-2 or something close. It means the equivalent of micromoles of photons falling in a one square meter area per second."
 f: "In photobiology the measurement used is <b>uMol/m2/sec</b>: the equivalent of micromoles of photons falling in a one square meter area per second."

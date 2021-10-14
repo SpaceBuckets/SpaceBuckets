@@ -85,7 +85,7 @@ c: "This is in response to someone asking about one of [Growmau5's videos on sim
 
         *   [Learn more about light spectrum and Photomorphogenesis »](/docs/photomorphogenesis)"
 o: "3"
-d: "I often size heat sinks that prevent the LEDs from going above 85-125 C for safety, and then use a quite fan to keep them at a temperature I want them to be. This provides an inherent fail-safe feature when experimenting."
+d: "This is in response to someone asking about one of Growmau5's videos on simple mounting of LEDs to heatsinksparticularly at the  part on using Kapton tape. I'm showing some easier and neater ways to mount COB LEDs without normal mounting hardware."
 ---
 
 
