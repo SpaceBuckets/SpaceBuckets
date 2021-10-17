@@ -95,7 +95,7 @@ export default {
         {
           link: "/docs/begin-your-journey",
           title: "SB Knowledge Base",
-          desc: "Browse the Space Buckets Docs",
+          desc: "Browse the Space Bucket Docs",
           icon: "icon-flask"
         },
         {
@@ -107,7 +107,7 @@ export default {
         {
           link: "/gallery/1",
           title: "Try a random bucket",
-          desc: "Infinite bucket loop!",
+          desc: "Infinite space bucket loop!",
           icon: "icon-random"
         },
                          

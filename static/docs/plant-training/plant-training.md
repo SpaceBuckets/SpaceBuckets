@@ -1,5 +1,5 @@
 ---
-t: "Plant Training"
+t: "Plant Training for Small Spaces"
 s: "plant-training"
 a: "ekrof"
 c: "Space Buckets can be used to grow many kinds of plants, _but they need to be trained to fit the limits of its container_. Plant training is an essential tool for this hobby: untrained plants will outgrow their buckets if you let them.
@@ -9,13 +9,16 @@ c: "Space Buckets can be used to grow many kinds of plants, _but they need to be
         <div>Hot peppers are a great plant to practice trainig techniques.</div>
     </pre>
 
-    Plant training techniques can be divided into two: _Low Stress Training_, which includes bending, tucking and guiding the stems; and _High Stress Training_, which purposely stresses the plant to make it heal. 
+    Plant training techniques can be divided into two: _Low Stress Training_, which includes bending, tucking and guiding the stems; and _High Stress Training_, which purposely stresses the plant to make it heal. This article covers both groups of techniques.
     
     
-    LST can be started early in the life of a plant, and it is specially useful for cannabis and hot peppers. As the plant gets older, it stem hardens, which makes the training more difficult. HST techniques pose a higher risk of failure, but sometimes a bigger reward. These methods have a drastic impact on the plant, and require a few days of healing time. All of the following techniques are recommended for gardening in small spaces, and sometimes inevitable.
+    **LST** can be started early in the life of a plant, and it is specially useful for cannabis and hot peppers. As the plant gets older, it stem hardens, which makes the training more difficult. On the other hand, **HST** poses a higher risk of failure, but sometimes a bigger reward. These methods have a drastic impact on the plant, and require a few days of healing time.
 
 
-    For growing in a Space Bucket, *you need to train the plant to grow as horizontally as possible*. If you can keep your plant flat and with an even canopy, the lighting inside your bucket will be more effective, and you'll get better yields. That being said, _every plant is different_, and there are many factors that influence its performance. 
+    For growing in a Space Bucket or in small spaces, *you need to train the plant to grow as horizontally as possible*. If you can keep your plant flat and with an even canopy, the lighting inside your bucket will be more effective, and you'll get better yields. 
+    
+    
+    That being said, _every plant is different_, and there are many factors that influence its performance. Even if the techniques are the same, two plants may react differently and challenge you in different ways.
     
 
     ### LST: Low Stress Training

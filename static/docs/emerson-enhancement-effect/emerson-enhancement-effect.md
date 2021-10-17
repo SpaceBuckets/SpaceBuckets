@@ -22,7 +22,9 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
     *   You can see this **jamming of electrons** in chlorophyll fluorescence shots with proteins associated with the PSII and much less fluorescence associated with the PSI (the single 750nm hump). Higher fluorescence means lower photosynthesis efficiency.
 
     *   _I think most far red driver boards are gimmicks_ because they are likely not putting out enough far red light to make a noticeable difference.
-    
+            
+    *   [Learn more about how different light colors affect plants »](/docs/photomorphogenesis)
+
     <details>
         <summary>View related studies and papers (44)</summary>
 

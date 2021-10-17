@@ -22,7 +22,9 @@
         <nuxt-link to="/docs/begin-your-journey">DOCS</nuxt-link>
         <nuxt-link to="/gallery/1">GALLERY</nuxt-link>
         <nuxt-link to="/build">BUILD</nuxt-link>
+        <nuxt-link to="/draw">DRAW</nuxt-link>
         <nuxt-link to="/design" class="onlydesktop" no-prefetch>DESIGN</nuxt-link>
+      
         <nuxt-link to="/play" no-prefetch>PLAY</nuxt-link>
         <a class="onlymobile" href="https://www.reddit.com/r/SpaceBuckets" title="/r/SpaceBuckets">SUBREDDIT</a>
  
