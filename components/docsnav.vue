@@ -213,11 +213,10 @@ export default {
 
 <style lang="scss" scoped>
 section > div + div {
-  display: none
+  display: none;
 }
 section.ractive > div + div {
   display: block;
-  //max-height: 400px;
   overflow: auto;
   padding-bottom: 12px;
 }
@@ -233,23 +232,19 @@ section.ractive > div + div {
     text-decoration: none;
     display: block;
     padding: 5px 15px;
+    @media (max-width: 980px) {
+      padding: 8px 15px;
+    }    
     &:hover {
       color: #fdd835;
     }
     &.ractive {
- color: #fdd835 !important;
+      color: #fdd835 !important;
       font-weight: bold !important;      
     }
     &.nuxt-link-active {
       color: #fdd835;
       font-weight: bold;
-/*       &:first-child {
-        font-weight:normal;
-        color: #eee;
-        &:after {
-          display: none;
-        }
-      } */
       &:after {
         content: "»";
         margin-left: 5px;

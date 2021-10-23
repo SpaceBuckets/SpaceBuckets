@@ -111,11 +111,12 @@ header {
       color: #fdd835;
     }
     @media (max-width: 980px) {
-      &.nuxt-link-active {
+       &.nuxt-link-active {
         background: #fdd835 !important;
         color: #222;
         &:hover { color: #222; }
         path { fill: #222; }
+        &:after { content: "»"; padding-left: 5px; }
       }      
     }
     &:hover {
@@ -151,8 +152,7 @@ header {
     align-items: center;
     padding: 0 15px;
     min-height: 50px;  
-        font-size: 21px;
-
+    font-size: 21px;
     &:hover svg path{
         fill: #fdd835 !important;
       }
@@ -223,7 +223,9 @@ header {
       background: #151515;
       width: 280px;
       z-index: 9999;
-      min-height: 100vh;
+      position: fixed;
+      top: 50px;
+      bottom: 0;
       + .nav-backdrop:before {
         content: "";
         display: block !important;
@@ -238,16 +240,10 @@ header {
       }
     }
     a {
-      padding: 10px 0 10px 15px;
-      float: left;
-      width: 100%;
-      height: 50px;
-      justify-content: center;   
-      display: flex;   
+      padding: 15px 0 15px 15px;
       border-bottom: 1px solid #222;
       border-right: 1px solid #222;
-      flex-direction: column;
-      svg {
+       svg {
         display: block;
         height: 24px;
         margin-bottom: 12px;
@@ -392,7 +388,7 @@ img {
 
 p {
   margin: 0 0 15px;
-  line-height: 1.6em;
+  line-height: 1.6;
 }
 
 #stat {

@@ -1,5 +1,5 @@
 ---
-t: "Emerson (enhancement) Effect"
+t: "Emerson Enhancement Effect"
 s: "emerson-enhancement-effect"
 a: "SuperAngryGuy"
 c: "The Emerson effect is about driving photosynthesis with part of the light PAR (400-680nm in this case), and part of the light far red color (700nm-740nm or so wavelength), _which combined can result in photosynthesis rates higher than normal_.
@@ -9,7 +9,7 @@ c: "The Emerson effect is about driving photosynthesis with part of the light PA
         <div>Several recent studies have shown that far-red photons synergistically interact with shorter wavelength photons to increase leaf photochemical efficiency. <a href='https://onlinelibrary.wiley.com/doi/am-pdf/10.1111/pce.13730'>(source)</a></div>
     </pre>
 
-    Robert Emerson used his work with red and far red light to deduce that there must be **  [two photosystems](https://en.wikipedia.org/wiki/Photosystem), called photosystem I (PSI) and photosystem II (PSII)**. These are named in the order of discovery, but for photosynthesis the process starts with the PSII first.
+    Robert Emerson used his work with red and far red light to deduce that there must be **[two photosystems](https://en.wikipedia.org/wiki/Photosystem), called photosystem I (PSI) and photosystem II (PSII)**. These are named in the order of discovery, but for photosynthesis the process starts with the PSII first.
 
     Monochromatic light has a sharp drop off in photosynthesis at 680nm or so (red drop effect), but **this does not happen if far red light is added** with about 720nm being most efficient in driving additional photosynthesis.
 
