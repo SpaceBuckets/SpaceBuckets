@@ -114,6 +114,7 @@ header {
       &.nuxt-link-active {
         background: #fdd835 !important;
         color: #222;
+        &:hover { color: #222; }
         path { fill: #222; }
       }      
     }
@@ -193,6 +194,9 @@ header {
       color: #fff;
       padding-left: 35px;
       width: 200px;
+      @media (max-width: 1185px) {
+        width: 130px;
+      }      
       &:focus {
         outline: 0;
       }
@@ -202,6 +206,9 @@ header {
     display: block;
     flex: 1;
     padding: 15px 20px;
+    @media (max-width: 1185px) {
+      padding: 15px 10px;
+    }
     svg {
       display: none;
     }
@@ -214,8 +221,9 @@ header {
       display: block;
       padding-top: 0;
       background: #151515;
-      width: 100vw;
+      width: 280px;
       z-index: 9999;
+      min-height: 100vh;
       + .nav-backdrop:before {
         content: "";
         display: block !important;
@@ -225,16 +233,15 @@ header {
         bottom: 0;
         right: 0;
         top: 50px;
+        cursor: pointer;
         z-index: -1;
       }
     }
     a {
-      padding: 10px 0;
+      padding: 10px 0 10px 15px;
       float: left;
-      width: 50%;
+      width: 100%;
       height: 50px;
-      text-align: center;
-      align-items: center;
       justify-content: center;   
       display: flex;   
       border-bottom: 1px solid #222;
@@ -262,17 +269,10 @@ header {
   & + div {
     background: #000;
   }
-  &.docs + div {
-    //background: #fafafa;
-  }
 }
 
-
-
 body {
-      //overflow-x: hidden !important;
-          background: #000;
-
+  background: #000;
 }
 button:focus {
   outline: 0;
@@ -351,8 +351,7 @@ body {
 a {
   color: #136baf;
   &:hover {
-          color: #093557;
-
+    color: #093557;
   }
 }
 
@@ -416,7 +415,7 @@ p {
     top: 0;
     bottom: 0;
     left: 10px;
-    svg { width: 20px; }  
+    svg { width: 20px; path { fill: #004d47; } }  
   }
   input {
     width: 100%;
