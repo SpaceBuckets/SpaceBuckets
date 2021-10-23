@@ -9,12 +9,9 @@ c: "**LED bulbs can be used for Space Buckets, and they are a good replacement f
         <div>A glass shield is an important safety feature</div>
     </pre>
 
-    ### Types of LED bulbs and Safety
+    ### LED Bulbs Safety
 
-    For better results, you can to remove the protective cap on top of the bulb to take advantage of LEDs unidirectional light output, as the cap will diffuse the light in different directions. Make sure the LEDs are all pointing the same way. 
-
-
-    _But an important note on safety_: When removing the cover or diffuser on an LED lamp, **you may be exposing yourself to very unsafe DC voltage.** Count the LED's. If there are more than 20 LED's then you should probably think about using a different brand of LED. This is because the SMD LED's commonly used in LED e27 lightbulbs use about 3v. Wired in series, the string could require upwards of 60vDC. Although this voltage may be safe, you are quickly approaching the range of voltage that can pass current through the human body. This is regardless of AC or DC.
+    _An important note on safety_: When removing the cover or diffuser on an LED lamp, **you may be exposing yourself to very unsafe DC voltage.** Count the LED's. If there are more than 20 LED's then you should probably think about using a different brand of LED. This is because the SMD LED's commonly used in LED e27 lightbulbs use about 3v. Wired in series, the string could require upwards of 60vDC. Although this voltage may be safe, you are quickly approaching the range of voltage that can pass current through the human body. This is regardless of AC or DC.
     
     * [Read more on LED bulb safety on /r/HandsOnComplexity](https://www.reddit.com/r/HandsOnComplexity/comments/fasuw9/a_strong_warning_about_removing_the_domes_from/)
     "
