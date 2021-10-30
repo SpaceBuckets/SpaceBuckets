@@ -32,7 +32,7 @@ c: "Plant canopy penetration is _a function of both optical power output and how
 
     I have a 100 watt LED at 120 degrees and a typical 0.005 watt laser pointer (lasers are rated on their true optical power output unlike LEDs) at what ever degrees it is. The tiny laser has better penetration. I can focus it to put tiny burn holes on the bottom leaves of a typical indoor plant in a few seconds with better optics than a cheap laser pointer.
 
-    ### Marketing penetration
+    ### Marketing
 
     Beware that some LED grow light manufacturers/importers might make a comparison and have the ruler (or whatever) say 12 inches from their light (A) and a competitors light (B). So A with a light meter puts out at that 12 inches so much more light than B, maybe even twice as much as their competitor! No, check the beam angle of both the lights. 
 

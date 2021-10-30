@@ -104,7 +104,7 @@ function getItems(itemsArr) {
 
 const asins = {
   container: {
-    bucket: "B008DRMUS2",
+    bucket: "B071WCRN9W",
     brute: "B005KDAK8O",
     tote: "B06ZZNLLP5"
   },
