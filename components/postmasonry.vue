@@ -214,14 +214,15 @@ export default {
   font-size: 0;
   background: #000;
   border-top: 1px solid #1a1a1b;
-  &.template { column-count: 3; }
-  @media (max-width: 1220px) {
+   @media (max-width: 1220px) {
     column-count: 3;
     column-gap: 0;
+    &.template { column-count: 3; }    
   }
   @media (max-width: 660px) {
     column-count: auto;
     column-gap: 0;
+    &.template { column-count: auto; }    
   }
   .img-c {
     background: #151515;
