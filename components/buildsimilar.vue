@@ -97,7 +97,7 @@
           </nuxt-link>
 
           <nuxt-link to="/u/spacebucket-sue" v-if="active.container == 'tote' && active.airflow == 'linefan' && active.light == 'cfl'">
-            <img src="/u/spaceBucket_sue/cover.jpg" alt/>
+            <img src="/u/spacebucket-sue/cover.jpg" alt/>
             <h2>SUE SPACE TOTE</h2>
           </nuxt-link>
 
@@ -147,9 +147,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+section {
+  background: transparent !important;
+}
 .similar-bucket a {
   position: relative;
   display: block;
+  width: 300px;
+  height: 387px;
+  margin: 0 auto;
+  //display: inline-block;
+  background: #444;
   h2 {
     position: absolute;
     z-index: 999;
