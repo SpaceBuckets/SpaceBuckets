@@ -8,11 +8,13 @@ function shuffle(r) {
       (r[n] = f);
   return r;
 }
-const getBuilds = async () => {
+const getBuilds = () => {
   try {
-    return (await import("~/json/u.json")).default;
+    const data = require("../json/u.json");
+    return data;
   } catch (t) {
-    return console.log(t), [];
+    console.log(t);
+    return [];
   }
 };
 const getGalleryBuilds = async () => {
