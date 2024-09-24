@@ -30,6 +30,7 @@
     "sass-loader": "^10.1.1",
     "sort-array": "^4.1.1",
     "webpack": "^4.46.0",
-    "@nuxtjs/pwa": "^3.3.5"
+    "@nuxtjs/pwa": "^3.3.5",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
