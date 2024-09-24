@@ -232,13 +232,13 @@
 
 const asins = {
   container: {
-    bucket: "B01GETA5J6",
+    bucket: "B0DFK4JFQZ",
     brute: "B005KDAK8O",
     tote: "B06ZZNLLP5"
   },
   light: {
     cfl: "B00M6SR1JM",
-    ufo: "B07312WKX2",
+    ufo: "B09C5MB6GB",
     led: "B086Z826QC",
     ledbulb: "B01BFCGBN6"
   },
