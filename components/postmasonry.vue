@@ -3,13 +3,18 @@
     <div class="post-content">
       <h2>
         <span>{{ post.t }}</span>
-        <span v-if="post.a">by <a style="padding: 0; height: auto" :href="`https://www.reddit.com/user/${post.a}`">/u/{{ post.a }}</a></span>
-  
+        <span v-if="post.a"
+          >by
+          <a
+            style="padding: 0; height: auto"
+            :href="`https://www.reddit.com/user/${post.a}`"
+            >/u/{{ post.a }}</a
+          ></span
+        >
       </h2>
       <div v-html="post.c"></div>
     </div>
     <div class="post-support">
- 
       <div class="placeholder-items">
         <div
           v-for="(placeholder, ee) in post.itemCount"
@@ -21,8 +26,7 @@
               <div class="img-placeholder"></div>
             </div>
             <p class="item-title"></p>
-      
-           </a>
+          </a>
         </div>
       </div>
       <div class="real-items" v-if="variation != 'skeleton'">
@@ -72,21 +76,25 @@
         </div>
       </div>
     </div>
-    
+
     <a
       class="img-c"
       v-for="(img, ie) in post.i"
       target="_blank"
       :key="`section-${ie}`"
-      :style="{ 'display':'block','padding-top': img.s + '%', 'background': '#'+img.h.replace('.jpg', '') }"
-      :href="`/u/${post.s}/${img.h}`">
+      :style="{
+        display: 'block',
+        'padding-top': img.s + '%',
+        background: '#' + img.h.replace('.jpg', ''),
+      }"
+      :href="`/u/${post.s}/${img.h}`"
+    >
       <img :src="`/u/${post.s}/${img.h}`" alt />
-     </a>
+    </a>
   </div>
 </template>
 
 <script>
-
 export default {
   name: "postmasonry",
   props: ["post", "variation"],
@@ -96,17 +104,17 @@ export default {
       relatedItems: [],
       swipeItem: [],
       progressScroll: 0,
-       savedActive: false,
+      savedActive: false,
     };
   },
-  async created() {  
+  async created() {
     if (process.client && this.$props.variation != "skeleton") {
       if (
         this.post.z !== "" ||
         (this.post.z !== undefined && this.post.z.length > 0)
       ) {
         const zItems = fetch(
-          `https://bucket-builder.herokuapp.com/bucket-builder/${this.post.z}`
+          `https://sb-amz-c75cae75c764.herokuapp.com/bucket-builder/${this.post.z}`
         )
           .then((response) => response.json())
           .then((data) => (this.amazonItems = data.ItemsResult.Items));
@@ -153,7 +161,7 @@ export default {
     padding: 10px 0 15px;
     margin-bottom: 0;
     overflow: auto;
-     text-transform: uppercase;
+    text-transform: uppercase;
     > * {
       flex: 1;
     }
@@ -214,15 +222,19 @@ export default {
   font-size: 0;
   background: #000;
   border-top: 1px solid #1a1a1b;
-   @media (max-width: 1220px) {
+  @media (max-width: 1220px) {
     column-count: 3;
     column-gap: 0;
-    &.template { column-count: 3; }    
+    &.template {
+      column-count: 3;
+    }
   }
   @media (max-width: 660px) {
     column-count: auto;
     column-gap: 0;
-    &.template { column-count: auto; }    
+    &.template {
+      column-count: auto;
+    }
   }
   .img-c {
     background: #151515;

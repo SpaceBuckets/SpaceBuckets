@@ -226,7 +226,7 @@
 <script>
  function getItems(itemsArr) {
   return fetch(
-    "https://bucket-builder.herokuapp.com/bucket-builder/" + itemsArr.join(",")
+    "https://sb-amz-c75cae75c764.herokuapp.com/bucket-builder/" + itemsArr.join(",")
   ).then(res => res.json());
 }
 

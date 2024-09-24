@@ -1,22 +1,52 @@
- <template>
-    <div class="gallery-container">
-     <div style="padding: 10px 15px 20px;background: #fafafa;">
-      <br>
+<template>
+  <div class="gallery-container">
+    <div style="padding: 10px 15px 20px;background: #fafafa;">
+      <br />
       <p>
-        Welcome! You have reached the home of the Space Buckets movement. We're an <a href="https://www.reddit.com/r/SpaceBuckets">open community of indoor gardeners</a> who like to build DIY grow chambers. Space Buckets are easy to make, and only require common items for construction.
-        <strong>Total cost is about $100</strong>, depending on what materials you recycle. Your support is appreciated! Amazon suggestions help maintain this site. <strong>This website is built to be explored</strong>. <a href="https://spacebuckets.com/gallery/1">In our Gallery</a> you'll find over 300 examples of great setups: the style of the containers is variable, but their gardening function is the same. Ready to start your build? <strong><a href="https://spacebuckets.com/template">Take the next step</a></strong> with the DIY guide. 
+        Welcome! You have reached the home of the Space Buckets movement. We're
+        an
+        <a href="https://www.reddit.com/r/SpaceBuckets"
+          >open community of indoor gardeners</a
+        >
+        who like to build DIY grow chambers. Space Buckets are easy to make, and
+        only require common items for construction.
+        <strong>Total cost is about $100</strong>, depending on what materials
+        you recycle. Your support is appreciated! Amazon suggestions help
+        maintain this site.
+        <strong>This website is built to be explored</strong>.
+        <a href="https://spacebuckets.com/gallery/1">In our Gallery</a> you'll
+        find over 300 examples of great setups: the style of the containers is
+        variable, but their gardening function is the same. Ready to start your
+        build?
+        <strong
+          ><a href="https://spacebuckets.com/template"
+            >Take the next step</a
+          ></strong
+        >
+        with the DIY guide.
       </p>
-    </div> 
+    </div>
     <div class="search-sidebar">
       <div class="sidebar-content">
         <h2>MATERIALS</h2>
-        <p>Select categories to filter the products. Amazon links help support this website ♥</p>
+        <p>
+          Select categories to filter the products. Amazon links help support
+          this website ♥
+        </p>
       </div>
 
-      <section class="search-filters" v-for="(items, parent) in options">   
-        <div>{{parent}}</div>
-        <div><div v-for="item in items" :class="{ active: filterActive == item}" @click="selectFilter(item);">{{item}}</div></div>
-        <hr>
+      <section class="search-filters" v-for="(items, parent) in options">
+        <div>{{ parent }}</div>
+        <div>
+          <div
+            v-for="item in items"
+            :class="{ active: filterActive == item }"
+            @click="selectFilter(item)"
+          >
+            {{ item }}
+          </div>
+        </div>
+        <hr />
       </section>
     </div>
 
@@ -28,28 +58,56 @@
         target="_blank"
         class="item-title-container"
       >
-        <div class="product-title">{{item.title}}</div>
+        <div class="product-title">{{ item.title }}</div>
         <div class="product-brand-container">
-          <i class="product-brand" v-if="filterItems !== 8">{{item.brand}}</i>
-          <div class="product-price" v-if="filterItems !== 8">{{item.price}}</div>
+          <i class="product-brand" v-if="filterItems !== 8">{{ item.brand }}</i>
+          <div class="product-price" v-if="filterItems !== 8">
+            {{ item.price }}
+          </div>
         </div>
-        <div class="product-image"  v-if="filterItems !== 8">
+        <div class="product-image" v-if="filterItems !== 8">
           <img :src="`${item.img}`" />
         </div>
-
       </a>
     </section>
- <recommendtable/>
-
-    </div>
+    <recommendtable />
+  </div>
 </template>
-    <script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8235a492-f9c9-44c2-b5a3-fde706d65bf4"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha512-3oappXMVVac3Ge3OndW0WqpGTWx9jjRJA8SXin8RxmPfc8rg87b31FGy14WHG/ZMRISo9pBjezW9y00RYAEONA==" crossorigin="anonymous"></script>
+<script
+  async
+  src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=8235a492-f9c9-44c2-b5a3-fde706d65bf4"
+></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"
+  integrity="sha512-3oappXMVVac3Ge3OndW0WqpGTWx9jjRJA8SXin8RxmPfc8rg87b31FGy14WHG/ZMRISo9pBjezW9y00RYAEONA=="
+  crossorigin="anonymous"
+></script>
 <script>
-
 const asins = {
-  cfl: ["B00M6SR1JM", "B005LFME8K", "B071FCPR3C","B002KEL4EA", "B071HLLMRF","B00OGPF85M","B088B3G7YN","B07BFNLJDL","B005TIDDLG","B073ZMLZGW"],
-  led: ["B01MZBXL28","B0758GXHQK", "B07H9W1TSZ", "B07NNT3G7J", "B07NNZXGMW", "B07428QCCZ","B076WTFZ8W","B07BRKG7X1","B078B8HGRR","B0744GY7TP"],
+  cfl: [
+    "B00M6SR1JM",
+    "B005LFME8K",
+    "B071FCPR3C",
+    "B002KEL4EA",
+    "B071HLLMRF",
+    "B00OGPF85M",
+    "B088B3G7YN",
+    "B07BFNLJDL",
+    "B005TIDDLG",
+    "B073ZMLZGW",
+  ],
+  led: [
+    "B01MZBXL28",
+    "B0758GXHQK",
+    "B07H9W1TSZ",
+    "B07NNT3G7J",
+    "B07NNZXGMW",
+    "B07428QCCZ",
+    "B076WTFZ8W",
+    "B07BRKG7X1",
+    "B078B8HGRR",
+    "B0744GY7TP",
+  ],
   ufo: [
     "B07315FTRS",
     "B07VRPCBRL",
@@ -58,9 +116,20 @@ const asins = {
     "B07KR2S65L",
     "B01B4GQ6MO",
     "B07T47G2L2",
-    "B08B8T8C72"
+    "B08B8T8C72",
   ],
-  cob: ["B073QXXNN8","B073QYT1GF","B0083KMCQ4","B01DJ41EQ2", "B00CZ75TWA", "B01DBZHUXA","B01NBXZUS3","B01D1LD68C","B07SR26W5Q","B07T1YJN6L"],
+  cob: [
+    "B073QXXNN8",
+    "B073QYT1GF",
+    "B0083KMCQ4",
+    "B01DJ41EQ2",
+    "B00CZ75TWA",
+    "B01DBZHUXA",
+    "B01NBXZUS3",
+    "B01D1LD68C",
+    "B07SR26W5Q",
+    "B07T1YJN6L",
+  ],
   buckets: ["B079H1HVZ5", "B01BLKPDHM", "B01GETA5J6", "B071WCRN9W"],
   brutes: ["B00RD9E340", "B005KDALGA", "B005V9B3HY", "B005KDAQ3I"],
   totes: ["B015DZJNOA", "B08575M7ZK", "B001B1C4G0", "B00V87CQYM"],
@@ -94,13 +163,13 @@ function createItem(asin, type) {
 }
 
 function itemFromAmazon(json) {
-    if(!json.Offers) { 
-      json.Offers = {}
-      json.Offers.Listings = {}
-      json.Offers.Listings[0] = {}
-      json.Offers.Listings[0].Price = {}
-      json.Offers.Listings[0].Price.Amount = "-"
-    } 
+  if (!json.Offers) {
+    json.Offers = {};
+    json.Offers.Listings = {};
+    json.Offers.Listings[0] = {};
+    json.Offers.Listings[0].Price = {};
+    json.Offers.Listings[0].Price.Amount = "-";
+  }
 
   return {
     asin: json.ASIN,
@@ -116,7 +185,10 @@ function itemFromAmazon(json) {
 const cachedItems = [];
 
 async function fetchItems(itemsArr) {
-  const res = await fetch("https://bucket-builder.herokuapp.com/bucket-materials/" + itemsArr.join(","));
+  const res = await fetch(
+    "https://sb-amz-c75cae75c764.herokuapp.com/bucket-materials/" +
+      itemsArr.join(",")
+  );
   const json = await res.json();
   return Object.values(json.ItemsResult.Items);
 }
@@ -137,7 +209,9 @@ async function getItems(asins) {
 }
 
 async function searchItems(query) {
-  const res = await fetch("https://bucket-builder.herokuapp.com/bucket-search/" + query);
+  const res = await fetch(
+    "https://sb-amz-c75cae75c764.herokuapp.com/bucket-search/" + query
+  );
   const json = await res.json();
   return Object.values(json.ItemsResult.Items).map(itemFromAmazon);
 }
@@ -150,11 +224,11 @@ export default {
       wishlist: [],
       filterActive: "",
       options: {
-        lighting: ["cfl","led","ufo","cob"],
-        container: ["buckets","bins","brutes","totes"],
-        airflow: ["pcfans","line","inline"],
-        extras: ["tools","monitoring"],
-      }      
+        lighting: ["cfl", "led", "ufo", "cob"],
+        container: ["buckets", "bins", "brutes", "totes"],
+        airflow: ["pcfans", "line", "inline"],
+        extras: ["tools", "monitoring"],
+      },
     };
   },
   mounted() {
@@ -163,10 +237,22 @@ export default {
   head() {
     return {
       title: `Materials - Space Buckets: DIY Indoor Gardening`,
-      meta: [{ hid: 'description', name: 'description', content: 'Browse the collection of recommended products for DIY indoor gardening.' }],
-      link: [ { rel: "canonical", href: "https://spacebuckets.com" + this.$route.path, },]
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Browse the collection of recommended products for DIY indoor gardening.",
+        },
+      ],
+      link: [
+        {
+          rel: "canonical",
+          href: "https://spacebuckets.com" + this.$route.path,
+        },
+      ],
     };
-  },  
+  },
   methods: {
     toggleWishlist(item) {
       if (this.wishlist.includes(item)) {
@@ -191,7 +277,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .item-title-container {
   padding: 14px 20px 14px 15px;
   font-size: 14px;
@@ -218,17 +303,17 @@ export default {
     width: 200px;
     height: auto;
     padding: 12px;
-    &[src='undefined'] {
+    &[src="undefined"] {
       opacity: 0;
     }
-  }  
-      @media (max-width: 980px) {
-flex-basis: calc(50% - 10px);
+  }
+  @media (max-width: 980px) {
+    flex-basis: calc(50% - 10px);
     max-width: calc(50% - 10px);
     margin: 5px;
     //height: auto;
     //img { width: 100% }
- }
+  }
 
   &:hover {
     opacity: 1;
