@@ -10,11 +10,9 @@ function shuffle(r) {
 }
 const getBuilds = async () => {
   try {
-    const module = await import("../json/u.json", { assert: { type: "json" } });
-    return module.default;
-  } catch (error) {
-    console.log(error);
-    return [];
+    return (await import("~/json/u.json")).default;
+  } catch (t) {
+    return console.log(t), [];
   }
 };
 const getGalleryBuilds = async () => {
